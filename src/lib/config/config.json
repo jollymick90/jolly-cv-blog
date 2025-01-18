@@ -1,0 +1,42 @@
+{
+    "it": {
+        "landing": {
+            "title": "Benvenuto!",
+            "heading": "Ciao, sono Mario Rossi!",
+            "description": "Questo è il mio sito personale."
+        },
+        "resume": {
+            "title": "Il mio Resume",
+            "name": "Mario Rossi",
+            "role": "Sviluppatore Web",
+            "description": "Breve descrizione...",
+            "experiences": [
+                {
+                    "company": "Azienda X",
+                    "position": "Frontend Dev",
+                    "years": "2019-2022"
+                }
+            ]
+        }
+    },
+    "en": {
+        "landing": {
+            "title": "Welcome!",
+            "heading": "Hi, I'm Mario Rossi!",
+            "description": "This is my personal website."
+        },
+        "resume": {
+            "title": "My Resume",
+            "name": "Mario Rossi",
+            "role": "Web Developer",
+            "description": "Short description...",
+            "experiences": [
+                {
+                    "company": "Company X",
+                    "position": "Frontend Dev",
+                    "years": "2019-2022"
+                }
+            ]
+        }
+    }
+}
