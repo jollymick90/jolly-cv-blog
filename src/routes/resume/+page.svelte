@@ -1,7 +1,8 @@
 <!-- src/routes/resume/+page.svelte -->
 <script lang="ts">
-	import { getConfig } from '../../utils/config';
+	import { getConfig } from '$lib/utils/config';
 	import type { ResumeConfig } from '../../types';
+	import Resume from '../../components/Resume.svelte';
 
 	let config: ResumeConfig;
 
@@ -38,6 +39,7 @@
                 <div ref={componentRef} >
                     <Resume />
                 </div> -->
+				<Resume />
             </div>
         </div>
 

@@ -1,3 +1,15 @@
+<script>
+	import Certifications from "./Certifications.svelte";
+	import Contact from "./Contact.svelte";
+	import Experiences from "./Experiences.svelte";
+
+
+	import MainSkills from "./MainSkills.svelte";
+	import Presentation from "./Presentation.svelte";
+	import Skills from "./Skills.svelte";
+	import Studies from "./Studies.svelte";
+
+</script>
 <div class="relative py-1 bg-white overflow-hidden">
     <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto">
@@ -9,15 +21,15 @@
                     Software engineer
                 </span>
             </h1>
-            <!-- <MainSkills />
-            <Contact /> -->
+            <MainSkills />
+            <Contact /> 
         </div>
         <div class="mt-3 prose prose-indigo prose-lg text-gray-500 mx-auto">
-            <!-- <Presentation />
+            <Presentation />
             <Skills />
             <Experiences />
             <Certifications />
-            <Studies /> -->
+            <Studies /> 
         </div>
     </div>
 
