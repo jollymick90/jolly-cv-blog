@@ -3,33 +3,21 @@
 
     const eventTypes = {
     cert: { 
-         bgColorClass: 'bg-green-400' },
+         bgColorClass: 'bg-purple-400' },
 }
 const timeline = [
     {
-        id: 3,
-        type: eventTypes.cert,
-        content: 'AWS Certified Developer - Associate',
-        date: 'Dicembre 2022',
-    },
-    {
-        id: 2,
-        type: eventTypes.cert,
-        content: 'ISIPM Base',
-        date: 'Aprile 22',
-    },
-    {
         id: 1,
         type: eventTypes.cert,
-        content: 'Google Professional Data Engineering ',
-        date: 'Marzo 2020',
+        content: 'GDG Dev Fest Venezia',
+        date: 'Novembre 2024',
     }
 ]
 </script>
 
 <div class="bg-white px-4 py-2 sm:rounded-lg sm:px-1">
 	<h2 id="timeline-title" class="mx-1 my-1 text-lg font-medium text-gray-900">
-		Certificazioni
+		Spearkers per eventi
 	</h2>
 	<div class="mt-3 flow-root">
 		{#each timeline as item, itemIdx}

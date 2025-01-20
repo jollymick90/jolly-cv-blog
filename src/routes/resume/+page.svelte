@@ -44,11 +44,10 @@
         </div>
 
     </div>
-	<h1>{config?.name}</h1>
+	<!-- <h1>{config?.name}</h1>
 	<h2>{config?.role}</h2>
 	<p>{config?.description}</p>
 
-	<!-- Esperienze, competenze, ecc... -->
 	{#each config?.experiences ?? [] as experience}
 		<div>
 			<h3>{experience.company}</h3>
@@ -56,5 +55,5 @@
 		</div>
 	{/each}
 
-	<button on:click={downloadResume}>Download Resume</button>
+	<button on:click={downloadResume}>Download Resume</button> -->
 </main>

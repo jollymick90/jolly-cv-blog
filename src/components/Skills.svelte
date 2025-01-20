@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SkillItem, SkillItemUI } from "$lib/libs";
+	import type { SkillItemUI } from "$lib/libs";
     import { listSkills } from "$lib/config/config";
     import { getColor } from "$lib/utils/skills.utils";
 
@@ -10,9 +10,6 @@
         }
     })
 
-
-// {getColor(skill), "h-1"
-//{ width: `${skill.level}%` }
 </script>
 
 

@@ -7,6 +7,7 @@
 	import MainSkills from "./MainSkills.svelte";
 	import Presentation from "./Presentation.svelte";
 	import Skills from "./Skills.svelte";
+	import Speakers from "./Speakers.svelte";
 	import Studies from "./Studies.svelte";
 
 </script>
@@ -28,6 +29,7 @@
             <Presentation />
             <Skills />
             <Experiences />
+            <Speakers />
             <Certifications />
             <Studies /> 
         </div>

@@ -6,7 +6,6 @@ const listSkills: SkillItem[] = [
         name: "Typescript",
         level: 90,
         levelTag: "high"
-
     },
     {
         name: "Javascript",
@@ -39,22 +38,31 @@ const listSkills: SkillItem[] = [
         levelTag: "high"
     },
     {
-        name: "OpenLayers",
-        level: 70,
+        name: "OpenLayers/Leaflet",
+        level: 75,
         levelTag: "high"
     },
     {
         name: "git",
-        level: 70,
+        level: 80,
+        levelTag: "high"
+    },
+    {
+        name: "Java",
+        level: 80,
+        levelTag: "high"
+    },
+    {
+        name: "Spring Boot",
+        level: 80,
+        levelTag: "high"
+    },
+    {
+        name: "Hibernate",
+        level: 80,
         levelTag: "high"
     },
     //intermedie
-
-    {
-        name: "Java",
-        level: 60,
-        levelTag: "medium"
-    },
     {
         name: "Kotlin",
         level: 60,
@@ -62,6 +70,11 @@ const listSkills: SkillItem[] = [
     },
     {
         name: "Android",
+        level: 65,
+        levelTag: "medium"
+    },
+    {
+        name: "React Native",
         level: 65,
         levelTag: "medium"
     },
@@ -75,13 +88,17 @@ const listSkills: SkillItem[] = [
         level: 60,
         levelTag: "medium"
     },
-    //
     {
         name: "SQL",
-        level: 50,
-        levelTag: "base"
+        level: 60,
+        levelTag: "medium"
     },
-
+    {
+        name: "NodeJS",
+        level: 60,
+        levelTag: "medium"
+    },
+    // base
     {
         name: "C#",
         level: 50,
@@ -89,11 +106,6 @@ const listSkills: SkillItem[] = [
     },
     {
         name: "DotNet",
-        level: 50,
-        levelTag: "base"
-    },
-    {
-        name: "NodeJS",
         level: 50,
         levelTag: "base"
     },
