@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotlight - Tailwind UI Replica</title>
+  <!-- CDN Tailwind CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@^3.2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Stili extra (opzionali) -->
+  <style>
+    /* Esempio di swirl/gradient background personalizzato per la hero */
+    .hero-bg {
+      background: radial-gradient(
+        circle at 20% 50%,
+        rgba(99, 102, 241, 0.15),
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 80% 50%,
+        rgba(236, 72, 153, 0.15),
+        transparent 25%
+      );
+    }
+
+    /* Esempio per dare un effetto "text gradient" al titolo */
+    .gradient-text {
+      background: linear-gradient(to right, #6366f1, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- HEADER / NAVBAR -->
+  <header class="relative z-10">
+    <nav class="container mx-auto flex items-center justify-between py-6 px-4">
+      <div class="text-xl font-bold gradient-text">Spotlight</div>
+      <div>
+        <ul class="flex items-center space-x-6 text-sm">
+          <li><a href="#" class="hover:underline">Prodotto</a></li>
+          <li><a href="#" class="hover:underline">Prezzi</a></li>
+          <li><a href="#" class="hover:underline">Risorse</a></li>
+        </ul>
+      </div>
+      <div>
+        <a
+          href="#"
+          class="bg-indigo-500 hover:bg-indigo-400 text-white px-4 py-2 rounded-md text-sm font-medium"
+        >
+          Inizia ora
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative hero-bg overflow-hidden">
+    <!-- Sfondo gradiente decorativo -->
+    <div
+      class="absolute inset-0 opacity-25 pointer-events-none"
+      aria-hidden="true"
+    ></div>
+    
+    <div class="container mx-auto flex flex-col items-center justify-center text-center px-4 pt-16 pb-24">
+      <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 gradient-text">
+        Spotlight
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 mb-8">
+        Semplifica il tuo stack di marketing. Metti i tuoi clienti al centro e automatizza
+        tutte le operazioni con un’unica piattaforma integrata.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="#"
+          class="inline-block bg-indigo-500 hover:bg-indigo-400 px-6 py-3 rounded-md text-white font-medium"
+        >
+          Inizia subito gratis
+        </a>
+        <a
+          href="#"
+          class="inline-block border border-gray-600 hover:border-gray-500 px-6 py-3 rounded-md text-white font-medium"
+        >
+          Scopri di più
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS SECTION (Solo segnaposto testo) -->
+  <section class="py-12">
+    <div class="container mx-auto text-center px-4">
+      <p class="text-sm uppercase tracking-wider text-gray-400 mb-6">
+        Usato dai team più innovativi del mondo
+      </p>
+      <!-- Invece dei loghi (immagini), usiamo box segnaposto con testo. -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-8">
+        <div class="bg-gray-800 p-6 rounded-md">
+          <span class="text-gray-400 text-sm">Logo 1</span>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-md">
+          <span class="text-gray-400 text-sm">Logo 2</span>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-md">
+          <span class="text-gray-400 text-sm">Logo 3</span>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-md">
+          <span class="text-gray-400 text-sm">Logo 4</span>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-md">
+          <span class="text-gray-400 text-sm">Logo 5</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold gradient-text">Perché Spotlight?</h2>
+        <p class="text-gray-400 mt-2 max-w-xl mx-auto">
+          Metti al centro i tuoi clienti e offri un'esperienza eccezionale.  
+          Ecco perché i team di tutto il mondo si affidano a noi.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-gray-800 p-8 rounded-lg">
+          <div class="mb-4">
+            <!-- Icona segnaposto (es. un div circolare) -->
+            <div class="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center">
+              <span class="text-white font-bold">1</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Focus sul cliente</h3>
+          <p class="text-gray-400">
+            Strumenti di automazione mirati a incrementare la soddisfazione del cliente.
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-gray-800 p-8 rounded-lg">
+          <div class="mb-4">
+            <div class="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center">
+              <span class="text-white font-bold">2</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Tutto in uno</h3>
+          <p class="text-gray-400">
+            Un’unica piattaforma per gestire marketing, analisi e campagne email.
+          </p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-gray-800 p-8 rounded-lg">
+          <div class="mb-4">
+            <div class="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center">
+              <span class="text-white font-bold">3</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Scalabile</h3>
+          <p class="text-gray-400">
+            Architettura robusta per crescere con te man mano che il tuo business si espande.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 gradient-text">Pronto a iniziare?</h2>
+      <p class="text-gray-300 mb-8 max-w-lg mx-auto">
+        Crea subito un account gratuito e scopri perché Spotlight è la piattaforma scelta da migliaia di aziende.
+      </p>
+      <a
+        href="#"
+        class="inline-block bg-pink-500 hover:bg-pink-400 px-8 py-4 rounded-md text-white font-semibold text-lg"
+      >
+        Registrati ora
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 py-8">
+    <div class="container mx-auto px-4 text-gray-400 text-sm">
+      <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+        <p>&copy; 2023 Spotlight. Tutti i diritti riservati.</p>
+        <div class="space-x-4">
+          <a href="#" class="hover:underline">Termini</a>
+          <a href="#" class="hover:underline">Privacy</a>
+          <a href="#" class="hover:underline">Contatti</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
