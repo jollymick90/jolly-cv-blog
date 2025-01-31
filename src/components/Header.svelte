@@ -1,5 +1,13 @@
 <!-- HEADER / NAVBAR -->
-<header class="relative z-10">
+ <style>
+	.head-component {
+		height: var(--header-height);
+		margin-bottom: var(--header-mb);
+	}
+ </style>
+<header class="pointer-events-none relative z-50 flex flex-none flex-col head-component"
+
+  >
 	<nav class="container mx-auto flex items-center justify-between px-4 py-6">
 		<div class="gradient-text text-xl font-bold">MS</div>
 		<div>
