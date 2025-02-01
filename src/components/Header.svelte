@@ -1,3 +1,8 @@
+<script>
+
+	import Avatar from "./Avatar.svelte";
+
+</script>
 <!-- HEADER / NAVBAR -->
  <style>
 	.head-component {
@@ -8,6 +13,11 @@
 <header class="pointer-events-none relative z-50 flex flex-none flex-col head-component"
 
   >
+  <div class="relative flex gap-4">
+	<div class="flex flex-1">
+		<Avatar></Avatar>
+	</div>
+  </div>
 	<nav class="container mx-auto flex items-center justify-between px-4 py-6">
 		<div class="gradient-text text-xl font-bold">MS</div>
 		<div>
