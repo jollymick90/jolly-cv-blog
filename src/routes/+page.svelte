@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Container from '../components/Container.svelte';
-	import Home from '../components/home/Home.svelte';
+	import HomeHeadings from '../components/home/HomeHeadings.svelte';
+	
+	import Photos from '../components/home/Photos.svelte';
 
 	export let data;
 	let config = data.config;
@@ -11,5 +13,6 @@
 </svelte:head>
 
 <Container className="mt-9">
-	<Home {data}></Home>
+	<HomeHeadings {data}></HomeHeadings>
 </Container>
+<Photos></Photos>

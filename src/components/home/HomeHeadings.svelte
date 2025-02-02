@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LinkedInIcon from './../icons/LinkedInIcon.svelte';
+	import LinkedInIcon from '../icons/LinkedInIcon.svelte';
 
 	import SocialLink from '../shared/SocialLink.svelte';
 	import GitHubIcon from '../icons/GitHubIcon.svelte';
