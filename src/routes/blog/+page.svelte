@@ -6,14 +6,14 @@
 </script>
 
 <Container className="mt-9">
-<h1>Blog</h1>
+<h1 class="text-white">Blog</h1>
 
 {#each posts as post}
 	<article class="text-white">
-		<h2>{post.metadata.title}</h2>
+		<h2>
+			<a href={`/blog/${post.slug}`}>{post.metadata.title}</a>
+		</h2>		
 		<p>{post.metadata.date}</p>
-		<!-- post.component è il contenuto markdown -->
-		<svelte:component this={post.component} />
 	</article>
 {/each}
 </Container>
