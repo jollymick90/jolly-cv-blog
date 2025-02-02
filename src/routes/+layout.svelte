@@ -14,7 +14,7 @@
 	  <div class="relative flex w-full flex-col">
 	<Header></Header>
 	<main class="flex-auto">
-	{@render children()}
-</main>
+		{@render children()}
+	</main>
 </div>
 </div>

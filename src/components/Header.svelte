@@ -2,8 +2,7 @@
 	import Avatar from './Avatar.svelte';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { derived } from 'svelte/store';
-	import AvatarContainer from './AvatarContainer.svelte';
+
 	import Container from './Container.svelte';
 	import Navigation from './Navigation.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
@@ -73,6 +72,7 @@
 		if (!isHomePage && !avatarRef) return;
 		//@ts-ignore
 		const downDelay = avatarRef?.offsetTop ?? 0;
+		console.log("downDelay", downDelay)
 		const fromScale = 1;
 		const toScale = 36 / 64;
 		const fromX = 0;
@@ -91,6 +91,7 @@
 		const borderX = (-toX + x) * borderScale;
 		const borderTransform = `translate3d(${borderX}rem, 0, 0) scale(${borderScale})`;
 		setProperty('--avatar-border-transform', borderTransform);
+		console.log("scale === toScale",scale === toScale, scale, toScale)
 		setProperty('--avatar-border-opacity', scale === toScale ? '1' : '0');
 	}
 
@@ -122,7 +123,7 @@
 			class="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
 		></div>
 		<Container
-			classNameOuter="top-0 order-last -mb-3 pt-3"
+			className="top-0 order-last -mb-3 pt-3"
 			style="position: var(--header-position);"
 		>
 			<div
@@ -130,30 +131,36 @@
 				style="position: var(--header-inner-position);"
 			>
 				<div class="relative">
-					<AvatarContainer
-						class="absolute left-0 top-3 origin-left transition-opacity"
+					<div
+						class="absolute left-0 top-3 origin-left transition-opacity
+						h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg
+						shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
 						style="opacity: var(--avatar-border-opacity, 0); transform: var(--avatar-border-transform);"
-					/>
+					></div>
 					<Avatar
 						large
 						class="block h-16 w-16 origin-left"
 						style="transform: var(--avatar-image-transform);"
-					/>
+					></Avatar>
+					
 				</div>
 			</div>
 		</Container>
 	{/if}
 	<div bind:this={headerRef} class="top-0 z-10 h-16 pt-6" style="position: var(--header-position);">
 		<Container
-			class="sm:px-8 top-[var(--header-top,theme(spacing.6))] w-full"
+			className="sm:px-8 top-[var(--header-top,theme(spacing.6))] w-full"
 			style="position: var(--header-inner-position);"
 		>
 			<div class="relative flex gap-4">
 				<div class="flex flex-1">
 					{#if !isHomePage}
-						<AvatarContainer>
+						<div
+						class="h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg
+						shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
+						>
 							<Avatar />
-						</AvatarContainer>
+						</div>
 					{/if}
 				</div>
 				<div class="white flex flex-1 justify-end md:justify-center">
