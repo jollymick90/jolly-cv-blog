@@ -1,7 +1,13 @@
 <script lang="ts">
 	import NavItem from './core/NavItem.svelte';
+	import MobileNavigation from './MobileNavigation.svelte';
 
 	export let type: 'mobile' | 'desktop' = 'mobile';
+	let isOpen = false;
+  
+  function toggleMenu() {
+    isOpen = !isOpen;
+  }
 </script>
 
 <nav>
@@ -15,11 +21,13 @@
 			<NavItem href="/resume">Resume</NavItem>
 		</ul>
 	{:else}
+		<MobileNavigation></MobileNavigation>
 		<button
 			type="button"
 			class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
 			aria-controls="mobile-menu"
 			aria-expanded="false"
+			on:click
 		>
 			<span class="absolute -inset-0.5"></span>
 			<span class="sr-only">Open main menu</span>
@@ -60,5 +68,8 @@
 				<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
 			</svg>
 		</button>
+		
 	{/if}
+
+	
 </nav>

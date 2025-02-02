@@ -1,8 +1,8 @@
 <!-- src/routes/resume/+page.svelte -->
 <script lang="ts">
 	import { getConfig } from '$lib/utils/config';
+	import Resume from '../../components/resume/Resume.svelte';
 	import type { ResumeConfig } from '../../types';
-	import Resume from '../../components/Resume.svelte';
 
 	let config: ResumeConfig;
 
