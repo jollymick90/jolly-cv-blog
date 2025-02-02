@@ -72,7 +72,6 @@
 		if (!isHomePage && !avatarRef) return;
 		//@ts-ignore
 		const downDelay = avatarRef?.offsetTop ?? 0;
-		console.log("downDelay", downDelay)
 		const fromScale = 1;
 		const toScale = 36 / 64;
 		const fromX = 0;
@@ -91,7 +90,6 @@
 		const borderX = (-toX + x) * borderScale;
 		const borderTransform = `translate3d(${borderX}rem, 0, 0) scale(${borderScale})`;
 		setProperty('--avatar-border-transform', borderTransform);
-		console.log("scale === toScale",scale === toScale, scale, toScale)
 		setProperty('--avatar-border-opacity', scale === toScale ? '1' : '0');
 	}
 
