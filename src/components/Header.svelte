@@ -6,6 +6,7 @@
 	import AvatarContainer from './AvatarContainer.svelte';
 	import Container from './Container.svelte';
 	import Navigation from './Navigation.svelte';
+	import ThemeToggle from './ThemeToggle.svelte';
 
 	let isHomePage: boolean;
 
@@ -144,7 +145,7 @@
 	{/if}
 	<div bind:this={headerRef} class="top-0 z-10 h-16 pt-6" style="position: var(--header-position);">
 		<Container
-			class="top-[var(--header-top,theme(spacing.6))] w-full"
+			class="sm:px-8 top-[var(--header-top,theme(spacing.6))] w-full"
 			style="position: var(--header-inner-position);"
 		>
 			<div class="relative flex gap-4">
@@ -172,7 +173,9 @@
 			  <DesktopNavigation class="pointer-events-auto hidden md:block" /> -->
 				</div>
 				<div class="flex justify-end md:flex-1">
-					<div class="pointer-events-auto">ThemeToggle</div>
+					<div class="pointer-events-auto">
+						<ThemeToggle />
+					</div>
 				</div>
 			</div>
 		</Container>
