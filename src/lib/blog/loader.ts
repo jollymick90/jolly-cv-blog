@@ -5,6 +5,7 @@ export async function loadArticles() {
     const resolvedPosts = await Promise.all(
         Object.entries(import.meta.glob('/src/content/*.md')).map(async ([path, resolver]) => {
             const mod: any = await resolver();
+            console.log("-- mod", mod)
             return {
                 metadata: mod.metadata,
                 // component: mod.default,
