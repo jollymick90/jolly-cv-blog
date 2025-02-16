@@ -3,12 +3,12 @@
 	import { onMount } from 'svelte';
 	import HomeArticle from './HomeArticle.svelte';
 
-    $: count = 0;
+	$: count = 0;
 	let articleList: any[] = [];
 	onMount(() => {
 		async function init() {
 			articleList = await loadArticles();
-            count = articleList.length;
+			count = articleList.length;
 		}
 		init();
 	});
@@ -16,11 +16,6 @@
 	let articlesHomeList = [];
 </script>
 
-
-<div class="text-white">
-	{#each articleList as article }
-	<HomeArticle article={article}></HomeArticle>
-
-	{/each}
-    {count}
-</div>
+{#each articleList as article}
+	<HomeArticle {article}></HomeArticle>
+{/each}

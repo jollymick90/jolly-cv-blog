@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { ArticleFormat } from "../../content/content";
 	import Card from "../core/card/Card.svelte";
+	import CardCta from "../core/card/CardCta.svelte";
+	import CardDescription from "../core/card/CardDescription.svelte";
 	import CardEyebrow from "../core/card/CardEyebrow.svelte";
 	import CardTitle from "../core/card/CardTitle.svelte";
 
@@ -11,9 +13,11 @@
     <CardTitle href="{`/blog/${article.slug}`}">
         {article.metadata.title}
     </CardTitle>
-    <CardEyebrow>
-        {article.metadata.description}
+    <CardEyebrow decorate>
+        {article.metadata.date}
     </CardEyebrow>
-    {JSON.stringify(article.metadata)}
-    {JSON.stringify(article.slug)}
+    <CardDescription>
+        {article.metadata.description}
+    </CardDescription>
+    <CardCta>Leggi l'articolo</CardCta>
 </Card>
