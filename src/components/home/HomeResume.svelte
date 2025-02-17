@@ -1,13 +1,14 @@
 <script lang="ts">
 	import type { RoleProps } from '$lib/types/components';
+
 	import Button from '../core/Button.svelte';
 	import ArrowDownIcon from '../core/icons/ArrowDownIcon.svelte';
 	import BriefcaseIcon from '../core/icons/BriefcaseIcon.svelte';
 	import Role from '../core/Role.svelte';
 	let resume: RoleProps[] = [
 		{
-			company: 'Planetaria',
-			title: 'CEO',
+			company: 'CompanyA',
+			title: 'FullStack Developer',
 			logo: 'logoPlanetaria',
 			start: '2019',
 			end: {
@@ -16,14 +17,14 @@
 			}
 		},
 		{
-			company: 'Airbnb',
+			company: 'CompanyB',
 			title: 'Product Designer',
 			logo: 'logoAirbnb',
 			start: '2014',
 			end: '2019'
 		},
 		{
-			company: 'Facebook',
+			company: 'CompanyC',
 			title: 'iOS Software Engineer',
 			logo: 'logoFacebook',
 			start: '2011',
@@ -46,7 +47,9 @@
 	</h2>
 	<ol class="mt-6 space-y-4">
 		{#each resume as role}
-			<Role {role} />
+			<Role {role} 
+	
+			/>
 		{/each}
 	</ol>
 	<Button href="#" variant="secondary" class="group mt-6 w-full">
