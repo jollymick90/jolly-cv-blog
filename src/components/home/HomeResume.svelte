@@ -5,11 +5,13 @@
 	import ArrowDownIcon from '../core/icons/ArrowDownIcon.svelte';
 	import BriefcaseIcon from '../core/icons/BriefcaseIcon.svelte';
 	import Role from '../core/Role.svelte';
+	import image1 from '$lib/img/LogoJob1.webp';
+	import image2 from '$lib/img/LogoJob2.webp';
 	let resume: RoleProps[] = [
 		{
-			company: 'CompanyA',
-			title: 'FullStack Developer',
-			logo: 'logoPlanetaria',
+			company: 'Planetaria',
+			title: 'CEO',
+			logo: image2,
 			start: '2019',
 			end: {
 				label: 'Present',
@@ -19,21 +21,21 @@
 		{
 			company: 'CompanyB',
 			title: 'Product Designer',
-			logo: 'logoAirbnb',
+			logo: image1,
 			start: '2014',
 			end: '2019'
 		},
 		{
 			company: 'CompanyC',
 			title: 'iOS Software Engineer',
-			logo: 'logoFacebook',
+			logo: image2,
 			start: '2011',
 			end: '2014'
 		},
 		{
 			company: 'Starbucks',
 			title: 'Shift Supervisor',
-			logo: 'logoStarbucks',
+			logo: image1,
 			start: '2008',
 			end: '2011'
 		}
