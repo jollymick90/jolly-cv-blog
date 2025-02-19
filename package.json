@@ -35,6 +35,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"clsx": "^2.1.1",
+		"html-to-pdf-js": "^0.9.3",
 		"html2pdf.js": "^0.9.0",
 		"svelte-preprocess": "^6.0.3"
 	}

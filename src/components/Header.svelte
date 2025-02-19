@@ -23,6 +23,7 @@
 	}
 
 	function setProperty(property: string, value: string) {
+		console.log("---setProperty", property, value)
 		document.documentElement.style.setProperty(property, value);
 	}
 
@@ -32,12 +33,15 @@
 
 	function updateHeaderStyles() {
 		//@ts-ignore
-		if (!headerRef || !avatarRef) return;
+		if (!headerRef) return;
 		//@ts-ignore
 		const downDelay = avatarRef?.offsetTop ?? 0;
 		const upDelay = 64;
 		const { top, height } = headerRef.getBoundingClientRect();
-		const scrollY = clamp(window.scrollY, 0, document.body.scrollHeight - window.innerHeight);
+		const scrollY = clamp(
+			window.scrollY,
+			 0,
+			  document.body.scrollHeight - window.innerHeight);
 
 		if (isInitial) {
 			setProperty('--header-position', 'sticky');
@@ -83,8 +87,9 @@
 
 		let x = (scrollY * (fromX - toX)) / downDelay + toX;
 		x = clamp(x, fromX, toX);
-
-		setProperty('--avatar-image-transform', `translate3d(${x}rem, 0, 0) scale(${scale})`);
+		
+		setProperty('--avatar-image-transform', 
+		`translate3d(${x}rem, 0, 0) scale(${scale})`);
 
 		const borderScale = 1 / (toScale / scale);
 		const borderX = (-toX + x) * borderScale;
@@ -115,7 +120,7 @@
 	style="height: var(--header-height); margin-bottom: var(--header-mb);"
 >
 	{#if isHomePage}
-		<!-- Se siamo sulla home, posizioniamo l'avatar (con la runa) -->
+		
 		<div
 			bind:this={avatarRef}
 			class="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
@@ -137,8 +142,8 @@
 					></div>
 					<Avatar
 						large
-						class="block h-16 w-16 origin-left"
-						style="transform: var(--avatar-image-transform);"
+						className="block h-16 w-16 origin-left"
+						styleTransform="transform: var(--avatar-image-transform);"
 					></Avatar>
 					
 				</div>

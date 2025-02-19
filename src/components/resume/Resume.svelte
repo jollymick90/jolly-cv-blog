@@ -8,14 +8,14 @@
 	import Skills from './Skills.svelte';
 	import Speakers from './Speakers.svelte';
 	import Studies from './Studies.svelte';
-	//@ts-ignore
-	import html2pdf from 'html2pdf.js';
+	// //@ts-ignore
+	// import html2pdf from 'html2pdf.js';
 	let captureElement: HTMLDivElement;
 
 	function downloadPDF() {
 		if (!captureElement) return;
 
-		html2pdf().from(captureElement).save('download.pdf');
+		// html2pdf().from(captureElement).save('download.pdf');
 	}
 </script>
 

@@ -3,9 +3,12 @@
 	import avatar from '$lib/img/avatar.jpg';
 	export let large = false;
 	export let className: string = '';
+	export let styleTransform = '';
 </script>
 
-<a href="/" aria-label="Home" {...$$restProps} class={clsx('pointer-events-auto', className)}>
+<a href="/" aria-label="Home" 
+style={styleTransform}
+class={clsx('pointer-events-auto', className)}>
 	<img
 		src={avatar}
 		alt="Michele"

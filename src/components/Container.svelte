@@ -1,13 +1,7 @@
 <script lang="ts">
-	import clsx from 'clsx';
-
-	// In questo componente potresti voler passare eventuali proprietà extra (ad es. class) a ContainerOuter
-	
+	import clsx from 'clsx';	
 	export let className: string = '';
-	// const {} = $props();
-	//console.log("$$restProps", $$restProps)
-	// class='sm:px-8 {classNameOuter} {$$restProps.class}' {...$$restProps}
-	// class={`${$props.class || ''} someClass`} 
+	export let styleProp: string = '';
 </script>
 
 <div class={clsx('sm:px-8', className)} {...$$restProps}>

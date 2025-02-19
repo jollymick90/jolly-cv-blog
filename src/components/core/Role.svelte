@@ -17,7 +17,7 @@
 	<div
 		class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
 	>
-	<Icon class="h-7 w-7 text-white" aria-hidden="true" src={Briefcase} />
+	<Icon class="h-7 w-7 dark:text-white text-zinc-400" aria-hidden="true" src={Briefcase} />
 
 		<!-- <img src={role.logo} alt="" class="h-7 w-7" /> -->
 	</div>
