@@ -6,7 +6,7 @@
 import { loadArticles } from '$lib/blog/loader';
 
 export async function load() {
-  const resolvedPosts = await loadArticles();
+  const resolvedPosts: any = await loadArticles();
   return {
     posts: resolvedPosts
   };

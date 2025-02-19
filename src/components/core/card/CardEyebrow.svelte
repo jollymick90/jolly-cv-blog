@@ -1,9 +1,10 @@
 <script lang="ts">
 	export let decorate: boolean = false;
+	export let className: string = '';
 </script>
 
-<p
-	class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500
+<time
+	class="{className} relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500
   {decorate && 'pl-3.5'}"
 >
 	{#if decorate}
@@ -13,4 +14,4 @@
 	{/if}
 	<span></span>
 	<slot></slot>
-</p>
+</time>

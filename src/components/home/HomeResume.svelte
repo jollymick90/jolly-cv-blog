@@ -2,8 +2,8 @@
 	import type { RoleProps } from '$lib/types/components';
 
 	import Button from '../core/Button.svelte';
-	import ArrowDownIcon from '../core/icons/ArrowDownIcon.svelte';
-	import BriefcaseIcon from '../core/icons/BriefcaseIcon.svelte';
+	import ArrowDownIcon from '../icons/ArrowDownIcon.svelte';
+	import BriefcaseIcon from '../icons/BriefcaseIcon.svelte';
 	import Role from '../core/Role.svelte';
 	import image1 from '$lib/img/LogoJob1.webp';
 	import image2 from '$lib/img/LogoJob2.webp';
@@ -49,9 +49,7 @@
 	</h2>
 	<ol class="mt-6 space-y-4">
 		{#each resume as role}
-			<Role {role} 
-	
-			/>
+			<Role {role} />
 		{/each}
 	</ol>
 	<Button href="#" variant="secondary" className="group mt-6 w-full">
