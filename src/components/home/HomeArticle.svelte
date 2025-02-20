@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ArticleFormat } from "../../content/content";
+	import type { ArticleFormat } from "$lib/content/content";
 	import Card from "../core/card/Card.svelte";
 	import CardCta from "../core/card/CardCta.svelte";
 	import CardDescription from "../core/card/CardDescription.svelte";

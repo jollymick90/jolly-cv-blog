@@ -1,53 +1,39 @@
 <script lang="ts">
-    	import { Icon, Flag } from 'svelte-hero-icons';
+	import { Icon, Flag } from 'svelte-hero-icons';
+	import type { Certification, CertificationUI } from '$lib/content/resume';
+	import { eventTypes } from '$lib/content';
 
-    const eventTypes = {
-    cert: { 
-         bgColorClass: 'bg-green-400' },
-}
-const timeline = [
-    {
-        id: 3,
-        type: eventTypes.cert,
-        content: 'AWS Certified Developer - Associate',
-        date: 'Dicembre 2022',
-    },
-    {
-        id: 2,
-        type: eventTypes.cert,
-        content: 'ISIPM Base',
-        date: 'Aprile 22',
-    },
-    {
-        id: 1,
-        type: eventTypes.cert,
-        content: 'Google Professional Data Engineering ',
-        date: 'Marzo 2020',
-    }
-]
+	export let certifications: Certification[];
+
+	const timeline: CertificationUI[] = certifications.map(certItem => {
+		return {
+			...certItem,
+			className: eventTypes[certItem.type]
+		}
+	});
+
 </script>
 
 <div class="bg-white px-4 py-2 sm:rounded-lg sm:px-1">
-	<h2 id="timeline-title" class="mx-1 my-1 text-lg font-medium text-gray-900">
-		Certificazioni
-	</h2>
+	<h2 id="timeline-title" class="mx-1 my-1 text-lg font-medium text-gray-900">Certificazioni</h2>
 	<div class="mt-3 flow-root">
 		{#each timeline as item, itemIdx}
 			<div>
 				<div class="relative pb-2">
 					{#if itemIdx !== timeline.length - 1}
-						<span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"
+						<span
+							class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200"
+							aria-hidden="true"
 						></span>
 					{/if}
 
 					<div class="relative flex space-x-3">
 						<div>
 							<span
-								class="{item.type.bgColorClass}
+								class="{item.className}
                                 flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-white"
 							>
-								<Icon class="h-5 w-5 text-white"
-                                aria-hidden="true" src={Flag} />
+								<Icon class="h-5 w-5 text-white" aria-hidden="true" src={Flag} />
 							</span>
 						</div>
 						<div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
@@ -57,7 +43,7 @@ const timeline = [
 								</div>
 							</div>
 							<div class="whitespace-nowrap text-right text-sm text-gray-500">
-								<span >{item.date}</span>
+								<span>{item.date}</span>
 							</div>
 						</div>
 					</div>
@@ -66,4 +52,3 @@ const timeline = [
 		{/each}
 	</div>
 </div>
-

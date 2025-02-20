@@ -1,10 +1,12 @@
 <!-- src/routes/resume/+page.svelte -->
 <script lang="ts">
+	import { myResumePlaceholder, type IResume } from '$lib/content';
 	import { getConfig } from '$lib/utils/config';
 	import Container from '../../components/Container.svelte';
 	import Resume from '../../components/resume/Resume.svelte';
 	import type { ResumeConfig } from '../../types';
 
+	let resume: IResume = myResumePlaceholder
 	let config: ResumeConfig;
 
 	$: (async () => {
@@ -22,5 +24,5 @@
 </svelte:head>
 
 <Container className="mt-9">
-	<Resume />
+	<Resume resume={resume}/>
 </Container>

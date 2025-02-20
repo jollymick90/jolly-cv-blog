@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { IResume } from '$lib/content';
 	import Certifications from './Certifications.svelte';
 	import Contact from './Contact.svelte';
 	import Experiences from './Experiences.svelte';
@@ -11,6 +12,7 @@
 	// //@ts-ignore
 	// import html2pdf from 'html2pdf.js';
 	let captureElement: HTMLDivElement;
+	export let resume: IResume;
 
 	function downloadPDF() {
 		if (!captureElement) return;
@@ -20,14 +22,13 @@
 </script>
 
 <button
-type="button"
-aria-label="Download CV PDF"
-class="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-sm transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20
-font-semibold 
-                                dark:text-zinc-200 text-gray-900
-"
-
- on:click={downloadPDF}>Download PDF</button>
+	type="button"
+	aria-label="Download CV PDF"
+	class="group rounded-full bg-white/90 px-3 py-2 font-semibold text-gray-900 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-sm transition dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"
+	on:click={downloadPDF}
+>
+	Download PDF
+</button>
 <div bind:this={captureElement} class="relative overflow-hidden bg-white py-1">
 	<div class="relative px-4 sm:px-6 lg:px-8">
 		<div class="mx-auto max-w-prose text-lg">
@@ -45,11 +46,11 @@ font-semibold
 			<Contact />
 		</div>
 		<div class="prose prose-lg prose-indigo mx-auto mt-3 text-gray-500">
-			<Presentation />
+			<Presentation presentation={resume.presentation}/>
 			<Skills />
 			<Experiences />
 			<Speakers />
-			<Certifications />
+			<Certifications certifications={resume.certifications}/>
 			<Studies />
 		</div>
 	</div>

@@ -1,24 +1,8 @@
 <script lang="ts">
-const mainSkillList = [
-    {
-        name: "Typescript",
-    },
-    {
-        name: "Javascript",
-    },
-    {
-        name: "React",
-    },
-    {
-        name: "Angular",
-    },
-    {
-        name: "Vue",
-    },
-    {
-        name: "Android",
-    }
-]
+	import type { MainSkills } from "$lib/content/resume";
+
+    export let mainSkillList: MainSkills[] = [];
+
 </script>
 
 <div class="w-full mt-8 text-xl text-gray-500 leading-8">
