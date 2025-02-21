@@ -1,4 +1,4 @@
-import type { MainSkills, PresentationResume, IResume, Certification, SkillItem } from "./resume"
+import type { MainSkills, PresentationResume, IResume, Certification, SkillItem } from "../content/resume"
 
 const mainSkillList: MainSkills[] = [
     {

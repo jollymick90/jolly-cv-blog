@@ -3,7 +3,7 @@ import configData from '$lib/config/config.json'; // import del JSON
 import type {
 	LangType,
 	SectionType
-} from '../../types';
+} from '../types';
 
 // Se vuoi, puoi definire un tipo per tutto il config
 // type AppConfig = { it: { landing: ..., resume: ...}, en: { ... } };

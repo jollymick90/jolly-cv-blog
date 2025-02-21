@@ -1,2 +1,2 @@
 export * from './resume';
-export * from './my-resume';
+export * from '../config/my-resume';

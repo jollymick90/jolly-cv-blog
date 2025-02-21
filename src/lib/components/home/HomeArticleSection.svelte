@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { loadArticles } from '$lib/blog/loader';
+	import { loadArticles } from '$lib/utils/blog-loader-utils';
 	import { onMount } from 'svelte';
 	import HomeArticle from './HomeArticle.svelte';
 
