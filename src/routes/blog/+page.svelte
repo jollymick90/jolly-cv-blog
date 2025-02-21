@@ -1,6 +1,6 @@
 <script>
-	import Article from '../../components/blog/Article.svelte';
-	import SimpleLayout from '../../components/layout/SimpleLayout.svelte';
+	import Article from '$lib/components/blog/Article.svelte';
+	import SimpleLayout from '$lib/components/layout/SimpleLayout.svelte';
 
 	export let data;
 	let { posts } = data;

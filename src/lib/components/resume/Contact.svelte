@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type ContactData } from './../../lib/content/resume';
+	import { type ContactData } from '../../content/resume';
     import { Icon, Envelope, Phone } from "svelte-hero-icons";
     export let contact: ContactData; 
 </script>

@@ -2,8 +2,8 @@
 <script lang="ts">
 	import { myResumePlaceholder, type IResume } from '$lib/content';
 	import { getConfig } from '$lib/utils/config';
-	import Container from '../../components/Container.svelte';
-	import Resume from '../../components/resume/Resume.svelte';
+	import Container from '$lib/components/Container.svelte';
+	import Resume from '$lib/components/resume/Resume.svelte';
 	import type { ResumeConfig } from '../../types';
 
 	let resume: IResume = myResumePlaceholder
