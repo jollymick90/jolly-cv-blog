@@ -1,7 +1,6 @@
 <script lang="ts">
 	import clsx from 'clsx';	
 	export let className: string = '';
-	export let styleProp: string = '';
 </script>
 
 <div class={clsx('sm:px-8', className)} {...$$restProps}>
