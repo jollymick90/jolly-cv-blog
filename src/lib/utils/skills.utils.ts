@@ -1,4 +1,4 @@
-import type { SkillItem } from '$lib/libs';
+import type { SkillItem } from '$lib/content/resume';
 
 export const getColor = (skill: SkillItem) => {
     switch (skill.levelTag) {

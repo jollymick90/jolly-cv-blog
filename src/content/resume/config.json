@@ -1,0 +1,42 @@
+{
+    "it": {
+        "landing": {
+            "title": "Benvenuto!",
+            "heading": "Ciao, sono Michele Scarpa!",
+            "description": "Sono un ingegnere informatico, mi occupo principalmente di sviluppo web. Ho una passione per lo sviluppo di software e possiedo esperienza in varie tecnologie, tra cui JS, TS, Java, Angular, React e Spring. Nel corso della mia carriera, ho lavorato anche a progetti che coinvolgono il Digital Signage (Smart TV - Tizen ) e applicazioni mobili Android"
+        },
+        "resume": {
+            "title": "Il mio Resume",
+            "name": "Michele Scarpa",
+            "role": "Sviluppatore Web",
+            "description": "Breve descrizione...",
+            "experiences": [
+                {
+                    "company": "Azienda X",
+                    "position": "Frontend Dev",
+                    "years": "2019-2022"
+                }
+            ]
+        }
+    },
+    "en": {
+        "landing": {
+            "title": "Welcome!",
+            "heading": "Hi, I'm Michele Scarpa!",
+            "description": "I am a software engineer, primarily focused on web development. I have a passion for software development and possess expertise in various technologies, including JS, TS, Java, Angular, React, and Spring. Throughout my career, I have also worked on projects involving Digital Signage (Smart TVs - Tizen ) and mobile android applications"
+        },
+        "resume": {
+            "title": "My Resume",
+            "name": "Michele Scarpa",
+            "role": "Web Developer",
+            "description": "Short description...",
+            "experiences": [
+                {
+                    "company": "Company X",
+                    "position": "Frontend Dev",
+                    "years": "2019-2022"
+                }
+            ]
+        }
+    }
+}

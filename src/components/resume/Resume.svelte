@@ -42,12 +42,12 @@
 					Software engineer
 				</span>
 			</h1>
-			<MainSkills />
-			<Contact />
+			<MainSkills mainSkillList={resume.mainSkills}/>
+			<Contact contact={resume.contact}/>
 		</div>
 		<div class="prose prose-lg prose-indigo mx-auto mt-3 text-gray-500">
 			<Presentation presentation={resume.presentation}/>
-			<Skills />
+			<Skills listSkills={resume.skills}/>
 			<Experiences />
 			<Speakers />
 			<Certifications certifications={resume.certifications}/>

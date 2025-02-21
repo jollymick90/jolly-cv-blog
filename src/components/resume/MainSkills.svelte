@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { MainSkills } from "$lib/content/resume";
 
-    export let mainSkillList: MainSkills[] = [];
+    export let mainSkillList: MainSkills[];
 
 </script>
 
