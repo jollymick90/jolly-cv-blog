@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Container from '../lib/components/Container.svelte';
-	import HomeArticleSection from '../lib/components/home/HomeArticleSection.svelte';
-	import HomeHeadings from '../lib/components/home/HomeHeadings.svelte';
-	import HomeNewsLetterSection from '../lib/components/home/HomeNewsLetterSection.svelte';
-	import HomeResume from '../lib/components/home/HomeResume.svelte';
+	import Container from '$lib/components/template/Container.svelte';
+	import HomeArticleSection from '$lib/components/pages/home/HomeArticleSection.svelte';
+	import HomeHeadings from '$lib/components/pages/home/HomeHeadings.svelte';
+	import HomeNewsLetterSection from '$lib/components/pages/home/HomeNewsLetterSection.svelte';
+	import HomeResume from '$lib/components/pages/home/HomeResume.svelte';
 	
-	import Photos from '../lib/components/home/Photos.svelte';
+	import Photos from '$lib/components/pages/home/Photos.svelte';
 
 	export let data;
 	let config = data.config;

@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Avatar from '$lib/components/Avatar.svelte';
+	import Avatar from '$lib/components/theme/Avatar.svelte';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
-	import Container from '$lib/components/Container.svelte';
+	import Container from '$lib/components/template/Container.svelte';
 	import Navigation from '$lib/components/template/Navigation.svelte';
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+	import ThemeToggle from '$lib/components/template/ThemeToggle.svelte';
 
 	let isHomePage: boolean;
 

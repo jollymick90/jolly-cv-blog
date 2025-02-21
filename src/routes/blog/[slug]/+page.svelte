@@ -1,5 +1,5 @@
 <script>
-	import ArticleLayout from '$lib/components/blog/ArticleLayout.svelte';
+	import ArticleLayout from '$lib/components/pages/blog/ArticleLayout.svelte';
 
 	export let data;
 	let { metadata, content } = data;

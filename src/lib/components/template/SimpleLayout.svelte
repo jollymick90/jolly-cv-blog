@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Container from '../Container.svelte';
+	import Container from '$lib/components/template/Container.svelte';
 	export let title: string = '';
 	export let intro: string = '';
 </script>

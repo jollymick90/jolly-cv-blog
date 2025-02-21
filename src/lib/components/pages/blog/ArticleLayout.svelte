@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils/format-date-utils';
-	import Container from '../Container.svelte';
-	import ArrowLeftIcon from '../icons/ArrowLeftIcon.svelte';
+	import Container from '$lib/components/template/Container.svelte';
+	import { ArrowLeftIcon } from '$lib/components/icons';
 	export let article: any;
 	function back(): any {
 		history.back();
