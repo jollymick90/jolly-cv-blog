@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ItemList } from "$lib/types/template";
+	import type { ItemList } from "$lib/components/types/template";
 
 	let showIcon = false;
 	export let items: ItemList[] = [];

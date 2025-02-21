@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { ArticleFormat } from "$lib/content/content";
-	import Card from "../core/card/Card.svelte";
-	import CardCta from "../core/card/CardCta.svelte";
-	import CardDescription from "../core/card/CardDescription.svelte";
-	import CardEyebrow from "../core/card/CardEyebrow.svelte";
-	import CardTitle from "../core/card/CardTitle.svelte";
+	import Card from "$lib/components/core/card/Card.svelte";
+	import CardCta from "$lib/components/core/card/CardCta.svelte";
+	import CardDescription from "$lib/components/core/card/CardDescription.svelte";
+	import CardEyebrow from "$lib/components/core/card/CardEyebrow.svelte";
+	import CardTitle from "$lib/components/core/card/CardTitle.svelte";
 
     export let article: ArticleFormat;
 </script>

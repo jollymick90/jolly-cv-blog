@@ -1,10 +1,9 @@
 <script lang="ts">
-	import type { RoleProps } from '$lib/types/components';
-
-	import Button from '../core/Button.svelte';
-	import ArrowDownIcon from '../icons/ArrowDownIcon.svelte';
-	import BriefcaseIcon from '../icons/BriefcaseIcon.svelte';
-	import Role from '../core/Role.svelte';
+	import type { RoleProps } from '$lib/components/types/components';
+	import Button from '$lib/components/core/Button.svelte';
+	import ArrowDownIcon from '$lib/components/icons/ArrowDownIcon.svelte';
+	import BriefcaseIcon from '$lib/components/icons/BriefcaseIcon.svelte';
+	import Role from '$lib/components/core/Role.svelte';
 	import image1 from '$lib/img/LogoJob1.webp';
 	import image2 from '$lib/img/LogoJob2.webp';
 	let resume: RoleProps[] = [

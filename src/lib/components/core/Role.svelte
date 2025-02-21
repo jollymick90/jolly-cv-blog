@@ -1,7 +1,7 @@
 
 
 <script lang="ts">
-	import type { RoleProps } from "$lib/types/components";
+	import type { RoleProps } from "$lib/components/types/components";
 	import { Icon, Briefcase } from 'svelte-hero-icons';
 
     

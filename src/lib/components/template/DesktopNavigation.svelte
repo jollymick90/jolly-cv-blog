@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { ItemList } from '$lib/types/template';
-	import NavItem from '../core/NavItem.svelte';
+	import type { ItemList } from '$lib/components/types/template';
+	import NavItem from '$lib/components/core/NavItem.svelte';
 
 	export let items: ItemList[] = [];
 	const itemsList = items.filter((item) => !item.disable);

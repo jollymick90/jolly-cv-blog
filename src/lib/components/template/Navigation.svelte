@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { ItemList } from '$lib/types/template';
-	import MobileNavigation from './MobileNavigation.svelte';
-	import DesktopNavigation from './template/DesktopNavigation.svelte';
+	import type { ItemList } from '$lib/components/types/template';
+	import MobileNavigation from '$lib/components/template/MobileNavigation.svelte';
+	import DesktopNavigation from '$lib/components/template/DesktopNavigation.svelte';
 
 	export let type: 'mobile' | 'desktop' = 'mobile';
 	let itemsList: ItemList[] = [
