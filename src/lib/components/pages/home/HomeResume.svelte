@@ -4,41 +4,21 @@
 	import ArrowDownIcon from '$lib/components/icons/ArrowDownIcon.svelte';
 	import BriefcaseIcon from '$lib/components/icons/BriefcaseIcon.svelte';
 	import Role from '$lib/components/theme/Role.svelte';
-	import image1 from '$lib/img/LogoJob1.webp';
-	import image2 from '$lib/img/LogoJob2.webp';
-	let resume: RoleProps[] = [
-		{
-			company: 'Planetaria',
-			title: 'CEO',
-			logo: image2,
-			start: '2019',
-			end: {
-				label: 'Present',
-				dateTime: new Date().getFullYear().toString()
-			}
-		},
-		{
-			company: 'CompanyB',
-			title: 'Product Designer',
-			logo: image1,
-			start: '2014',
-			end: '2019'
-		},
-		{
-			company: 'CompanyC',
-			title: 'iOS Software Engineer',
-			logo: image2,
-			start: '2011',
-			end: '2014'
-		},
-		{
-			company: 'Starbucks',
-			title: 'Shift Supervisor',
-			logo: image1,
-			start: '2008',
-			end: '2011'
+	// import image1 from '$lib/img/LogoJob1.webp';
+	// import image2 from '$lib/img/LogoJob2.webp';
+	import Resume from '../resume/Resume.svelte';
+	import type { IResume } from '$lib/content';
+	export let resume: IResume;
+	let data: RoleProps[] = resume.experiences.map(exp => {
+		const _role: RoleProps = {
+			company: exp.content,
+			title: exp.target,
+			start: exp.dateStart,
+			end: exp.dateEnd
 		}
-	];
+		return _role;
+	})
+
 </script>
 
 <div class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
@@ -47,7 +27,7 @@
 		<span class="ml-3">Work</span>
 	</h2>
 	<ol class="mt-6 space-y-4">
-		{#each resume as role}
+		{#each data as role}
 			<Role {role} />
 		{/each}
 	</ol>

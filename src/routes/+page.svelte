@@ -6,9 +6,12 @@
 	import HomeResume from '$lib/components/pages/home/HomeResume.svelte';
 	
 	import Photos from '$lib/components/pages/home/Photos.svelte';
+	import { myResumePlaceholder } from '$lib/config/my-resume.js';
+	import type { IResume } from '$lib/content/resume.js';
 
 	export let data;
 	let config = data.config;
+	let resume: IResume = myResumePlaceholder
 </script>
 
 <svelte:head>
@@ -29,7 +32,7 @@
           </div>
           <div class="space-y-10 lg:pl-16 xl:pl-24">
             <HomeNewsLetterSection></HomeNewsLetterSection>
-            <HomeResume></HomeResume>
+            <HomeResume resume={resume}></HomeResume>
           </div>
         </div>
 </Container>

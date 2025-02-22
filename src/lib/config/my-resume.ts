@@ -87,13 +87,24 @@ export const experiences: ExperiencesEvent[] = [
     {
         id: 1,
         type: 'work',
-        content: 'Viasat - Greenext',
-        target: 'Front End Developer',
+        content: 'Almaviva Digitaltec',
+        target: 'Fullstack Developer',
         dateEnd: 'current',
         dateEndTime: null,
+        dateStart: 'Sep 22',
+        dateStartTime: '2022-09-01',
+        date: '2022 - current'
+    },
+    {
+        id: 1,
+        type: 'work',
+        content: 'Viasat - Greenext',
+        target: 'Front End Developer',
+        dateEnd: 'Sep 22',
+        dateEndTime: '2022-09-01',
         dateStart: 'Sep 21',
         dateStartTime: '2021-09-01',
-        date: '2021 - current'
+        date: '2021 - 2022'
     },
     {
         id: 2,

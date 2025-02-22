@@ -1,5 +1,5 @@
 import { eventTypes } from '$lib/content';
-import type { SkillItem, TimelineEvent, TimelineEventUI } from '$lib/content/resume';
+import type { SkillItem, TimelineEvent } from '$lib/content/resume';
 
 export const getColor = (skill: SkillItem) => {
     switch (skill.levelTag) {
