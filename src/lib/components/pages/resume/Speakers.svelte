@@ -1,18 +1,9 @@
 <script lang="ts">
-    	import { Icon, Flag } from 'svelte-hero-icons';
-
-    const eventTypes = {
-    cert: { 
-         bgColorClass: 'bg-purple-400' },
-}
-const timeline = [
-    {
-        id: 1,
-        type: eventTypes.cert,
-        content: 'GDG Dev Fest Venezia',
-        date: 'Novembre 2024',
-    }
-]
+	import type { SpeakersEvent, SpeakersEventUI } from '$lib/content';
+	import { Icon, Flag } from 'svelte-hero-icons';
+	import { mapTimelineUI } from '$lib/utils/skills.utils';
+	export let speakers: SpeakersEvent[];
+	const timeline: SpeakersEventUI[] = speakers.map(mapTimelineUI);
 </script>
 
 <div class="bg-white px-4 py-2 sm:rounded-lg sm:px-1">
@@ -24,18 +15,19 @@ const timeline = [
 			<div>
 				<div class="relative pb-2">
 					{#if itemIdx !== timeline.length - 1}
-						<span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"
+						<span
+							class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200"
+							aria-hidden="true"
 						></span>
 					{/if}
 
 					<div class="relative flex space-x-3">
 						<div>
 							<span
-								class="{item.type.bgColorClass}
-                                flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-white"
+								class="{item.className}
+                            flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-white"
 							>
-								<Icon class="h-5 w-5 text-white"
-                                aria-hidden="true" src={Flag} />
+								<Icon class="h-5 w-5 text-white" aria-hidden="true" src={Flag} />
 							</span>
 						</div>
 						<div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
@@ -45,7 +37,7 @@ const timeline = [
 								</div>
 							</div>
 							<div class="whitespace-nowrap text-right text-sm text-gray-500">
-								<span >{item.date}</span>
+								<span>{item.date}</span>
 							</div>
 						</div>
 					</div>
@@ -54,4 +46,3 @@ const timeline = [
 		{/each}
 	</div>
 </div>
-

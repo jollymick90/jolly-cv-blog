@@ -1,4 +1,10 @@
-import type { MainSkills, PresentationResume, IResume, Certification, SkillItem } from "../content/resume"
+import type {
+    MainSkills,
+    PresentationResume,
+    IResume, Certification,
+    SkillItem, SpeakersEvent,
+    StudiesEvent, ExperiencesEvent
+} from "$lib/content/resume"
 
 const mainSkillList: MainSkills[] = [
     {
@@ -44,12 +50,74 @@ const certifications: Certification[] = [
     }
 ];
 
-export 	const eventTypes = {
+export const eventTypes = {
     cert: 'bg-green-400',
     work: 'bg-blue-400',
-    study: 'bg-red-400'
-    
+    study: 'bg-red-400',
+    speaker: 'bg-purple-400'
+
 };
+export const speakers: SpeakersEvent[] = [
+    {
+        id: 1,
+        type: 'speaker',
+        content: 'GDG Dev Fest Venezia',
+        date: 'Novembre 2024',
+    }
+]
+
+export const studies: StudiesEvent[] = [
+    {
+        id: 1,
+        type: 'study',
+        content: 'Università studi Padova',
+        target: "Triennale Ingegneria Dell'informazione",
+        date: '2015'
+    },
+    {
+        id: 2,
+        type: 'study',
+        content: 'ITIS C.Zuccante',
+        target: 'Perito Tecnico Elettronico e telecomunicazioni',
+        date: '2009'
+    }
+];
+
+export const experiences: ExperiencesEvent[] = [
+    {
+        id: 1,
+        type: 'work',
+        content: 'Viasat - Greenext',
+        target: 'Front End Developer',
+        dateEnd: 'current',
+        dateEndTime: null,
+        dateStart: 'Sep 21',
+        dateStartTime: '2021-09-01',
+        date: '2021 - current'
+    },
+    {
+        id: 2,
+        type: 'work',
+        content: 'Red-V - Ennova Researh',
+        target: 'Backend Frontend Mobile',
+        dateStart: 'Sep 15',
+        dateStartTime: '2015-09-15',
+        dateEnd: 'Sep 21',
+        dateEndTime: '2021-09-01',
+        date: '2015 - 2021'
+    },
+    {
+        id: 3,
+        type: 'work',
+        content: "IN's mercato",
+        target: 'Work & study',
+        dateStart: 'Sep 12',
+        dateStartTime: '2012-10-1',
+        dateEnd: 'Dec 14',
+        dateEndTime: '2014-12-01',
+        date: '2012 - 2014'
+    }
+];
 const listSkills: SkillItem[] = [
     //advanced
     {
@@ -171,9 +239,12 @@ export const myResumePlaceholder: IResume = {
     mainSkills: [...mainSkillList],
     presentation,
     certifications: [...certifications],
+    speakers: [...speakers],
     contact: {
         email: 'scarpa.michele.90@gmail.com',
         phone: '+393483482541'
     },
-    skills: [ ...listSkills ]
+    skills: [...listSkills],
+    studies: [...studies],
+    experiences: [...experiences]
 }

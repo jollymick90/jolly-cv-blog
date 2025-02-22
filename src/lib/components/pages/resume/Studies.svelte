@@ -1,25 +1,29 @@
 <script lang="ts">
+	import { eventTypes, type StudiesEvent } from '$lib/content';
 	import { Icon, AcademicCap } from 'svelte-hero-icons';
+	import { mapTimelineUI } from '$lib/utils/skills.utils.js';
 
-	const eventTypes = {
-		study: { bgColorClass: 'bg-red-400' }
-	};
-	const timeline = [
-		{
-			id: 1,
-			type: eventTypes.study,
-			content: 'Università studi Padova',
-			target: "Triennale Ingegneria Dell'informazione",
-			date: '2015'
-		},
-		{
-			id: 2,
-			type: eventTypes.study,
-			content: 'ITIS C.Zuccante',
-			target: 'Perito Tecnico Elettronico e telecomunicazioni',
-			date: '2009'
-		}
-	];
+	// const eventTypes = {
+	// 	study: { bgColorClass: 'bg-red-400' }
+	// };
+	export let studies: StudiesEvent[];
+	const timeline = studies.map(mapTimelineUI);
+	// [
+	// 	{
+	// 		id: 1,
+	// 		type: eventTypes.study,
+	// 		content: 'Università studi Padova',
+	// 		target: "Triennale Ingegneria Dell'informazione",
+	// 		date: '2015'
+	// 	},
+	// 	{
+	// 		id: 2,
+	// 		type: eventTypes.study,
+	// 		content: 'ITIS C.Zuccante',
+	// 		target: 'Perito Tecnico Elettronico e telecomunicazioni',
+	// 		date: '2009'
+	// 	}
+	// ];
 </script>
 
 <div class="bg-white px-4 py-2 sm:rounded-lg sm:px-1">
@@ -37,7 +41,7 @@
 					<div class="relative flex space-x-3">
 						<div>
 							<span
-								class="{item.type.bgColorClass}
+								class="{item.className}
                                 flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-white"
 							>
 								<Icon class="h-5 w-5 text-white" src={AcademicCap} aria-hidden="true" />

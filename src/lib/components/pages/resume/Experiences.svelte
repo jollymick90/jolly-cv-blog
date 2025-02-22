@@ -1,43 +1,11 @@
 <script lang="ts">
+	import type { ExperiencesEvent, ExperiencesEventUI } from '$lib/content';
+	import { mapTimelineUI } from '$lib/utils/skills.utils';
 	import { Icon, Briefcase } from 'svelte-hero-icons';
+	export let experiences: ExperiencesEvent[];
 
-	const eventTypes = {
-		work: {
-			bgColorClass: 'bg-blue-400'
-		}
-	};
-	const timeline = [
-		{
-			id: 1,
-			type: eventTypes.work,
-			content: 'Viasat - Greenext',
-			target: 'Front End Developer',
-			dateEnd: 'current',
-			dateEndTime: null,
-			dateStart: 'Sep 21',
-			dateStartTime: '2021-09-01'
-		},
-		{
-			id: 2,
-			type: eventTypes.work,
-			content: 'Red-V - Ennova Researh',
-			target: 'Backend Frontend Mobile',
-			dateStart: 'Sep 15',
-			dateStartTime: '2015-09-15',
-			dateEnd: 'Sep 21',
-			dateEndTime: '2021-09-01'
-		},
-		{
-			id: 3,
-			type: eventTypes.work,
-			content: "IN's mercato",
-			target: 'Work & study',
-			dateStart: 'Sep 12',
-			dateStartTime: '2012-10-1',
-			dateEnd: 'Dec 14',
-			dateEndTime: '2014-12-01'
-		}
-	];
+	const timeline: ExperiencesEventUI[] = experiences.map(mapTimelineUI);
+
 </script>
 
 <div class="bg-white px-4 py-2 sm:rounded-lg sm:px-1">
@@ -56,7 +24,7 @@
 					<div class="relative flex space-x-3">
 						<div>
 							<span
-								class="{item.type.bgColorClass}
+								class="{item.className}
                                 flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-white"
 							>
 								<Icon class="h-5 w-5 text-white" aria-hidden="true" src={Briefcase} />

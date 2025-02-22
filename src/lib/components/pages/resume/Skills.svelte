@@ -1,14 +1,13 @@
 <script lang="ts">
 	import type { SkillItemUI, SkillItem } from '$lib/content/resume';
 	import { getColor } from '$lib/utils/skills.utils';
-	// import type { SkillItem } from '$lib/content';
 
     export let listSkills: SkillItem[];
     
-	const skills: SkillItemUI[] = listSkills.map((skill) => {
+	const skills: SkillItemUI[] = listSkills.map((item) => {
 		return {
-			...skill,
-			color: getColor(skill)
+			...item,
+			color: getColor(item)
 		};
 	});
 </script>
