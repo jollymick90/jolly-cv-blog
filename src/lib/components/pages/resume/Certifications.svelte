@@ -5,13 +5,12 @@
 
 	export let certifications: Certification[];
 
-	const timeline: CertificationUI[] = certifications.map(certItem => {
+	const timeline: CertificationUI[] = certifications.map((certItem) => {
 		return {
 			...certItem,
 			className: eventTypes[certItem.type]
-		}
+		};
 	});
-
 </script>
 
 <div class="bg-white px-4 py-2 sm:rounded-lg sm:px-1">
@@ -36,13 +35,11 @@
 								<Icon class="h-5 w-5 text-white" aria-hidden="true" src={Flag} />
 							</span>
 						</div>
-						<div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-							<div>
-								<div class="text-sm text-gray-500">
-									<span>{item.content}</span>
-								</div>
+						<div class="flex min-w-0 flex-1 flex-col justify-between space-x-4 pt-1.5">
+							<div class="text-sm text-gray-500">
+								<span>{item.content}</span>
 							</div>
-							<div class="whitespace-nowrap text-right text-sm text-gray-500">
+							<div class="whitespace-nowrap text-sm text-gray-500">
 								<span>{item.date}</span>
 							</div>
 						</div>

@@ -5,7 +5,6 @@
 	export let experiences: ExperiencesEvent[];
 
 	const timeline: ExperiencesEventUI[] = experiences.map(mapTimelineUI);
-
 </script>
 
 <div class="bg-white px-4 py-2 sm:rounded-lg sm:px-1">
@@ -17,7 +16,9 @@
 			<div>
 				<div class="relative pb-2">
 					{#if itemIdx !== timeline.length - 1}
-						<span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"
+						<span
+							class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200"
+							aria-hidden="true"
 						></span>
 					{/if}
 
@@ -30,20 +31,19 @@
 								<Icon class="h-5 w-5 text-white" aria-hidden="true" src={Briefcase} />
 							</span>
 						</div>
-						<div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-							<div>
-								<div class="text-sm text-gray-500">
-									<span>{item.content}{' '}</span>
-									<span class="font-medium text-gray-900">
-										{item.target}
-									</span>
-								</div>
+						<div class="flex min-w-0 flex-1 flex-col justify-between space-x-4 pt-1.5">
+							<div class="text-sm text-gray-500">
+								<span>{item.content}{' '}</span>
 							</div>
-							<div class="whitespace-nowrap text-right text-sm text-gray-500">
-								<time dateTime={item.dateStart}>{item.dateStart}</time>-
+							<span class="text-sm font-medium text-gray-900">
+								{item.target}
+							</span>
+							<div class="whitespace-nowrap text-sm text-gray-500">
+								<time dateTime={item.dateStart}>{item.dateStart}</time>
+								-
 								{#if item.dateEndTime}
 									<time dateTime={item.dateEndTime}>{item.dateEnd}</time>
-                                    {/if}
+								{/if}
 								{#if item.dateEndTime === null}
 									{item.dateEnd}
 								{/if}

@@ -24,6 +24,9 @@ export default {
 				  800: '#155e75',
 				  900: '#164e63',
 				},
+				'exp-base': '#bdceff',
+				'exp-work': '#4d79ff',
+				'exp-pro': '#1723de'
 			  },
 		}
 	},

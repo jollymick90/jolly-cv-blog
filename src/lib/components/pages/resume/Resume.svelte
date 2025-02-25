@@ -48,10 +48,15 @@
 		<div class="prose prose-lg prose-indigo mx-auto mt-3 text-gray-500">
 			<Presentation presentation={resume.presentation}/>
 			<Skills listSkills={resume.skills}/>
-			<Experiences experiences={resume.experiences}/>
-			<Speakers speakers={resume.speakers}/>
+			
+				<Experiences experiences={resume.experiences}/>
+				
+			
+			<div class="grid grid-cols-3">
+				<Speakers speakers={resume.speakers}/>
 			<Certifications certifications={resume.certifications}/>
 			<Studies studies={resume.studies}/>
+		</div>
 		</div>
 	</div>
 </div>

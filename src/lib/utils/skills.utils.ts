@@ -5,14 +5,14 @@ export const getColor = (skill: SkillItem) => {
     switch (skill.levelTag) {
         case "high":
 
-            return "bg-green-500"
+            return "bg-exp-pro";//bg-green-500"
 
         case "medium":
 
-            return "bg-yellow-500"
+            return  "bg-exp-work";//"bg-yellow-500"
         case "base":
 
-            return "bg-pink-500"
+            return  "bg-exp-base";//"bg-pink-500"
     }
 }
 export const mapTimelineUI = <
