@@ -93,7 +93,8 @@ export const experiences: ExperiencesEvent[] = [
         dateEndTime: null,
         dateStart: 'Sep 22',
         dateStartTime: '2022-09-01',
-        date: '2022 - current'
+        date: '2022 - current',
+        description: 'Dal 2022 ho lavorato a progetti fullstack con tecnologie Angular e Java-Springboot. Almaviva opera principalmente come azienda di consulenza per la pubblica amministrazione'
     },
     {
         id: 1,
@@ -104,7 +105,8 @@ export const experiences: ExperiencesEvent[] = [
         dateEndTime: '2022-09-01',
         dateStart: 'Sep 21',
         dateStartTime: '2021-09-01',
-        date: '2021 - 2022'
+        date: '2021 - 2022',
+        description: 'In questa realtà ho operato principalmente come frontend developer con tecnologie Angular e React, sperimentando Graphql. Ho avuto modo di prendere la certificazione ISIPM per avere le basi del project managment: concetti essenziali per poter lavorare in progetti. Principalmente ho lavorato nel settore WASTE-MANAGMENT (dalla Bussines Unit di Viasat e poi nell\'azienda Greenext)'
     },
     {
         id: 2,
@@ -115,7 +117,8 @@ export const experiences: ExperiencesEvent[] = [
         dateStartTime: '2015-09-15',
         dateEnd: 'Sep 21',
         dateEndTime: '2021-09-01',
-        date: '2015 - 2021'
+        date: '2015 - 2021',
+        description: 'è stato il mio primo lavoro nel settore IT esattamente quando ho finito il percorso di studi. Ho avuto modo di conoscere lo sviluppo software in tutto il suo stack, dal database al frontend, dalle soluzioni on-premises al cloud. Principalmente ho lavorato al prodotto RED-V che opera nel settore Digital-Signage. Inoltre ho potuto lavorare su prodotti di diversi importanti clienti. Dal primo anno ho potuto sviluppare in Android, da JAVA-Eclipse fino a Kotlik-AndroidStudio'
     },
     {
         id: 3,
@@ -126,7 +129,8 @@ export const experiences: ExperiencesEvent[] = [
         dateStartTime: '2012-10-1',
         dateEnd: 'Dec 14',
         dateEndTime: '2014-12-01',
-        date: '2012 - 2014'
+        date: '2012 - 2014',
+        description: 'Durante gli anni di studio a ingegneria, per pagarmi gli studi, ho lavorato presso questo supermercato. Fin da subito ho avuto modo di imparare l\'importanza dell\'organizzazione, della leadership e del gioco di squadra'
     }
 ];
 const listSkills: SkillItem[] = [

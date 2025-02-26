@@ -35,7 +35,8 @@ export type ExperiencesEvent = {
     dateEnd: string,
     dateEndTime: string | null,
     dateStart: string,
-    dateStartTime: string
+    dateStartTime: string,
+    description: string
 } & TimelineEvent;
 
 export type ExperiencesEventUI = {
