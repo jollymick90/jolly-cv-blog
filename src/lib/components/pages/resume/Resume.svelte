@@ -29,36 +29,37 @@
 >
 	Download PDF
 </button>
-<div bind:this={captureElement} class="relative overflow-hidden bg-white py-1">
-	<div class="relative px-4 sm:px-6 lg:px-8">
-		<div class="mx-auto max-w-prose text-lg">
-			<h1>
-				<span class="block text-center text-base font-semibold uppercase tracking-wide text-jm-600">
-					Michele Scarpa
-				</span>
-				<span
-					class="mt-2 block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl"
-				>
-					Software engineer
-				</span>
-			</h1>
-			<MainSkills mainSkillList={resume.mainSkills} />
-			<Contact contact={resume.contact} />
-		</div>
-		<div class="prose prose-lg prose-indigo mx-auto mt-3 text-gray-500">
-			<Presentation presentation={resume.presentation} />
-			<Skills listSkills={resume.skills} />
+<div
+	bind:this={captureElement}
+	class="flex w-full flex-col items-center justify-center overflow-hidden bg-white px-2"
+>
+	<div class="w-full mx-2 max-w-prose text-lg">
+		<h1>
+			<span class="block text-center text-base font-semibold uppercase tracking-wide text-jm-600">
+				Michele Scarpa
+			</span>
+			<span
+				class="mt-2 block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl"
+			>
+				Software engineer
+			</span>
+		</h1>
+		<MainSkills mainSkillList={resume.mainSkills} />
+		<Contact contact={resume.contact} />
+	</div>
+	<div class="w-full prose prose-2xl prose-indigo mt-3 text-gray-500">
+		<Presentation presentation={resume.presentation} />
+		<Skills listSkills={resume.skills} />
 
-			<div class="grid grid-cols-1">
-				<Experiences experiences={resume.experiences} />
-			</div>
-			<div class="grid grid-cols-1">
-				<Speakers speakers={resume.speakers} />
-			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2">
-				<Certifications certifications={resume.certifications} />
-				<Studies studies={resume.studies} />
-			</div>
+		<div class="grid grid-cols-1">
+			<Experiences experiences={resume.experiences} />
+		</div>
+		<div class="grid grid-cols-1">
+			<Speakers speakers={resume.speakers} />
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2">
+			<Certifications certifications={resume.certifications} />
+			<Studies studies={resume.studies} />
 		</div>
 	</div>
 </div>

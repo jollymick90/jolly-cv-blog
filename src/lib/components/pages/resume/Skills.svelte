@@ -13,10 +13,21 @@
 </script>
 
 <div class="w-full">
-	<h4>Abilità tecniche</h4>
-    <span>
-        ho suddiviso le mie abilità in 
-    </span>
+	<h4 class="my-1">Abilità</h4>
+	<div class="flex flex-col my-1">
+		<span class="truncate text-ellipsis text-md">Ho riassunto le mie capacità in questa tabella</span>
+	</div>
+
+	<div class="grid w-full grid-cols-6 gap-2">
+		{#each skills as skill}
+			<div class="m-1 flex w-full flex-col">
+				<span class="truncate text-ellipsis text-sm">{skill.name}</span>
+				<div class="h-1 w-full bg-gray-200">
+					<div class="{skill.color} h-1" style="width: {skill.level}%"></div>
+				</div>
+			</div>
+		{/each}
+	</div>
 	<div class="flex h-full">
 		<div class="flex w-full flex-col justify-start">
             <b >conoscenza</b> 
@@ -52,16 +63,5 @@
 			</div>
 
 		</div>
-	</div>
-
-	<div class="grid w-full grid-cols-6 gap-2">
-		{#each skills as skill}
-			<div class="m-1 flex w-full flex-col">
-				<span class="truncate text-ellipsis text-sm">{skill.name}</span>
-				<div class="h-1 w-full bg-gray-200">
-					<div class="{skill.color} h-1" style="width: {skill.level}%"></div>
-				</div>
-			</div>
-		{/each}
 	</div>
 </div>

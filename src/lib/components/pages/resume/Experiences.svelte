@@ -32,8 +32,8 @@
 							</span>
 						</div>
 						<div class="min-w-0 flex-1 space-x-4 pt-1.5">
-							<div class="grid md:flex grid-cols-1">
-								<div class="flex flex-col">
+							<div class="grid grid-cols-1 md:flex">
+								<div class="flex flex-col flex-1">
 									<div class="text-sm text-gray-500">
 										<span>{item.content}{' '}</span>
 									</div>
@@ -51,11 +51,10 @@
 										{/if}
 									</div>
 								</div>
-								<div>
-									<span class="text-sm font-medium p-4 text-gray-500">
-										{item.description}
-									</span>
-								</div>
+
+								<p class="text-sm font-medium text-gray-500 w-2/3">
+									{item.description}
+								</p>
 							</div>
 						</div>
 					</div>
