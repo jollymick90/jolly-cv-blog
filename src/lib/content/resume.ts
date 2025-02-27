@@ -30,20 +30,31 @@ export type StudiesEventUI = {
     className: string;
 } & TimelineEventUI;
 
+export type SkillAquired = {
+    name: string,
+    level?: number
+}
+
 export type ExperiencesEvent = {
     target: string,
     dateEnd: string,
     dateEndTime: string | null,
     dateStart: string,
     dateStartTime: string,
-    description: string
+    description: string,
+    longDescription?: string,
+    experiencesList?: string[],
+    skillAquiredList: SkillAquired[]
 } & TimelineEvent;
 
 export type ExperiencesEventUI = {
     className: string;
 } & ExperiencesEvent;
 
-export type SpeakersEvent = TimelineEvent;
+export type SpeakersEvent = {
+    description: string,
+    title: string
+} & TimelineEvent;
 
 export type SpeakersEventUI = {
     className: string;

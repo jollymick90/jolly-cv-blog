@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ItemsContainerStyled from '$lib/components/template/ItemsContainerStyled.svelte';
 	import type { ExperiencesEvent, ExperiencesEventUI } from '$lib/content';
 	import { mapTimelineUI } from '$lib/utils/skills.utils';
 	import { Icon, Briefcase } from 'svelte-hero-icons';
@@ -31,32 +32,35 @@
 								<Icon class="h-5 w-5 text-white" aria-hidden="true" src={Briefcase} />
 							</span>
 						</div>
-						<div class="min-w-0 flex-1 space-x-4 pt-1.5">
-							<div class="grid grid-cols-1 md:flex">
-								<div class="flex flex-col flex-1">
-									<div class="text-sm text-gray-500">
-										<span>{item.content}{' '}</span>
-									</div>
-									<span class="text-sm font-medium text-gray-900">
-										{item.target}
-									</span>
-									<div class="whitespace-nowrap text-sm text-gray-500">
-										<time dateTime={item.dateStart}>{item.dateStart}</time>
-										-
-										{#if item.dateEndTime}
-											<time dateTime={item.dateEndTime}>{item.dateEnd}</time>
-										{/if}
-										{#if item.dateEndTime === null}
-											{item.dateEnd}
-										{/if}
-									</div>
-								</div>
-
-								<p class="text-sm font-medium text-gray-500 w-2/3">
-									{item.description}
-								</p>
+						<ItemsContainerStyled>
+							<div class="text-sm text-gray-500">
+								<span>{item.content}{' '}</span>
 							</div>
-						</div>
+							<span class="text-sm font-medium text-gray-900">
+								{item.target}
+							</span>
+							<div class="whitespace-nowrap text-sm text-gray-500">
+								<time dateTime={item.dateStart}>{item.dateStart}</time>
+								-
+								{#if item.dateEndTime}
+									<time dateTime={item.dateEndTime}>{item.dateEnd}</time>
+								{/if}
+								{#if item.dateEndTime === null}
+									{item.dateEnd}
+								{/if}
+							</div>
+
+							<div slot="descriptions">
+								{#if item.experiencesList}
+									<ul class="list-disc">
+										{#each item.experiencesList as experiences}
+											<li>{experiences}</li>
+										{/each}
+									</ul>
+								{/if}
+							</div>
+						</ItemsContainerStyled>
+						
 					</div>
 				</div>
 			</div>

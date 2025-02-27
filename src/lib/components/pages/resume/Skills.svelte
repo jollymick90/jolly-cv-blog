@@ -28,8 +28,8 @@
 			</div>
 		{/each}
 	</div>
-	<div class="flex h-full">
-		<div class="flex w-full flex-col justify-start">
+	<div class="flex m-1">
+		<div class="px-1 flex w-full flex-col justify-start">
             <b >conoscenza</b> 
             <div class="flex h-1 w-full bg-gray-200">
 				<div class="h-1 bg-exp-base" style="width: 100%"></div>
@@ -39,7 +39,7 @@
 				<span class="truncate text-ellipsis text-sm">Comprensione codice e task semplici</span>
 			</div>
 		</div>
-		<div class="flex w-full flex-col justify-start">
+		<div class="px-1 flex w-full flex-col justify-start">
             <b>applicazione</b>
             <div class="flex h-1 w-full bg-gray-200">
 				<div class="h-1 bg-exp-work" style="width: 100%"></div>
@@ -50,7 +50,7 @@
 			</div>
 
 		</div>
-		<div class="flex w-full flex-col justify-start">
+		<div class="px-1 flex w-full flex-col justify-start">
             <b>condivisione</b>
             <div class="flex h-1 w-full bg-gray-200">
 				<div class="h-1 bg-exp-pro" style="width: 100%"></div>

@@ -23,6 +23,12 @@ const mainSkillList: MainSkills[] = [
         name: "Vue",
     },
     {
+        name: "Svelte",
+    },
+    {
+        name: "Java",
+    },    
+    {
         name: "Android",
     }
 ]
@@ -63,6 +69,8 @@ export const speakers: SpeakersEvent[] = [
         type: 'speaker',
         content: 'GDG Dev Fest Venezia',
         date: 'Novembre 2024',
+        title: 'Frontend Roadmap: Beginning Dilemma',
+        description: 'Roadmap e strumenti per la strada del frontend developer'
     }
 ]
 
@@ -94,7 +102,13 @@ export const experiences: ExperiencesEvent[] = [
         dateStart: 'Sep 22',
         dateStartTime: '2022-09-01',
         date: '2022 - current',
-        description: 'Dal 2022 ho lavorato a progetti fullstack con tecnologie Angular e Java-Springboot. Almaviva opera principalmente come azienda di consulenza per la pubblica amministrazione'
+        description: 'Dal 2022 ho lavorato a progetti fullstack con tecnologie Angular e Java-Springboot. Principalmente in progetti dedicati alla pubblica amministrazione. Ho anche fatto largo uso di tecnologie GIS: Geoserver, Geonode, leaflet',
+        experiencesList: [
+            'Sviluppo di applicativi fullstack Angular, Springboot',
+            "Gestione piccoli team in progetti",
+            "Sviluppo applicativi Web GIS: Geoserver, Geonode, Leaflet"
+        ],
+        skillAquiredList: []
     },
     {
         id: 1,
@@ -106,7 +120,13 @@ export const experiences: ExperiencesEvent[] = [
         dateStart: 'Sep 21',
         dateStartTime: '2021-09-01',
         date: '2021 - 2022',
-        description: 'In questa realtà ho operato principalmente come frontend developer con tecnologie Angular e React, sperimentando Graphql. Ho avuto modo di prendere la certificazione ISIPM per avere le basi del project managment: concetti essenziali per poter lavorare in progetti. Principalmente ho lavorato nel settore WASTE-MANAGMENT (dalla Bussines Unit di Viasat e poi nell\'azienda Greenext)'
+        experiencesList: [
+            "Mantenimento e sviluppo applicativo Angular ",
+            "Sviluppo applicativo in React con tecnologia GraphQL",
+            "Acquisizione certificazione project management ISIPM"
+        ],
+        description: 'Durante questa esperienza ho lavorato principalmente come Frontend Developer, utilizzando Angular e React ed esplorando l\'uso di GraphQL. Ho inoltre conseguito la certificazione ISIPM per acquisire una solida base di Project Management, indispensabile per operare in contesti progettuali complessi. Mi sono prevalentemente dedicato al settore Waste Management, inizialmente nella Business Unit di Viasat e successivamente presso Greenext.',
+        skillAquiredList: []
     },
     {
         id: 2,
@@ -118,7 +138,20 @@ export const experiences: ExperiencesEvent[] = [
         dateEnd: 'Sep 21',
         dateEndTime: '2021-09-01',
         date: '2015 - 2021',
-        description: 'è stato il mio primo lavoro nel settore IT esattamente quando ho finito il percorso di studi. Ho avuto modo di conoscere lo sviluppo software in tutto il suo stack, dal database al frontend, dalle soluzioni on-premises al cloud. Principalmente ho lavorato al prodotto RED-V che opera nel settore Digital-Signage. Inoltre ho potuto lavorare su prodotti di diversi importanti clienti. Dal primo anno ho potuto sviluppare in Android, da JAVA-Eclipse fino a Kotlik-AndroidStudio'
+        skillAquiredList: [
+            { name: 'JAVA' },
+            { name: 'Hibernate' }
+
+        ],
+        experiencesList: [
+            'Sviluppo nuove funzionalità e mantenimento prodotto Digital Signage',
+            'Sviluppo applicazioni per SmartTV: Samsung (Tizen) e Toshiba',
+            'Sviluppo applicazioni mobile Android: B2B e B2C',
+            'Sviluppo applicazioni WebGis con VueJS e OpenLayer'
+        ],
+
+        description: 'Ho lavorato allo sviluppo di soluzioni Digital Signage, inizialmente su dispositivi Android e backend Java/JSP. Ho realizzato un client per monitor “embedded” (Toshiba e Samsung Tizen). Ho potuto lavorare anche ad altri progetti in prodotti e in consulenza con le seguenti tecnologie: Vue.js, React, Angular e Android (Kotlin)',
+        longDescription: 'Durante questa esperienza lavorativa mi sono inizialmente occupato del settore Digital Signage, contribuendo allo sviluppo di un applicativo client per dispositivi Android e di un backend monolitico in Java, con interfacce JSP. Il focus principale riguardava la gestione e l\'ottimizzazione di immagini, video, font e altri asset destinati ai player, che ne curano la visualizzazione. In una seconda fase, ho lavorato alla realizzazione di un client per monitor “embedded” - display professionali dotati di API e browser personalizzati, pensati per applicazioni di digital signage. Oltre a perfezionare il prodotto, ho avuto modo di partecipare a diversi progetti, sfruttando tecnologie come Vue.js, React, Angular e sviluppando app mobile su Android (Kotlin).'
     },
     {
         id: 3,
@@ -130,7 +163,12 @@ export const experiences: ExperiencesEvent[] = [
         dateEnd: 'Dec 14',
         dateEndTime: '2014-12-01',
         date: '2012 - 2014',
-        description: 'Durante gli anni di studio a ingegneria, per pagarmi gli studi, ho lavorato presso questo supermercato. Fin da subito ho avuto modo di imparare l\'importanza dell\'organizzazione, della leadership e del gioco di squadra'
+        skillAquiredList: [
+            { name: 'Customer Service' },
+            { name: 'Time Managment' }
+        ],
+        experiencesList: ['Inventario - Organizzazione Lavoro personale e dei collaboratori'],
+        description: 'Durante gli anni di studio in ingegneria, per sostenere le spese universitarie, ho lavorato in un supermercato. Questa esperienza mi ha permesso fin da subito di sviluppare competenze fondamentali come l\'organizzazione, la leadership e il lavoro di squadra, qualità che continuo a valorizzare nel mio percorso professionale.'
     }
 ];
 const listSkills: SkillItem[] = [
