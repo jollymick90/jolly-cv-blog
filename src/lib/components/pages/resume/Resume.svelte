@@ -31,17 +31,20 @@
 </button>
 <div
 	bind:this={captureElement}
-	class="flex w-full flex-col items-center justify-center overflow-hidden bg-white px-2"
+	class="flex w-full flex-col items-center justify-center overflow-hidden border-2 
+	border-gray-400 dark:border-white rounded-xl px-2"
 >
 	<div class="w-full mx-2 max-w-prose text-lg">
 		<h1>
 			<span class="mt-3 block text-center text-xl font-semibold uppercase tracking-wide text-jm-600">
-				Michele Scarpa
+				
+				{resume.fullName}
 			</span>
 			<span
-				class="block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl"
+				class="block text-center text-3xl font-extrabold leading-8 tracking-tight text-zinc-800
+				dark:text-zinc-100 sm:text-4xl"
 			>
-				Software engineer
+				{resume.mainRoleTitle}
 			</span>
 		</h1>
 		<MainSkills mainSkillList={resume.mainSkills} />

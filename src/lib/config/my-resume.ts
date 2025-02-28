@@ -319,6 +319,8 @@ const listSkills: SkillItem[] = [
 ]
 
 export const myResumePlaceholder: IResume = {
+    fullName: 'Michele Scarpa',
+    mainRoleTitle: 'Software engineer',
     mainSkills: [...mainSkillList],
     presentation,
     certifications: [...certifications],

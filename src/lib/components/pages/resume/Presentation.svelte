@@ -4,6 +4,6 @@
     export let presentation: PresentationResume;
 </script>
 
-<p class="font-medium text-gray-500 text-center pb-1 mb-1">
+<p class="font-medium text-gray-500 dark:text-zinc-100 text-center pb-1 mb-1">
     {presentation}
 </p>

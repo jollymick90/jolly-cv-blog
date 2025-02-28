@@ -106,6 +106,8 @@ export interface SkillItemUI extends SkillItem {
 }
 
 export type IResume = {
+	fullName: string;
+    mainRoleTitle: string;
     mainSkills: MainSkills[],
     presentation: PresentationResume,
     certifications: Certification[],
