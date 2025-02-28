@@ -1,9 +1,10 @@
 <script lang="ts">
+	import ButtonExpand from '$lib/components/template/ButtonExpand.svelte';
 	import type { SkillItemUI, SkillItem } from '$lib/content/resume';
 	import { getColor } from '$lib/utils/skills.utils';
 
 	export let listSkills: SkillItem[];
-
+	let isExpand = false;
 	const skills: SkillItemUI[] = listSkills.map((item) => {
 		return {
 			...item,
@@ -15,15 +16,12 @@
 <div class="w-full">
 	
 	<h2 id="timeline-title" class="mx-1 my-1 text-lg font-medium text-gray-900 dark:text-zinc-100">
-		Competenze
+		<span>Competenze</span> 
+		<ButtonExpand onChange={(value: boolean) => {isExpand = value}}></ButtonExpand>
 	</h2>
-	<div class="flex flex-col my-1">
-		<span class="truncate text-ellipsis text-md">
-			
-		</span>
-	</div>
 
-	<div class="grid w-full grid-cols-6 gap-2">
+	<div class="grid w-full grid-cols-6 gap-2 {isExpand ? '' : 'h-20 overflow-hidden'}">
+	
 		{#each skills as skill}
 			<div class="m-1 flex w-full flex-col">
 				<span class="truncate dark:text-zinc-100 text-ellipsis text-sm">{skill.name}</span>
@@ -33,6 +31,7 @@
 			</div>
 		{/each}
 	</div>
+	
 	<h2 id="timeline-title" class="mt-1 text-md font-medium text-gray-900 dark:text-zinc-100">
 		Scala Competenze
 	</h2>

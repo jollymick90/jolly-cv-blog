@@ -255,7 +255,8 @@ const listSkills: SkillItem[] = [
     {
         name: "Hibernate",
         level: 80,
-        levelTag: "high"
+        levelTag: "high",
+        
     },
     //intermedie
     {
@@ -300,6 +301,21 @@ const listSkills: SkillItem[] = [
         levelTag: "medium"
     },
     // base
+    {
+        name: "Docker",
+        level: 50,
+        levelTag: "base"
+    },
+    {
+        name: "Kubernates",
+        level: 50,
+        levelTag: "base"
+    },
+    {
+        name: "Helm",
+        level: 40,
+        levelTag: "base"
+    },
     {
         name: "C#",
         level: 50,
