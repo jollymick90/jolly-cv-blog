@@ -12,6 +12,8 @@ export default {
 			colors: {
 				transparent: 'transparent',
 				current: 'currentColor',
+				'cv-primary': '#C7AB95',
+				'cv-secondary': '#BABABA',
 				'white': '#ffffff',
 				'jm': {
 				  100: '#cffafe',
