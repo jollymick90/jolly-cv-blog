@@ -35,11 +35,11 @@
 >
 	<div class="w-full mx-2 max-w-prose text-lg">
 		<h1>
-			<span class="block text-center text-base font-semibold uppercase tracking-wide text-jm-600">
+			<span class="mt-3 block text-center text-xl font-semibold uppercase tracking-wide text-jm-600">
 				Michele Scarpa
 			</span>
 			<span
-				class="mt-2 block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl"
+				class="block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl"
 			>
 				Software engineer
 			</span>
@@ -47,7 +47,7 @@
 		<MainSkills mainSkillList={resume.mainSkills} />
 		<Contact contact={resume.contact} />
 	</div>
-	<div class="w-full px-20 xl:px-32 prose-indigo mt-3 text-gray-500">
+	<div class="w-full px-20 xl:px-32 mt-1 text-gray-500">
 		<Presentation presentation={resume.presentation} />
 		<Skills listSkills={resume.skills} />
 

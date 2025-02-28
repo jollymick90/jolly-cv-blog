@@ -6,6 +6,20 @@ import type {
     StudiesEvent, ExperiencesEvent
 } from "$lib/content/resume"
 
+// 
+// "Da oltre otto anni mi dedico allo sviluppo software, creando soluzioni su misura per ogni contesto e cliente, e puntando sempre all’eccellenza tecnica e alla continua innovazione."
+
+// "Attivo nel settore IT dal 2015, ho consolidato una solida esperienza nella realizzazione di applicazioni fullstack e mobile, mettendo in campo versatilità, problem solving e un approccio orientato al risultato."
+
+// "Il mio percorso nel mondo del software, iniziato nel 2015, mi ha permesso di sviluppare competenze trasversali e di adottare le migliori tecnologie per rispondere alle esigenze specifiche dei clienti con soluzioni di alta qualità."
+
+// "Dal 2015 trasformo sfide tecnologiche in opportunità, sfruttando la mia esperienza con linguaggi e framework diversificati per progettare e realizzare applicazioni efficienti e innovative."
+
+// "Con un percorso professionale che inizia nel 2015, mi contraddistingue la capacità di adattarmi a contesti dinamici, sviluppando software che uniscono precisione tecnica e creatività per risolvere problemi complessi."
+
+// Mi chiamo Michele Scarpa e sono un ingegnere del software da diversi anni. Ho consolidato una solida esperienza nalla realizzazione di applicazioni fullstack e mobile. Il mio focus è nel miglioramento continuo di tutto ciò che gira attorno a un software, capendo il contesto, le tecnologie e il dominio in cui vive.  
+
+
 const mainSkillList: MainSkills[] = [
     {
         name: "Typescript",
@@ -33,7 +47,7 @@ const mainSkillList: MainSkills[] = [
     }
 ]
 
-const presentation: PresentationResume = 'Dal 2015 sviluppo software, so essere versatile e in questi anni ho imparato a trovare soluzioni adatte al contesto e al cliente. Sono appassionato del settore IT e ricerco costantemente di migliorare le mie qualità tecniche e professionali, un ottimo problem solver focalizzato su risultato e qualità';
+const presentation: PresentationResume = 'Mi chiamo Michele Scarpa e sono un ingegnere del software da diversi anni. Ho consolidato una solida esperienza nalla realizzazione di applicazioni fullstack e mobile. Il mio focus è nel miglioramento continuo di tutto ciò che gira attorno a un software, capendo il contesto, le tecnologie e il dominio in cui vive. ';
 
 const certifications: Certification[] = [
     {
@@ -176,57 +190,67 @@ const listSkills: SkillItem[] = [
     {
         name: "Typescript",
         level: 90,
-        levelTag: "high"
+        levelTag: "high",
+        type: 'PROGRAMMING_LANGUAGE'
     },
     {
         name: "Javascript",
         level: 90,
-        levelTag: "high"
+        levelTag: "high",
+        type: 'PROGRAMMING_LANGUAGE'
     },
     {
         name: "HTML/CSS",
         level: 85,
-        levelTag: "high"
+        levelTag: "high",
+        type: 'WEB_DEVELOPMENT'
     },
     {
         name: "React",
         level: 85,
-        levelTag: "high"
+        levelTag: "high",
+        type: 'WEB_DEVELOPMENT'
     },
     {
         name: "Angular",
         level: 85,
-        levelTag: "high"
+        levelTag: "high",
+        type: 'WEB_DEVELOPMENT'
     },
     {
         name: "Vue",
         level: 85,
-        levelTag: "high"
+        levelTag: "high",
+        type: 'WEB_DEVELOPMENT'
     },
     {
         name: "JQuery",
         level: 85,
-        levelTag: "high"
+        levelTag: "high",
+        type: 'WEB_DEVELOPMENT'
     },
     {
         name: "OpenLayers/Leaflet",
-        level: 75,
-        levelTag: "high"
+        level: 80,
+        levelTag: "high",
+        type: 'WEB_DEVELOPMENT'
     },
     {
         name: "git",
         level: 80,
-        levelTag: "high"
+        levelTag: "high",
     },
     {
         name: "Java",
         level: 80,
-        levelTag: "high"
+        levelTag: "high",
+        type: 'PROGRAMMING_LANGUAGE'
     },
     {
         name: "Spring Boot",
         level: 80,
-        levelTag: "high"
+        levelTag: "high",
+        type: 'FRAMEWORKS'
     },
     {
         name: "Hibernate",
@@ -237,32 +261,38 @@ const listSkills: SkillItem[] = [
     {
         name: "Kotlin",
         level: 60,
-        levelTag: "medium"
+        levelTag: "medium",
+        type: 'PROGRAMMING_LANGUAGE'
     },
     {
         name: "Android",
-        level: 65,
-        levelTag: "medium"
+        level: 70,
+        levelTag: "medium",
+        type: 'MOBILE'
     },
     {
         name: "React Native",
-        level: 65,
-        levelTag: "medium"
+        level: 70,
+        levelTag: "medium",
+        type: 'MOBILE'
     },
     {
         name: "Tizen OS",
         level: 65,
-        levelTag: "medium"
+        levelTag: "medium",
+        type: 'OTHER'
     },
     {
         name: "Framework7",
         level: 60,
-        levelTag: "medium"
+        levelTag: "medium",
+        type: 'FRAMEWORKS'
     },
     {
         name: "SQL",
         level: 60,
-        levelTag: "medium"
+        levelTag: "medium",
+        type: 'DATABASE_MANAGEMENT'
     },
     {
         name: "NodeJS",

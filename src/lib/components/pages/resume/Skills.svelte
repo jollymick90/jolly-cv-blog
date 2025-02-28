@@ -13,9 +13,14 @@
 </script>
 
 <div class="w-full">
-	<h4 class="my-1">Abilità</h4>
+	
+	<h2 id="timeline-title" class="mx-1 my-1 text-lg font-medium text-gray-900">
+		Competenze
+	</h2>
 	<div class="flex flex-col my-1">
-		<span class="truncate text-ellipsis text-md">Ho riassunto le mie capacità in questa tabella</span>
+		<span class="truncate text-ellipsis text-md">
+			
+		</span>
 	</div>
 
 	<div class="grid w-full grid-cols-6 gap-2">
@@ -28,14 +33,18 @@
 			</div>
 		{/each}
 	</div>
+	<h2 id="timeline-title" class="mt-1 text-md font-medium text-gray-900">
+		Scala Competenze
+	</h2>
 	<div class="flex m-1">
+		
 		<div class="px-1 flex w-full flex-col justify-start">
             <b >conoscenza</b> 
             <div class="flex h-1 w-full bg-gray-200">
 				<div class="h-1 bg-exp-base" style="width: 100%"></div>
 			</div>
 			<div class="flex flex-col px-5">
-				<span class="truncate text-ellipsis text-sm">Poche esperienze professionali</span>
+				<span class="truncate text-ellipsis text-sm">Esperienze professionali contenute</span>
 				<span class="truncate text-ellipsis text-sm">Comprensione codice e task semplici</span>
 			</div>
 		</div>

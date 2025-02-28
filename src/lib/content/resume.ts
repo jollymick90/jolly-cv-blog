@@ -66,10 +66,39 @@ export type CertificationUI = {
     className: string;
 } & Certification;
 
+export type SkillTypeEnum = {
+    PROGRAMMING_LANGUAGE: unknown,
+    DATABASE_MANAGEMENT: unknown
+    CLOUD_PLATFORM: unknown,
+    NETWORKING: unknown,
+    DEVOPS: unknown,
+    OPERATING_SYSTEM: unknown,
+    WEB_DEVELOPMENT: unknown,
+    MOBILE: unknown,
+    FRAMEWORKS: unknown,
+    TOOLS: unknown,
+    OTHER: unknown,
+    SOFT: unknown
+}
+
+export type SkillTagEnum = {
+    frontend: unknown,
+    backend: unknown,
+    gis: unknown,
+    technical: unknown,
+    softskill: unknown,
+    versioning: unknown
+}
+
+export type SkillType = keyof SkillTypeEnum;
+export type SkillTag = string;
+
 export interface SkillItem {
     name: string;
     level: number;
     levelTag: LevelTag;
+    type?: SkillType;
+    tags?: SkillTag;
 }
 
 export interface SkillItemUI extends SkillItem {
