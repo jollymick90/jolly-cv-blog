@@ -1,11 +1,13 @@
 <script lang="ts">
+	import type { IResume } from '$lib/content';
 	import avatar from '$lib/img/avatar.jpg';
+    export let resume: IResume;
 </script>
 
-<div class="flex justify-center bg-gray-100 py-10">
+<div class="flex justify-center dark:bg-gray-100 py-10">
 	<div class="flex w-full max-w-4xl rounded-lg bg-white shadow-lg">
 		<!-- Left Sidebar -->
-		<div class="w-1/3 bg-gray-200 p-6">
+		<div class="w-1/3 bg-zinc-800 dark:bg-gray-200 p-6">
 			<div class="flex flex-col items-center">
 				<img src={avatar} alt="Michele Scarpa" class="mb-4 h-24 w-24 rounded-full" />
 			</div>
@@ -53,16 +55,16 @@
 		</div>
 
 		<!-- Right Content -->
-		<div class="w-2/3 bg-zinc-800 p-6">
+		<div class="w-2/3 ">
 			<!-- Header -->
-			<div class="pl-4 pt-5">
-				<h1 class="dark:text-cv-secondary text-xl font-bold text-gray-800">Michele</h1>
-				<h1 class="dark:text-cv-primary text-xl font-bold text-gray-800">Scarpa</h1>
-				<h2 class="dark:text-cv-secondary text-sm text-gray-600">OPERATIONS DIRECTOR</h2>
+			<div class="pl-4 pt-5 bg-slate-100 dark:bg-zinc-800 p-6">
+				<h1 class="dark:text-cv-secondary text-4xl font-medium text-gray-800">Michele</h1>
+				<h1 class="dark:text-cv-primary text-4xl font-medium text-gray-800">Scarpa</h1>
+				<h2 class="mt-5 dark:text-cv-secondary text-2xl text-gray-600">OPERATIONS DIRECTOR</h2>
 			</div>
-			<div>
-				<h2 class="text-xl font-bold text-gray-800">Professional Overview</h2>
-				<p class="mt-2 text-gray-700">
+			<div class="bg-slate-100 dark:bg-zinc-800 p-6 mt-4">
+				<h2 class="text-xl font-bold text-gray-800 dark:text-cv-primary">Professional Overview</h2>
+				<p class="mt-2 text-gray-700 dark:text-gray-100">
 					Showcase your most impressive accomplishments right here. Within seconds, the reader
 					should be able to tell who you are and what your areas of expertise are. The purpose of a
 					professional profile is to provide a quick overview of your potential skills, experience,
@@ -70,14 +72,14 @@
 				</p>
 
 				<div class="mt-6">
-					<h2 class="text-xl font-bold text-gray-800">Work Experience</h2>
+					<h2 class="text-xl font-bold text-gray-800 dark:text-cv-primary">Work Experience</h2>
 
 					<div class="mt-4">
 						<h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">
 							Operations Manager
 						</h3>
-						<p class="text-gray-600">Northwind Traders, Orlando | 20XX — present</p>
-						<ul class="mt-2 list-disc pl-5 text-gray-700">
+						<p class="text-gray-600 dark:text-gray-100">Northwind Traders, Orlando | 20XX — present</p>
+						<ul class="mt-2 list-disc pl-5 text-gray-700 dark:text-gray-100">
 							<li>Describe your job role in 2-3 bullet points. Avoid using too many bullets.</li>
 							<li>
 								Employers want to know what you've achieved. If possible, quantify what you have
@@ -95,8 +97,8 @@
 						<h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">
 							Logistics Coordinator
 						</h3>
-						<p class="text-gray-600">Northwind Traders, Miami | 20XX — 20XX</p>
-						<ul class="mt-2 list-disc pl-5 text-gray-700">
+						<p class="text-gray-600 dark:text-gray-100">Northwind Traders, Miami | 20XX — 20XX</p>
+						<ul class="mt-2 list-disc pl-5 text-gray-700 dark:text-gray-100">
 							<li>Be as precise as possible. Don’t write long paragraphs.</li>
 							<li>
 								Highlight your accomplishments but don't exaggerate; they will ask questions from
@@ -110,9 +112,9 @@
 					</div>
 
 					<div class="mt-4">
-						<h3 class="text-lg font-semibold text-gray-800">Logistics Coordinator</h3>
+						<h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Logistics Coordinator</h3>
 						<p class="text-gray-600">Northwind Traders, Miami | 20XX — 20XX</p>
-						<ul class="mt-2 list-disc pl-5 text-gray-700">
+						<ul class="mt-2 list-disc pl-5 text-gray-700 dark:text-gray-100">
 							<li>Be as precise as possible. Don’t write long paragraphs.</li>
 							<li>
 								Highlight your accomplishments but don't exaggerate; they will ask questions from
