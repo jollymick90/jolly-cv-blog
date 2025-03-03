@@ -14,7 +14,7 @@ export type LevelTag = "high" | "medium" | "base"
 export type TimelineEvent = {
     id: number;
     type: TimelineEventType;
-    content: string;
+    content?: string;
     date: string;
 }
 
@@ -36,7 +36,9 @@ export type SkillAquired = {
 }
 
 export type ExperiencesEvent = {
-    target: string,
+    companyName: string;
+    role: string;
+    target?: string,
     dateEnd: string,
     dateEndTime: string | null,
     dateStart: string,

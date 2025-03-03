@@ -1,10 +1,13 @@
 import type {
-    MainSkills,
-    PresentationResume,
-    IResume, Certification,
-    SkillItem, SpeakersEvent,
-    StudiesEvent, ExperiencesEvent
-} from "$lib/content/resume"
+	Certification,
+	ExperiencesEvent,
+	IResume,
+	MainSkills,
+	PresentationResume,
+	SkillItem,
+	SpeakersEvent,
+	StudiesEvent
+} from '$lib/content/resume';
 
 // 
 // "Da oltre otto anni mi dedico allo sviluppo software, creando soluzioni su misura per ogni contesto e cliente, e puntando sempre all’eccellenza tecnica e alla continua innovazione."
@@ -109,8 +112,8 @@ export const experiences: ExperiencesEvent[] = [
     {
         id: 1,
         type: 'work',
-        content: 'Almaviva Digitaltec',
-        target: 'Fullstack Developer',
+        companyName: 'Almaviva Digitaltec',
+        role: 'Fullstack Developer',
         dateEnd: 'current',
         dateEndTime: null,
         dateStart: 'Sep 22',
@@ -127,8 +130,8 @@ export const experiences: ExperiencesEvent[] = [
     {
         id: 1,
         type: 'work',
-        content: 'Viasat - Greenext',
-        target: 'Front End Developer',
+        companyName: 'Viasat - Greenext',
+        role: 'Front End Developer',
         dateEnd: 'Sep 22',
         dateEndTime: '2022-09-01',
         dateStart: 'Sep 21',
@@ -145,8 +148,8 @@ export const experiences: ExperiencesEvent[] = [
     {
         id: 2,
         type: 'work',
-        content: 'Red-V - Ennova Researh',
-        target: 'Backend Frontend Mobile',
+        companyName: 'Red-V - Ennova Researh',
+        role: 'Backend Frontend Mobile',
         dateStart: 'Sep 15',
         dateStartTime: '2015-09-15',
         dateEnd: 'Sep 21',
@@ -170,8 +173,8 @@ export const experiences: ExperiencesEvent[] = [
     {
         id: 3,
         type: 'work',
-        content: "IN's mercato",
-        target: 'Work & study',
+        companyName: "IN's mercato",
+        role: 'Work & study',
         dateStart: 'Sep 12',
         dateStartTime: '2012-10-1',
         dateEnd: 'Dec 14',
