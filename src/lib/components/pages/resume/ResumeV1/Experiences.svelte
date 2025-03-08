@@ -33,34 +33,49 @@
 							</span>
 						</div>
 						<ItemsContainerStyled>
-							<div class="text-sm text-gray-500 dark:text-zinc-100">
-								<span>{item.content}</span>
-							</div>
-							<span class="text-sm font-medium text-gray-900 dark:text-zinc-100">
-								{item.target}
-							</span>
-							<div class="whitespace-nowrap text-sm text-gray-500 dark:text-zinc-100">
-								<time dateTime={item.dateStart}>{item.dateStart}</time>
-								-
-								{#if item.dateEndTime}
-									<time dateTime={item.dateEndTime}>{item.dateEnd}</time>
-								{/if}
-								{#if item.dateEndTime === null}
-									{item.dateEnd}
-								{/if}
+							<div>
+								<div class="text-sm text-gray-500 dark:text-zinc-100">
+									<span>{item.content}</span>
+								</div>
+								<span class="text-sm font-medium text-gray-900 dark:text-zinc-100">
+									{item.target}
+								</span>
+								<div class="whitespace-nowrap text-sm text-gray-500 dark:text-zinc-100">
+									<time dateTime={item.dateStart}>{item.dateStart}</time>
+									-
+									{#if item.dateEndTime}
+										<time dateTime={item.dateEndTime}>{item.dateEnd}</time>
+									{/if}
+									{#if item.dateEndTime === null}
+										{item.dateEnd}
+									{/if}
+								</div>
 							</div>
 
-							<div slot="descriptions">
-								{#if item.experiencesList}
-									<ul class="list-disc dark:text-zinc-100">
-										{#each item.experiencesList as experiences}
-											<li>{experiences}</li>
-										{/each}
-									</ul>
+							<div slot="descriptions" class="flex flex-col gap-1 dark:text-zinc-100">
+								{#if item.experiencesList}									
+									{#each item.experiencesList as experiences}
+										<div class="w-full">
+											<span class="mt-1 font-normal">{experiences}</span>
+										</div>
+									{/each}									
+								{/if}
+							</div>
+							<div slot="skills" class="">
+								{#if item.skillAquiredList}
+									
+										<div class="flex flex-col dark:text-zinc-100">
+											{#each item.skillAquiredList as skill}
+												<div class="flex flex-row justify-start gap-1">
+													<span class="font-medium">{skill.name}</span>
+													<span class="font-light">{skill.type}</span>
+												</div>
+											{/each}
+										</div>
+
 								{/if}
 							</div>
 						</ItemsContainerStyled>
-						
 					</div>
 				</div>
 			</div>
