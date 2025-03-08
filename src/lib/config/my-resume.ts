@@ -149,7 +149,7 @@ export const experiences: ExperiencesEvent[] = [
         id: 2,
         type: 'work',
         companyName: 'Red-V - Ennova Researh',
-        role: 'Backend Frontend Mobile',
+        role: 'Junior Software Engineer',
         dateStart: 'Sep 15',
         dateStartTime: '2015-09-15',
         dateEnd: 'Sep 21',

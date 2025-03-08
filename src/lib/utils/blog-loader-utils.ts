@@ -4,8 +4,14 @@ export async function loadArticles() {
         Object.entries(import.meta.glob('/src/content/blog/*.md')).map(async ([path, resolver]) => {
             const mod: any = await resolver();
             console.log("-- mod", mod)
+            let metadata = {
+                ...mod.metadata
+            }
+            if (!metadata.date) {
+                metadata.date = (new Date().toDateString())
+            }
             return {
-                metadata: mod.metadata,
+                metadata,
                 // component: mod.default,
                 slug: path.split('/').pop()?.replace('.md', '')
             };
@@ -14,6 +20,7 @@ export async function loadArticles() {
 
     // Ordina magari per data
     resolvedPosts.sort((a, b) => {
+        
         return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
     });
 

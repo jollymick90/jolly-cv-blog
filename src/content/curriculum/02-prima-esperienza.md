@@ -1,5 +1,6 @@
 # Prima esperienza: **Red-V**
 
+## prima parte Red-V
 
 ### **Software Engineer – Red-V (Rinnova Research)**  
 **Periodo:** 2015 – 2021  
@@ -30,3 +31,27 @@ Durante questa esperienza, ho contribuito allo sviluppo e all'evoluzione di un p
   - **Sincronizzazione contenuti su Led Wall**: contributo a feature Java per garantire la sincronizzazione fluida dei contenuti su schermi di grandi dimensioni.  
 
 Questa esperienza mi ha permesso di formarmi sia sul **backend (Java, database, gestione multimediale)** che sul **frontend (applicazioni web e SPA su browser embedded)**, consolidando una solida conoscenza dello sviluppo software full-stack.  
+
+
+## **seconda parte della tua esperienza in Ennova-Research (2019-2021):**  
+
+### **Software Engineer – Ennova-Research (Madre di Red-V)**  
+**Periodo:** 2019 – 2021  
+**Settore:** Mobile Development, GIS, Web Applications  
+
+Dopo aver consolidato la mia esperienza in **Red-V**, sono stato coinvolto in diversi progetti per i clienti dell’azienda madre, **Ennova-Research**, ampliando le mie competenze nello sviluppo **mobile e frontend web**. Ho lavorato su soluzioni **B2B e B2C**, oltre a contribuire a progetti **GIS per il settore amministrativo e primario**.  
+
+#### **Mobile Development (Android – Kotlin, Java)**  
+- **Esperienza nel settore B2B:** sviluppo di un’applicazione Android per **casse di parcheggi** installata su tablet industriali.  
+- **Esperienza nel settore B2C:** contributo allo sviluppo di un’app informativa turistica, scaricabile dagli utenti per consultare contenuti e servizi locali.  
+- **Approfondimento di Kotlin**, completando la mia esperienza Android con progetti strutturati per ambienti business.  
+
+#### **Frontend Development (Vue.js, GIS, OpenLayers)**  
+- **Sviluppo di portali GIS interattivi**, utilizzando **Vue.js e OpenLayers** per visualizzare e monitorare dati territoriali.  
+- **Progetti per il settore primario e amministrativo**, con interfacce avanzate per la gestione di informazioni geografiche.  
+- **Personalizzazione e sviluppo di mappe interattive**, ottimizzando la UX per la consultazione e l’analisi dei dati.  
+
+#### **Supporto continuativo a Red-V**  
+- Ho continuato a supportare e migliorare il prodotto **Digital Signage** di Red-V, fornendo assistenza tecnica e implementando nuove funzionalità.  
+
+Questa fase mi ha permesso di ampliare la mia esperienza in **mobile development, GIS e frontend avanzato**, lavorando su soluzioni innovative per il mondo **B2B, B2C e amministrativo**.  

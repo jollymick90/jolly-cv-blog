@@ -1,4 +1,4 @@
-# **20 punti chiave** estrapolati dalla tua esperienza in **Red-V**
+## **20 punti chiave** estrapolati dalla tua esperienza in **Red-V**
 
 
 ### **Esperienza e Ruolo**  
@@ -26,3 +26,29 @@
 18. **Problem solving e debugging in ambienti complessi**, sia a livello software che hardware.  
 19. **Ottimizzazione delle performance in ambienti con risorse limitate**, come player Digital Signage e dispositivi Android embedded.  
 20. **Lavoro trasversale tra sviluppo e assistenza tecnica**, acquisendo un mindset orientato alla risoluzione di problemi reali per il cliente.  
+
+
+## punti chiave seconda parte
+
+Ecco **15 punti chiave** estrapolati dalla tua esperienza in **Ennova-Research (2019-2021):**  
+
+### **Esperienza e Ruolo**  
+1. **Software Engineer con focus su mobile e frontend web**, operando su progetti B2B, B2C e GIS.  
+2. **Esperienza in sviluppo Android con Kotlin e Java**, completando la mia formazione mobile.  
+3. **Sviluppo di applicazioni B2B per tablet industriali**, integrate in sistemi di pagamento per casse di parcheggi.  
+4. **Sviluppo di applicazioni B2C per il settore turistico**, migliorando l’accessibilità delle informazioni per gli utenti finali.  
+5. **Contributo allo sviluppo di portali GIS** per il monitoraggio territoriale, utilizzando Vue.js e OpenLayers.  
+6. **Personalizzazione avanzata di mappe interattive**, migliorando la visualizzazione e l’usabilità dei dati geografici.  
+7. **Esperienza nel settore amministrativo e primario**, con progetti web dedicati all’analisi e alla gestione di dati territoriali.  
+8. **Utilizzo di tecnologie moderne per frontend web**, come Vue.js, OpenLayers e soluzioni GIS customizzate.  
+
+### **Competenze Tecniche Acquisite**  
+9. **Approfondimento di Kotlin e Android avanzato**, lavorando su soluzioni business critiche.  
+10. **Esperienza con Vue.js e sviluppo SPA**, ampliando le mie competenze nel mondo frontend moderno.  
+11. **Ottimizzazione delle prestazioni di applicazioni GIS**, migliorando l’interattività delle mappe e la gestione dei dati.  
+12. **Capacità di lavorare su progetti multi-settore**, adattandomi a esigenze diverse tra B2B, B2C e amministrazioni pubbliche.  
+13. **Lavoro su tecnologie geospaziali avanzate**, grazie all’uso di OpenLayers per la visualizzazione e gestione di mappe.  
+
+### **Contributo Continuativo a Red-V**  
+14. **Supporto tecnico e implementazione di nuove feature** per il prodotto Digital Signage di Red-V.  
+15. **Gestione di assistenza e miglioramenti al CMS multimediale**, garantendo continuità e stabilità del prodotto.  
