@@ -11,8 +11,8 @@
 	export let resume: IResume;
 	let data: RoleProps[] = resume.experiences.map(exp => {
 		const _role: RoleProps = {
-			company: exp.content,
-			title: exp.target,
+			company: exp.companyName,
+			title: exp.role,
 			start: exp.dateStart,
 			end: exp.dateEnd
 		}
