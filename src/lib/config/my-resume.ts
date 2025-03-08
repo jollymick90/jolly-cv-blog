@@ -119,13 +119,34 @@ export const experiences: ExperiencesEvent[] = [
         dateStart: 'Sep 22',
         dateStartTime: '2022-09-01',
         date: '2022 - current',
-        description: 'Dal 2022 ho lavorato a progetti fullstack con tecnologie Angular e Java-Springboot. Principalmente in progetti dedicati alla pubblica amministrazione. Ho anche fatto largo uso di tecnologie GIS: Geoserver, Geonode, leaflet',
+        description: 'Attualmente lavoro in Almaviva, una delle più grandi corporate italiane, specializzata in soluzioni IT per la Pubblica Amministrazione. In questa esperienza ho consolidato il mio ruolo di Senior Fullstack Developer, ampliando le mie competenze su tecnologie enterprise e su architetture scalabili.',
         experiencesList: [
-            'Sviluppo di applicativi fullstack Angular, Springboot',
-            "Gestione piccoli team in progetti",
-            "Sviluppo applicativi Web GIS: Geoserver, Geonode, Leaflet"
+            'Gestione fullstack di progetti enterprise, curando frontend, backend e database.',
+            'Responsabile della delivery di due progetti in produzione per la Pubblica Amministrazione.',
+            'Mentoring di colleghi junior, affiancandoli nel percorso di crescita tecnica e professionale.',
+            'Affiancamento di uno sviluppatore junior post-bootcamp, contribuendo alla sua formazione fino al suo ingresso in un\'altra grande azienda come frontend e mobile developer.',
+            'Conseguimento della certificazione AWS Developer Associate, rafforzando le competenze in cloud e architetture scalabili.',
         ],
-        skillAquiredList: []
+        skillAquiredList: [
+            { name: "React", type: "Frontend" },
+            { name: "Angular", type: "Frontend" },
+            { name: "Java", type: "Backend" },
+            { name: "Spring Boot", type: "Backend" },
+            { name: "Hibernate", type: "Backend" },
+            { name: "NodeJS", type: "Backend" },
+            { name: "Meteor", type: "Backend" },
+            { name: "PostgresSQL", type: "Database" },
+            { name: "Postgis", type: "Database" },
+            { name: "Docker", type: "DevOps & Cloud" },
+            { name: "Kubernates", type: "DevOps & Cloud" },
+            { name: "AWS", type: "DevOps & Cloud" },
+            { name: "Leaflet", type: "GIS Frontend" },
+            { name: "Geoserver", type: "GIS Backend" },
+            { name: "Geonode", type: "GIS Workflow" },
+            { name: "Kamunda", type: "Workflow Managment" },
+            { name: "Keycloak", type: "API & Security" },
+            { name: "WSO2", type: "API & Security" },            
+        ]
     },
     {
         id: 1,
@@ -138,12 +159,22 @@ export const experiences: ExperiencesEvent[] = [
         dateStartTime: '2021-09-01',
         date: '2021 - 2022',
         experiencesList: [
-            "Mantenimento e sviluppo applicativo Angular ",
-            "Sviluppo applicativo in React con tecnologia GraphQL",
-            "Acquisizione certificazione project management ISIPM"
+            "Sviluppo e manutenzione di applicazioni frontend in Angular e React per la gestione di flotte e servizi di raccolta rifiuti.",
+            "Integrazione con backend .NET/C# tramite GraphQL, ottimizzando la comunicazione tra frontend e database.",
+            "Utilizzo di NX per la gestione di monorepo e scalabilità delle applicazioni Angular/React.",
+            "Implementazione di componenti avanzati con KendoUI e Syncfusion, migliorando la UX e la gestione dati complessi.",
+            "Conseguimento della certificazione ISIPM Base in Project Management, migliorando la comprensione delle fasi progettuali e la collaborazione con i PM."
         ],
-        description: 'Durante questa esperienza ho lavorato principalmente come Frontend Developer, utilizzando Angular e React ed esplorando l\'uso di GraphQL. Ho inoltre conseguito la certificazione ISIPM per acquisire una solida base di Project Management, indispensabile per operare in contesti progettuali complessi. Mi sono prevalentemente dedicato al settore Waste Management, inizialmente nella Business Unit di Viasat e successivamente presso Greenext.',
-        skillAquiredList: []
+        description: 'Ho lavorato per Viasat – Vem Solutions, in particolare nella Business Unit Greennext Technologies, specializzata nei servizi di gestione dei rifiuti (Waste Management). In questa esperienza ho sviluppato applicazioni frontend in Angular e React, lavorando su soluzioni per il monitoraggio e la gestione delle flotte.',
+        skillAquiredList: [
+            { name: "React", type: "Frontend" },
+            { name: "Angular", type: "Frontend" },
+            { name: "NX - Workspace", type: "Frontend" },
+            { name: "Kendo UI", type: "UI Library" },
+            { name: "Syncfusion", type: "UI Library" },
+            { name: ".Net / C#", type: "Backend" },
+            { name: "GrpahQL", type: "API"  },
+        ]
     },
     {
         id: 2,
@@ -156,15 +187,32 @@ export const experiences: ExperiencesEvent[] = [
         dateEndTime: '2021-09-01',
         date: '2015 - 2021',
         skillAquiredList: [
-            { name: 'JAVA' },
-            { name: 'Hibernate' }
-
+            { name: 'Java (monolite con JSP)', type: "Backend" },
+            { name: 'Hibernate', type: "Backend" },
+            { name: 'SQL (PostgreSQL, MySQL, SQL Server)', type: "Backend" },
+            { name: 'JavaScript', type: "Frontend" },
+            { name: 'Typescript', type: "Frontend" },
+            { name: 'JQuery', type: "Frontend" },
+            { name: 'FFmpeg', type: "Multimedia Processing" },
+            { name: 'ImageMagick', type: "Multimedia Processing" },
+            { name: 'Android Player', type: "Player Digital Signage" },
+            { name: 'Web Player (Typescript, JQuery)', type: "Player Digital Signage" },
+            { name: 'Toshiba Professional Monitor', type: "Player Digital Signage" },
+            { name: 'Samsung Professional Monitor - Tizen OS', type: "Player Digital Signage" },
+            { name: 'VueJS', type: "Frontend" },
+            { name: 'Android (Java, Kotlin)', type: "Player Digital Signage" },
+            { name: 'Angular', type: "Frontend" },
+            { name: 'GIS - Openlayer', type: "Frontend" },
+            { name: 'Android - Kotlin', type: "Mobile" },
         ],
         experiencesList: [
-            'Sviluppo nuove funzionalità e mantenimento prodotto Digital Signage',
-            'Sviluppo applicazioni per SmartTV: Samsung (Tizen) e Toshiba',
-            'Sviluppo applicazioni mobile Android: B2B e B2C',
-            'Sviluppo applicazioni WebGis con VueJS e OpenLayer'
+            'Player Web per Digital Signage',
+            'Player Android - Feature avanzate',
+            'Progetti chiave: Upgrade tecnologico allo Stadio Olimpico',
+            'Progetti chiave: Sistema di tracking su mappa per trasporto pubblico',
+            'Progetti chiave: Sincronizzazione contenuti su Led Wall',
+            'Mobile Development (Android - Kotlin, Java)',
+            'Frontend Development (Vue.js, GIS, OpenLayers)',
         ],
 
         description: 'Ho lavorato allo sviluppo di soluzioni Digital Signage, inizialmente su dispositivi Android e backend Java/JSP. Ho realizzato un client per monitor “embedded” (Toshiba e Samsung Tizen). Ho potuto lavorare anche ad altri progetti in prodotti e in consulenza con le seguenti tecnologie: Vue.js, React, Angular e Android (Kotlin)',
@@ -181,11 +229,15 @@ export const experiences: ExperiencesEvent[] = [
         dateEndTime: '2014-12-01',
         date: '2012 - 2014',
         skillAquiredList: [
-            { name: 'Customer Service' },
-            { name: 'Time Managment' }
+            { name: 'capacità gestionali e organizzative' },
+            { name: 'problem solving e al lavoro in team' }
         ],
-        experiencesList: ['Inventario - Organizzazione Lavoro personale e dei collaboratori'],
-        description: 'Durante gli anni di studio in ingegneria, per sostenere le spese universitarie, ho lavorato in un supermercato. Questa esperienza mi ha permesso fin da subito di sviluppare competenze fondamentali come l\'organizzazione, la leadership e il lavoro di squadra, qualità che continuo a valorizzare nel mio percorso professionale.'
+        experiencesList: [
+            'Gestione della cassa',
+            'Gestione del magazzino e dell\'inventario',
+            'Gestione della squadra e dei collaboratori'
+        ],
+        description: 'Per finanziare gli studi, ho lavorato in un discount, ricoprendo diversi ruoli operativi, tra cui gestione della cassa, magazzino, inventario e organizzazione del personale. Questo mi ha permesso di sviluppare capacità gestionali e organizzative, oltre a rafforzare la mia attitudine al problem solving e al lavoro in team.'
     }
 ];
 const listSkills: SkillItem[] = [

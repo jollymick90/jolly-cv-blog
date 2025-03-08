@@ -32,7 +32,8 @@ export type StudiesEventUI = {
 
 export type SkillAquired = {
     name: string,
-    level?: number
+    level?: number,
+    type?: string
 }
 
 export type ExperiencesEvent = {
