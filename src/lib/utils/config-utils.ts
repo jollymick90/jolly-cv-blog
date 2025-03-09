@@ -1,4 +1,5 @@
-import configData from '$lib/config/config.json'; // import del JSON
+//import configData from '$lib/config/config.json'; // import del JSON
+import configData from '$content/config/config.json';
 
 import type {
 	LangType,
