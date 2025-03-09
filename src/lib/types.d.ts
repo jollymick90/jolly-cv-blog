@@ -1,3 +1,5 @@
+import type { IResume } from './content';
+
 export type LandingConfig = {
     title: string,
     heading: string,
@@ -18,7 +20,7 @@ export type ResumeConfig = {
 
 export type SiteContent = {
     landing: LandingConfig,
-    resume: ResumeConfig
+    resume: IResume
 }
 export type SiteConfig = {
     it: SiteContent,

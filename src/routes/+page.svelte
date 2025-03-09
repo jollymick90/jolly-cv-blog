@@ -6,12 +6,12 @@
 	import HomeResume from '$lib/components/pages/home/HomeResume.svelte';
 	
 	import Photos from '$lib/components/pages/home/Photos.svelte';
-	import { myResumePlaceholder } from '$lib/config/my-resume.js';
-	import type { IResume } from '$lib/content/resume.js';
+	// import { myResumePlaceholder } from '$lib/config/my-resume.js';
+	// import type { IResume } from '$lib/content/resume.js';
 
 	export let data;
-	let config = data.config;
-	let resume: IResume = myResumePlaceholder
+	let config = data.landing;
+	let resume = data.resume;
 </script>
 
 <svelte:head>
@@ -19,7 +19,11 @@
 </svelte:head>
 
 <Container className="mt-9">
-	<HomeHeadings {data}></HomeHeadings>
+	<HomeHeadings 
+		heading={config.heading}
+		description={config.description}
+		socialListInput={resume.contact.social}
+	></HomeHeadings>
 </Container>
 <Photos></Photos>
 

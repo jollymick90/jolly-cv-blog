@@ -1,6 +1,13 @@
+export type SocialIcon =  'LinkedInIcon' | 'GitHubIcon' | 'InstagramIcon' | 'BlueskyIcon' | 'XIcon';
+export type SocialInfo = {
+    icon: SocialIcon;
+    href: string;
+    ariaLabel: string;
+}
 export type ContactData = {
     phone: string;
     email: string;
+    social: SocialInfo[]
     
 }
 export type PresentationResume = string;
@@ -109,6 +116,7 @@ export interface SkillItemUI extends SkillItem {
 }
 
 export type IResume = {
+    title: string;
 	fullName: string;
     mainRoleTitle: string;
     mainSkills: MainSkills[],

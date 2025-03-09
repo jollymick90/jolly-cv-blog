@@ -1,17 +1,15 @@
 <!-- src/routes/resume/+page.svelte -->
 <script lang="ts">
-	import { myResumePlaceholder, type IResume } from '$lib/content';
-	import { getConfig } from '$lib/utils/config-utils';
 	import Container from '$lib/components/template/Container.svelte';
 	import Resume from '$lib/components/pages/resume/Resume.svelte';
-	import type { ResumeConfig } from '$lib/types';
+	
+	export let data;
+	// let resume: IResume | null = null
+	// let config: ResumeConfig;
 
-	let resume: IResume = myResumePlaceholder
-	let config: ResumeConfig;
-
-	$: (async () => {
-		config = await getConfig('resume');
-	})();
+	// $: (async () => {
+	// 	config = await getConfig('resume');
+	// })();
 
 	function downloadResume() {
 		// logica per download PDF/Resume
@@ -20,9 +18,9 @@
 </script>
 
 <svelte:head>
-	<title>{config?.title ?? 'Resume'}</title>
+	<title>{data?.resume.title ?? 'Resume'}</title>
 </svelte:head>
 
 <Container className="mt-9">
-	<Resume resume={resume}/>
+	<Resume resume={data.resume}/>
 </Container>

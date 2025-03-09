@@ -1,10 +1,10 @@
 import type {
 	Certification,
 	ExperiencesEvent,
-	IResume,
 	MainSkills,
 	PresentationResume,
 	SkillItem,
+	SocialInfo,
 	SpeakersEvent,
 	StudiesEvent
 } from '$lib/content/resume';
@@ -44,7 +44,7 @@ const mainSkillList: MainSkills[] = [
     },
     {
         name: "Java",
-    },    
+    },
     {
         name: "Android",
     }
@@ -145,7 +145,7 @@ export const experiences: ExperiencesEvent[] = [
             { name: "Geonode", type: "GIS Workflow" },
             { name: "Kamunda", type: "Workflow Managment" },
             { name: "Keycloak", type: "API & Security" },
-            { name: "WSO2", type: "API & Security" },            
+            { name: "WSO2", type: "API & Security" },
         ]
     },
     {
@@ -173,7 +173,7 @@ export const experiences: ExperiencesEvent[] = [
             { name: "Kendo UI", type: "UI Library" },
             { name: "Syncfusion", type: "UI Library" },
             { name: ".Net / C#", type: "Backend" },
-            { name: "GrpahQL", type: "API"  },
+            { name: "GrpahQL", type: "API" },
         ]
     },
     {
@@ -311,7 +311,7 @@ const listSkills: SkillItem[] = [
         name: "Hibernate",
         level: 80,
         levelTag: "high",
-        
+
     },
     //intermedie
     {
@@ -389,18 +389,47 @@ const listSkills: SkillItem[] = [
 
 ]
 
-export const myResumePlaceholder: IResume = {
-    fullName: 'Michele Scarpa',
-    mainRoleTitle: 'Software engineer',
-    mainSkills: [...mainSkillList],
-    presentation,
-    certifications: [...certifications],
-    speakers: [...speakers],
-    contact: {
-        email: 'scarpa.michele.90@gmail.com',
-        phone: '+393483482541'
-    },
-    skills: [...listSkills],
-    studies: [...studies],
-    experiences: [...experiences]
+const socialList: SocialInfo[] = [{
+    icon: 'LinkedInIcon',
+    href: 'https://www.linkedin.com/in/michele-scarpa-90-arco/',
+    ariaLabel: 'Follow on LinkedIn'
+},
+{
+    icon: 'GitHubIcon',
+    href: 'https://github.com/jollymick90',
+    ariaLabel: 'Follow on Github'
+},
+{
+    icon: 'InstagramIcon',
+    href: 'https://www.instagram.com/michele.scarpetta/',
+    ariaLabel: 'Follow on Instagram'
+},
+{
+    icon: 'BlueskyIcon',
+    href: 'https://x.com/mscarpa90',
+    ariaLabel: 'Follow on X'
+},
+{
+    icon: 'XIcon',
+    href: 'https://x.com/mscarpa90',
+    ariaLabel: 'Follow on X'
 }
+];
+
+// export const myResumePlaceholder: IResume = {
+//     fullName: 'Michele Scarpa',
+//     mainRoleTitle: 'Software engineer',
+//     mainSkills: [...mainSkillList],
+//     presentation,
+//     contact: {
+//         email: 'scarpa.michele.90@gmail.com',
+//         phone: '+393483482541',
+//         social: [...socialList]
+//     },
+//     skills: [...listSkills],
+//     certifications: [...certifications],
+//     speakers: [...speakers],
+//     studies: [...studies],
+//     experiences: [...experiences],
+
+// }
