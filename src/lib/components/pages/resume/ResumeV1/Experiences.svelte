@@ -3,6 +3,8 @@
 	import type { ExperiencesEvent, ExperiencesEventUI } from '$lib/content';
 	import { mapTimelineUI } from '$lib/utils/skills.utils';
 	import { Icon, Briefcase } from 'svelte-hero-icons';
+	import SkillAquired from './SkillAquired.svelte';
+	import SkillExperiences from './SkillExperiences.svelte';
 	export let experiences: ExperiencesEvent[];
 
 	const timeline: ExperiencesEventUI[] = experiences.map(mapTimelineUI);
@@ -33,47 +35,33 @@
 							</span>
 						</div>
 						<ItemsContainerStyled>
-							<div>
-								<div class="text-sm text-gray-500 dark:text-zinc-100">
-									<span>{item.content}</span>
-								</div>
-								<span class="text-sm font-medium text-gray-900 dark:text-zinc-100">
-									{item.target}
-								</span>
-								<div class="whitespace-nowrap text-sm text-gray-500 dark:text-zinc-100">
-									<time dateTime={item.dateStart}>{item.dateStart}</time>
-									-
-									{#if item.dateEndTime}
-										<time dateTime={item.dateEndTime}>{item.dateEnd}</time>
-									{/if}
-									{#if item.dateEndTime === null}
-										{item.dateEnd}
-									{/if}
+							<div class="overflow-hidden rounded-lg border-2 border-zinc-200 shadow">
+								<div class="px-2 py-3 sm:p-3">
+									<div class="flex gap-2">
+										<div class="text-sm text-gray-500 dark:text-zinc-200">
+											<span>{item.companyName}</span>
+										</div>
+										<span class="text-sm font-medium text-gray-900 dark:text-zinc-200">
+											{item.role}
+										</span>
+										<div class="whitespace-nowrap text-sm text-gray-500 dark:text-zinc-200">
+											<time dateTime={item.dateStart}>{item.dateStart}</time>
+											-
+											{#if item.dateEndTime}
+												<time dateTime={item.dateEndTime}>{item.dateEnd}</time>
+											{/if}
+											{#if item.dateEndTime === null}
+												{item.dateEnd}
+											{/if}
+										</div>
+									</div>
 								</div>
 							</div>
-
 							<div slot="descriptions" class="flex flex-col gap-1 dark:text-zinc-100">
-								{#if item.experiencesList}									
-									{#each item.experiencesList as experiences}
-										<div class="w-full">
-											<span class="mt-1 font-normal">{experiences}</span>
-										</div>
-									{/each}									
-								{/if}
+								<SkillExperiences experiencesList={item.experiencesList}></SkillExperiences>
 							</div>
 							<div slot="skills" class="">
-								{#if item.skillAquiredList}
-									
-										<div class="flex flex-col dark:text-zinc-100">
-											{#each item.skillAquiredList as skill}
-												<div class="flex flex-row justify-start gap-1">
-													<span class="font-medium">{skill.name}</span>
-													<span class="font-light">{skill.type}</span>
-												</div>
-											{/each}
-										</div>
-
-								{/if}
+								<SkillAquired skillAquiredList={item.skillAquiredList}></SkillAquired>
 							</div>
 						</ItemsContainerStyled>
 					</div>

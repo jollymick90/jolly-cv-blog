@@ -32,10 +32,10 @@
 <div
 	bind:this={captureElement}
 	class="flex w-full flex-col items-center justify-center overflow-hidden border-2 
-	dark:bg-zinc-800
+	dark:bg-lapislazuli-200
 	border-gray-400 dark:border-white rounded-xl px-2"
 >
-	<div class="w-full  mx-2 max-w-prose text-lg">
+	<div class="w-full mx-2 max-w-prose text-lg">
 		<h1>
 			<span class="mt-3 block text-center text-xl font-semibold uppercase tracking-wide text-jm-600">
 				
@@ -51,7 +51,7 @@
 		<MainSkills mainSkillList={resume.mainSkills} />
 		<Contact contact={resume.contact} />
 	</div>
-	<div class="w-full px-20 xl:px-32 mt-1 text-gray-500">
+	<div class="w-full px-5 lg:px-16 xl:px-32 mt-1 text-gray-500">
 		<Presentation presentation={resume.presentation} />
 		<Skills listSkills={resume.skills} />
 

@@ -326,15 +326,15 @@
                         },
                         {
                             "name": "Leaflet",
-                            "type": "GIS Frontend"
+                            "type": "GIS"
                         },
                         {
                             "name": "Geoserver",
-                            "type": "GIS Backend"
+                            "type": "GIS"
                         },
                         {
                             "name": "Geonode",
-                            "type": "GIS Workflow"
+                            "type": "GIS"
                         },
                         {
                             "name": "Kamunda",
@@ -846,15 +846,15 @@
                         },
                         {
                             "name": "Leaflet",
-                            "type": "GIS Frontend"
+                            "type": "GIS"
                         },
                         {
                             "name": "Geoserver",
-                            "type": "GIS Backend"
+                            "type": "GIS"
                         },
                         {
                             "name": "Geonode",
-                            "type": "GIS Workflow"
+                            "type": "GIS"
                         },
                         {
                             "name": "Kamunda",
