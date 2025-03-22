@@ -6,6 +6,7 @@
 	import Container from '$lib/components/template/Container.svelte';
 	import Navigation from '$lib/components/template/Navigation.svelte';
 	import ThemeToggle from '$lib/components/template/ThemeToggle.svelte';
+	import TailwindDetect from '../theme/TailwindDetect.svelte';
 
 	let isHomePage: boolean;
 
@@ -23,7 +24,7 @@
 	}
 
 	function setProperty(property: string, value: string) {
-		console.log("---setProperty", property, value)
+		// console.log("---setProperty", property, value)
 		document.documentElement.style.setProperty(property, value);
 	}
 
@@ -114,6 +115,7 @@
 		};
 	});
 </script>
+<TailwindDetect />
 
 <header
 	class="pointer-events-none relative z-50 flex flex-none flex-col"
