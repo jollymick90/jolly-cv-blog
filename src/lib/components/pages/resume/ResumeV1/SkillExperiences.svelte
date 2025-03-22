@@ -6,9 +6,9 @@
 	<div class="px-2 py-3 sm:p-3">
 		{#if experiencesList}
 			{#each experiencesList as experiences}
-				<div class="w-full">
-					<span class="mt-1 font-normal text-zinc-800">{experiences}</span>
-				</div>
+				<ul class="w-full">
+					<li class="ml-2 list-disc mt-1 font-normal text-zinc-800">{experiences}</li>
+				</ul>
 			{/each}
 		{/if}
 	</div>

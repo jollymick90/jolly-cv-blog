@@ -51,7 +51,7 @@
 		<MainSkills mainSkillList={resume.mainSkills} />
 		<Contact contact={resume.contact} />
 	</div>
-	<div class="w-full px-5 lg:px-16 xl:px-32 mt-1 text-gray-500">
+	<div class="w-full px-0 md:px-5 lg:px-16 xl:px-32 mt-1 text-gray-500">
 		<Presentation presentation={resume.presentation} />
 		<Skills listSkills={resume.skills} />
 

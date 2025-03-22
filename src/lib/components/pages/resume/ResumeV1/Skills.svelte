@@ -21,7 +21,7 @@
 	</h2>
 
 	<div class="{isExpand ? '' : 'h-20 overflow-hidden'}">
-	<div class="grid w-full grid-cols-6 gap-2">
+	<div class="grid w-full grid-cols-3 md:grid-cols-6 gap-2">
 	
 		{#each skills as skill}
 			<div class="m-1 flex w-full flex-col">
@@ -33,7 +33,7 @@
 		{/each}
 	
 	</div>
-	<div class="mt-1 overflow-hidden rounded-lg border-2 border-zinc-200 shadow">
+	<div class="mt-1 overflow-hidden rounded-lg border-2 border-dotted border-zinc-200 shadow">
 		<div class="px-2 py-3 sm:p-3">
 			<h2 id="timeline-title" class="mt-1 text-md font-medium text-gray-900 dark:text-zinc-100">
 				Scala Competenze

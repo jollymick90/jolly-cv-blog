@@ -272,7 +272,7 @@
                         "Gestione fullstack di progetti enterprise, curando frontend, backend e database.",
                         "Responsabile della delivery di due progetti in produzione per la Pubblica Amministrazione.",
                         "Mentoring di colleghi junior, affiancandoli nel percorso di crescita tecnica e professionale.",
-                        "Affiancamento di uno sviluppatore junior post-bootcamp, contribuendo alla sua formazione fino al suo ingresso in un\\'altra grande azienda come frontend e mobile developer.",
+                        "Affiancamento di uno sviluppatore junior post-bootcamp, contribuendo alla sua formazione fino al suo ingresso in un'altra grande azienda come frontend e mobile developer.",
                         "Conseguimento della certificazione AWS Developer Associate, rafforzando le competenze in cloud e architetture scalabili."
                     ],
                     "skillAquiredList": [
@@ -378,16 +378,16 @@
                             "type": "Frontend"
                         },
                         {
-                            "name": "NX - Workspace",
+                            "name": "NX - Monorepo",
                             "type": "Frontend"
                         },
                         {
                             "name": "Kendo UI",
-                            "type": "UI Library"
+                            "type": "Frontend"
                         },
                         {
                             "name": "Syncfusion",
-                            "type": "UI Library"
+                            "type": "Frontend"
                         },
                         {
                             "name": ".Net / C#",
@@ -401,14 +401,14 @@
                 },
                 {
                     "id": 2,
-                    "type": "'work'",
-                    "companyName": "'Red-V - Ennova Researh'",
-                    "role": "'Junior Software Engineer'",
-                    "dateStart": "'Sep 15'",
-                    "dateStartTime": "'2015-09-15'",
-                    "dateEnd": "'Sep 21'",
-                    "dateEndTime": "'2021-09-01'",
-                    "date": "'2015 - 2021'",
+                    "type": "work",
+                    "companyName": "Red-V - Ennova Researh",
+                    "role": "Junior Software Engineer",
+                    "dateStart": "Sep 15",
+                    "dateStartTime": "2015-09-15",
+                    "dateEnd": "Sep 21",
+                    "dateEndTime": "2021-09-01",
+                    "date": "2015 - 2021",
                     "skillAquiredList": [
                         {
                             "name": "Java (monolite con JSP)",
@@ -418,9 +418,18 @@
                             "name": "Hibernate",
                             "type": "Backend"
                         },
+
                         {
-                            "name": "SQL (PostgreSQL, MySQL, SQL Server)",
-                            "type": "Backend"
+                            "name": "PostgreSQL",
+                            "type": "Database"
+                        },
+                        {
+                            "name": "MySQL",
+                            "type": "Database"
+                        },
+                        {
+                            "name": "SQL Server",
+                            "type": "Database"
                         },
                         {
                             "name": "JavaScript",
@@ -436,46 +445,42 @@
                         },
                         {
                             "name": "FFmpeg",
-                            "type": "Multimedia Processing"
+                            "type": "Tools"
                         },
                         {
                             "name": "ImageMagick",
-                            "type": "Multimedia Processing"
+                            "type": "Tools"
                         },
                         {
-                            "name": "Android Player",
-                            "type": "Player Digital Signage"
+                            "name": "Web Player",
+                            "type": "Digital Signage"
                         },
                         {
-                            "name": "Web Player (Typescript, JQuery)",
-                            "type": "Player Digital Signage"
+                            "name": "Toshiba Monitor",
+                            "type": "Digital Signage"
                         },
                         {
-                            "name": "Toshiba Professional Monitor",
-                            "type": "Player Digital Signage"
-                        },
-                        {
-                            "name": "Samsung Professional Monitor - Tizen OS",
-                            "type": "Player Digital Signage"
+                            "name": "Samsung Tizen OS",
+                            "type": "Digital Signage"
                         },
                         {
                             "name": "VueJS",
                             "type": "Frontend"
                         },
                         {
-                            "name": "Android (Java, Kotlin)",
-                            "type": "Player Digital Signage"
+                            "name": "Android",
+                            "type": "Digital Signage"
                         },
                         {
                             "name": "Angular",
                             "type": "Frontend"
                         },
                         {
-                            "name": "GIS - Openlayer",
-                            "type": "Frontend"
+                            "name": "Openlayer",
+                            "type": "GIS"
                         },
                         {
-                            "name": "Android - Kotlin",
+                            "name": "Kotlin",
                             "type": "Mobile"
                         }
                     ],
@@ -489,30 +494,32 @@
                         "Frontend Development (Vue.js, GIS, OpenLayers)"
                     ],
                     "description": "Ho lavorato allo sviluppo di soluzioni Digital Signage, inizialmente su dispositivi Android e backend Java/JSP. Ho realizzato un client per monitor “embedded” (Toshiba e Samsung Tizen). Ho potuto lavorare anche ad altri progetti in prodotti e in consulenza con le seguenti tecnologie: Vue.js, React, Angular e Android (Kotlin)",
-                    "longDescription": "Durante questa esperienza lavorativa mi sono inizialmente occupato del settore Digital Signage, contribuendo allo sviluppo di un applicativo client per dispositivi Android e di un backend monolitico in Java, con interfacce JSP. Il focus principale riguardava la gestione e l\\'ottimizzazione di immagini, video, font e altri asset destinati ai player, che ne curano la visualizzazione. In una seconda fase, ho lavorato alla realizzazione di un client per monitor “embedded” - display professionali dotati di API e browser personalizzati, pensati per applicazioni di digital signage. Oltre a perfezionare il prodotto, ho avuto modo di partecipare a diversi progetti, sfruttando tecnologie come Vue.js, React, Angular e sviluppando app mobile su Android (Kotlin)."
+                    "longDescription": "Durante questa esperienza lavorativa mi sono inizialmente occupato del settore Digital Signage, contribuendo allo sviluppo di un applicativo client per dispositivi Android e di un backend monolitico in Java, con interfacce JSP. Il focus principale riguardava la gestione e l'ottimizzazione di immagini, video, font e altri asset destinati ai player, che ne curano la visualizzazione. In una seconda fase, ho lavorato alla realizzazione di un client per monitor “embedded” - display professionali dotati di API e browser personalizzati, pensati per applicazioni di digital signage. Oltre a perfezionare il prodotto, ho avuto modo di partecipare a diversi progetti, sfruttando tecnologie come Vue.js, React, Angular e sviluppando app mobile su Android (Kotlin)."
                 },
                 {
                     "id": 3,
-                    "type": "'work'",
-                    "companyName": "IN\\'s mercato",
-                    "role": "'Work & study'",
-                    "dateStart": "'Sep 12'",
-                    "dateStartTime": "'2012-10-1'",
-                    "dateEnd": "'Dec 14'",
-                    "dateEndTime": "'2014-12-01'",
-                    "date": "'2012 - 2014'",
+                    "type": "work",
+                    "companyName": "INs mercato",
+                    "role": "Work & study",
+                    "dateStart": "Sep 12",
+                    "dateStartTime": "2012-10-1",
+                    "dateEnd": "Dec 14",
+                    "dateEndTime": "2014-12-01",
+                    "date": "2012 - 2014",
                     "skillAquiredList": [
                         {
-                            "name": "capacità gestionali e organizzative"
+                            "name": "capacità gestionali e organizzative",
+                            "type": "softskills"
                         },
                         {
-                            "name": "problem solving e al lavoro in team"
+                            "name": "problem solving e al lavoro in team",
+                            "type": "softskills"
                         }
                     ],
                     "experiencesList": [
-                        "Gestione della cassa",
-                        "Gestione del magazzino e dell\\'inventario",
-                        "Gestione della squadra e dei collaboratori"
+                        "Servizio al cliente e gestione della cassa",
+                        "Gestione del magazzino e dellinventario",
+                        "Organizzazione del lavoro e dei collaboratori"
                     ],
                     "description": "Per finanziare gli studi, ho lavorato in un discount, ricoprendo diversi ruoli operativi, tra cui gestione della cassa, magazzino, inventario e organizzazione del personale. Questo mi ha permesso di sviluppare capacità gestionali e organizzative, oltre a rafforzare la mia attitudine al problem solving e al lavoro in team."
                 }
@@ -792,7 +799,7 @@
                         "Gestione fullstack di progetti enterprise, curando frontend, backend e database.",
                         "Responsabile della delivery di due progetti in produzione per la Pubblica Amministrazione.",
                         "Mentoring di colleghi junior, affiancandoli nel percorso di crescita tecnica e professionale.",
-                        "Affiancamento di uno sviluppatore junior post-bootcamp, contribuendo alla sua formazione fino al suo ingresso in un\\'altra grande azienda come frontend e mobile developer.",
+                        "Affiancamento di uno sviluppatore junior post-bootcamp, contribuendo alla sua formazione fino al suo ingresso in un'altra grande azienda come frontend e mobile developer.",
                         "Conseguimento della certificazione AWS Developer Associate, rafforzando le competenze in cloud e architetture scalabili."
                     ],
                     "skillAquiredList": [
@@ -898,7 +905,7 @@
                             "type": "Frontend"
                         },
                         {
-                            "name": "NX - Workspace",
+                            "name": "NX - Monorepo",
                             "type": "Frontend"
                         },
                         {
@@ -921,14 +928,14 @@
                 },
                 {
                     "id": 2,
-                    "type": "'work'",
-                    "companyName": "'Red-V - Ennova Researh'",
-                    "role": "'Junior Software Engineer'",
-                    "dateStart": "'Sep 15'",
-                    "dateStartTime": "'2015-09-15'",
-                    "dateEnd": "'Sep 21'",
-                    "dateEndTime": "'2021-09-01'",
-                    "date": "'2015 - 2021'",
+                    "type": "work",
+                    "companyName": "Red-V - Ennova Researh",
+                    "role": "Junior Software Engineer",
+                    "dateStart": "Sep 15",
+                    "dateStartTime": "2015-09-15",
+                    "dateEnd": "Sep 21",
+                    "dateEndTime": "2021-09-01",
+                    "date": "2015 - 2021",
                     "skillAquiredList": [
                         {
                             "name": "Java (monolite con JSP)",
@@ -991,11 +998,11 @@
                             "type": "Frontend"
                         },
                         {
-                            "name": "GIS - Openlayer",
-                            "type": "Frontend"
+                            "name": "Openlayer",
+                            "type": "GIS"
                         },
                         {
-                            "name": "Android - Kotlin",
+                            "name": "Kotlin",
                             "type": "Mobile"
                         }
                     ],
@@ -1009,18 +1016,18 @@
                         "Frontend Development (Vue.js, GIS, OpenLayers)"
                     ],
                     "description": "Ho lavorato allo sviluppo di soluzioni Digital Signage, inizialmente su dispositivi Android e backend Java/JSP. Ho realizzato un client per monitor “embedded” (Toshiba e Samsung Tizen). Ho potuto lavorare anche ad altri progetti in prodotti e in consulenza con le seguenti tecnologie: Vue.js, React, Angular e Android (Kotlin)",
-                    "longDescription": "Durante questa esperienza lavorativa mi sono inizialmente occupato del settore Digital Signage, contribuendo allo sviluppo di un applicativo client per dispositivi Android e di un backend monolitico in Java, con interfacce JSP. Il focus principale riguardava la gestione e l\\'ottimizzazione di immagini, video, font e altri asset destinati ai player, che ne curano la visualizzazione. In una seconda fase, ho lavorato alla realizzazione di un client per monitor “embedded” - display professionali dotati di API e browser personalizzati, pensati per applicazioni di digital signage. Oltre a perfezionare il prodotto, ho avuto modo di partecipare a diversi progetti, sfruttando tecnologie come Vue.js, React, Angular e sviluppando app mobile su Android (Kotlin)."
+                    "longDescription": "Durante questa esperienza lavorativa mi sono inizialmente occupato del settore Digital Signage, contribuendo allo sviluppo di un applicativo client per dispositivi Android e di un backend monolitico in Java, con interfacce JSP. Il focus principale riguardava la gestione e l'ottimizzazione di immagini, video, font e altri asset destinati ai player, che ne curano la visualizzazione. In una seconda fase, ho lavorato alla realizzazione di un client per monitor “embedded” - display professionali dotati di API e browser personalizzati, pensati per applicazioni di digital signage. Oltre a perfezionare il prodotto, ho avuto modo di partecipare a diversi progetti, sfruttando tecnologie come Vue.js, React, Angular e sviluppando app mobile su Android (Kotlin)."
                 },
                 {
                     "id": 3,
-                    "type": "'work'",
-                    "companyName": "IN\\'s mercato",
-                    "role": "'Work & study'",
-                    "dateStart": "'Sep 12'",
-                    "dateStartTime": "'2012-10-1'",
-                    "dateEnd": "'Dec 14'",
-                    "dateEndTime": "'2014-12-01'",
-                    "date": "'2012 - 2014'",
+                    "type": "work",
+                    "companyName": "IN's mercato",
+                    "role": "Work & study",
+                    "dateStart": "Sep 12",
+                    "dateStartTime": "2012-10-1",
+                    "dateEnd": "Dec 14",
+                    "dateEndTime": "2014-12-01",
+                    "date": "2012 - 2014",
                     "skillAquiredList": [
                         {
                             "name": "capacità gestionali e organizzative"
@@ -1030,9 +1037,9 @@
                         }
                     ],
                     "experiencesList": [
-                        "Gestione della cassa",
-                        "Gestione del magazzino e dell\\'inventario",
-                        "Gestione della squadra e dei collaboratori"
+                        "Customer services and Gestione della cassa",
+                        "Gestione del magazzino e dell'inventario",
+                        "Organizzazione del lavoro e dei collaboratori"
                     ],
                     "description": "Per finanziare gli studi, ho lavorato in un discount, ricoprendo diversi ruoli operativi, tra cui gestione della cassa, magazzino, inventario e organizzazione del personale. Questo mi ha permesso di sviluppare capacità gestionali e organizzative, oltre a rafforzare la mia attitudine al problem solving e al lavoro in team."
                 }
