@@ -1,6 +1,7 @@
 <script lang="ts">
+	import ButtonExpand from '$lib/components/template/ButtonExpand.svelte';
 	import type { SkillAquired } from '$lib/content';
-	import SkillChip from './SkillChip.svelte';
+	import SkillChip from '../SkillChip.svelte';
 
 	const {
 		skillAquiredList

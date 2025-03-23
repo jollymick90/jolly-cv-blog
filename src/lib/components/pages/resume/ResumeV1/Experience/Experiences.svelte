@@ -1,4 +1,5 @@
 <script lang="ts">
+
 	import type { ExperiencesEvent, ExperiencesEventUI } from '$lib/content';
 	import { mapTimelineUI } from '$lib/utils/skills.utils';
 

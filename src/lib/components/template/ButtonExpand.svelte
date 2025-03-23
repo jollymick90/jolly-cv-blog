@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { ChevronDoubleDown, ChevronDown, ChevronUp, Icon } from 'svelte-hero-icons';
+	import { ChevronDown, ChevronUp, Icon } from 'svelte-hero-icons';
 
-	let {onChange}:{onChange:(value: boolean) => void} = $props();
+	let {onChange, initialValue}:{
+		initialValue: boolean,
+		onChange:(value: boolean) => void} = $props();
 	
-	let isExpand = $state(false);
-	// $: onChange(isExpand);
+	let isExpand = $state(initialValue);
 
 	function changeStatus(): any {
 		isExpand = !isExpand;

@@ -1,10 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { writable } from 'svelte/store';
-  
-    // Creiamo uno store per salvare il breakpoint corrente
-    export const currentBreakpoint = writable('');
-  
+    import { currentBreakpoint } from '$lib/stores/breakpoint';
+      
     // Definiamo i breakpoint in base alla configurazione di Tailwind
     const breakpoints = {
       xs: 0,
@@ -34,20 +31,17 @@
         }
       }
   
-      // Inizializza il breakpoint al montaggio del componente
       updateBreakpoint();
       // Aggiunge il listener per l'evento resize
       window.addEventListener('resize', updateBreakpoint);
   
-      // Ritorna una funzione di cleanup che rimuove il listener quando il componente viene distrutto
       return () => {
         window.removeEventListener('resize', updateBreakpoint);
       };
     });
   </script>
   
-  <!-- Esempio di utilizzo -->
-  <div>
+  <!-- <div>
     <p class="text-white">Il breakpoint corrente è: {$currentBreakpoint}</p>
   </div>
-  
+   -->

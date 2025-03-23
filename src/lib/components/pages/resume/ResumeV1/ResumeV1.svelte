@@ -2,7 +2,7 @@
 	import type { IResume } from '$lib/content';
 	import Certifications from './Certifications.svelte';
 	import Contact from './Contact.svelte';
-	import Experiences from './Experiences.svelte';
+	import Experiences from './Experience/Experiences.svelte';
 
 	import MainSkills from './MainSkills.svelte';
 	import Presentation from './Presentation.svelte';

@@ -1,19 +1,17 @@
 <script lang="ts">
 	import ButtonExpand from '$lib/components/template/ButtonExpand.svelte';
+	import { isMobile } from '$lib/stores/breakpoint';
 
 	const { experiencesList }: { experiencesList: string[] | undefined } = $props();
-	let isExpand = $state(false);
+	
+	let isExpand = $state(!$isMobile);
+	
 </script>
 
-<ButtonExpand
-	onChange={(value: boolean) => {
-		isExpand = value;
-	}}
-></ButtonExpand>
+
 
 <div class="overflow-hidden rounded-lg bg-cv-200 shadow">
 	<div class="px-2 py-3 sm:p-3">
-		<div class={isExpand ? '' : 'h-20 overflow-hidden'}>
 			{#if experiencesList}
 				{#each experiencesList as experiences}
 					<ul class="w-full">
@@ -21,6 +19,6 @@
 					</ul>
 				{/each}
 			{/if}
-		</div>
+
 	</div>
 </div>

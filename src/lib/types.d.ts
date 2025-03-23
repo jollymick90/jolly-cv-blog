@@ -1,5 +1,5 @@
 import type { IResume } from './content';
-
+export type TailwindBreakpoints = '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 export type LandingConfig = {
     title: string,
     heading: string,

@@ -2,9 +2,11 @@
 	import ButtonExpand from '$lib/components/template/ButtonExpand.svelte';
 	import type { SkillItemUI, SkillItem } from '$lib/content/resume';
 	import { getColor } from '$lib/utils/skills.utils';
+	import { isMobile } from '$lib/stores/breakpoint';
 
 	const { listSkills }: { listSkills: SkillItem[] } = $props();
-	let isExpand = $state(false);
+	let isExpand = $state(!$isMobile);
+	
 	const skills: SkillItemUI[] = listSkills.map((item) => {
 		return {
 			...item,

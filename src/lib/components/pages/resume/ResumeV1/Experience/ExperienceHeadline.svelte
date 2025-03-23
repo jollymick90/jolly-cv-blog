@@ -1,5 +1,7 @@
 <script lang="ts">
+	import ButtonExpand from '$lib/components/template/ButtonExpand.svelte';
 	import type { ExperiencesEventUI } from '$lib/content';
+	import { isExpand } from './experience.store';
 	const { item }: { item: ExperiencesEventUI } = $props();
 </script>
 
@@ -22,6 +24,13 @@
 					{item.dateEnd}
 				{/if}
 			</div>
+			<ButtonExpand
+			initialValue={false}
+	onChange={(value: boolean) => {
+		console.log("value", value)
+		isExpand.set(value)
+	}}
+></ButtonExpand>
 		</div>
 	</div>
 </div>
