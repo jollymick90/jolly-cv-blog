@@ -25,7 +25,7 @@
 	<div class="relative pb-2">
 		{#if isLast}
 			<span
-				class="absolute left-4 top-4 -ml-px hidden h-full w-0.5 bg-gray-200 dark:bg-gray-50 md:block"
+				class="absolute left-6 top-4 -ml-px hidden h-full w-0.5 bg-gray-200 dark:bg-gray-50 md:block"
 				aria-hidden="true"
 			></span>
 		{/if}
@@ -36,7 +36,7 @@
 			<div class="hidden md:block">
 				<span
 					class="{item.className}
-                    flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-white"
+                    mt-2 ml-2 flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-white"
 				>
 					<Icon class="h-5 w-5 text-white" aria-hidden="true" src={Briefcase} />
 				</span>
