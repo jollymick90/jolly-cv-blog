@@ -7,7 +7,7 @@
 
 <div class="overflow-hidden rounded-lg border-2 border-zinc-200 shadow">
 	<div class="px-2 py-3 sm:p-3">
-		<div class="flex flex-col md:flex-row justify-between gap-1 md:gap-2">
+		<div class="flex flex-wrap md:flex-nowrap md:flex-row justify-between gap-1 md:gap-2">
 			<div class="text-md text-gray-500 dark:text-zinc-200">
 				<span>{item.companyName}</span>
 			</div>

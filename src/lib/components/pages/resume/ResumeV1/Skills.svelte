@@ -19,6 +19,7 @@
 	<h2 id="timeline-title" class="mx-1 my-1 text-lg font-medium text-gray-900 dark:text-zinc-100">
 		<span>Competenze</span>
 		<ButtonExpand
+			initialValue={false}
 			onChange={(value: boolean) => {
 				isExpand = value;
 			}}
@@ -41,7 +42,7 @@
 				<h2 id="timeline-title" class="text-md mt-1 font-medium text-gray-900 dark:text-zinc-100">
 					Scala Competenze
 				</h2>
-				<div class="m-1 flex">
+				<div class="m-1 flex flex-col md:flex-row">
 					<div class="flex w-full flex-col justify-start px-1">
 						<b class="dark:text-zinc-100">conoscenza</b>
 						<div class="flex h-1 w-full bg-gray-200">

@@ -60,7 +60,7 @@
             <div class="px-2 py-1 md:py-3 sm:p-3">
                 <div class="grid grid-cols-6 md:grid-cols-3 gap-1 ">
                     <span class="hidden md:block font-medium text-zinc-800">{skill.type} </span>
-                    <span class="block md:hiddenfont-medium text-zinc-800">{skill.typeShort} </span>
+                    <span class="block md:hidden font-medium text-zinc-800">{skill.typeShort} </span>
 
                     <div class="col-start-2 col-span-6 md:col-span-2">
                         <div class="flex flex-wrap gap-1">

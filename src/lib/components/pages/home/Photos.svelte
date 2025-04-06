@@ -28,7 +28,7 @@
 	];
 </script>
 
-<div class="mt-16 sm:mt-20 hidden">
+<div class="mt-16 sm:mt-20">
 	<div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
 		{#each imgList as imgItem}
 			<div
