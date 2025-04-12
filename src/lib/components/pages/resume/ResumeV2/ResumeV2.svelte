@@ -1,7 +1,5 @@
 <script lang="ts">
-	import type { IResume } from '$lib/content';
-	import avatar from '$lib/img/avatar.jpg';
-    export let resume: IResume;
+	import avatar from '$lib/img/avatar.jpg';    
 </script>
 
 <div class="flex justify-center dark:bg-gray-100 py-10">

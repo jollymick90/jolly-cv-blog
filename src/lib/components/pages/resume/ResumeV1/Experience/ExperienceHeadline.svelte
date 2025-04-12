@@ -1,8 +1,14 @@
+<script module lang="ts">
+	export const isExpandItem = writable<boolean>(false);
+
+</script>
 <script lang="ts">
 	import ButtonExpand from '$lib/components/template/ButtonExpand.svelte';
 	import type { ExperiencesEventUI } from '$lib/content';
+	import { writable } from 'svelte/store';
 	import { isExpand } from './experience.store';
 	const { item }: { item: ExperiencesEventUI } = $props();
+
 </script>
 
 <div class="overflow-hidden rounded-lg border-2 border-zinc-200 shadow">
@@ -28,7 +34,7 @@
 			initialValue={false}
 	onChange={(value: boolean) => {
 		console.log("value", value)
-		isExpand.set(value)
+		isExpandItem.set(value)
 	}}
 ></ButtonExpand>
 		</div>

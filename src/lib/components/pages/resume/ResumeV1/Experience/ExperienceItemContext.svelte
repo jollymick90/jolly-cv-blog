@@ -2,7 +2,7 @@
 	import type { ExperiencesEventUI } from '$lib/content';
 	import { Briefcase, Icon } from 'svelte-hero-icons';
 	import ItemsContainerStyled from '$lib/components/template/ItemsContainerStyled.svelte';
-	import ExperienceHeadline from './ExperienceHeadline.svelte';
+	import ExperienceHeadline, { isExpandItem } from './ExperienceHeadline.svelte';
 	import SkillExperiences from './SkillExperiences.svelte';
 	import SkillAquired from './SkillAquired.svelte';
 	import { isExpand } from './experience.store';
@@ -14,9 +14,9 @@
 		isLast: boolean;
 	} = $props();
 	let _isExpand = $derived($isExpand)
-
+	let _isExpandItem = $derived($isExpandItem);
 	$effect(()=> {
-		console.log(".---", _isExpand)
+		console.log(".---", _isExpandItem)
 	})
 
 </script>
@@ -29,7 +29,7 @@
 				aria-hidden="true"
 			></span>
 		{/if}
-		<div class={_isExpand ? '' : 'h-[300px] overflow-hidden'}>
+		<div class={_isExpandItem ? '' : 'h-[300px] overflow-hidden'}>
 
 		<div class="relative flex md:space-x-3">
 
