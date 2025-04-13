@@ -2,6 +2,7 @@
 	import '../app.css';
 	import Header from '$lib/components/template/Header.svelte';
 	let { children } = $props();
+	console.log("load layout.svelte shared lang")
 
 </script>
 <div class="flex w-full">

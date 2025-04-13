@@ -37,6 +37,7 @@
 		"clsx": "^2.1.1",
 		"html-to-pdf-js": "^0.9.3",
 		"html2pdf.js": "^0.9.0",
-		"svelte-preprocess": "^6.0.3"
+		"svelte-preprocess": "^6.0.3",
+		"sveltekit-i18n": "^2.4.2"
 	}
 }

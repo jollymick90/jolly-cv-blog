@@ -1,8 +1,5 @@
+
 <script lang="ts">
-	console.log("load page.svelte loaded and redirect")
-</script>
-<h1>page svelte common</h1>
-<!-- <script lang="ts">
 	import Container from '$lib/components/template/Container.svelte';
 	import HomeArticleSection from '$lib/components/pages/home/HomeArticleSection.svelte';
 	import HomeHeadings from '$lib/components/pages/home/HomeHeadings.svelte';
@@ -12,7 +9,7 @@
 	import Photos from '$lib/components/pages/home/Photos.svelte';
 	// import { myResumePlaceholder } from '$lib/config/my-resume.js';
 	// import type { IResume } from '$lib/content/resume.js';
-
+	console.log("load home page .svelte shared lang")
 	export let data;
 	let config = data.landing;
 	let resume = data.resume;
@@ -41,4 +38,4 @@
 			<HomeResume {resume}></HomeResume>
 		</div>
 	</div>
-</Container> -->
+</Container>
