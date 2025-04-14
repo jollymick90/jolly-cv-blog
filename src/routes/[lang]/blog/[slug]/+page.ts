@@ -1,4 +1,5 @@
 // export const prerender = false;
+export const prerender = true;
 
 export async function load({ params }) {
   

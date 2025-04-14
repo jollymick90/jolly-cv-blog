@@ -4,6 +4,7 @@ import type { IResume } from '$lib/content';
 import type { LandingConfig } from '$lib/types';
 import { getConfig } from '$lib/utils/config-utils';
 
+export const prerender = true
 // export const prerender = true;
 
 // export function entries() {
