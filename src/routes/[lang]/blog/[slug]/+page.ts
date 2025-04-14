@@ -1,4 +1,7 @@
+export const prerender = false;
+
 export async function load({ params }) {
+  console.log("Load slug blog")
   const { slug } = params;
 
   try {

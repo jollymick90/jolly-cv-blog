@@ -1,5 +1,5 @@
 <script lang="ts">
-	console.log("load page.svelte loaded and redirect")
+	console.log("1 load page.svelte loaded and redirect")
 </script>
 <h1>page svelte common</h1>
 <!-- <script lang="ts">
