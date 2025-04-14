@@ -1,9 +1,10 @@
 <script lang="ts">
 	import '../app.css';
 	import Header from '$lib/components/template/Header.svelte';
-	let { children } = $props();
-	console.log("load layout.svelte shared lang")
-
+	import { langStore } from '$lib/i18n/lang.store';
+	let { children, data } = $props();
+	langStore.set(data.lang);
+	
 </script>
 <div class="flex w-full">
 	<div class="fixed inset-0 flex justify-center sm:px-8">
@@ -14,7 +15,7 @@
 		</div>
 	</div>
 	<div class="relative flex w-full flex-col">
-		<Header></Header>
+		<Header lang={data.lang}></Header>
 		<main class="flex-auto">
 			{@render children()}
 		</main>

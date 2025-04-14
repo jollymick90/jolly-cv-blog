@@ -2,23 +2,24 @@ import {
 	setLocale,
 	setRoute
 } from '$lib/i18n';
+import { defaultLang } from '$lib/i18n/lang.store';
+import type { LangAvailable } from '$lib/types';
 
 import type { Load } from '@sveltejs/kit';
 
 export const prerender = true;
 
 export const load: Load = async ({ url }) => {
-  console.log("1 load layout shared lang")
+  
   const { pathname } = url;
 
-  const lang = `${pathname.match(/\w+?(?=\/|$)/) || ''}`;
+  const _lang = `${pathname.match(/\w+?(?=\/|$)/) || ''}`;
+  const lang: LangAvailable = (_lang === 'it' || _lang === 'en') ? _lang as LangAvailable : defaultLang;
 
   const route = pathname.replace(new RegExp(`^/${lang}`), '');
 
   await setLocale(lang);
   await setRoute(route);
   
-  console.log(`2 set layout load setLocale=${lang} setRoute=${route}`);
-  
-  return { route, lang };
+  return { route, lang  };
 };

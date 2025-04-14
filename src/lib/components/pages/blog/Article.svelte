@@ -9,13 +9,15 @@ import {
     CardDescription,
     CardCta
 } from "$lib/components/theme/card";
+	import { langStore } from "$lib/i18n/lang.store";
+const lang = $derived($langStore);
 
-export let article: ArticleFormat;
+const { article } : { article: ArticleFormat } = $props();
 </script>
 
 <article class="md:grid md:grid-cols-4 md:items-baseline">
     <Card className="md:col-span-3">
-        <CardTitle href="{`/blog/${article.slug}`}">
+        <CardTitle href="/{lang}/blog/{article.slug}">
             {article.metadata.title}
         </CardTitle>
         <CardEyebrow

@@ -1,3 +1,4 @@
+import type { LangAvailable } from '$lib/types';
 import type { Config } from 'sveltekit-i18n';
 import i18n from 'sveltekit-i18n';
 
@@ -81,7 +82,8 @@ const config: Config = ({
     }
   },
 });
-export const defaultLocale = 'en';
+
+export const LANG_AVAILABLE: LangAvailable[] = ['it', 'en'];
 
 export const {
   t,

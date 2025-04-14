@@ -1,4 +1,5 @@
 import type { IResume } from './content';
+
 export type TailwindBreakpoints = '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 export type LandingConfig = {
     title: string,
@@ -30,3 +31,8 @@ export type SiteConfig = {
 export type LangType = keyof SiteConfig;
 //export type SectionType = 'landing' | 'resume';
 export type SectionType = keyof SiteContent;
+
+
+export type NavigationType = 'mobile' | 'desktop';
+export type LangAvailable = 'it' | 'en';
+export type LangEntries = { lang: LangAvailable }

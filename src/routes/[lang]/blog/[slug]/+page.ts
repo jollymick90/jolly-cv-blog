@@ -1,11 +1,11 @@
-export const prerender = false;
+// export const prerender = false;
 
 export async function load({ params }) {
-  console.log("Load slug blog")
+  
   const { slug } = params;
 
   try {
-    const post = await import(`../../../content/blog/${slug}.md`);
+    const post = await import(`../../../../content/blog/${slug}.md`);
 
     return {
       metadata: post.metadata,

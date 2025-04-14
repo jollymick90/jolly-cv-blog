@@ -3,7 +3,7 @@
 
 	export let data;
 	let { metadata, content } = data;
-	console.log(metadata, content, data)
+	
 </script>
 
 <ArticleLayout article={metadata}>

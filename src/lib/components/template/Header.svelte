@@ -1,21 +1,22 @@
 <script lang="ts">
 	import Avatar from '$lib/components/theme/Avatar.svelte';
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
-
+	import { page } from '$app/state';
+	
 	import Container from '$lib/components/template/Container.svelte';
 	import Navigation from '$lib/components/template/Navigation.svelte';
 	import ThemeToggle from '$lib/components/template/ThemeToggle.svelte';
 	import TailwindDetect from '../theme/TailwindDetect.svelte';
+	import type { LangAvailable } from '$lib/types';
 
-	let isHomePage: boolean;
+	const { lang }:{lang: LangAvailable} = $props();
 
-	let headerRef: HTMLDivElement;
-	let avatarRef: HTMLDivElement;
+	let headerRef: HTMLDivElement | null = $state(null);
+	let avatarRef: HTMLDivElement | null = $state(null);;
 
 	let isInitial = true;
-
-	$: isHomePage = $page.url.pathname === '/';
+	
+	let isHomePage = $derived(page.url.pathname === '/');
 
 	function clamp(number: number, a: number, b: number) {
 		let min = Math.min(a, b);
@@ -33,9 +34,9 @@
 	}
 
 	function updateHeaderStyles() {
-		//@ts-ignore
+		
 		if (!headerRef) return;
-		//@ts-ignore
+		
 		const downDelay = avatarRef?.offsetTop ?? 0;
 		const upDelay = 64;
 		const { top, height } = headerRef.getBoundingClientRect();
@@ -170,19 +171,12 @@
 				</div>
 				<div class="white flex flex-1 justify-end md:justify-center">
 					<div class="pointer-events-auto md:hidden">
-					
-						<Navigation type='mobile'/>
-						
+						<Navigation type='mobile' lang={lang}/>
 					</div>
-					<div class="pointer-events-auto hidden md:block">
-						
-						
-						<Navigation type='desktop'/>
-						
-						
+					<div class="pointer-events-auto hidden md:block">					
+						<Navigation type='desktop' lang={lang}/>						
 					</div>
-					<!-- <MobileNavigation class="pointer-events-auto md:hidden" />
-			  <DesktopNavigation class="pointer-events-auto hidden md:block" /> -->
+
 				</div>
 				<div class="flex justify-end md:flex-1">
 					<div class="pointer-events-auto">

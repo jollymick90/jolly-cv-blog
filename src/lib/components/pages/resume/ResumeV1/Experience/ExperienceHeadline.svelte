@@ -6,7 +6,7 @@
 	import ButtonExpand from '$lib/components/template/ButtonExpand.svelte';
 	import type { ExperiencesEventUI } from '$lib/content';
 	import { writable } from 'svelte/store';
-	import { isExpand } from './experience.store';
+	
 	const { item }: { item: ExperiencesEventUI } = $props();
 
 </script>

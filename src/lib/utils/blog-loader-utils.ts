@@ -1,9 +1,17 @@
-export async function loadArticles() {
+export type ArticleBlogMD = {
+    metadata: {
+        title: string,
+        date: string,
+        description: string
+    },
+    slug: string | undefined
+}
+export async function loadArticles(): Promise<ArticleBlogMD[]> {
 
     const resolvedPosts = await Promise.all(
         Object.entries(import.meta.glob('/src/content/blog/*.md')).map(async ([path, resolver]) => {
             const mod: any = await resolver();
-            console.log("-- mod", mod)
+            
             let metadata = {
                 ...mod.metadata
             }
@@ -24,5 +32,5 @@ export async function loadArticles() {
         return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
     });
 
-    return resolvedPosts;
+    return resolvedPosts as ArticleBlogMD[];
 }

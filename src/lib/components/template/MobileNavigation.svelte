@@ -1,10 +1,11 @@
 <script lang="ts">
 	import type { ItemList } from "$lib/components/types/template";
+	const { items }: { items: ItemList[] } = $props();
 
 	let showIcon = false;
-	export let items: ItemList[] = [];
+	
 	const itemsList = items.filter(item => !item.disable)
-	let isOpen = false;
+	let isOpen = $state(false);
 
 	function toggleMenu() {
 		isOpen = !isOpen;
@@ -18,7 +19,7 @@
     hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white dark:bg-zinc-800/90"
 	aria-controls="mobile-menu"
 	aria-expanded={isOpen}
-	on:click={toggleMenu}
+	onclick={toggleMenu}
 >
 	<span class="absolute -inset-0.5"></span>
 	<span class="sr-only">Open main menu</span>

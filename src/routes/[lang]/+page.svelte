@@ -9,8 +9,8 @@
 	import Photos from '$lib/components/pages/home/Photos.svelte';
 	// import { myResumePlaceholder } from '$lib/config/my-resume.js';
 	// import type { IResume } from '$lib/content/resume.js';
-	console.log("load home page .svelte shared lang")
-	export let data;
+	
+	let { data } = $props();
 	let config = data.landing;
 	let resume = data.resume;
 </script>
