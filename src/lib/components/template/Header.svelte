@@ -26,7 +26,6 @@
 	}
 
 	function setProperty(property: string, value: string) {
-		// console.log("---setProperty", property, value)
 		document.documentElement.style.setProperty(property, value);
 	}
 
@@ -180,10 +179,11 @@
 
 				</div>
 				<div class="flex justify-end md:flex-1">
-					<div class="pointer-events-auto">
+					<div class="flex pointer-events-auto">
 						<ThemeToggle />
 						<LangSelect />
 					</div>
+
 				</div>
 			</div>
 		</Container>

@@ -15,9 +15,6 @@
 	} = $props();
 	let _isExpand = $derived($isExpand)
 	let _isExpandItem = $derived($isExpandItem);
-	$effect(()=> {
-		console.log(".---", _isExpandItem)
-	})
 
 </script>
 

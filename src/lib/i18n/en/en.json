@@ -6,5 +6,8 @@
         "readarticle": "Read the complete article"
     },
     "resume": { },
-    "blog": { }
+    "blog": { },
+    "common": {
+        "langselect": "Language"
+    }
 }
