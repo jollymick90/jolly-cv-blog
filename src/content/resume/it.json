@@ -411,7 +411,6 @@
                     "name": "Hibernate",
                     "type": "Backend"
                 },
-
                 {
                     "name": "PostgreSQL",
                     "type": "Database"

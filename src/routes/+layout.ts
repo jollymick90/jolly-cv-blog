@@ -10,7 +10,6 @@ import type { Load } from '@sveltejs/kit';
 export const prerender = true;
 
 export const load: Load = async ({ url }) => {
-  
   const { pathname } = url;
 
   const _lang = `${pathname.match(/\w+?(?=\/|$)/) || ''}`;

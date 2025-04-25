@@ -8,6 +8,7 @@
 	import ThemeToggle from '$lib/components/template/ThemeToggle.svelte';
 	import TailwindDetect from '../theme/TailwindDetect.svelte';
 	import type { LangAvailable } from '$lib/types';
+	import LangSelect from './LangSelect.svelte';
 
 	const { lang }:{lang: LangAvailable} = $props();
 
@@ -181,6 +182,7 @@
 				<div class="flex justify-end md:flex-1">
 					<div class="pointer-events-auto">
 						<ThemeToggle />
+						<LangSelect />
 					</div>
 				</div>
 			</div>

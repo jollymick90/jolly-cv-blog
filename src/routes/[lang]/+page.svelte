@@ -1,5 +1,6 @@
 
 <script lang="ts">
+	import { t } from '$lib/i18n';
 	import Container from '$lib/components/template/Container.svelte';
 	import HomeArticleSection from '$lib/components/pages/home/HomeArticleSection.svelte';
 	import HomeHeadings from '$lib/components/pages/home/HomeHeadings.svelte';
@@ -7,22 +8,19 @@
 	import HomeResume from '$lib/components/pages/home/HomeResume.svelte';
 
 	import Photos from '$lib/components/pages/home/Photos.svelte';
-	// import { myResumePlaceholder } from '$lib/config/my-resume.js';
-	// import type { IResume } from '$lib/content/resume.js';
-	
+
 	let { data } = $props();
-	let config = data.landing;
 	let resume = data.resume;
 </script>
 
 <svelte:head>
-	<title>{config?.title ?? 'Landing Page'}</title>
+	<title>
+		{$t('home.title')}
+	</title>
 </svelte:head>
 
 <Container className="mt-9">
 	<HomeHeadings
-		heading={config.heading}
-		description={config.description}
 		socialListInput={resume.contact.social}
 	></HomeHeadings>
 </Container>

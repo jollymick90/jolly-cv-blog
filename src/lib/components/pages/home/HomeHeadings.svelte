@@ -1,5 +1,5 @@
 <script lang="ts">
-	  import { t } from '$lib/i18n';
+	import { t } from '$lib/i18n';
 
 	import {
 		BlueskyIcon,
@@ -11,11 +11,8 @@
 	import SocialLink from '$lib/components/theme/SocialLink.svelte';
 	import type { SocialInfo } from '$lib/content';
 
-	
+	let { socialListInput }: { socialListInput: SocialInfo[] } = $props();
 
-	export let heading: string;
-	export let description: string;
-	export let socialListInput: SocialInfo[];
 	let socialList = socialListInput.map((socialItem) => {
 		const socialItemUi = {
 			...socialItem,
@@ -46,15 +43,18 @@
 
 <div class="max-w-2xl">
 	<h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-		{heading}
+		{$t('home.heading')}
 		{$t('home.title')}
 	</h1>
 	<p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-		{description}
+		{$t('home.description')}
 	</p>
 	<div class="mt-6 flex gap-6">
 		{#each socialList as socialItem}
-			<SocialLink icon={socialItem.icon} href={socialItem.href} ariaLabel={socialItem.ariaLabel}
+			<SocialLink 
+			 icon={socialItem.icon}
+			 href={socialItem.href}
+			 ariaLabel={socialItem.ariaLabel}
 			></SocialLink>
 		{/each}
 	</div>

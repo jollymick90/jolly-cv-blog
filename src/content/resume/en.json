@@ -28,7 +28,7 @@
             "name": "Android"
         }
     ],
-    "presentation": "Mi chiamo Michele Scarpa e sono un ingegnere del software da diversi anni. Ho consolidato una solida esperienza nalla realizzazione di applicazioni fullstack e mobile. Il mio focus è nel miglioramento continuo di tutto ciò che gira attorno a un software, capendo il contesto, le tecnologie e il dominio in cui vive. ",
+    "presentation": "My name is Michele Scarpa and I have been a software engineer for several years. I have consolidated a solid experience in the creation of fullstack and mobile applications. My focus is on the continuous improvement of everything that revolves around a software, understanding the context, the technologies and the domain in which it lives",
     "contact": {
         "email": "scarpa.michele.90@gmail.com",
         "phone": "+393483482541",
@@ -208,19 +208,19 @@
             "id": 3,
             "type": "cert",
             "content": "AWS Certified Developer - Associate",
-            "date": "Dicembre 2022"
+            "date": "December 2022"
         },
         {
             "id": 2,
             "type": "cert",
             "content": "ISIPM Base",
-            "date": "Aprile 22"
+            "date": "April 22"
         },
         {
             "id": 1,
             "type": "cert",
             "content": "Google Professional Data Engineering ",
-            "date": "Marzo 2020"
+            "date": "March 2020"
         }
     ],
     "speakers": [
@@ -230,7 +230,7 @@
             "content": "GDG Dev Fest Venezia",
             "date": "Novembre 2024",
             "title": "Frontend Roadmap: Beginning Dilemma",
-            "description": "Roadmap e strumenti per la strada del frontend developer"
+            "description": "Roadmap and tools for the frontend developer road"
         }
     ],
     "studies": [
@@ -238,14 +238,14 @@
             "id": 1,
             "type": "study",
             "content": "Università studi Padova",
-            "target": "Triennale Ingegneria Dell'informazione",
+            "target": "Bachelor's Degree in Information Engineering",
             "date": "2015"
         },
         {
             "id": 2,
             "type": "study",
             "content": "ITIS C.Zuccante",
-            "target": "Perito Tecnico Elettronico e telecomunicazioni",
+            "target": "Electronics and Telecommunications Technical Expert",
             "date": "2009"
         }
     ],
@@ -260,13 +260,13 @@
             "dateStart": "Sep 22",
             "dateStartTime": "2022-09-01",
             "date": "2022 - current",
-            "description": "Attualmente lavoro in Almaviva, una delle più grandi corporate italiane, specializzata in soluzioni IT per la Pubblica Amministrazione. In questa esperienza ho consolidato il mio ruolo di Senior Fullstack Developer, ampliando le mie competenze su tecnologie enterprise e su architetture scalabili.",
+            "description": "I currently work in Almaviva, one of the largest Italian corporations, specialized in IT solutions for the Public Administration. In this experience I consolidated my role as Senior Fullstack Developer, expanding my skills on enterprise technologies and scalable architectures.",
             "experiencesList": [
-                "Gestione fullstack di progetti enterprise, curando frontend, backend e database.",
-                "Responsabile della delivery di due progetti in produzione per la Pubblica Amministrazione.",
-                "Mentoring di colleghi junior, affiancandoli nel percorso di crescita tecnica e professionale.",
-                "Affiancamento di uno sviluppatore junior post-bootcamp, contribuendo alla sua formazione fino al suo ingresso in un'altra grande azienda come frontend e mobile developer.",
-                "Conseguimento della certificazione AWS Developer Associate, rafforzando le competenze in cloud e architetture scalabili."
+                "Fullstack management of enterprise projects, taking care of frontend, backend and database.",
+                "Responsible for the delivery of two projects in production for the Public Administration.",
+                "Mentoring of junior colleagues, supporting them in the path of technical and professional growth.",
+                "Shadowing a post-bootcamp junior developer, contributing to his training until he joined another large company as a frontend and mobile developer.",
+                "Achievement of the AWS Developer Associate certification, strengthening skills in cloud and scalable architectures."
             ],
             "skillAquiredList": [
                 {
@@ -354,13 +354,13 @@
             "dateStartTime": "2021-09-01",
             "date": "2021 - 2022",
             "experiencesList": [
-                "Sviluppo e manutenzione di applicazioni frontend in Angular e React per la gestione di flotte e servizi di raccolta rifiuti.",
-                "Integrazione con backend .NET/C# tramite GraphQL, ottimizzando la comunicazione tra frontend e database.",
-                "Utilizzo di NX per la gestione di monorepo e scalabilità delle applicazioni Angular/React.",
-                "Implementazione di componenti avanzati con KendoUI e Syncfusion, migliorando la UX e la gestione dati complessi.",
-                "Conseguimento della certificazione ISIPM Base in Project Management, migliorando la comprensione delle fasi progettuali e la collaborazione con i PM."
+                "Development and maintenance of frontend applications in Angular and React for the management of fleets and waste collection services.",
+                "Integration with .NET/C# backends via GraphQL, streamlining communication between frontend and database.",
+                "Use NX to manage monorepo and scale Angular/React applications.",
+                "Implementing advanced components with KendoUI and Syncfusion, improving UX and complex data management.",
+                "Achievement of the ISIPM Base certification in Project Management, improving the understanding of the project phases and collaboration with PMs."
             ],
-            "description": "Ho lavorato per Viasat - Vem Solutions, in particolare nella Business Unit Greennext Technologies, specializzata nei servizi di gestione dei rifiuti (Waste Management). In questa esperienza ho sviluppato applicazioni frontend in Angular e React, lavorando su soluzioni per il monitoraggio e la gestione delle flotte.",
+            "description": "I worked for Viasat - Vem Solutions, in particular in the Greennext Technologies Business Unit, specialized in waste management services. In this experience I developed frontend applications in Angular and React, working on solutions for fleet monitoring and management.",
             "skillAquiredList": [
                 {
                     "name": "React",
@@ -474,15 +474,15 @@
             ],
             "experiencesList": [
                 "Player Web per Digital Signage",
-                "Player Android - Feature avanzate",
-                "Progetti chiave: Upgrade tecnologico allo Stadio Olimpico",
-                "Progetti chiave: Sistema di tracking su mappa per trasporto pubblico",
-                "Progetti chiave: Sincronizzazione contenuti su Led Wall",
+                "Player Android - advanced feature",
+                "Key projects: Technological upgrade to the Olympic Stadium",
+                "Key projects: Map tracking system for public transport",
+                "Key projects: Content synchronization on Led Wall",
                 "Mobile Development (Android - Kotlin, Java)",
                 "Frontend Development (Vue.js, GIS, OpenLayers)"
             ],
-            "description": "Ho lavorato allo sviluppo di soluzioni Digital Signage, inizialmente su dispositivi Android e backend Java/JSP. Ho realizzato un client per monitor “embedded” (Toshiba e Samsung Tizen). Ho potuto lavorare anche ad altri progetti in prodotti e in consulenza con le seguenti tecnologie: Vue.js, React, Angular e Android (Kotlin)",
-            "longDescription": "Durante questa esperienza lavorativa mi sono inizialmente occupato del settore Digital Signage, contribuendo allo sviluppo di un applicativo client per dispositivi Android e di un backend monolitico in Java, con interfacce JSP. Il focus principale riguardava la gestione e l'ottimizzazione di immagini, video, font e altri asset destinati ai player, che ne curano la visualizzazione. In una seconda fase, ho lavorato alla realizzazione di un client per monitor “embedded” - display professionali dotati di API e browser personalizzati, pensati per applicazioni di digital signage. Oltre a perfezionare il prodotto, ho avuto modo di partecipare a diversi progetti, sfruttando tecnologie come Vue.js, React, Angular e sviluppando app mobile su Android (Kotlin)."
+            "description": "I worked on the development of Digital Signage solutions, initially on Android devices and Java/JSP backends. I have created a client for 'embedded' monitors (Toshiba and Samsung Tizen). I was also able to work on other projects in products and consulting with the following technologies: Vue.js, React, Angular and Android (Kotlin)",
+            "longDescription": "During this work experience I initially worked in the Digital Signage sector, contributing to the development of a client application for Android devices and a monolithic backend in Java, with JSP interfaces. The main focus was on the management and optimization of images, videos, fonts and other assets intended for players, who take care of their display. In a second phase, I worked on the creation of a client for 'embedded' monitors - professional displays equipped with APIs and custom browsers, designed for digital signage applications. In addition to perfecting the product, I had the opportunity to participate in several projects, taking advantage of technologies such as Vue.js, React, Angular and developing mobile apps on Android (Kotlin)."
         },
         {
             "id": 3,
@@ -496,18 +496,18 @@
             "date": "2012 - 2014",
             "skillAquiredList": [
                 {
-                    "name": "capacità gestionali e organizzative"
+                    "name": "Management and organizational skills"
                 },
                 {
-                    "name": "problem solving e al lavoro in team"
+                    "name": "problem solving and teamwork"
                 }
             ],
             "experiencesList": [
-                "Customer services and Gestione della cassa",
-                "Gestione del magazzino e dell'inventario",
-                "Organizzazione del lavoro e dei collaboratori"
+                "Customer services and Cash management",
+                "Warehouse and inventory management",
+                "Organization of work and collaborators"
             ],
-            "description": "Per finanziare gli studi, ho lavorato in un discount, ricoprendo diversi ruoli operativi, tra cui gestione della cassa, magazzino, inventario e organizzazione del personale. Questo mi ha permesso di sviluppare capacità gestionali e organizzative, oltre a rafforzare la mia attitudine al problem solving e al lavoro in team."
+            "description": "To finance my studies, I worked in a discount store, covering various operational roles, including cash management, warehouse, inventory and staff organization. This allowed me to develop management and organizational skills, as well as strengthening my aptitude for problem solving and teamwork."
         }
     ]
 }

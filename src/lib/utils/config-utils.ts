@@ -1,24 +1,19 @@
-//import configData from '$lib/config/config.json'; // import del JSON
-import configData from '$content/config/config.json';
+import resumeEn from '$content/resume/en.json';
+import resumeIt from '$content/resume/it.json';
+import { defaultLang } from '$lib/i18n/lang.store';
 
-import type {
-	LangType,
-	SectionType
-} from '../types';
+import type { LangType } from '../types';
 
-// Se vuoi, puoi definire un tipo per tutto il config
-// type AppConfig = { it: { landing: ..., resume: ...}, en: { ... } };
-
-
-const DEFAULT_LANG: LangType = 'it'; // o prendi la lingua di default da altrove
-
-
-
-export function getConfig(
-  section: SectionType,
-  lang: LangType = DEFAULT_LANG
+export function getResumeLang(
+  lang: LangType = defaultLang
 ): any {
   // Ritorna la parte di config corrispondente
+  if (lang === 'en') {
+    return resumeEn;
+  } else if (lang === 'it') {
+    return resumeIt;
+  }
 
-  return configData[lang]?.[section] ?? {};
+  return resumeIt;
+
 }

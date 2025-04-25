@@ -1,4 +1,4 @@
-<script context="module" lang="ts">
+<script module lang="ts">
 	export type ThemeAvailable = 'dark' | 'light' | 'system';
 </script>
 
@@ -7,10 +7,9 @@
 	import { writable } from 'svelte/store';
 
 	let resolvedTheme: ThemeAvailable = 'dark';
-	let otherTheme: ThemeAvailable = 'light';
-	$: mounted = false;
-
-	let isDark = true;
+	let otherTheme = $state<ThemeAvailable>('light');
+	let mounted = $state(false);
+	let isDark = $state(true); ;
 
 	// Store per gestire il tema
 	export const theme = writable<ThemeAvailable>('dark');

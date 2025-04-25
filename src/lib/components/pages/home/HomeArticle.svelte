@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { t } from '$lib/i18n';
 	import type { ArticleFormat } from "$lib/content/content";
 	import { 
         Card, 
@@ -21,5 +22,5 @@
     <CardDescription>
         {article.metadata.description}
     </CardDescription>
-    <CardCta>Leggi l'articolo</CardCta>
+    <CardCta>{$t('home.readarticle')}</CardCta>
 </Card>
