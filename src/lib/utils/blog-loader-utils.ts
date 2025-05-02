@@ -1,3 +1,6 @@
+import { defaultLang } from '$lib/i18n/lang.store';
+import type { LangType } from '$lib/types';
+
 export type ArticleBlogMD = {
     metadata: {
         title: string,
@@ -6,12 +9,46 @@ export type ArticleBlogMD = {
     },
     slug: string | undefined
 }
-export async function loadArticles(): Promise<ArticleBlogMD[]> {
+
+const globMap = {
+    en: import.meta.glob('/src/content/blog/en/*.md'),
+    it: import.meta.glob('/src/content/blog/it/*.md'),
+};
+export async function loadArticles(lang: LangType = defaultLang): Promise<ArticleBlogMD[]> {
+
+    const files = globMap[lang] ?? globMap[defaultLang];
+
+    const resolvedPosts = await Promise.all(
+        Object.entries(files).map(async ([path, resolver]) => {
+            const mod: any = await resolver();
+
+            const metadata = mod.metadata ?? {};
+            if (!metadata.date) {
+                metadata.date = (new Date().toDateString())
+            }
+            return {
+                metadata,
+                slug: path.split('/').pop()?.replace('.md', '')
+            };
+        })
+    );
+
+    resolvedPosts.sort((a, b) => {
+
+        return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
+    });
+
+    return resolvedPosts as ArticleBlogMD[];
+}
+
+
+export async function loadArticlesOld(): Promise<ArticleBlogMD[]> {
+
 
     const resolvedPosts = await Promise.all(
         Object.entries(import.meta.glob('/src/content/blog/*.md')).map(async ([path, resolver]) => {
             const mod: any = await resolver();
-            
+
             let metadata = {
                 ...mod.metadata
             }
@@ -28,7 +65,7 @@ export async function loadArticles(): Promise<ArticleBlogMD[]> {
 
     // Ordina magari per data
     resolvedPosts.sort((a, b) => {
-        
+
         return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
     });
 

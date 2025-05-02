@@ -6,7 +6,10 @@
         "readarticle": "Read the complete article"
     },
     "resume": { },
-    "blog": { },
+    "blog": { 
+        "title": "Story and thoughts about my road on software engineer world",
+        "intro": "All my long-form thoughts on programming — insights, experiences, and lessons learned. Here you'll find side projects, test builds, proof of concepts, and my 'learn-by-doing' journey."
+    },
     "common": {
         "langselect": "Language"
     }

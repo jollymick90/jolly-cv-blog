@@ -10,6 +10,7 @@ import {
     CardCta
 } from "$lib/components/theme/card";
 import { langStore } from "$lib/i18n/lang.store";
+import { t } from "$lib/i18n";
 const lang = $derived($langStore);
 
 const { article } : { article: ArticleFormat } = $props();
@@ -28,7 +29,9 @@ const { article } : { article: ArticleFormat } = $props();
         <CardDescription>
             {article.metadata.description}
         </CardDescription>
-        <CardCta>Leggi l'articolo</CardCta>
+        <CardCta>
+            {$t('home.readarticle')}
+        </CardCta>
     </Card>
     <CardEyebrow
         className="mt-1 hidden md:block"

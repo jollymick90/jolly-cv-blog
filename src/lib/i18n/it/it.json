@@ -6,6 +6,10 @@
         "readarticle": "Leggi l'articolo"
     },
     "resume": { },
+    "blog": {
+        "title": "Storie e pensieri sulla mia strada nel mondo del software",
+        "intro": "Tutti i miei pensieri approfonditi sulla programmazione — intuizioni, esperienze e lezioni apprese. Qui trovi progetti personali, prototipi, proof of concept e il mio percorso di apprendimento attraverso la pratica."
+    },
     "common": {
         "langselect": "Language"
     }

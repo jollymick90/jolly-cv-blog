@@ -2,18 +2,20 @@
 	import { loadArticles } from '$lib/utils/blog-loader-utils';
 	import { onMount } from 'svelte';
 	import HomeArticle from './HomeArticle.svelte';
+	import { langStore } from '$lib/i18n/lang.store';
 
-	$: count = 0;
-	let articleList: any[] = [];
+	let count = $state(0);
+	let currentLang = $derived($langStore);
+	let articleList: any[] = $state([]);
+
 	onMount(() => {
 		async function init() {
-			articleList = await loadArticles();
+			articleList = await loadArticles(currentLang);
 			count = articleList.length;
 		}
 		init();
 	});
 
-	let articlesHomeList = [];
 </script>
 
 {#each articleList as article}
