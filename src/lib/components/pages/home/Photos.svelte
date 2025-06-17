@@ -1,9 +1,9 @@
 <script lang="ts">
-	import image1 from '$lib/img/photos/image-1.jpg';
-	import image2 from '$lib/img/photos/image-2.jpg';
-	import image3 from '$lib/img/photos/image-3.jpg';
-	import image4 from '$lib/img/photos/image-4.jpg';
-	import image5 from '$lib/img/photos/image-5.jpg';
+	import image1 from '$lib/img/photos/image-6.jpg';
+	import image2 from '$lib/img/photos/image-7.jpg';
+	import image3 from '$lib/img/photos/image-8.jpg';
+	import image4 from '$lib/img/photos/image-9.jpg';
+	import image5 from '$lib/img/photos/image-10.webp';
 	const imgList = [
 		{
 			src: image1,
