@@ -7,8 +7,14 @@ export type SocialInfo = {
 export type ContactData = {
     phone: string;
     email: string;
-    social: SocialInfo[]
-    
+    social: SocialInfo[];
+    address: {
+        showStreet: boolean;
+        street: string;
+        city: string;
+        zipcode: string;
+        country: string;
+    }
 }
 export type PresentationResume = string;
 export type MainSkills = {
@@ -88,7 +94,7 @@ export type SkillTypeEnum = {
     FRAMEWORKS: unknown,
     TOOLS: unknown,
     OTHER: unknown,
-    SOFT: unknown
+    SOFT_SKILL: unknown
 }
 
 export type SkillTagEnum = {

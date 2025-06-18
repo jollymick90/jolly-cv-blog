@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { type ExperiencesEvent } from '$lib/content/resume'
+
+	
 import type {
     IResume
 } from "$lib/content";
@@ -8,6 +11,18 @@ export const {
 }: {
     resume: IResume
 } = $props();
+
+const skills = [...resume.skills];
+const top5Skills = skills.filter(skill => skill.type === 'SOFT_SKILL')
+.sort((skillA, skillB) => skillB.level - skillA.level)
+.splice(0,3);
+
+
+const top5TechSkills = skills.filter(skill => 
+skill.type === 'WEB_DEVELOPMENT'
+)
+.sort((skillA, skillB) => skillB.level - skillA.level)
+.splice(0,7);
 </script>
 
 <!-- <!DOCTYPE html>
@@ -21,21 +36,38 @@ export const {
 <div class="cv-container">
     <aside class="sidebar">
         <!-- <img src="profile.jpg" alt={resume.fullName} class="profile-pic"> -->
-        <h1>{resume.mainRoleTitle}</h1>
+        <h1>{resume.fullName}</h1>
         <p class="subtitle">{resume.mainRoleTitle}</p>
         <div class="details">
             <h3>Details</h3>
-            <p>130 Terry Boulevard<br>Hartford, CT 06105<br>United States</p>
-            <p>(203) 297-6342<br><a href="mailto:neilburr_ws5_@yahoo.com">neilburr_ws5_@yahoo.com</a></p>
+            <p>
+                {#if resume.contact.address.showStreet}
+                     <span>{resume.contact.address.street}</span>
+                {/if}
+                <br>
+                {resume.contact.address.city} {resume.contact.address.zipcode}
+                <br>
+                {resume.contact.address.country}
+            </p>
+            <p>
+                {resume.contact.phone}<br>
+            <a href="{resume.contact.email}">
+                {resume.contact.email}
+            </a>
+            </p>
         </div>
         <div class="skills">
             <h3>Skills</h3>
             <ul>
-                <li>Analytical Thinking Skills</li>
-                <li>Principles and Practices of Engineering</li>
-                <li>Creative Problem Solving</li>
-                <li>Field Investigation Skills</li>
-                <li>Project Management</li>
+                {#each top5Skills as skill }
+                    <li>{skill.name}</li>
+                {/each}
+            </ul>
+            <h3>Tech Skills</h3>
+             <ul>
+                {#each top5TechSkills as skill }
+                    <li>{skill.name}</li>
+                {/each}
             </ul>
         </div>
     </aside>
@@ -43,12 +75,14 @@ export const {
     <main class="main-content">
         <section class="profile">
             <h2>Profile</h2>
-            <p>Dedicated and experienced Civil Engineer with extensive knowledge of engineering principles, theories, specifications, and standards. Bringing leadership, drive, and over seven years of experience to the table. Proven track record of finishing complex projects under budget and ahead of schedule. Substantial knowledge and experience with environmentally sustainable construction.</p>
+            <p>{resume.presentation}</p>
         </section>
 
         <section class="experience">
             <h2>Employment History</h2>
-            <h3>Civil Engineer, Hexagon Corporation, Hartford</h3>
+             {#snippet experience(experience: ExperiencesEvent)}
+                           
+            <h3>{experience.role}, {experience.companyName}, Italy</h3>
             <p><em>September 2014 – September 2019</em></p>
             <ul>
                 <li>Carefully managed projects so that milestones were met during agreed time and within budget confines.</li>
@@ -56,6 +90,11 @@ export const {
                 <li>Created detailed plans and frequently monitored progress to assure project goals were met.</li>
                 <li>Ensured that building regulations were all met and provided thorough directions with any unusual or difficult engineering issue.</li>
             </ul>
+             {/snippet}
+             {#each resume.experiences as exp}
+               {@render experience(exp)} 
+             {/each}
+ 
 
             <h3>Civil Engineer, Racon & Lewis Ltd, Danbury</h3>
             <p><em>August 2012 – August 2014</em></p>
@@ -165,6 +204,10 @@ h2 {
 h3 {
     margin-bottom: 5px;
     color: #10253f;
+}
+.sidebar h3 {
+   color: #ddd; 
+   font-weight: 800;
 }
 
 ul {
