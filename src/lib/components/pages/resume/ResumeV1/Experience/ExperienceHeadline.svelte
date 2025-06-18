@@ -30,13 +30,12 @@
 					{item.dateEnd}
 				{/if}
 			</div>
-			<ButtonExpand
+			<!-- <ButtonExpand
 			initialValue={false}
 	onChange={(value: boolean) => {
-		console.log("value", value)
 		isExpandItem.set(value)
 	}}
-></ButtonExpand>
+></ButtonExpand> -->
 		</div>
 	</div>
 </div>

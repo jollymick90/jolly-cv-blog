@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Container from '$lib/components/template/Container.svelte';
 	import Resume from '$lib/components/pages/resume/Resume.svelte';	
+	import Cv from '$lib/components/pages/resume/CV.svelte';
 	
 	let { data } = $props();
 	function downloadResume() {
@@ -12,5 +13,5 @@
 </svelte:head>
 
 <Container className="mt-9">
-	<Resume resume={data.resume}/>
+	<Cv resume={data.resume}/>
 </Container>

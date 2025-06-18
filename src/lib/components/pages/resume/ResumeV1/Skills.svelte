@@ -5,7 +5,7 @@
 	import { isMobile } from '$lib/stores/breakpoint';
 
 	const { listSkills }: { listSkills: SkillItem[] } = $props();
-	let isExpand = $state(!$isMobile);
+	let isExpand = true;//$state(!$isMobile);
 	
 	const skills: SkillItemUI[] = listSkills.map((item) => {
 		return {
@@ -16,15 +16,14 @@
 </script>
 
 <div class="w-full">
-	<h2 id="timeline-title" class="mx-1 my-1 text-lg font-medium text-gray-900 dark:text-zinc-100">
-		<span>Competenze</span>
+	<!-- <h2 id="timeline-title" class="mx-1 my-1 text-lg font-medium text-gray-900 dark:text-zinc-100">
 		<ButtonExpand
 			initialValue={false}
 			onChange={(value: boolean) => {
 				isExpand = value;
 			}}
 		></ButtonExpand>
-	</h2>
+	</h2> -->
 
 	<div class={isExpand ? '' : 'h-20 overflow-hidden'}>
 		<div class="grid w-full grid-cols-3 gap-2 md:grid-cols-6">

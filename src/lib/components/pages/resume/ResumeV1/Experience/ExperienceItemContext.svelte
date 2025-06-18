@@ -13,8 +13,8 @@
 		item: ExperiencesEventUI;
 		isLast: boolean;
 	} = $props();
-	let _isExpand = $derived($isExpand)
-	let _isExpandItem = $derived($isExpandItem);
+	let _isExpand = true//;$derived($isExpand)
+	let _isExpandItem = true;//$derived($isExpandItem);
 
 </script>
 
