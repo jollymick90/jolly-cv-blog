@@ -1,9 +1,13 @@
 <script lang="ts">
+	
 	import { type ExperiencesEvent } from '$lib/content/resume'
 
 	
 import type {
-    IResume
+    IResume,
+
+	StudiesEvent
+
 } from "$lib/content";
 
 export const {
@@ -83,44 +87,32 @@ skill.type === 'WEB_DEVELOPMENT'
              {#snippet experience(experience: ExperiencesEvent)}
                            
             <h3>{experience.role}, {experience.companyName}, Italy</h3>
-            <p><em>September 2014 – September 2019</em></p>
+            <p><em>{experience.dateStart} – {experience.dateEnd}</em></p>
             <ul>
-                <li>Carefully managed projects so that milestones were met during agreed time and within budget confines.</li>
-                <li>Attended meetings to discuss projects with clients, contractors, asset owners, and stockholders.</li>
-                <li>Created detailed plans and frequently monitored progress to assure project goals were met.</li>
-                <li>Ensured that building regulations were all met and provided thorough directions with any unusual or difficult engineering issue.</li>
+                {#each Array.from(experience.experiencesList || [])  as expItem}
+                    <li>{expItem}</li>
+                {/each}
+              
             </ul>
              {/snippet}
              {#each resume.experiences as exp}
                {@render experience(exp)} 
              {/each}
  
-
-            <h3>Civil Engineer, Racon & Lewis Ltd, Danbury</h3>
-            <p><em>August 2012 – August 2014</em></p>
-            <ul>
-                <li>Planned and directed the execution of various projects, keeping economical, administrative, and physical requirements in mind.</li>
-                <li>Trained incoming engineers to meet standards and protocol expectations.</li>
-                <li>Wrote daily reports for accountability and quality assurance.</li>
-                <li>Advised project managers on financial decisions regarding product costs.</li>
-            </ul>
-
-            <h3>Junior Civil Engineer, Racon & Lewis Ltd, Danbury</h3>
-            <p><em>August 2009 – August 2012</em></p>
-            <ul>
-                <li>Assisted senior engineers with all tasks related to ensuring project success.</li>
-                <li>Inspected all materials to ensure project specifications and quantities properly met.</li>
-                <li>Thoroughly inspected all major structures and supervised any revisions made.</li>
-                <li>Monitored construction and inspected installation of major systems.</li>
-                <li>Assisted with and independently produced many Engineer reports.</li>
-            </ul>
         </section>
 
         <section class="education">
             <h2>Education</h2>
-            <h3>Master of Civil Engineering, New York University, New York</h3>
-            <p><em>January 2009 – January 2011</em></p>
-            <p>Graduated with a 3.9 GPA.</p>
+
+            {#snippet studies(study: StudiesEvent)}
+                           
+            <h3>{study.target}, {study.content}, Italy</h3>
+            <p><em>{study.date}</em></p>
+
+             {/snippet}
+              {#each resume.studies as study}
+               {@render studies(study)} 
+             {/each}
         </section>
     </main>
 </div>
