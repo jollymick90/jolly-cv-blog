@@ -13,5 +13,6 @@
 </svelte:head>
 
 <Container className="mt-9">
-	<Cv resume={data.resume}/>
+	
+	 <Cv resume={data.resume}/>
 </Container>
