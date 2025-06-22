@@ -18,6 +18,10 @@
         "title": "Dal Codice alla Realizzazione",
         "intro": "Scopri i progetti a cui ho dato vita, unendo creatività e competenza tecnica per trasformare idee in realtà"
     },
+    "event": {
+        "title": "Divulgazione Tech",
+        "intro": "Dal codice al palco: il mio impegno nel condividere temi importanti e stimolare la discussione nella community di sviluppatori. Grazie al progetto BacaroTech sono diventato uno speaker e cerco di portare dal vivo gli alcuni temi per me importanti. Riuscire a programmare è importante per un developer, riuscire a raccontare come programmare è un passo in più verso una maggiore consapevolezza"
+    },
     "common": {
         "langselect": "Language"
     }

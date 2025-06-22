@@ -18,6 +18,10 @@
         "title": "Thoughts in Code and Beyond",
         "intro": "An archive of my insights, discoveries, and journey through the world of programming and more."
     },
+     "event": {
+        "title": "Tech Contamination",
+        "intro": "From code to stage: my commitment to sharing important topics and fostering discussion within the developer community. Thanks to the BacaroTech project, I've become a speaker, and I aim to bring some topics important to me live to audiences. Being able to program is crucial for a developer; being able to talk about how to program is a further step towards greater awareness."
+    },
     "common": {
         "langselect": "Language"
     }

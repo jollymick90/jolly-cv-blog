@@ -23,8 +23,7 @@
 		{
 			title: 'Eventi',
 			description: 'Speak directly to your customers',
-			href: `/${lang}/content`,
-			disable: true
+			href: `/${lang}/event`,
 		},
 		{
 			title: 'Blog',
