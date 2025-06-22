@@ -2,7 +2,7 @@
 	import { type ContactData } from '$lib/content/resume';
     import { Icon, Envelope, Phone } from "svelte-hero-icons";
     const { contact }: {contact: ContactData} = $props();
-    const showPhone = false;
+    const showPhone = contact.showPhone;
 </script>
 <div class="text-center flex flex-col md:flex-row gap-1 justify-center mt-4 text-lg text-gray-500  dark:text-zinc-100 leading-8">
     <div

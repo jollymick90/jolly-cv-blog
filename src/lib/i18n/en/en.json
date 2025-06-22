@@ -6,7 +6,9 @@
         "readarticle": "Read the complete article"
     },
     "resume": { 
-
+        "contact": "Contact",
+        "softskills": "Soft Skills",
+        "techskills":"Technical Skills"
     },
     "blog": { 
         "title": "Story and thoughts about my road on software engineer world",

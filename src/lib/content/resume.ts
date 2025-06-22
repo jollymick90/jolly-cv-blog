@@ -5,13 +5,16 @@ export type SocialInfo = {
     ariaLabel: string;
 }
 export type ContactData = {
+    showPhone: boolean;
     phone: string;
     email: string;
     social: SocialInfo[];
     address: {
         showStreet: boolean;
         street: string;
+        useShortAddress: boolean;
         city: string;
+        nearestBigCity: string;
         zipcode: string;
         country: string;
     }

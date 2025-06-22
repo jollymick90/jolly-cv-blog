@@ -31,11 +31,14 @@
     "presentation": "Mi chiamo Michele Scarpa e sono un ingegnere del software da diversi anni. Ho consolidato una solida esperienza nalla realizzazione di applicazioni fullstack e mobile. Il mio focus è nel miglioramento continuo di tutto ciò che gira attorno a un software, capendo il contesto, le tecnologie e il dominio in cui vive. ",
     "contact": {
         "email": "scarpa.michele.90@gmail.com",
+        "showPhone": true,
         "phone": "+393483482541",
         "address": {
-            "showStreet": true,
+            "showStreet": false,
             "street": "via Isonzo 45/B",
             "city": "Vigonza, Padova",
+            "nearestBigCity": "Padova",
+            "useShortAddress": true,
             "zipcode": "35010",
             "country": "Italia"
         },

@@ -31,11 +31,14 @@
     "presentation": "My name is Michele Scarpa and I have been a software engineer for several years. I have consolidated a solid experience in the creation of fullstack and mobile applications. My focus is on the continuous improvement of everything that revolves around a software, understanding the context, the technologies and the domain in which it lives",
     "contact": {
         "email": "scarpa.michele.90@gmail.com",
+        "showPhone": false,
         "phone": "+393483482541",
         "address": {
-            "showStreet": true,
+            "showStreet": false,
             "street": "via Isonzo 45/B",
             "city": "Vigonza, Padua",
+            "nearestBigCity": "Padua",
+            "useShortAddress": true,
             "zipcode": "35010",
             "country": "Italy"
         },
