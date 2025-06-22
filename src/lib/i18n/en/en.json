@@ -5,14 +5,18 @@
         "description": "I am a software engineer, primarily focused on web development. I have a passion for software development and possess expertise in various technologies, including JS, TS, Java, Angular, React, and Spring. Throughout my career, I have also worked on projects involving Digital Signage (Smart TVs - Tizen ) and mobile android applications",
         "readarticle": "Read the complete article"
     },
+    "project": {
+        "title": "From Code to Creation",
+        "intro": "Explore the projects I've brought to life, combining creativity and technical expertise to transform ideas into reality."
+    },
     "resume": { 
         "contact": "Contact",
         "softskills": "Soft Skills",
         "techskills":"Technical Skills"
     },
     "blog": { 
-        "title": "Story and thoughts about my road on software engineer world",
-        "intro": "All my long-form thoughts on programming — insights, experiences, and lessons learned. Here you'll find side projects, test builds, proof of concepts, and my 'learn-by-doing' journey."
+        "title": "Thoughts in Code and Beyond",
+        "intro": "An archive of my insights, discoveries, and journey through the world of programming and more."
     },
     "common": {
         "langselect": "Language"

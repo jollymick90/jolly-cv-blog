@@ -1,18 +1,13 @@
 <script lang="ts">
 	import type { ItemList } from "$lib/components/types/template";
-	import { onMount } from "svelte";
 	const { items }: { items: ItemList[] } = $props();
 
-	let showIcon = false;
 	
 	const itemsList = items.filter(item => !item.disable)
 	let isOpen = $state(false);
 
 	function toggleMenu() {
 		isOpen = !isOpen;
-	}
-	function ontouchend() {
-		isOpen = false;
 	}
 
 	function onclick(event: any) {		
@@ -34,11 +29,6 @@
 	<span class="sr-only">Open main menu</span>
 
 	{#if isOpen}
-		<!--
-        Icon when menu is open.
-
-        Menu open: "block", Menu closed: "hidden"
-    -->
 		<svg
 			class="size-6"
 			fill="none"
@@ -51,11 +41,6 @@
 			<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
 		</svg>
 	{:else}
-		<!--
-        Icon when menu is closed.
-
-        Menu open: "hidden", Menu closed: "block"
-    -->
 		<svg
 			class="size-6"
 			fill="none"
@@ -90,21 +75,7 @@
 							class="group relative flex gap-x-6 rounded-lg p-4
                                 hover:bg-gray-50 dark:hover:bg-zinc-600"
 						>
-							<div
-								class="{showIcon
-									? 'block'
-									: 'hidden'} mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
-							>
-								<svg
-									class="size-6 text-gray-600 group-hover:text-indigo-600"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-								>
-									<path stroke-linecap="round" stroke-linejoin="round" d={item.icon} />
-								</svg>
-							</div>
+							
 							<div>
 								<a
 									onclick={onclick}
@@ -114,7 +85,6 @@
 								>
 									{item.title}
 								</a>
-								<!-- <p class="mt-1 text-gray-600">{item.description}</p> -->
 							</div>
 						</div>
 					{/each}

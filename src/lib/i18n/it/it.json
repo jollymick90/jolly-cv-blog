@@ -11,8 +11,12 @@
         "techskills":"Technical Skills"
     },
     "blog": {
-        "title": "Storie e pensieri sulla mia strada nel mondo del software",
-        "intro": "Tutti i miei pensieri approfonditi sulla programmazione — intuizioni, esperienze e lezioni apprese. Qui trovi progetti personali, prototipi, proof of concept e il mio percorso di apprendimento attraverso la pratica."
+        "title": "Pensieri in Codice e non Solo",
+        "intro": "Un archivio delle mie intuizioni, scoperte e del mio viaggio nel mondo della programmazione e oltre."
+    },
+    "project": {
+        "title": "Dal Codice alla Realizzazione",
+        "intro": "Scopri i progetti a cui ho dato vita, unendo creatività e competenza tecnica per trasformare idee in realtà"
     },
     "common": {
         "langselect": "Language"
