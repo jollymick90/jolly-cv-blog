@@ -1,0 +1,201 @@
+{
+    "mainSkillsList": [
+        {
+            "name": "Typescript"
+        },
+        {
+            "name": "Javascript"
+        },
+        {
+            "name": "React"
+        },
+        {
+            "name": "Angular"
+        },
+        {
+            "name": "Vue"
+        },
+        {
+            "name": "Svelte"
+        },
+        {
+            "name": "Java"
+        },
+        {
+            "name": "Android"
+        }
+    ],
+        "skills": [
+        {
+            "name": "Analytical Thinking Skills",
+            "level": 80,
+            "levelTag": "high",
+            "type": "SOFT_SKILL"
+        },
+        {
+            "name": "Creative Problem Solving",
+            "level": 80,
+            "levelTag": "high",
+            "type": "SOFT_SKILL"
+        },
+        {
+            "name": "Project Management",
+            "level": 80,
+            "levelTag": "high",
+            "type": "SOFT_SKILL"
+        },
+        {
+            "name": "Field Investigation Skills",
+            "level": 80,
+            "levelTag": "high",
+            "type": "SOFT_SKILL"
+        },
+        {
+            "name": "Principles and Practices of Engineering",
+            "level": 80,
+            "levelTag": "high",
+            "type": "SOFT_SKILL"
+        },
+        {
+            "name": "Typescript",
+            "level": 90,
+            "levelTag": "high",
+            "type": "PROGRAMMING_LANGUAGE"
+        },
+        {
+            "name": "Javascript",
+            "level": 90,
+            "levelTag": "high",
+            "type": "PROGRAMMING_LANGUAGE"
+        },
+        {
+            "name": "HTML/CSS",
+            "level": 85,
+            "levelTag": "high",
+            "type": "WEB_DEVELOPMENT"
+        },
+        {
+            "name": "React",
+            "level": 85,
+            "levelTag": "high",
+            "type": "WEB_DEVELOPMENT"
+        },
+        {
+            "name": "Angular",
+            "level": 85,
+            "levelTag": "high",
+            "type": "WEB_DEVELOPMENT"
+        },
+        {
+            "name": "Vue",
+            "level": 85,
+            "levelTag": "high",
+            "type": "WEB_DEVELOPMENT"
+        },
+        {
+            "name": "JQuery",
+            "level": 85,
+            "levelTag": "high",
+            "type": "WEB_DEVELOPMENT"
+        },
+        {
+            "name": "OpenLayers/Leaflet",
+            "level": 80,
+            "levelTag": "high",
+            "type": "WEB_DEVELOPMENT"
+        },
+        {
+            "name": "git",
+            "level": 80,
+            "levelTag": "high"
+        },
+        {
+            "name": "Java",
+            "level": 80,
+            "levelTag": "high",
+            "type": "PROGRAMMING_LANGUAGE"
+        },
+        {
+            "name": "Spring Boot",
+            "level": 80,
+            "levelTag": "high",
+            "type": "FRAMEWORKS"
+        },
+        {
+            "name": "Hibernate",
+            "level": 80,
+            "levelTag": "high"
+        },
+        {
+            "name": "Kotlin",
+            "level": 60,
+            "levelTag": "medium",
+            "type": "PROGRAMMING_LANGUAGE"
+        },
+        {
+            "name": "Android",
+            "level": 70,
+            "levelTag": "medium",
+            "type": "MOBILE"
+        },
+        {
+            "name": "React Native",
+            "level": 70,
+            "levelTag": "medium",
+            "type": "MOBILE"
+        },
+        {
+            "name": "Tizen OS",
+            "level": 65,
+            "levelTag": "medium",
+            "type": "OTHER"
+        },
+        {
+            "name": "Framework7",
+            "level": 60,
+            "levelTag": "medium",
+            "type": "FRAMEWORKS"
+        },
+        {
+            "name": "SQL",
+            "level": 60,
+            "levelTag": "medium",
+            "type": "DATABASE_MANAGEMENT"
+        },
+        {
+            "name": "NodeJS",
+            "level": 60,
+            "levelTag": "medium"
+        },
+        {
+            "name": "Docker",
+            "level": 50,
+            "levelTag": "base"
+        },
+        {
+            "name": "Kubernates",
+            "level": 50,
+            "levelTag": "base"
+        },
+        {
+            "name": "Helm",
+            "level": 40,
+            "levelTag": "base"
+        },
+        {
+            "name": "C#",
+            "level": 50,
+            "levelTag": "base"
+        },
+        {
+            "name": "DotNet",
+            "level": 50,
+            "levelTag": "base"
+        },
+        {
+            "name": "Cordova",
+            "level": 40,
+            "levelTag": "base"
+        }
+    ]
+}

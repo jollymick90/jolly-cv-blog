@@ -17,3 +17,26 @@ export function getResumeLang(
   return resumeIt;
 
 }
+
+
+// export function getResumeLang(
+//   lang: LangType = defaultLang
+// ): any {
+//   if (lang === 'en') {
+//     return {
+//       ...resumeEn,
+//       ...common
+//     };
+//   } else if (lang === 'it') {
+//     return {
+//       ...resumeIt,
+//       ...common
+//     };
+//   }
+
+//   return {
+//       ...resumeEn,
+//       ...common
+//     };
+
+// }
