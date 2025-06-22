@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ItemList } from "$lib/components/types/template";
+	import { onMount } from "svelte";
 	const { items }: { items: ItemList[] } = $props();
 
 	let showIcon = false;
@@ -10,6 +11,14 @@
 	function toggleMenu() {
 		isOpen = !isOpen;
 	}
+	function ontouchend() {
+		isOpen = false;
+	}
+
+	function onclick(event: any) {		
+		isOpen = false;		
+	}
+	
 </script>
 
 <button
@@ -98,6 +107,7 @@
 							</div>
 							<div>
 								<a
+									onclick={onclick}
 									href={item.href}
 									class="font-semibold
                                         text-gray-900 dark:text-zinc-200"

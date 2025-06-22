@@ -16,7 +16,7 @@
 	</div>
 	<div class="relative flex w-full flex-col">
 		<Header lang={data.lang}></Header>
-		<main class="flex-auto">
+		<main class="flex-auto px-2">
 			{@render children()}
 		</main>
 	</div>

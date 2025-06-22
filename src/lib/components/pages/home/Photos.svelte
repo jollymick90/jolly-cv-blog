@@ -4,27 +4,37 @@
 	import image3 from '$lib/img/photos/image-8.jpg';
 	import image4 from '$lib/img/photos/image-9.jpg';
 	import image5 from '$lib/img/photos/image-10.webp';
+	import image6 from '$lib/img/photos/image-11.jpg';
+	import image7 from '$lib/img/photos/image-12.jpg';
 	const imgList = [
 		{
 			src: image1,
 			css: 'rotate-2'
 		},
 		{
+			src: image4,
+			css: 'rotate-2'
+		},		
+		{
 			src: image2,
+			css: '-rotate-2'
+		},
+		{
+			src: image6,
+			css: 'rotate-2'
+		},
+		{
+			src: image7,
+			css: '-rotate-2'
+		},
+		{
+			src: image5,
 			css: '-rotate-2'
 		},
 		{
 			src: image3,
 			css: 'rotate-2'
 		},
-		{
-			src: image4,
-			css: 'rotate-2'
-		},
-		{
-			src: image5,
-			css: '-rotate-2'
-		}
 	];
 </script>
 

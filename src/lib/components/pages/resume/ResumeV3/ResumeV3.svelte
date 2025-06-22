@@ -38,12 +38,12 @@
 
 	<main class=" p-5 md:w-[70%] md:p-4">
 		<section class="profile">
-			<h2>Profile</h2>
+			<h2 class="font-medium my-2">Profile</h2>
 			<p>{resume.presentation}</p>
 		</section>
 
 		<section class="experience">
-			<h2>Employment History</h2>
+			<h2 class="font-medium my-2">Employment History</h2>
 
 			{#each resume.experiences as exp}
 				{@render experience(exp)}
@@ -51,7 +51,7 @@
 		</section>
 
 		<section class="education">
-			<h2>Education</h2>
+			<h2 class="font-medium my-2">Education</h2>
 
 			{#each resume.studies as study}
 				{@render studies(study)}
@@ -168,17 +168,20 @@
 {/snippet}
 {#snippet studies(study: StudiesEvent)}
 	<h3 class="mb-2 text-[#10253f]">
-		{study.target}, {study.content}, Italy
-	</h3>
-	<p><em>{study.date}</em></p>
+		<em>{study.date}</em> {study.target}, {study.content}, Italy
+	</h3>	
 {/snippet}
 
 {#snippet experience(experience: ExperiencesEvent)}
-	<h3 class="mb-2 text-[#10253f]">{experience.role}, {experience.companyName}, Italy</h3>
-	<p><em>{experience.dateStart} – {experience.dateEnd}</em></p>
+	<h3 class="my-2 text-[#10253f] border-b-[1px] border-[#10253f]">
+        {experience.role}, {experience.companyName}, Italy</h3>
+	<p><em>{new Date(experience.dateStartTime).getFullYear()} - {
+    experience.dateEndTime === null ? 'current' : 
+    new Date(experience.dateEndTime).getFullYear()
+    }</em></p>
 	<ul>
 		{#each Array.from(experience.experiencesList || []) as expItem}
-			<li>{expItem}</li>
+			<li class="list-disc">{expItem}</li>
 		{/each}
 	</ul>
 {/snippet}
@@ -228,7 +231,7 @@
 	}
 
 	.skills ul {
-		list-style: none;
+		/* list-style: none; */
 		padding: 0;
 	}
 
@@ -243,9 +246,9 @@
 	}
 
 	h2 {
-		border-bottom: 2px solid #ddd;
+		/* border-bottom: 2px solid #ddd;
 		padding-bottom: 5px;
-		margin-top: 30px;
+		margin-top: 30px; */
 	}
 	/* h3 {
     margin-bottom: 5px;
