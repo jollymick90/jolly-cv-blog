@@ -2,7 +2,7 @@
 	import { type ExperiencesEvent } from '$lib/content/resume';
 
 	import type { IResume, StudiesEvent } from '$lib/content';
-	import { Icon, Envelope, Phone } from 'svelte-hero-icons';
+	import { Icon, Envelope, Phone, MapPin } from 'svelte-hero-icons';
 
 	import { t } from '$lib/i18n';
 
@@ -18,125 +18,19 @@
 		.sort((skillA, skillB) => skillB.level - skillA.level)
 		.splice(0, 3);
 
-	const top5TechSkills = skills
+	const web5TechSkills = skills
 		.filter((skill) => skill.type === 'WEB_DEVELOPMENT')
 		.sort((skillA, skillB) => skillB.level - skillA.level)
-		.splice(0, 7);
+		.splice(0, 5);
+
+	const programmingLanguage = skills
+		.filter((skill) => skill.type === 'PROGRAMMING_LANGUAGE')
+		.sort((skillA, skillB) => skillB.level - skillA.level)
+		.splice(0, 5);        
+
+    
 </script>
 
-{#snippet address()}
-	<p class="flex flex-wrap">
-		{#if resume.contact.address.showStreet}
-			<span>{resume.contact.address.street}</span>
-		{/if}
-		<br />
-		{#if resume.contact.address.useShortAddress}
-			<span>{resume.contact.address.nearestBigCity}</span>
-		{:else}
-			<span>{resume.contact.address.city}</span>
-		{/if}
-
-		{#if resume.contact.address.showStreet}
-			<span>{resume.contact.address.zipcode}</span>
-		{/if}
-		<span>, {resume.contact.address.country}</span>
-	</p>
-{/snippet}
-
-{#snippet headerDesktop()}
-	<aside class="sidebar hidden md:block">
-		<h1>{resume.fullName}</h1>
-		<p class="subtitle">{resume.mainRoleTitle}</p>
-		<div class="details">
-			<h3>{$t('resume.contact')}</h3>
-			{@render address()}
-			<p>
-				{#if resume.contact.showPhone}
-					<a href={`tel:${resume.contact.phone}`}>
-						{resume.contact.phone}
-					</a>
-				{/if}
-				<br />
-				<a href={`mailto:${resume.contact.email}`}>
-					{resume.contact.email}
-				</a>
-			</p>
-		</div>
-		<div class="skills">
-			<h3>{$t('resume.softskills')}</h3>
-			<ul>
-				{#each top5Skills as skill}
-					<li>{skill.name}</li>
-				{/each}
-			</ul>
-			<h3>{$t('resume.techskills')}</h3>
-			<ul>
-				{#each top5TechSkills as skill}
-					<li>{skill.name}</li>
-				{/each}
-			</ul>
-		</div>
-	</aside>
-{/snippet}
-{#snippet headerMobile()}
-	<header class="w-full bg-[#10253f] p-2 text-white md:hidden">
-		<h1>{resume.fullName}</h1>
-		<p class="mb-2 text-xl">{resume.mainRoleTitle}</p>
-		<div class="mb-3 border-b-2 border-[#ffffff55] pb-2">
-			<h3 class=" text-white">
-				{$t('resume.contact')}
-			</h3>
-			{@render address()}
-			<div class="flex flex-col">
-				{#if resume.contact.showPhone}
-					<div class="flex">
-						<Icon class="-ml-1 mr-2 h-5 w-5 text-gray-400" aria-hidden="true" src={Phone} />
-						<a href={`tel:${resume.contact.phone}`}>
-							{resume.contact.phone}
-						</a>
-					</div>
-				{/if}
-
-				<div class="flex">
-					<Icon class="-ml-1 mr-2 h-5 w-5 text-gray-400" aria-hidden="true" src={Envelope} />
-					<a href={`mailto:${resume.contact.email}`}>
-						{resume.contact.email}
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="">
-			<h3>{$t('resume.softskills')}</h3>
-			<ul class="flex flex-col gap-2">
-				{#each top5Skills as skill}
-					<li>{skill.name}</li>
-				{/each}
-			</ul>
-			<h3>{$t('resume.techskills')}</h3>
-			<ul class="flex flex-col gap-2">
-				{#each top5TechSkills as skill}
-					<li>{skill.name}</li>
-				{/each}
-			</ul>
-		</div>
-	</header>
-{/snippet}
-{#snippet studies(study: StudiesEvent)}
-	<h3 class="mb-2 text-[#10253f]">
-		{study.target}, {study.content}, Italy
-	</h3>
-	<p><em>{study.date}</em></p>
-{/snippet}
-
-{#snippet experience(experience: ExperiencesEvent)}
-	<h3 class="mb-2 text-[#10253f]">{experience.role}, {experience.companyName}, Italy</h3>
-	<p><em>{experience.dateStart} – {experience.dateEnd}</em></p>
-	<ul>
-		{#each Array.from(experience.experiencesList || []) as expItem}
-			<li>{expItem}</li>
-		{/each}
-	</ul>
-{/snippet}
 <div class="cv-container m-auto flex max-w-[1200px] flex-col bg-white md:flex-row">
 	{@render headerDesktop()}
 
@@ -166,13 +60,136 @@
 	</main>
 </div>
 
+
+{#snippet contact()}
+	<div class="flex flex-col">
+		{#if resume.contact.showPhone}
+			<div class="flex">
+				<Icon class="h-5 w-5 mr-2 text-gray-400" aria-hidden="true" src={Phone} />
+				<a href={`tel:${resume.contact.phone}`}>
+					{resume.contact.phone}
+				</a>
+			</div>
+		{/if}
+
+		<div class="flex">
+			<Icon class="h-5 w-5 mr-2 text-gray-400" aria-hidden="true" src={Envelope} />
+			<a href={`mailto:${resume.contact.email}`}>
+				{resume.contact.email}
+			</a>
+		</div>
+	</div>
+{/snippet}
+{#snippet address()}
+	<p class="flex flex-wrap">
+        <Icon class="h-5 w-5 mr-2 text-gray-400" aria-hidden="true" src={MapPin} />
+		{#if resume.contact.address.showStreet}
+			<span>{resume.contact.address.street}</span>
+		{/if}
+		<br />
+		{#if resume.contact.address.useShortAddress}
+			<span>{resume.contact.address.nearestBigCity}</span>
+		{:else}
+			<span>{resume.contact.address.city}</span>
+		{/if}
+
+		{#if resume.contact.address.showStreet}
+			<span>{resume.contact.address.zipcode}</span>
+		{/if}
+		<span>, {resume.contact.address.country}</span>
+	</p>
+{/snippet}
+
+{#snippet headerDesktop()}
+	<aside class="sidebar hidden md:block">
+		<h1>{resume.fullName}</h1>
+		<p class="subtitle">{resume.mainRoleTitle}</p>
+		<div class="details">
+			<h3>{$t('resume.contact')}</h3>
+			{@render address()}
+			{@render contact()}
+		</div>
+		<div class="skills">
+			<h3>{$t('resume.softskills')}</h3>
+			<ul>
+				{#each top5Skills as skill}
+					<li>{skill.name}</li>
+				{/each}
+			</ul>
+			<h3 class="mt-2">{$t('resume.techskills')}</h3>
+            <ul>
+				{#each programmingLanguage as skill}
+					<li>{skill.name}</li>
+				{/each}
+			</ul>
+			<ul>
+				{#each web5TechSkills as skill}
+					<li>{skill.name}</li>
+				{/each}
+			</ul>
+		</div>
+	</aside>
+{/snippet}
+{#snippet headerMobile()}
+	<header class="w-full bg-[#10253f] p-2 text-white md:hidden">
+		<h1>{resume.fullName}</h1>
+		<p class="mb-2 text-xl">{resume.mainRoleTitle}</p>
+		<div class="mb-3 pb-2">
+			<h3 class="mb-1 border-b-2 border-[#fffffff5] text-white">
+				{$t('resume.contact')}
+			</h3>
+			{@render address()}
+			{@render contact()}
+		</div>
+		<div class="">
+			<h3 class=" border-b-2 border-[#fffffff5]">{$t('resume.softskills')}</h3>
+			<ul class="flex flex-col gap-2">
+				{#each top5Skills as skill}
+					<li>{skill.name}</li>
+				{/each}
+			</ul>
+			<h3 class=" border-b-2 border-[#fffffff5]">{$t('resume.techskills')}</h3>
+            <ul class="flex flex-col gap-2">
+                <li class="flex flex-wrap gap-2">
+				{#each programmingLanguage as skill}
+					<span>{skill.name}</span>
+				{/each}
+                </li>
+			</ul>
+			<ul class="flex flex-col gap-2">
+                <li class="flex flex-wrap gap-2">
+				{#each web5TechSkills as skill}
+					<span>{skill.name}</span>
+				{/each}
+                </li>
+			</ul>
+		</div>
+	</header>
+{/snippet}
+{#snippet studies(study: StudiesEvent)}
+	<h3 class="mb-2 text-[#10253f]">
+		{study.target}, {study.content}, Italy
+	</h3>
+	<p><em>{study.date}</em></p>
+{/snippet}
+
+{#snippet experience(experience: ExperiencesEvent)}
+	<h3 class="mb-2 text-[#10253f]">{experience.role}, {experience.companyName}, Italy</h3>
+	<p><em>{experience.dateStart} – {experience.dateEnd}</em></p>
+	<ul>
+		{#each Array.from(experience.experiencesList || []) as expItem}
+			<li>{expItem}</li>
+		{/each}
+	</ul>
+{/snippet}
+
 <style>
 	.cv-container {
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	}
 
 	.sidebar {
-		width: 30%;
+		width: 35%;
 		background: #10253f;
 		color: white;
 		padding: 30px 20px;
