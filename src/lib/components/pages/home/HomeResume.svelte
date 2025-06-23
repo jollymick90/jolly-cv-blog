@@ -5,7 +5,7 @@
 	import Button from '$lib/components/theme/Button.svelte';
 	import ArrowDownIcon from '$lib/components/icons/ArrowDownIcon.svelte';
 	import BriefcaseIcon from '$lib/components/icons/BriefcaseIcon.svelte';
-	import Role from '$lib/components/theme/Role.svelte';
+	import Role from '$lib/components/pages/home/HomeResumeRole.svelte';
 
 	const { resume }: { resume: IResume } = $props();
 

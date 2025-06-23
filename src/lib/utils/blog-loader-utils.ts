@@ -1,5 +1,6 @@
 import { defaultLang } from '$lib/i18n/lang.store';
 import type { LangType } from '$lib/types';
+import { loadMdFiles } from './md-loader-utils';
 
 export type ArticleBlogMD = {
     metadata: {
@@ -18,20 +19,27 @@ export async function loadArticles(lang: LangType = defaultLang): Promise<Articl
 
     const files = globMap[lang] ?? globMap[defaultLang];
 
-    const resolvedPosts = await Promise.all(
-        Object.entries(files).map(async ([path, resolver]) => {
-            const mod: any = await resolver();
+    // const resolvedPosts = await Promise.all(
+    //     Object.entries(files).map(async ([path, resolver]) => {
+    //         const mod: any = await resolver();
 
-            const metadata = mod.metadata ?? {};
-            if (!metadata.date) {
-                metadata.date = (new Date().toDateString())
-            }
-            return {
-                metadata,
-                slug: path.split('/').pop()?.replace('.md', '')
-            };
-        })
-    );
+    //         const metadata = mod.metadata ?? {};
+    //         if (!metadata.date) {
+    //             metadata.date = (new Date().toDateString())
+    //         }
+    //         return {
+    //             metadata,
+    //             slug: path.split('/').pop()?.replace('.md', '')
+    //         };
+    //     })
+    // );
+
+        const resolvedPosts = await loadMdFiles(lang, globMap, defaultLang);
+    
+        resolvedPosts.sort((a, b) => {
+    
+            return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
+        });
 
     resolvedPosts.sort((a, b) => {
 

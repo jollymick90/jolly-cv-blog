@@ -19,7 +19,6 @@
 	>
 	<Icon class="h-7 w-7 dark:text-white text-zinc-400" aria-hidden="true" src={Briefcase} />
 
-		<!-- <img src={role.logo} alt="" class="h-7 w-7" /> -->
 	</div>
 	<dl class="flex flex-auto flex-wrap gap-x-2">
 		<dt class="sr-only">Company</dt>

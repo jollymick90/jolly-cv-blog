@@ -1,5 +1,5 @@
 ---
-title: "GIS and Farms"
+title: "Frontend Roadmap: Beginning Dilemma"
 date: "2025-06-22"
 description: "During first job, i knew GIS technologies: Openlayer, Geoserver, Vue."
 ---

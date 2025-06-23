@@ -36,3 +36,13 @@ export type SectionType = keyof SiteContent;
 export type NavigationType = 'mobile' | 'desktop';
 export type LangAvailable = 'it' | 'en';
 export type LangEntries = { lang: LangAvailable }
+
+export type GlobalMDPage = {
+    en: Record<string, () => Promise<unknown>>;
+    it: Record<string, () => Promise<unknown>>;
+}
+
+export type LoadResultMdPage = {
+    metadata: any;
+    slug: string | undefined;
+}

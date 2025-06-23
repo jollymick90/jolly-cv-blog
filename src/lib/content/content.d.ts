@@ -7,3 +7,23 @@ export type ArticleFormat = {
     }
 
 }
+
+export type ProjectFormat = {
+    slug: string;
+    metadata: {
+        title: string;
+        date: string;
+        description: string;
+    }
+
+}
+
+export type EventFormat = {
+    slug: string;
+    metadata: {
+        title: string;
+        date: string;
+        description: string;
+    }
+
+}
