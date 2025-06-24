@@ -17,29 +17,7 @@ const globMap = {
 };
 export async function loadArticles(lang: LangType = defaultLang): Promise<ArticleBlogMD[]> {
 
-    const files = globMap[lang] ?? globMap[defaultLang];
-
-    // const resolvedPosts = await Promise.all(
-    //     Object.entries(files).map(async ([path, resolver]) => {
-    //         const mod: any = await resolver();
-
-    //         const metadata = mod.metadata ?? {};
-    //         if (!metadata.date) {
-    //             metadata.date = (new Date().toDateString())
-    //         }
-    //         return {
-    //             metadata,
-    //             slug: path.split('/').pop()?.replace('.md', '')
-    //         };
-    //     })
-    // );
-
-        const resolvedPosts = await loadMdFiles(lang, globMap, defaultLang);
-    
-        resolvedPosts.sort((a, b) => {
-    
-            return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
-        });
+    const resolvedPosts = await loadMdFiles(lang, globMap, defaultLang);
 
     resolvedPosts.sort((a, b) => {
 
