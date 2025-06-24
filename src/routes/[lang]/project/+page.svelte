@@ -3,6 +3,7 @@
 	import Container from '$lib/components/template/Container.svelte';
 
 	let { data } = $props();
+	let { posts } = data;
 </script>
 
 <svelte:head>
@@ -10,5 +11,5 @@
 </svelte:head>
 
 <Container className="mt-9">
-	 <Projects/>
+	 <Projects projects={posts}/>
 </Container>

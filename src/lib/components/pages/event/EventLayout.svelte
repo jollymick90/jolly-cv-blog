@@ -2,12 +2,7 @@
 	import { formatDate } from '$lib/utils/format-date-utils';
 	import Container from '$lib/components/template/Container.svelte';
 	import { ArrowLeftIcon } from '$lib/components/icons';
-	import type { Snippet } from 'svelte';
-	
-	const { article, children }: {
-		article: any,
-		children: Snippet
-	} = $props();
+	export let article: any;
 	function back(): any {
 		history.back();
 	}
@@ -44,7 +39,7 @@
 			</time>
 		</header>
 		<div class="mt-8 prose dark:prose-invert">
-			{@render children()}
+			<slot></slot>
 		</div>
 	</article>
 </Container>

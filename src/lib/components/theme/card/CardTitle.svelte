@@ -1,5 +1,12 @@
 <script lang="ts">
-	export let href: string | null= null;
+	import type { Snippet } from "svelte";
+
+	
+	const { href, children }: {
+		href: string | null,
+		children: Snippet
+	} = $props();
+	  
 </script>
 
 <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
@@ -8,13 +15,13 @@
 		<a {href}>
 			<span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
 			<span class="relative z-10">
-				<slot></slot>
+				{@render children()}
 			</span>
 		</a>
 	{:else}
 		<span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
 		<span class="relative z-10">
-			<slot></slot>
+			{@render children()}
 		</span>
 	{/if}
 </h2>

@@ -2,8 +2,6 @@
 	import Article from '$lib/components/pages/blog/Article.svelte';
 	import BlogPageLayout from '$lib/components/template/BlogPageLayout.svelte';
 
-	// export let data;
-	// let { posts } = data;
 	let { data } = $props();
 	let { posts } = data;
 </script>

@@ -8,7 +8,7 @@ export async function load({ params, parent }) {
   const { slug } = params;
 
   try {
-    const post = await import(`../../../../content/blog/${lang}/${slug}.md`);
+    const post = await import(`../../../../content/event/${lang}/${slug}.md`);
 
     return {
       metadata: post.metadata,

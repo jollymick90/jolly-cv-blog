@@ -1,7 +1,10 @@
 <script lang="ts">
 	import Container from '$lib/components/template/Container.svelte';
+	import type { ProjectFormat } from '$lib/content/content';
 	import { t } from '$lib/i18n';
-	
+	import ProjectCard from './ProjectCard.svelte';
+	const { projects } : { projects: ProjectFormat[] } = $props();
+
 </script>
 
 <Container className="mt-16 sm:mt-32">
@@ -13,7 +16,9 @@
 			{$t("project.intro")}
 		</p>
 	</header>
-	<div class="mt-16 sm:mt-20">
-		<slot></slot>
+	<div class="mt-16 sm:mt-20 flex flex-col gap-4">
+		{#each projects as project }
+			<ProjectCard {project}></ProjectCard>	
+		{/each}		
 	</div>
 </Container>

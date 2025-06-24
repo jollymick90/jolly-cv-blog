@@ -1,21 +1,14 @@
+import type { ProjectFormat } from '$lib/content/content';
 import { defaultLang } from '$lib/i18n/lang.store';
 import type { LangType } from '$lib/types';
-import { loadMdFiles } from './md-loader-utils';
 
-export type ProjectBlogMD = {
-    metadata: {
-        title: string,
-        date: string,
-        description: string
-    },
-    slug: string | undefined
-}
+import { loadMdFiles } from './md-loader-utils';
 
 const globMap = {
     en: import.meta.glob('/src/content/project/en/*.md'),
     it: import.meta.glob('/src/content/project/it/*.md'),
 };
-export async function loadProjects(lang: LangType = defaultLang): Promise<ProjectBlogMD[]> {
+export async function loadProjects(lang: LangType = defaultLang): Promise<ProjectFormat[]> {
 
     const resolvedPosts = await loadMdFiles(lang, globMap, defaultLang);
 
@@ -24,5 +17,5 @@ export async function loadProjects(lang: LangType = defaultLang): Promise<Projec
         return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
     });
 
-    return resolvedPosts as ProjectBlogMD[];
+    return resolvedPosts as ProjectFormat[];
 }
