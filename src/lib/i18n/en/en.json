@@ -12,7 +12,9 @@
     "resume": { 
         "contact": "Contact",
         "softskills": "Soft Skills",
-        "techskills":"Technical Skills"
+        "techskills":"Technical Skills",
+        "history_experiences": "Experiences",
+        "education": "Education"
     },
     "blog": { 
         "title": "Thoughts in Code and Beyond",

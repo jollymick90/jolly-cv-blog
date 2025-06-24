@@ -2,33 +2,7 @@
     "title": "Curriculum Michele Scarpa",
     "fullName": "Michele Scarpa",
     "mainRoleTitle": "Software Engineer",
-    "mainSkillsList": [
-        {
-            "name": "Typescript"
-        },
-        {
-            "name": "Javascript"
-        },
-        {
-            "name": "React"
-        },
-        {
-            "name": "Angular"
-        },
-        {
-            "name": "Vue"
-        },
-        {
-            "name": "Svelte"
-        },
-        {
-            "name": "Java"
-        },
-        {
-            "name": "Android"
-        }
-    ],
-    "presentation": "Sono un ingegnere del software da diversi anni. Mi sono specializzato nello sviluppo di applicazioni web, GIS e Digital Signage. Ho consolidato una solida esperienza nalla realizzazione di applicazioni fullstack e mobile. Il mio focus è nel miglioramento continuo di tutto ciò che gira attorno a un software, capendo il contesto, le tecnologie e il dominio in cui vive. ",
+    "presentation": "Sono un ingegnere del software con quasi 10 anni di esperienza nello sviluppo di applicazioni web, mobile, GIS e Digital Signage. Mi occupo di soluzioni fullstack con particolare attenzione al contesto, al dominio e alle tecnologie per garantire qualità e continuo miglioramento.",
     "contact": {
         "email": "scarpa.michele.90@gmail.com",
         "showPhone": true,
@@ -139,75 +113,88 @@
             "skillAquiredList": [
                 {
                     "name": "React",
-                    "type": "Frontend"
+                    "type": "Frontend",
+                    "level": 80
                 },
                 {
                     "name": "Angular",
-                    "type": "Frontend"
+                    "type": "Frontend",
+                    "level": 90
                 },
                 {
                     "name": "Java",
-                    "type": "Backend"
+                    "type": "Backend",
+                    "level": 80
                 },
                 {
                     "name": "Spring Boot",
-                    "type": "Backend"
-                },
-                {
-                    "name": "Hibernate",
-                    "type": "Backend"
+                    "type": "Backend",
+                    "level": 80
                 },
                 {
                     "name": "NodeJS",
-                    "type": "Backend"
+                    "type": "Backend",
+                    "level": 70
                 },
                 {
                     "name": "Meteor",
-                    "type": "Backend"
+                    "type": "Backend",
+                    "level": 60
                 },
                 {
                     "name": "PostgresSQL",
-                    "type": "Database"
+                    "type": "Database",
+                    "level": 80
                 },
                 {
                     "name": "Postgis",
-                    "type": "Database"
+                    "type": "Database",
+                    "level": 80
                 },
                 {
                     "name": "Docker",
-                    "type": "DevOps & Cloud"
+                    "type": "DevOps & Cloud",
+                    "level": 80
                 },
                 {
                     "name": "Kubernates",
-                    "type": "DevOps & Cloud"
+                    "type": "DevOps & Cloud",
+                    "level": 60
                 },
                 {
                     "name": "AWS",
-                    "type": "DevOps & Cloud"
+                    "type": "DevOps & Cloud",
+                    "level": 60
                 },
                 {
                     "name": "Leaflet",
-                    "type": "GIS"
+                    "type": "GIS",
+                    "level": 80
                 },
                 {
                     "name": "Geoserver",
-                    "type": "GIS"
+                    "type": "GIS",
+                    "level": 80
                 },
                 {
                     "name": "Geonode",
-                    "type": "GIS"
+                    "type": "GIS",
+                    "level": 60
                 },
                 {
                     "name": "Kamunda",
-                    "type": "Workflow Managment"
+                    "type": "Workflow Managment",
+                    "level": 60
                 },
                 {
                     "name": "Keycloak",
-                    "type": "API & Security"
+                    "type": "API & Security",
+                    "level": 80
                 },
                 {
                     "name": "WSO2",
-                    "type": "API & Security"
+                    "type": "API & Security",
+                    "level": 60
                 }
             ]
         },
@@ -232,31 +219,38 @@
             "skillAquiredList": [
                 {
                     "name": "React",
-                    "type": "Frontend"
+                    "type": "Frontend",
+                    "level": 80
                 },
                 {
                     "name": "Angular",
-                    "type": "Frontend"
+                    "type": "Frontend",
+                    "level": 80
                 },
                 {
                     "name": "NX - Monorepo",
-                    "type": "Frontend"
+                    "type": "Frontend",
+                    "level": 80
                 },
                 {
                     "name": "Kendo UI",
-                    "type": "Frontend"
+                    "type": "Frontend",
+                    "level": 80
                 },
                 {
                     "name": "Syncfusion",
-                    "type": "Frontend"
+                    "type": "Frontend",
+                    "level": 80
                 },
                 {
                     "name": ".Net / C#",
-                    "type": "Backend"
+                    "type": "Backend",
+                    "level": 50
                 },
                 {
                     "name": "GrpahQL",
-                    "type": "API"
+                    "type": "API",
+                    "level": 70
                 }
             ]
         },
@@ -345,13 +339,11 @@
                 }
             ],
             "experiencesList": [
-                "Player Web per Digital Signage",
-                "Player Android - Feature avanzate",
-                "Progetti chiave: Upgrade tecnologico allo Stadio Olimpico",
-                "Progetti chiave: Sistema di tracking su mappa per trasporto pubblico",
-                "Progetti chiave: Sincronizzazione contenuti su Led Wall",
-                "Mobile Development (Android - Kotlin, Java)",
-                "Frontend Development (Vue.js, GIS, OpenLayers)"
+                "Player Web e Android per Digital Signage: Sviluppo di una piattaforma web e mobile ottimizzata per la gestione e distribuzione centralizzata di contenuti digitali su dispositivi di digital signage, con particolare attenzione a performance e scalabilità.",
+                "Sistema di tracking su mappa per trasporto pubblico: Realizzazione di un sistema web e mobile per tracciare in tempo reale mezzi pubblici, integrato con mappe interattive e funzionalità avanzate di geolocalizzazione per ottimizzare l'esperienza degli utenti finali.",
+                "Funzionalità avanzata Digital Signage -Led Wall: Progettazione e sviluppo di un sistema affidabile per la sincronizzazione e distribuzione simultanea di contenuti multimediali su schermi LED di grandi dimensioni in eventi pubblici.",
+                "Mobile Development (Android - Kotlin, Java): Creazione e manutenzione di applicazioni Android native con particolare attenzione a UX/UI, performance elevate e integrazione con servizi backend per garantire sicurezza e qualità.",
+                "Frontend Development (Vue.js, GIS, OpenLayers): Sviluppo di interfacce frontend avanzate utilizzando Vue.js integrate con soluzioni GIS tramite OpenLayers, per applicazioni web di gestione spaziale e visualizzazione interattiva di dati geografici."
             ],
             "description": "Ho lavorato allo sviluppo di soluzioni Digital Signage, inizialmente su dispositivi Android e backend Java/JSP. Ho realizzato un client per monitor “embedded” (Toshiba e Samsung Tizen). Ho potuto lavorare anche ad altri progetti in prodotti e in consulenza con le seguenti tecnologie: Vue.js, React, Angular e Android (Kotlin)",
             "longDescription": "Durante questa esperienza lavorativa mi sono inizialmente occupato del settore Digital Signage, contribuendo allo sviluppo di un applicativo client per dispositivi Android e di un backend monolitico in Java, con interfacce JSP. Il focus principale riguardava la gestione e l'ottimizzazione di immagini, video, font e altri asset destinati ai player, che ne curano la visualizzazione. In una seconda fase, ho lavorato alla realizzazione di un client per monitor “embedded” - display professionali dotati di API e browser personalizzati, pensati per applicazioni di digital signage. Oltre a perfezionare il prodotto, ho avuto modo di partecipare a diversi progetti, sfruttando tecnologie come Vue.js, React, Angular e sviluppando app mobile su Android (Kotlin)."

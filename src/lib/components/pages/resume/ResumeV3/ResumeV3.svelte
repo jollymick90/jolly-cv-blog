@@ -26,9 +26,7 @@
 	const programmingLanguage = skills
 		.filter((skill) => skill.type === 'PROGRAMMING_LANGUAGE')
 		.sort((skillA, skillB) => skillB.level - skillA.level)
-		.splice(0, 5);        
-
-    
+		.splice(0, 5);
 </script>
 
 <div class="cv-container m-auto flex max-w-[1200px] flex-col bg-white md:flex-row">
@@ -38,12 +36,11 @@
 
 	<main class=" p-5 md:w-[70%] md:p-4">
 		<section class="profile">
-			<h2 class="font-medium my-2">Profile</h2>
 			<p>{resume.presentation}</p>
 		</section>
 
 		<section class="experience">
-			<h2 class="font-medium my-2">Employment History</h2>
+			<h2 class="my-2 font-medium">{$t('resume.history_experiences')}</h2>
 
 			{#each resume.experiences as exp}
 				{@render experience(exp)}
@@ -51,7 +48,7 @@
 		</section>
 
 		<section class="education">
-			<h2 class="font-medium my-2">Education</h2>
+			<h2 class="my-2 font-medium">{$t('resume.education')}</h2>
 
 			{#each resume.studies as study}
 				{@render studies(study)}
@@ -60,12 +57,11 @@
 	</main>
 </div>
 
-
 {#snippet contact()}
 	<div class="flex flex-col">
 		{#if resume.contact.showPhone}
 			<div class="flex">
-				<Icon class="h-5 w-5 mr-2 text-gray-400" aria-hidden="true" src={Phone} />
+				<Icon class="mr-2 h-5 w-5 text-gray-400" aria-hidden="true" src={Phone} />
 				<a href={`tel:${resume.contact.phone}`}>
 					{resume.contact.phone}
 				</a>
@@ -73,7 +69,7 @@
 		{/if}
 
 		<div class="flex">
-			<Icon class="h-5 w-5 mr-2 text-gray-400" aria-hidden="true" src={Envelope} />
+			<Icon class="mr-2 h-5 w-5 text-gray-400" aria-hidden="true" src={Envelope} />
 			<a href={`mailto:${resume.contact.email}`}>
 				{resume.contact.email}
 			</a>
@@ -82,7 +78,7 @@
 {/snippet}
 {#snippet address()}
 	<p class="flex flex-wrap">
-        <Icon class="h-5 w-5 mr-2 text-gray-400" aria-hidden="true" src={MapPin} />
+		<Icon class="mr-2 h-5 w-5 text-gray-400" aria-hidden="true" src={MapPin} />
 		{#if resume.contact.address.showStreet}
 			<span>{resume.contact.address.street}</span>
 		{/if}
@@ -117,7 +113,7 @@
 				{/each}
 			</ul>
 			<h3 class="mt-2">{$t('resume.techskills')}</h3>
-            <ul>
+			<ul>
 				{#each programmingLanguage as skill}
 					<li>{skill.name}</li>
 				{/each}
@@ -149,41 +145,69 @@
 				{/each}
 			</ul>
 			<h3 class=" border-b-2 border-[#fffffff5]">{$t('resume.techskills')}</h3>
-            <ul class="flex flex-col gap-2">
-                <li class="flex flex-wrap gap-2">
-				{#each programmingLanguage as skill}
-					<span>{skill.name}</span>
-				{/each}
-                </li>
+			<ul class="flex flex-col gap-2">
+				<li class="flex flex-wrap gap-2">
+					{#each programmingLanguage as skill}
+						<span>{skill.name}</span>
+					{/each}
+				</li>
 			</ul>
 			<ul class="flex flex-col gap-2">
-                <li class="flex flex-wrap gap-2">
-				{#each web5TechSkills as skill}
-					<span>{skill.name}</span>
-				{/each}
-                </li>
+				<li class="flex flex-wrap gap-2">
+					{#each web5TechSkills as skill}
+						<span>{skill.name}</span>
+					{/each}
+				</li>
 			</ul>
 		</div>
 	</header>
 {/snippet}
 {#snippet studies(study: StudiesEvent)}
 	<h3 class="mb-2 text-[#10253f]">
-		<em>{study.date}</em> {study.target}, {study.content}, Italy
-	</h3>	
+		<em>{study.date}</em>
+		{study.target}, {study.content}, Italy
+	</h3>
 {/snippet}
 
 {#snippet experience(experience: ExperiencesEvent)}
-	<h3 class="my-2 text-[#10253f] border-b-[1px] border-[#10253f]">
-        {experience.role}, {experience.companyName}, Italy</h3>
-	<p><em>{new Date(experience.dateStartTime).getFullYear()} - {
-    experience.dateEndTime === null ? 'current' : 
-    new Date(experience.dateEndTime).getFullYear()
-    }</em></p>
-	<ul>
-		{#each Array.from(experience.experiencesList || []) as expItem}
-			<li class="list-disc">{expItem}</li>
-		{/each}
-	</ul>
+	{@const experiencesAquired = experience.skillAquiredList.filter((l) => l.level && l.level >= 70)}
+	{@const experiencesUse = experience.skillAquiredList.filter((l) => !l.level || l.level < 70)}
+	<h3 class="my-2 border-b-[1px] border-[#10253f] text-[#10253f]">
+		{experience.role}, {experience.companyName}, Italy
+	</h3>
+	<p>
+		<em>
+			{new Date(experience.dateStartTime).getFullYear()} - {experience.dateEndTime === null
+				? 'current'
+				: new Date(experience.dateEndTime).getFullYear()}
+		</em>
+	</p>
+	<div class="flex flex-col">
+		<div class="w-full">
+			<h4 class="text-bold">Abilità Aquisite/Consolidate</h4>
+			<div class="flex flex-wrap gap-1">
+			{#each experiencesAquired as sa}
+				<span class="py-1 px-2 border-2 border-blue-[#10253f] rounded-xl text-center">{sa.name}</span>
+			{/each}
+			</div>
+			{#if experiencesUse.length > 0}
+				<h4 class="text-bold">Tecnologie Usate</h4>
+				<div class="flex flex-wrap gap-1">
+				{#each experiencesUse as sa}
+					<p class="py-1 px-2 border-2 border-blue-[#10253f] rounded-xl text-center">{sa.name}</p>
+				{/each}
+				</div>
+			{/if}
+		</div>
+		<div class="w-full">
+			<h4 class="text-bold">Attività / Progetti</h4>
+			<ul>
+				{#each Array.from(experience.experiencesList || []) as expItem}
+					<li class="list-disc">{expItem}</li>
+				{/each}
+			</ul>
+		</div>
+	</div>
 {/snippet}
 
 <style>

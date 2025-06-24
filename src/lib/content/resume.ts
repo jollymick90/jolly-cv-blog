@@ -10,7 +10,7 @@ export type ContactData = {
     email: string;
     social: SocialInfo[];
     address: {
-        showStreet: boolean;
+        showStreet?: boolean;
         street: string;
         useShortAddress: boolean;
         city: string;

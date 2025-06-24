@@ -7,8 +7,10 @@
     },
     "resume": { 
         "contact": "Contatti",
-        "softskills": "Soft Skills",
-        "techskills":"Technical Skills"
+        "softskills": "Capacità Trasversali",
+        "techskills":"Capcità Tecniche",
+        "history_experiences": "Esperienze",
+        "education": "Istruzione"
     },
     "blog": {
         "title": "Pensieri in Codice e non Solo",
