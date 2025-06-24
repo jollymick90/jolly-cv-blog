@@ -1,4 +1,4 @@
-import { defaultLang } from '$lib/i18n/lang.store.js';
+import { defaultLang } from '$lib/i18n/lang.store';
 
 export const prerender = true;
 
@@ -8,7 +8,7 @@ export async function load({ params, parent }) {
   const { slug } = params;
 
   try {
-    const post = await import(`../../../../content/event/${lang}/${slug}.md`);
+    const post = await import(`../../../../content/events/${lang}/${slug}.md`);
 
     return {
       metadata: post.metadata,

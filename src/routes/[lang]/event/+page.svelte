@@ -1,8 +1,9 @@
 <script lang="ts">
-	import Event from '$lib/components/pages/event/Event.svelte';
+	import Events from '$lib/components/pages/event/Events.svelte';	
 	import Container from '$lib/components/template/Container.svelte';
 
 	let { data } = $props();
+	let { posts } = data;
 </script>
 
 <svelte:head>
@@ -10,5 +11,5 @@
 </svelte:head>
 
 <Container className="mt-9">
-	 <Event/>
+	 <Events events={posts}/>
 </Container>

@@ -1,7 +1,11 @@
 <script lang="ts">
 	import Container from '$lib/components/template/Container.svelte';
+	import type { EventFormat } from '$lib/content/content';
 	import { t } from '$lib/i18n';
-	
+	import EventCard from './EventCard.svelte';
+	const { events } : { events: EventFormat[] } = $props();
+	console.log(events)
+
 </script>
 
 <Container className="mt-16 sm:mt-32">
@@ -13,7 +17,9 @@
 			{$t("event.intro")}
 		</p>
 	</header>
-	<div class="mt-16 sm:mt-20">
-		<slot></slot>
+	<div class="mt-16 sm:mt-20 flex flex-col gap-4">
+		{#each events as event }
+			<EventCard {event}></EventCard>	
+		{/each}		
 	</div>
 </Container>

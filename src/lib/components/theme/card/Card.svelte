@@ -1,7 +1,13 @@
 <script lang="ts">
-	export let className: string = '';
+	import type { Snippet } from "svelte";
+
+	
+	const { className, children }: { 
+		className?: string,
+		children: Snippet
+		 } = $props();
 </script>
 
-<div class="{className} group relative flex flex-col items-start">
-	<slot></slot>
+<div class="{className} group relative flex flex-col items-start">	
+	{@render children()}
 </div>

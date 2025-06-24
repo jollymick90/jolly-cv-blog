@@ -4,8 +4,9 @@
 
 	import Button from '$lib/components/theme/Button.svelte';
 	import ArrowDownIcon from '$lib/components/icons/ArrowDownIcon.svelte';
-	import BriefcaseIcon from '$lib/components/icons/BriefcaseIcon.svelte';
-	import Role from '$lib/components/pages/home/HomeResumeRole.svelte';
+	
+	import HomeResumeRole from '$lib/components/pages/home/HomeResumeRole.svelte';
+	import { Briefcase, Icon } from 'svelte-hero-icons';
 
 	const { resume }: { resume: IResume } = $props();
 
@@ -21,14 +22,16 @@
 
 </script>
 
-<div class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+<div class="rounded-2xl border border-zinc-500 p-6 dark:border-zinc-700/40">
 	<h2 class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-		<BriefcaseIcon class="h-6 w-6 flex-none" />
+		
+		<Icon class="h-7 w-7 dark:text-white text-zinc-400"
+		 aria-hidden="true" src={Briefcase} />
 		<span class="ml-3">Work</span>
 	</h2>
 	<ol class="mt-6 space-y-4">
 		{#each data as role}
-			<Role {role} />
+			<HomeResumeRole {role} />
 		{/each}
 	</ol>
 	<Button href="#" variant="secondary" className="group mt-6 w-full">
@@ -38,3 +41,4 @@
 		/>
 	</Button>
 </div>
+

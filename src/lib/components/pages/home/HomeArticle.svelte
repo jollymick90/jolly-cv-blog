@@ -15,7 +15,7 @@
 </script>
 
 <Card>
-	<CardTitle href="/{lang}/blog/{article.slug}">
+	<CardTitle className="-inset-x-4 -inset-y-6 sm:-inset-x-6" href="/{lang}/blog/{article.slug}">
 		{article.metadata.title}
 	</CardTitle>
 	<CardEyebrow decorate>
