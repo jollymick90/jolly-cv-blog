@@ -259,9 +259,9 @@
                     "level": 50
                 },
                 {
-                    "name": "GrpahQL",
+                    "name": "GraphQL",
                     "type": "API",
-                    "level": 70
+                    "level": 60
                 }
             ]
         },
@@ -276,77 +276,60 @@
             "dateEndTime": "2021-09-01",
             "date": "2015 - 2021",
             "skillAquiredList": [
-                {
-                    "name": "Java (monolite con JSP)",
-                    "type": "Backend"
+               {
+                    "name": "Java - JSP - Hibernate",
+                    "type": "Backend",
+                    "level": 80
                 },
                 {
-                    "name": "Hibernate",
-                    "type": "Backend"
+                    "name": "SQL",
+                    "type": "Backend",
+                    "level": 80
                 },
                 {
-                    "name": "PostgreSQL",
-                    "type": "Database"
-                },
-                {
-                    "name": "MySQL",
-                    "type": "Database"
-                },
-                {
-                    "name": "SQL Server",
-                    "type": "Database"
-                },
-                {
-                    "name": "JavaScript",
-                    "type": "Frontend"
-                },
-                {
-                    "name": "Typescript",
-                    "type": "Frontend"
-                },
-                {
-                    "name": "JQuery",
-                    "type": "Frontend"
-                },
+                    "name": "JavaScript - Typescript - JQuery",
+                    "type": "Frontend",
+                    "level": 80
+                },               
                 {
                     "name": "FFmpeg",
-                    "type": "Tools"
+                    "type": "Multimedia Processing",
+                    "level": 60
                 },
                 {
                     "name": "ImageMagick",
-                    "type": "Tools"
+                    "type": "Multimedia Processing",
+                    "level": 60
                 },
                 {
-                    "name": "Web Player",
-                    "type": "Digital Signage"
+                    "name": "Media Player: Android - Tizen",
+                    "type": "Player Digital Signage",
+                    "level": 80
+                },                
+                {
+                    "name": "Toshiba Professional Monitor",
+                    "type": "Player Digital Signage",
+                    "level": 60
                 },
                 {
-                    "name": "Toshiba Monitor",
-                    "type": "Digital Signage"
+                    "name": "Samsung Professional Monitor - Tizen OS",
+                    "type": "Player Digital Signage",
+                    "level": 60
                 },
                 {
-                    "name": "Samsung Tizen OS",
-                    "type": "Digital Signage"
+                    "name": "VueJS - React - Angular",
+                    "type": "Frontend",
+                    "level": 80
                 },
                 {
-                    "name": "VueJS",
-                    "type": "Frontend"
-                },
-                {
-                    "name": "Android",
-                    "type": "Digital Signage"
-                },
-                {
-                    "name": "Angular",
-                    "type": "Frontend"
-                },
+                    "name": "Android (Java, Kotlin)",
+                    "type": "Player Digital Signage",
+                    "level": 80
+                },                
                 {
                     "name": "Openlayer",
-                    "type": "GIS"
-                },
-                {
-                    "name": "Kotlin",
-                    "type": "Mobile"
+                    "type": "GIS",
+                    "level": 80
                 }
             ],
              "experiencesListShort": [

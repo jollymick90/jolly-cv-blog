@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { type ExperiencesEvent } from '$lib/content/resume';
 
-	import type { IResume, StudiesEvent } from '$lib/content';
-	import { Icon, Envelope, Phone, MapPin } from 'svelte-hero-icons';
+	import type { IResume, StudiesEvent, TimelineEvent } from '$lib/content';
+	import { Icon, Envelope, Phone, MapPin, Briefcase } from 'svelte-hero-icons';
 
 	import { t } from '$lib/i18n';
 
@@ -19,9 +19,19 @@
 		.splice(0, 3);
 
 	const web5TechSkills = skills
-		.filter((skill) => skill.type === 'WEB_DEVELOPMENT')
+		.filter((skill) => skill.type === 'WEB_DEVELOPMENT' && skill.name != 'HTML/CSS')
 		.sort((skillA, skillB) => skillB.level - skillA.level)
 		.splice(0, 5);
+
+	const tools5TechSkills = skills
+		.filter((skill) => skill.type === 'TOOLS' && skill.name != 'Framework7')
+		.sort((skillA, skillB) => skillB.level - skillA.level)
+		.splice(0, 2);
+
+	const framework5TechSkills = skills
+		.filter((skill) => skill.type === 'FRAMEWORKS')
+		.sort((skillA, skillB) => skillB.level - skillA.level)
+		.splice(0, 2);
 
 	const programmingLanguage = skills
 		.filter((skill) => skill.type === 'PROGRAMMING_LANGUAGE')
@@ -44,14 +54,6 @@
 
 			{#each resume.experiences as exp}
 				{@render experience(exp)}
-			{/each}
-		</section>
-
-		<section class="education">
-			<h2 class="my-2 font-medium">{$t('resume.education')}</h2>
-
-			{#each resume.studies as study}
-				{@render studies(study)}
 			{/each}
 		</section>
 	</main>
@@ -97,7 +99,7 @@
 {/snippet}
 
 {#snippet headerDesktop()}
-	<aside class="sidebar hidden md:block">
+	<aside class="sidebar hidden w-[35%] bg-[#fefeff] dark:bg-[#10253f] dark:text-[#fefeff] md:block">
 		<h1>{resume.fullName}</h1>
 		<p class="subtitle">{resume.mainRoleTitle}</p>
 		<div class="details">
@@ -113,16 +115,34 @@
 				{/each}
 			</ul>
 			<h3 class="mt-2">{$t('resume.techskills')}</h3>
-			<ul>
+			<div class="flex flex-wrap gap-2">
 				{#each programmingLanguage as skill}
-					<li>{skill.name}</li>
+					<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
+						{skill.name}
+					</span>
 				{/each}
-			</ul>
-			<ul>
-				{#each web5TechSkills as skill}
-					<li>{skill.name}</li>
+			</div>
+			<div class="mt-2 flex flex-wrap gap-2">
+				{#each [...web5TechSkills, ...tools5TechSkills, ...framework5TechSkills] as skill}
+					<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
+						{skill.name}
+					</span>
 				{/each}
-			</ul>
+			</div>
+			<div>
+				<h3 class="mb-2 mt-2">{$t('resume.education')}</h3>
+
+				{#each resume.studies as study}
+					{@render studies(study)}
+				{/each}
+			</div>
+			<div>
+				<h3 class="mb-2 mt-2">{$t('resume.certifications')}</h3>
+
+				{#each resume.certifications as cert}
+					{@render certifications(cert)}
+				{/each}
+			</div>
 		</div>
 	</aside>
 {/snippet}
@@ -145,67 +165,89 @@
 				{/each}
 			</ul>
 			<h3 class=" border-b-2 border-[#fffffff5]">{$t('resume.techskills')}</h3>
-			<ul class="flex flex-col gap-2">
-				<li class="flex flex-wrap gap-2">
+			<div class="mt-2 flex flex-wrap gap-2">
 					{#each programmingLanguage as skill}
-						<span>{skill.name}</span>
+						<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
+							{skill.name}
+						</span>
+						
 					{/each}
-				</li>
-			</ul>
-			<ul class="flex flex-col gap-2">
-				<li class="flex flex-wrap gap-2">
-					{#each web5TechSkills as skill}
-						<span>{skill.name}</span>
+			</div>
+			<div class="mt-2 flex flex-wrap gap-2">
+					{#each [...web5TechSkills, ...tools5TechSkills, ...framework5TechSkills] as skill}
+						<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
+							{skill.name}
+						</span>
 					{/each}
-				</li>
-			</ul>
+			</div>
 		</div>
 	</header>
 {/snippet}
 {#snippet studies(study: StudiesEvent)}
-	<h3 class="mb-2 text-[#10253f]">
-		<em>{study.date}</em>
-		{study.target}, {study.content}, Italy
-	</h3>
+	<div class="mb-2 flex flex-col text-left text-[#10253f] dark:text-[#fefeff]">
+		<span>{study.target}</span>
+		<span>{study.content}</span>
+		<em class="text-sm">{study.date}</em>
+	</div>
+{/snippet}
+
+{#snippet certifications(cert: TimelineEvent)}
+	<div class="mb-2 flex flex-col text-left text-[#10253f] dark:text-[#fefeff]">
+		<span>{cert.content}</span>
+		<em class="text-sm">{cert.date}</em>
+	</div>
 {/snippet}
 
 {#snippet experience(experience: ExperiencesEvent)}
 	{@const experiencesAquired = experience.skillAquiredList.filter((l) => l.level && l.level >= 70)}
 	{@const experiencesUse = experience.skillAquiredList.filter((l) => !l.level || l.level < 70)}
-	<h3 class="my-2 border-b-[1px] border-[#10253f] text-[#10253f]">
-		{experience.role}, {experience.companyName}, Italy
-	</h3>
-	<p>
-		<em>
-			{new Date(experience.dateStartTime).getFullYear()} - {experience.dateEndTime === null
-				? 'current'
-				: new Date(experience.dateEndTime).getFullYear()}
-		</em>
-	</p>
-	<div class="flex flex-col">
-		<div class="w-full">
-			<h4 class="text-bold">Abilità Aquisite/Consolidate</h4>
-			<div class="flex flex-wrap gap-1">
-			{#each experiencesAquired as sa}
-				<span class="py-1 px-2 border-2 border-blue-[#10253f] rounded-xl text-center">{sa.name}</span>
-			{/each}
-			</div>
-			{#if experiencesUse.length > 0}
-				<h4 class="text-bold">Tecnologie Usate</h4>
-				<div class="flex flex-wrap gap-1">
-				{#each experiencesUse as sa}
-					<p class="py-1 px-2 border-2 border-blue-[#10253f] rounded-xl text-center">{sa.name}</p>
-				{/each}
-				</div>
-			{/if}
+	<div class="mb-2 border-b-2 border-dashed border-[#10253f] pb-5">
+		<div class="inline-flex gap-1">
+			<Icon
+				class="mr-2 mt-3 h-5 w-5 align-middle text-gray-400"
+				aria-hidden="true"
+				src={Briefcase}
+			/>
+			<h3 class="text-bold my-2 border-b-[1px] border-[#10253f] text-[#10253f]">
+				{experience.role}, {experience.companyName}, Italy
+			</h3>
 		</div>
-		<div class="w-full">
-			<h4 class="text-bold">Attività / Progetti</h4>
-			<ul>
-				{#each Array.from(experience.experiencesList || []) as expItem}
-					<li class="list-disc">{expItem}</li>
-				{/each}
-			</ul>
+		<p>
+			<em>
+				{new Date(experience.dateStartTime).getFullYear()} - {experience.dateEndTime === null
+					? 'current'
+					: new Date(experience.dateEndTime).getFullYear()}
+			</em>
+		</p>
+		<div class="flex flex-col">
+			<div class="w-full">
+				<h4 class="text-bold">{$t('resume.skills_acquired')}</h4>
+				<div class="flex flex-wrap gap-1">
+					{#each experiencesAquired as sa}
+						<span class="border-blue-[#10253f] rounded-xl border-2 px-2 py-1 text-center">
+							{sa.name}
+						</span>
+					{/each}
+				</div>
+				{#if experiencesUse.length > 0}
+					<h4 class="text-bold">{$t('resume.technologies')}</h4>
+					<div class="flex flex-wrap gap-1">
+						{#each experiencesUse as sa}
+							<p class="border-blue-[#10253f] rounded-xl border-2 px-2 py-1 text-center">
+								{sa.name}
+							</p>
+						{/each}
+					</div>
+				{/if}
+			</div>
+			<div class="w-full">
+				<h4 class="text-bold">{$t('resume.activities')}</h4>
+				<ul>
+					{#each Array.from(experience.experiencesList || []) as expItem}
+						<li class="list-disc">{expItem}</li>
+					{/each}
+				</ul>
+			</div>
 		</div>
 	</div>
 {/snippet}
@@ -216,9 +258,6 @@
 	}
 
 	.sidebar {
-		width: 35%;
-		background: #10253f;
-		color: white;
 		padding: 30px 20px;
 		text-align: center;
 	}
@@ -230,7 +269,6 @@
 
 	.subtitle {
 		font-size: 14px;
-		color: #c5d2e0;
 		margin-bottom: 30px;
 	}
 
@@ -255,7 +293,6 @@
 	}
 
 	.skills ul {
-		/* list-style: none; */
 		padding: 0;
 	}
 
@@ -268,16 +305,6 @@
 		width: 70%;
 		padding: 40px;
 	}
-
-	h2 {
-		/* border-bottom: 2px solid #ddd;
-		padding-bottom: 5px;
-		margin-top: 30px; */
-	}
-	/* h3 {
-    margin-bottom: 5px;
-    color: #10253f;
-} */
 
 	.sidebar h3 {
 		color: #ddd;

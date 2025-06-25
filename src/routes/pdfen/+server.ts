@@ -6,8 +6,6 @@ export async function GET() {
   const page = await browser.newPage();
   
   await page.goto('http://localhost:5173/en/print');
-  // await page.goto('https://jolly-cv-blog-git-develop-jollymick90s-projects.vercel.app/it/print');
-  
   const pdfBuffer = await page.pdf({ format: 'A4' });
   
   await browser.close();
@@ -18,4 +16,7 @@ export async function GET() {
       'Content-Disposition': 'attachment; filename="pagina.pdf"',
     }
   });
+
 }
+
+

@@ -258,9 +258,9 @@
                     "level": 50
                 },
                 {
-                    "name": "GrpahQL",
+                    "name": "GraphQL",
                     "type": "API",
-                    "level": 70
+                    "level": 60
                 }
             ]
         },
@@ -276,17 +276,22 @@
             "date": "2015 - 2021",
             "skillAquiredList": [
                 {
-                    "name": "Java (monolite con JSP)",
+                    "name": "Java",
                     "type": "Backend",
                     "level": 80
                 },
                 {
-                    "name": "Hibernate",
+                    "name": "Kotlin",
+                    "type": "Backend",
+                    "level": 70
+                },
+                {
+                    "name": "JSP",
                     "type": "Backend",
                     "level": 80
                 },
                 {
-                    "name": "SQL (PostgreSQL, MySQL, SQL Server)",
+                    "name": "SQL",
                     "type": "Backend",
                     "level": 80
                 },
@@ -295,16 +300,11 @@
                     "type": "Frontend",
                     "level": 80
                 },
-                {
+                 {
                     "name": "Typescript",
                     "type": "Frontend",
                     "level": 80
-                },
-                {
-                    "name": "JQuery",
-                    "type": "Frontend",
-                    "level": 80
-                },
+                },               
                 {
                     "name": "FFmpeg",
                     "type": "Multimedia Processing",
@@ -316,24 +316,19 @@
                     "level": 60
                 },
                 {
-                    "name": "Android Media Player",
+                    "name": "Tizen",
                     "type": "Player Digital Signage",
                     "level": 80
-                },
-                {
-                    "name": "Web Player (Typescript, JQuery)",
-                    "type": "Player Digital Signage",
-                    "level": 80
-                },
+                },                
                 {
                     "name": "Toshiba Professional Monitor",
                     "type": "Player Digital Signage",
-                    "level": 80
+                    "level": 60
                 },
                 {
                     "name": "Samsung Professional Monitor - Tizen OS",
                     "type": "Player Digital Signage",
-                    "level": 80
+                    "level": 60
                 },
                 {
                     "name": "VueJS",
@@ -341,8 +336,8 @@
                     "level": 80
                 },
                 {
-                    "name": "Android (Java, Kotlin)",
-                    "type": "Player Digital Signage",
+                    "name": "React",
+                    "type": "Frontend",
                     "level": 80
                 },
                 {
@@ -351,15 +346,16 @@
                     "level": 80
                 },
                 {
+                    "name": "Android",
+                    "type": "Player Digital Signage",
+                    "level": 80
+                },                
+                {
                     "name": "Openlayer",
                     "type": "GIS",
                     "level": 80
-                },
-                {
-                    "name": "Kotlin",
-                    "type": "Mobile",
-                    "level": 70
                 }
+                
             ],
             "experiencesListShort": [
             "Development of cross-platform digital signage and tracking systems, including real-time public transport monitoring and synchronized LED wall content distribution.",
