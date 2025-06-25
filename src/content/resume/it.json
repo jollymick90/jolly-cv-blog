@@ -349,6 +349,11 @@
                     "type": "Mobile"
                 }
             ],
+             "experiencesListShort": [
+                "Sviluppo di sistemi digital signage e tracciamento cross-platform, inclusi monitoraggio in tempo reale dei trasporti pubblici e distribuzione sincronizzata di contenuti su schermi LED.",
+                "Creazione di app Android native con attenzione a performance, UX/UI e integrazione sicura con backend, utilizzando Kotlin e Java.",
+                "Sviluppo frontend avanzato con Vue.js e OpenLayers per la gestione di dati spaziali e visualizzazioni geografiche interattive."
+            ],
             "experiencesList": [
                 "Player Web e Android per Digital Signage: Sviluppo di una piattaforma web e mobile ottimizzata per la gestione e distribuzione centralizzata di contenuti digitali su dispositivi di digital signage, con particolare attenzione a performance e scalabilità.",
                 "Sistema di tracking su mappa per trasporto pubblico: Realizzazione di un sistema web e mobile per tracciare in tempo reale mezzi pubblici, integrato con mappe interattive e funzionalità avanzate di geolocalizzazione per ottimizzare l'esperienza degli utenti finali.",
@@ -369,6 +374,7 @@
             "dateEnd": "Dec 14",
             "dateEndTime": "2014-12-01",
             "date": "2012 - 2014",
+            "hideForPrintable": true,
             "skillAquiredList": [
                 {
                     "name": "capacità gestionali e organizzative",

@@ -10,7 +10,11 @@
         "softskills": "Capacità Trasversali",
         "techskills":"Capcità Tecniche",
         "history_experiences": "Esperienze",
-        "education": "Istruzione"
+        "education": "Istruzione",
+        "certifications": "Certificazioni",
+        "skills_acquired": "Competenze sviluppate e consolidate",
+        "technologies":"Stack tecnologico utilizzato",
+        "activities": "Attività / Progetti"
     },
     "blog": {
         "title": "Pensieri in Codice e non Solo",

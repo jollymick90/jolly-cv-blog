@@ -65,6 +65,7 @@ export type ExperiencesEvent = {
     experiencesList?: string[],
     skillAquiredList: SkillAquired[],
     experiencesListShort?: string[]
+    hideForPrintable?: boolean;
 } & TimelineEvent;
 
 export type ExperiencesEventUI = {

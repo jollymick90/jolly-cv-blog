@@ -14,7 +14,11 @@
         "softskills": "Soft Skills",
         "techskills":"Technical Skills",
         "history_experiences": "Experiences",
-        "education": "Education"
+        "education": "Education",
+        "certifications": "Certifications",
+        "skills_acquired": "Skills developed and reinforced",
+        "technologies":"Technology stack adopted",
+        "activities": "Attività / Progetti"
     },
     "blog": { 
         "title": "Thoughts in Code and Beyond",
