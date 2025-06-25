@@ -5,7 +5,8 @@ export async function GET() {
   const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
   const page = await browser.newPage();
   
-  await page.goto('https://jolly-cv-blog-git-develop-jollymick90s-projects.vercel.app/it/print');
+  await page.goto('http://localhost:5173/en/print');
+  // await page.goto('https://jolly-cv-blog-git-develop-jollymick90s-projects.vercel.app/it/print');
   
   const pdfBuffer = await page.pdf({ format: 'A4' });
   
