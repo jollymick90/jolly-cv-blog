@@ -1,5 +1,6 @@
 import { mdsvex } from 'mdsvex';
 import path from 'path';
+
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -23,7 +24,7 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			precompress: false,
-			strict: true
+			strict: false
 		}),
 		// prerender: {
 		// 	entries: ['*']
