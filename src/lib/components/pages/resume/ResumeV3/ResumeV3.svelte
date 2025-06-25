@@ -2,7 +2,15 @@
 	import { type ExperiencesEvent } from '$lib/content/resume';
 
 	import type { IResume, StudiesEvent, TimelineEvent } from '$lib/content';
-	import { Icon, Envelope, Phone, MapPin, Briefcase } from 'svelte-hero-icons';
+	import {
+		Icon,
+		Envelope,
+		Phone,
+		MapPin,
+		Briefcase,
+		WrenchScrewdriver,
+		RocketLaunch
+	} from 'svelte-hero-icons';
 
 	import { t } from '$lib/i18n';
 
@@ -57,6 +65,7 @@
 			{/each}
 		</section>
 	</main>
+	{@render footerMobile()}
 </div>
 
 {#snippet contact()}
@@ -166,25 +175,62 @@
 			</ul>
 			<h3 class=" border-b-2 border-[#fffffff5]">{$t('resume.techskills')}</h3>
 			<div class="mt-2 flex flex-wrap gap-2">
-					{#each programmingLanguage as skill}
-						<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
-							{skill.name}
-						</span>
-						
-					{/each}
+				{#each programmingLanguage as skill}
+					<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
+						{skill.name}
+					</span>
+				{/each}
 			</div>
-			<div class="mt-2 flex flex-wrap gap-2">
-					{#each [...web5TechSkills, ...tools5TechSkills, ...framework5TechSkills] as skill}
-						<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
-							{skill.name}
-						</span>
-					{/each}
+			<div class="mt-2 flex flex-wrap gap-2 pb-2 border-b-2 border-[#fffffff5]">
+				{#each [...web5TechSkills, ...tools5TechSkills, ...framework5TechSkills] as skill}
+					<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
+						{skill.name}
+					</span>
+				{/each}
 			</div>
+			<!-- <div class="pb-2 border-b-2 border-[#fffffff5]">
+				<h3 class="mb-2 mt-2">{$t('resume.education')}</h3>
+
+				{#each resume.studies as study}
+					{@render studies(study)}
+				{/each}
+			</div>
+			<div class="pb-2 border-b-2 border-[#fffffff5]">
+				<h3 class="mb-2 mt-2">{$t('resume.certifications')}</h3>
+
+				{#each resume.certifications as cert}
+					{@render certifications(cert)}
+				{/each}
+			</div> -->
+			
 		</div>
 	</header>
 {/snippet}
+{#snippet footerMobile()}
+	<footer class="block md:hidden w-full bg-[#10253f] p-2 text-white">
+		
+		<div class="">
+			
+			<div class="pb-2 border-b-2 border-[#fffffff5]">
+				<h3 class="mb-2 mt-2">{$t('resume.education')}</h3>
+
+				{#each resume.studies as study}
+					{@render studies(study)}
+				{/each}
+			</div>
+			<div class="pb-2 border-b-2 border-[#fffffff5]">
+				<h3 class="mb-2 mt-2">{$t('resume.certifications')}</h3>
+
+				{#each resume.certifications as cert}
+					{@render certifications(cert)}
+				{/each}
+			</div>
+			
+		</div>
+	</footer>
+{/snippet}
 {#snippet studies(study: StudiesEvent)}
-	<div class="mb-2 flex flex-col text-left text-[#10253f] dark:text-[#fefeff]">
+	<div class="mb-2 flex flex-row flex-wrap gap-1 md:gap-0 md:flex-col text-left text-[#10253f] dark:text-[#fefeff]">
 		<span>{study.target}</span>
 		<span>{study.content}</span>
 		<em class="text-sm">{study.date}</em>
@@ -202,51 +248,72 @@
 	{@const experiencesAquired = experience.skillAquiredList.filter((l) => l.level && l.level >= 70)}
 	{@const experiencesUse = experience.skillAquiredList.filter((l) => !l.level || l.level < 70)}
 	<div class="mb-2 border-b-2 border-dashed border-[#10253f] pb-5">
-		<div class="inline-flex gap-1">
+		<div class="my-2 flex justify-start border-[#10253f] align-middle">
 			<Icon
-				class="mr-2 mt-3 h-5 w-5 align-middle text-gray-400"
+				class="mr-2 h-5 w-[50px] text-gray-400"
 				aria-hidden="true"
-				src={Briefcase}
+				src={Briefcase} 
 			/>
-			<h3 class="text-bold my-2 border-b-[1px] border-[#10253f] text-[#10253f]">
-				{experience.role}, {experience.companyName}, Italy
+			<h3 class="text-bold text-[#10253f]">
+				{experience.role}, {experience.companyName}
 			</h3>
-		</div>
-		<p>
-			<em>
+
+			<h3 class="text-md ml-2 align-middle italic">
 				{new Date(experience.dateStartTime).getFullYear()} - {experience.dateEndTime === null
 					? 'current'
 					: new Date(experience.dateEndTime).getFullYear()}
-			</em>
-		</p>
+			</h3>
+		</div>
 		<div class="flex flex-col">
-			<div class="w-full">
-				<h4 class="text-bold">{$t('resume.skills_acquired')}</h4>
-				<div class="flex flex-wrap gap-1">
-					{#each experiencesAquired as sa}
-						<span class="border-blue-[#10253f] rounded-xl border-2 px-2 py-1 text-center">
-							{sa.name}
-						</span>
-					{/each}
+			<div class="flex flex-col md:flex-row w-full">
+				<div class="flex">
+					<Icon
+					class="mr-2 h-5 w-[50px] align-middle text-gray-400"
+					aria-hidden="true"
+					src={WrenchScrewdriver}
+				/>
+					<h4 class="block md:hidden text-bold">{$t('resume.skills_acquired')}</h4>
 				</div>
-				{#if experiencesUse.length > 0}
-					<h4 class="text-bold">{$t('resume.technologies')}</h4>
+				
+
+				<div class="flex flex-col">
+					<h4 class="hidden md:block text-bold">{$t('resume.skills_acquired')}</h4>
 					<div class="flex flex-wrap gap-1">
-						{#each experiencesUse as sa}
-							<p class="border-blue-[#10253f] rounded-xl border-2 px-2 py-1 text-center">
+						{#each experiencesAquired as sa}
+							<span class="border-blue-[#10253f] rounded-xl border-2 px-2 py-1 text-center">
 								{sa.name}
-							</p>
+							</span>
 						{/each}
 					</div>
-				{/if}
+					{#if experiencesUse.length > 0}
+						<h4 class="text-bold">{$t('resume.technologies')}</h4>
+						<div class="flex flex-wrap gap-1">
+							{#each experiencesUse as sa}
+								<p class="border-blue-[#10253f] rounded-xl border-2 px-2 py-1 text-center">
+									{sa.name}
+								</p>
+							{/each}
+						</div>
+					{/if}
+				</div>
 			</div>
-			<div class="w-full">
-				<h4 class="text-bold">{$t('resume.activities')}</h4>
-				<ul>
-					{#each Array.from(experience.experiencesList || []) as expItem}
-						<li class="list-disc">{expItem}</li>
-					{/each}
-				</ul>
+			<div class="flex flex-col md:flex-row w-full">
+				<div class="flex">
+					<Icon
+						class="mt-2 h-5 w-[50px] align-middle text-gray-400"
+						aria-hidden="true"
+						src={RocketLaunch}
+					/>
+					<h4 class="block md:hidden text-bold">{$t('resume.activities')}</h4>
+				</div>
+				<div>
+					<h4 class="hidden md:block text-bold">{$t('resume.activities')}</h4>
+					<ul>
+						{#each Array.from(experience.experiencesList || []) as expItem}
+							<li class="list-disc">{expItem}</li>
+						{/each}
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

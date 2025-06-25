@@ -191,7 +191,7 @@
 				src={Briefcase}
 			/>
 			<h3 class="text-bold text-[#10253f]">
-				{experience.role}, {experience.companyName}, 
+				{experience.role}, {experience.companyName}
 			</h3>
 
 			<h3 class="ml-2 align-middle text-md italic">
