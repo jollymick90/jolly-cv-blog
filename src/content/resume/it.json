@@ -103,6 +103,12 @@
             "dateStartTime": "2022-09-01",
             "date": "2022 - current",
             "description": "Attualmente lavoro in Almaviva, una delle più grandi corporate italiane, specializzata in soluzioni IT per la Pubblica Amministrazione. In questa esperienza ho consolidato il mio ruolo di Senior Fullstack Developer, ampliando le mie competenze su tecnologie enterprise e su architetture scalabili.",
+            "experiencesListShort": [
+                "Gestione fullstack (frontend, backend, database) di progetti enterprise.",
+                "Responsabile della consegnata di due progetti in produzione per la Pubblica Amministrazione.",
+                "Mentoring di colleghi junior, supportandone la crescita tecnica e professionale.",
+                "Ottenimento della certificazione AWS Developer Associate, rafforzando competenze su architetture cloud."
+            ],
             "experiencesList": [
                 "Gestione fullstack di progetti enterprise, curando frontend, backend e database.",
                 "Responsabile della delivery di due progetti in produzione per la Pubblica Amministrazione.",
@@ -208,6 +214,11 @@
             "dateStart": "Sep 21",
             "dateStartTime": "2021-09-01",
             "date": "2021 - 2022",
+            "experiencesListShort": [
+                "Sviluppo frontend in Angular e React per sistemi di gestione flotte e raccolta rifiuti, integrati tramite GraphQL con backend .NET/C#.",
+                "Utilizzo avanzato di NX per monorepo, librerie UI come KendoUI e Syncfusion",
+                "Certificazione ISIPM Base in Project Management."
+            ],
             "experiencesList": [
                 "Sviluppo e manutenzione di applicazioni frontend in Angular e React per la gestione di flotte e servizi di raccolta rifiuti.",
                 "Integrazione con backend .NET/C# tramite GraphQL, ottimizzando la comunicazione tra frontend e database.",

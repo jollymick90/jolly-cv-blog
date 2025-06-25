@@ -9,7 +9,7 @@
 	let resolvedTheme: ThemeAvailable = 'dark';
 	let otherTheme = $state<ThemeAvailable>('light');
 	let mounted = $state(false);
-	let isDark = $state(true); ;
+	let isDark = $state(true);
 
 	// Store per gestire il tema
 	export const theme = writable<ThemeAvailable>('dark');

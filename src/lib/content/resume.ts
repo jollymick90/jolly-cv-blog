@@ -63,7 +63,8 @@ export type ExperiencesEvent = {
     description: string,
     longDescription?: string,
     experiencesList?: string[],
-    skillAquiredList: SkillAquired[]
+    skillAquiredList: SkillAquired[],
+    experiencesListShort?: string[]
 } & TimelineEvent;
 
 export type ExperiencesEventUI = {

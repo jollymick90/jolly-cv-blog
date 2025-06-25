@@ -6,7 +6,8 @@
 	langStore.set(data.lang);
 	
 </script>
-<div class="flex w-full">
+{@render children()}
+<!-- <div class="flex w-full">
 	<div class="fixed inset-0 flex justify-center sm:px-8">
 		<div class="flex w-full max-w-7xl lg:px-8">
 			<div
@@ -15,9 +16,6 @@
 		</div>
 	</div>
 	<div class="relative flex w-full flex-col">
-		<Header lang={data.lang}></Header>
-		<main class="flex-auto px-2">
-			{@render children()}
-		</main>
+		{@render children()}
 	</div>
-</div>
+</div> -->

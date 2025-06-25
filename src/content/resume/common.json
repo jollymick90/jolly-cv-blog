@@ -94,6 +94,12 @@
         },
         {
             "name": "JQuery",
+            "level": 70,
+            "levelTag": "high",
+            "type": "WEB_DEVELOPMENT"
+        },
+        {
+            "name": "Svelte",
             "level": 85,
             "levelTag": "high",
             "type": "WEB_DEVELOPMENT"
@@ -120,6 +126,12 @@
             "level": 80,
             "levelTag": "high",
             "type": "FRAMEWORKS"
+        },
+         {
+            "name": "Geoserver",
+            "level": 80,
+            "levelTag": "high",
+            "type": "TOOLS"
         },
         {
             "name": "Hibernate",
@@ -154,7 +166,7 @@
             "name": "Framework7",
             "level": 60,
             "levelTag": "medium",
-            "type": "FRAMEWORKS"
+            "type": "TOOLS"
         },
         {
             "name": "SQL",
