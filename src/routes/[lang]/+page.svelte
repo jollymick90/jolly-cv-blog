@@ -31,11 +31,11 @@ let resume = data.resume;
     </Container>
     <Photos></Photos>
 
-    <Container className="mt-24 md:mt-28">
+    <Container className="mt-24 mb-10 md:mt-28">
         <div class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
             <div class="space-y-10">
-                <HomeResume {resume}></HomeResume>
                 <HomeProject></HomeProject>
+                <HomeResume {resume}></HomeResume>
                 <HomeEvent></HomeEvent>
                 <HomeNewsLetterSection></HomeNewsLetterSection>
             </div>

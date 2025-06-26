@@ -4,7 +4,6 @@
 	import { t } from '$lib/i18n';
 	import EventCard from './EventCard.svelte';
 	const { events } : { events: EventFormat[] } = $props();
-	console.log(events)
 
 </script>
 

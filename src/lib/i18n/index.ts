@@ -36,9 +36,7 @@ export const {
 // Translations logs
 loading.subscribe(async ($loading) => {
   if ($loading) {
-    console.log('Loading translations...');
 
     await loading.toPromise();
-    console.log('Updated translations', translations.get());
   }
 });

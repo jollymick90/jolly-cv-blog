@@ -8,7 +8,7 @@
 	}
 </script>
 
-<Container className="mt-16 lg:mt-32">
+<Container className="mt-16 mb-20 lg:mt-32">
 	<div class="xl:relative">
 		<div class="mx-auto max-w-2xl">
 			<button

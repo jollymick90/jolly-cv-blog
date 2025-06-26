@@ -8,7 +8,7 @@
 {#if isFullScreen}
 	{@render children()}
 {:else}
-	<div class="flex w-full">
+	<div class="flex w-full pb-10 mb-10">
 		<div class="fixed inset-0 flex justify-center sm:px-8">
 			<div class="flex w-full max-w-7xl lg:px-8">
 				<div

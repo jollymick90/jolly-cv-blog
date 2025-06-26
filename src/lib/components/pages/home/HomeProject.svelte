@@ -6,7 +6,7 @@
 	import type { ProjectFormat } from '$lib/content/content';
 	import { onMount } from 'svelte';
 	import { loadProjects } from '$lib/utils/project-loader-utils';
-	import { CodeBracketSquare, Icon } from 'svelte-hero-icons';
+	import { ArrowRight, CodeBracketSquare, Icon } from 'svelte-hero-icons';
 	const lang = $derived($langStore);
 
 	let count = $state(0);
@@ -30,14 +30,12 @@
 
 		<span class="ml-3">Project</span>
 	</h2>
-	<ol class="mt-6 space-y-4 dark:text-white text-zinc-900">
+	<div class="flex flex-col mt-6 space-y-4 dark:text-white text-zinc-900">
 		{#each articleList as art}
-			<li>
-							<a href="/{lang}/project/{art.slug}">  
+			<a href="/{lang}/project/{art.slug}" class="flex flex-row justify-between">  
 				{art.metadata.title}
+				<Icon class="mr-2 h-5 w-5 text-gray-400" aria-hidden="true" src={ArrowRight} />
 			</a>
-			
-			</li>
 		{/each}
-	</ol>
+	</div>
 </div>

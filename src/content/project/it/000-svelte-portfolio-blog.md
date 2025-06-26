@@ -1,21 +1,35 @@
 ---
-title: "GIS and Farms"
+title: "Svelte Portfolio Blog"
 date: "2025-06-22"
-description: During first job, i knew GIS technologies: Openlayer, Geoserver, Vue.
+description: "Vi parlo di come ho costruito proprio questo sito. Delle sfide e delle varie decisioni che ho preso"
 ---
 
-# **Harnessing GIS for Agricultural Innovation**
+## **Vi parlo di come ho costruito proprio questo sito. Delle sfide e delle varie decisioni che ho preso**
 
-**Period:** 2016 – 2018 (Example Period)
-**Role:** GIS Developer / Consultant (Example Role)
+**Period:** 2025
 
-During my first professional experience, I delved into the fascinating world of Geographic Information Systems (GIS) and their powerful applications, particularly within the agricultural sector. This period was instrumental in shaping my understanding of how spatial data and visualization tools can revolutionize traditional farming practices. My journey was defined by three core areas:
+**Role:** Frontend Developer
 
--   **Introduction to GIS Technologies:** I gained hands-on experience with key open-source GIS tools. This included working extensively with **OpenLayers** for interactive web mapping, configuring and managing spatial data through **GeoServer**, and integrating these functionalities into dynamic user interfaces using the **Vue.js** framework.
+## TLDR: **Introduction to GIS Technologies:** 
+
+- Avevo tanta voglia di creare un mio sito personale
+- Stavo studiando Svelte, mi sembrava una tecnologia completa per tutte le mie esigenze presenti e future
+- Alla fine é stato più lungo del previsto
+- Sono soddisfatto e voglio fare di più
+
+## Partiamo dal principio ** 
+Dall'inizio di quest'anno mi sono deciso di creare 'il mio sito'. Un luogo mio, dove potessi mettere tutto ciò che sono io. Un luogo diverso da qualsiasi social network. Qualcosa che crescesse con me, fisicamente. Non che si appoggi a un social o ad altre piattaforme. 
+
+Ci si potrebbe chiedere, come mai complicarsi la vita così? 
+Io sono uno sviluppatore web, li creo tutti i giorni questi siti-web-applicativi-cms-blog. 
+
+### **Introduction to GIS Technologies:** 
+
+I gained hands-on experience with key open-source GIS tools. This included working extensively with **OpenLayers** for interactive web mapping, configuring and managing spatial data through **GeoServer**, and integrating these functionalities into dynamic user interfaces using the **Vue.js** framework.
 -   **Developing Farm Management Solutions:** My work involved creating and optimizing systems that allowed farmers to visualize and analyze their land, crops, and resources more effectively. This often meant developing custom tools for mapping field boundaries, tracking crop health, managing irrigation systems, and optimizing resource allocation based on geographical data.
 -   **Bridging Data and Decisions:** A significant part of my role was to translate complex spatial data into actionable insights for agricultural stakeholders. This involved not only technical development but also understanding the specific needs of farmers and agronomists, ensuring the GIS solutions provided tangible benefits for decision-making regarding planting, harvesting, and pest control.
 
-## Key Highlights
+### Key Highlights
 
 1.  **Proficiency in Open-Source GIS Stack**: Developed strong skills in **OpenLayers**, **GeoServer**, and **Vue.js** for building robust geospatial web applications.
 2.  **Applied GIS in Agriculture**: Successfully implemented GIS solutions to address real-world challenges in farm management and optimization.
@@ -28,3 +42,10 @@ During my first professional experience, I delved into the fascinating world of 
 9.  **Interdisciplinary Collaboration**: Worked at the intersection of technology and agriculture, collaborating with domain experts.
 10. **Continuous Learning in Geospatial Technologies**: Actively explored new tools and methodologies in the rapidly evolving field of GIS.
 
+
+
+## CODE
+
+``` js
+var ciao = "hello";
+```

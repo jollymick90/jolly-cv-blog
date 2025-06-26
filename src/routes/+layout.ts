@@ -16,7 +16,6 @@ export const load: Load = async ({ url }) => {
   const lang: LangAvailable = (_lang === 'it' || _lang === 'en') ? _lang as LangAvailable : defaultLang;
 
   const route = pathname.replace(new RegExp(`^/${lang}`), '');
-  console.log(route)
   let isFullScreen = false;
   if (route === '/print') {
     isFullScreen = true;

@@ -1,7 +1,6 @@
 import puppeteer from 'puppeteer';
 
 export async function GET() {
-  console.log("---- pdf action")
   const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
   const page = await browser.newPage();
   
