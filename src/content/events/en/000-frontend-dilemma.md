@@ -6,7 +6,7 @@ description: "Have you ever asked yourself which are the differences between Ang
 
 # **Frontend Roadmap: Beginning Dilemma**
 
-**Quando:** Venezia Novembre 2024
+**Quando:** Novembre 2024
 **Dove:** GDG Dev-Fest Venezia
 
 ## Description
@@ -55,4 +55,37 @@ You can change course. Just like with any GPS, if you feel like you’ve taken a
 The map is not the territory. The steps shown here aren’t necessarily the ones you’ll encounter in real life. In fact, projects and companies will often push you to take a different path — or skip steps entirely.
 
 ## Pick a framework
+[Frontend Roadmap](https://roadmap.sh/frontend)
 
+When you read the frontend roadmap on roadmap.sh, you’ll eventually reach the section called ‘Pick a framework’.
+
+<img src='/blog/000-img-001.png' alt="Pick a Framework" width=300/>
+
+I started my career in 2015. At that time, there was a lot of buzz around frontend frameworks and libraries.
+Personally, I wasn’t working with modern technologies yet — I was using JSP and jQuery.
+
+I have to say, it was a great training ground. And later, working with Vue, Angular, and React in succession gave me the chance to see these tools grow and mature — just like I did.
+
+So I asked myself: if I had to choose a framework today, which one would I pick?
+And more importantly — how would I go about choosing it?
+
+
+## Ingredients
+
+
+
+To answer this question, I simply thought about what I usually do when trying out a new technology.
+
+I explore the options available on the market
+
+I compare the results
+
+I try them out hands-on
+
+From this process, I identified three key ingredients for choosing the right framework:
+
+Having a clear overview of the available frameworks
+
+Defining comparison criteria
+
+Testing them directly

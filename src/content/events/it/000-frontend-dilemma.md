@@ -6,7 +6,7 @@ description: "Ti sei mai chiesto quale sia la differenza tra Angular, React, Vue
 
 # **Frontend Roadmap: Beginning Dilemma**
 
-**Quando:** Venezia Novembre 2024
+**Quando:** Novembre 2024
 **Dove:** GDG Dev-Fest Venezia
 
 # Descrizione
@@ -49,8 +49,32 @@ Facciamo qualche considerazione:
 
 
 ## Pick a framework
+[Frontend Roadmap](https://roadmap.sh/frontend)
 
-A un certo punto vedo il punto 'pick a framework'
+Se leggi la roadmap sul frontend a un certo punto leggerai il punto 'pick a framework'
 
+<img src='/blog/000-img-001.png' alt="Pick a Framework" width=300/>
 
-<!-- ![alt text](<000-img-001.png>) -->
+Ho iniziato la mia carriera nel 2015. In quel momento c'era parecchio fermento tra i framework e le librerie frontend. Io non lavoravo con tecnologie moderne ma con JSP + JQuery. 
+Devo dire che è stata una grande palestre e che poi aver affrontanto in successione: Vue, Angular e React, mi ha dato la possibilità di vedere questi strumenti crescere e maturare. Tanto quanto me. 
+
+Quindi mi sono chiesto, ma oggi, dovessi scegliere un framework, quale sceglierei? e come?
+
+## Ingredienti
+
+Per rispondere a questa domanda, ho semplicemente riflettuto su ciò che faccio di solito quando provo una nuova tecnologia.
+
+- Esploro le opzioni disponibili sul mercato
+
+- Confronto i risultati tra loro
+
+- Faccio dei test sul campo
+
+Da qui, ho individuato tre ingredienti fondamentali per scegliere il framework giusto:
+
+1) Avere una panoramica dei framework disponibili
+
+2) Disporre di criteri di confronto
+
+3) Testarli direttamente
+                    

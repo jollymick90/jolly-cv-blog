@@ -39,10 +39,6 @@
 	</h2>
 	<div class="flex flex-col mt-6 space-y-4 dark:text-white text-zinc-900">
 		{#each articleList as art}
-			<a href="/{lang}/project/{art.slug}" class="flex flex-row justify-between">  
-				{art.metadata.title}
-				<Icon class="mr-2 h-5 w-5 text-gray-400" aria-hidden="true" src={ArrowRight} />
-			</a>
 			<Card>
 				<CardTitle hoverHighlight={true} href="/{lang}/project/{art.slug}">
 					{art.metadata.title}
