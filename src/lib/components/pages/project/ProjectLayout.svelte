@@ -2,7 +2,8 @@
 	import { formatDate } from '$lib/utils/format-date-utils';
 	import Container from '$lib/components/template/Container.svelte';
 	import { ArrowLeftIcon } from '$lib/components/icons';
-	export let article: any;
+	
+	const { article, children } = $props();
 	function back(): any {
 		history.back();
 	}
@@ -13,7 +14,7 @@
 		<div class="mx-auto max-w-2xl">
 			<button
 				type="button"
-				on:click={() => back()}
+				onclick={() => back()}
 				aria-label="Go back to articles"
 				class="group mb-8 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:ring-white/10 dark:hover:border-zinc-700 dark:hover:ring-white/20 lg:absolute lg:-left-5 lg:-mt-2 lg:mb-0 xl:-top-1.5 xl:left-0 xl:mt-0"
 			>
@@ -39,7 +40,7 @@
 			</time>
 		</header>
 		<div class="mt-8 prose dark:prose-invert">
-			<slot></slot>
+			{@render children()}
 		</div>
 	</article>
 </Container>

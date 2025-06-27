@@ -1,30 +1,56 @@
 ---
 title: "Frontend Roadmap: Beginning Dilemma"
-date: "2025-06-22"
-description: "During first job, i knew GIS technologies: Openlayer, Geoserver, Vue."
+date: "2024-11-16"
+description: "Ti sei mai chiesto quale sia la differenza tra Angular, React, Vue e Svelte? Quale dovrei scegliere per iniziare la mia carriera?"
 ---
 
-# **Harnessing GIS for Agricultural Innovation**
+# **Frontend Roadmap: Beginning Dilemma**
 
-**Period:** 2016 – 2018 (Example Period)
-**Role:** GIS Developer / Consultant (Example Role)
+**Quando:** Venezia Novembre 2024
+**Dove:** GDG Dev-Fest Venezia
 
-During my first professional experience, I delved into the fascinating world of Geographic Information Systems (GIS) and their powerful applications, particularly within the agricultural sector. This period was instrumental in shaping my understanding of how spatial data and visualization tools can revolutionize traditional farming practices. My journey was defined by three core areas:
+# Descrizione
+Questa è la descrizione che ho messo al form di sessionize. 
 
--   **Introduction to GIS Technologies:** I gained hands-on experience with key open-source GIS tools. This included working extensively with **OpenLayers** for interactive web mapping, configuring and managing spatial data through **GeoServer**, and integrating these functionalities into dynamic user interfaces using the **Vue.js** framework.
--   **Developing Farm Management Solutions:** My work involved creating and optimizing systems that allowed farmers to visualize and analyze their land, crops, and resources more effectively. This often meant developing custom tools for mapping field boundaries, tracking crop health, managing irrigation systems, and optimizing resource allocation based on geographical data.
--   **Bridging Data and Decisions:** A significant part of my role was to translate complex spatial data into actionable insights for agricultural stakeholders. This involved not only technical development but also understanding the specific needs of farmers and agronomists, ensuring the GIS solutions provided tangible benefits for decision-making regarding planting, harvesting, and pest control.
+<i>Ti sei mai chiesto quale sia la differenza tra Angular, React, Vue e Svelte? Quale dovrei scegliere per iniziare la mia carriera? il tuo amico Jack al bar ti ha parlato di un idea geniale e tu hai appena imparato Angular: che occasione per mettere all'opera le tue conoscenze. Sicuro che non sia meglio farlo in react? Perché dovrei provare AlpineJS se mi trovo così bene con React? o no! non ho ancora finito di leggere questo abstract che ho scoperto che esiste Next, Vuex... e Angular è passato dalla 18 alla 22.
 
-## Key Highlights
+Il mondo del frontend è in continua evoluzione e può essere difficile trovare la strada giusta. Scelta complessa sia per chi è all'inizio sia per chi ha un po' più di bias.
+In questo talk, faremo chiarezza su queste domande e ti presenteremo una panoramica completa delle principali tecnologie frontend, evidenziando i loro pro e contro e i casi d'uso ideali.
+</i>
 
-1.  **Proficiency in Open-Source GIS Stack**: Developed strong skills in **OpenLayers**, **GeoServer**, and **Vue.js** for building robust geospatial web applications.
-2.  **Applied GIS in Agriculture**: Successfully implemented GIS solutions to address real-world challenges in farm management and optimization.
-3.  **Data Visualization and Analysis**: Created interactive maps and dashboards to visualize complex agricultural data, facilitating informed decision-making.
-4.  **Backend Integration with GeoServer**: Gained experience in publishing and managing spatial data services using GeoServer.
-5.  **Frontend Development with Vue.js**: Built user-friendly interfaces for GIS applications, enhancing user experience and data accessibility.
-6.  **Problem-Solving in Geospatial Contexts**: Addressed specific agricultural needs by designing and implementing tailored GIS functionalities.
-7.  **Understanding of Spatial Data Concepts**: Developed a solid foundation in geospatial data models, projections, and analysis techniques.
-8.  **Contribution to Sustainable Farming**: Played a role in developing technologies that could lead to more efficient and sustainable agricultural practices.
-9.  **Interdisciplinary Collaboration**: Worked at the intersection of technology and agriculture, collaborating with domain experts.
-10. **Continuous Learning in Geospatial Technologies**: Actively explored new tools and methodologies in the rapidly evolving field of GIS.
+Devo ringraziare l'organizzazione per avermi permesso di fare il mio primo talk davanti a una grande platea. A distanza di mesi da quel primo evento vorrei raccogliere alcuni punti di quel lavoro in questo post.
 
+Dividerò i punti in due:
+quelli sul tema e quelli sull'esposizione.
+
+# Frontend Dilemma
+
+## Curiosità
+
+La curiosità — e il fatto che tutto sia ispezionabile con un click — è ciò che mi ha portato verso il frontend.
+
+Un aspetto che, forse, vale per qualsiasi ambito dell’informatica — o addirittura per l’intero settore scientifico e tecnologico.
+Io continuo a tenere la testa nel browser: rispetto ad altri contesti, come lo sviluppo di applicativi desktop, mobile o altro, il risultato di una web application è facilmente “ispezionabile”. Basta un click con il tasto destro per aprire l’inspector.
+
+Uno strumento fondamentale, che credo non tutti conoscano davvero a fondo.
+
+## Roadmap
+
+[ROADMAP](https://roadmap.sh/)
+
+Conosci questo sito? Mostra una mappa di tutte le carriere e strade che si possono intraprendere. 
+Facciamo qualche considerazione:
+
+1) Sono strade che hanno un forte legame tra di loro. Non vanno prese le cose come compartimenti stagni.
+
+2) Puoi cambiare strada. Come tutti i navigatori, se ti senti di aver sbagliato strada, conviene cambiare!
+
+3) La mappa non è la realtà. Le tappe che vedi qui non sono quelle che necessariamente incontrerai per strada. Anzi, molto spesso, i progetti e le aziende ti porteranno a cambiare strada o a saltare dei passaggi. 
+
+
+## Pick a framework
+
+A un certo punto vedo il punto 'pick a framework'
+
+
+<!-- ![alt text](<000-img-001.png>) -->

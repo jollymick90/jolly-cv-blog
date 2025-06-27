@@ -3,7 +3,8 @@
         "title": "Benvenuto!",
         "heading": "Ciao, sono Michele Scarpa!",
         "description": "Sono un ingegnere informatico, mi occupo principalmente di sviluppo web. Ho una passione per lo sviluppo di software e possiedo esperienza in varie tecnologie, tra cui JS, TS, Java, Angular, React e Spring. Nel corso della mia carriera, ho lavorato anche a progetti che coinvolgono il Digital Signage (Smart TV - Tizen ) e applicazioni mobili Android",
-        "readarticle": "Leggi l'articolo"
+        "readarticle": "Leggi l'articolo",
+        "event": "Eventi"
     },
     "resume": { 
         "contact": "Contatti",

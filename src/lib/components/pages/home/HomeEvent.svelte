@@ -1,15 +1,21 @@
 <script lang="ts">
-	import BriefcaseIcon from '$lib/components/icons/BriefcaseIcon.svelte';
 	import { langStore } from '$lib/i18n/lang.store';
-
+	import {
+		Card,
+		CardCta,
+		CardDescription,
+		CardEyebrow,
+		CardTitle
+	} from '$lib/components/theme/card';
 	import type { EventFormat, ProjectFormat } from '$lib/content/content';
 	import { onMount } from 'svelte';
 	import { loadEvents } from '$lib/utils/event-loader-utils';
-	import { ArrowRight, Icon, PresentationChartLine } from 'svelte-hero-icons';
+	import { Icon, PresentationChartLine } from 'svelte-hero-icons';
+	import { t } from '$lib/i18n';
 	const lang = $derived($langStore);
 	let count = $state(0);
 	let currentLang = $derived($langStore);
-	let articleList: ProjectFormat[] = $state([]);
+	let articleList = $state([] as ProjectFormat[]);
 
 	onMount(() => {
 		async function init() {
@@ -28,14 +34,22 @@
 			aria-hidden="true"
 			src={PresentationChartLine}
 		/>
-		<span class="ml-3">Event</span>
+		<span class="ml-3">{$t('home.event')}</span>
 	</h2>
 	<div class="mt-6 flex flex-col space-y-4 text-zinc-900 dark:text-white">
-		{#each articleList as art}
-			<a href="/{lang}/project/{art.slug}" class="flex flex-row justify-between">
-				{art.metadata.title}
-				<Icon class="mr-2 h-5 w-5 text-gray-400" aria-hidden="true" src={ArrowRight} />
-			</a>
+		{#each articleList as article}
+			<Card>
+				<CardTitle hoverHighlight={true} href="/{lang}/event/{article.slug}">
+					{article.metadata.title}
+				</CardTitle>
+				<CardEyebrow decorate>
+					{article.metadata.date}
+				</CardEyebrow>
+				<CardDescription>
+					{article.metadata.description}
+				</CardDescription>
+				<CardCta color="text-jm-400">{$t('home.readarticle')}</CardCta>
+			</Card>
 		{/each}
 	</div>
 </div>
