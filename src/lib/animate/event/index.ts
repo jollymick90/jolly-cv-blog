@@ -7,15 +7,16 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 export function create3DEvent(container: any) {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
-        50,
+        80,
         container.clientWidth / container.clientHeight,
         0.1,
         100
     );
-    //camera.position.set(0, 1.5, 3);
-    camera.position.set(-1, 4.5, 5); // spostata a sinistra e in alto
-    // camera.position.set(0, 0, 1); // spostata a sinistra e in alto
-    camera.lookAt(0, 1, 0); // guarda il centro del palco
+    
+    // camera.position.set(-1, 4.5, 5);
+    camera.position.set(2, 4, 2);
+    
+    camera.lookAt(0, 0, 0);
 
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -29,6 +30,10 @@ export function create3DEvent(container: any) {
     controls.maxDistance = 6;
     controls.target.set(0, 1, 0); // punto che la camera guarda
     controls.update();
+    controls.addEventListener('change', () => {
+  console.log('Camera position:', camera.position.toArray());
+  console.log('Camera target:', controls.target.toArray());
+});
     // Lights
     const ambientLight = new THREE.HemisphereLight(0xffffff, 0x444444, 1);
     scene.add(ambientLight);
