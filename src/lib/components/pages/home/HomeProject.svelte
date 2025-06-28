@@ -13,8 +13,10 @@
 	import { loadProjects } from '$lib/utils/project-loader-utils';
 	import { ArrowRight, CodeBracketSquare, Icon } from 'svelte-hero-icons';
 	import { t } from '$lib/i18n';
+	import { create3DProject } from '$lib/animate/project';
 
 	const lang = $derived($langStore);
+	let container: any;
 
 	let count = $state(0);
 	let currentLang = $derived($langStore);
@@ -27,6 +29,8 @@
 			count = articleList.length;
 		}
 		init();
+
+		create3DProject(container);
 	});
 </script>
 
@@ -37,6 +41,8 @@
 
 		<span class="ml-3">Project</span>
 	</h2>
+	<div bind:this={container} class="h-52 w-full bg-blue-200"></div>
+
 	<div class="flex flex-col mt-6 space-y-4 dark:text-white text-zinc-900">
 		{#each articleList as art}
 			<Card>
