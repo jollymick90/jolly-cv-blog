@@ -1,4 +1,5 @@
 <script lang="ts">
+
 	import { langStore } from '$lib/i18n/lang.store';
 	import {
 		Card,
@@ -12,11 +13,14 @@
 	import { loadEvents } from '$lib/utils/event-loader-utils';
 	import { Icon, PresentationChartLine } from 'svelte-hero-icons';
 	import { t } from '$lib/i18n';
+	import svelteConference from '$lib/img/photos/image-12.jpg';
+	import { createOmino } from '$lib/animate/event/omino';
+	import { create3DEvent } from '$lib/animate/event';
 	const lang = $derived($langStore);
 	let count = $state(0);
 	let currentLang = $derived($langStore);
 	let articleList = $state([] as ProjectFormat[]);
-
+	let container: any;
 	onMount(() => {
 		async function init() {
 			articleList = (await loadEvents(currentLang)) as EventFormat[];
@@ -24,6 +28,8 @@
 			count = articleList.length;
 		}
 		init();
+		create3DEvent(container);
+		
 	});
 </script>
 
@@ -36,6 +42,7 @@
 		/>
 		<span class="ml-3">{$t('home.event')}</span>
 	</h2>
+	<div bind:this={container} class="h-52 w-full bg-blue-200"></div>
 	<div class="mt-6 flex flex-col space-y-4 text-zinc-900 dark:text-white">
 		{#each articleList as article}
 			<Card>

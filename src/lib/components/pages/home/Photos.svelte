@@ -7,10 +7,10 @@
 	import image6 from '$lib/img/photos/image-11.jpg';
 	import image7 from '$lib/img/photos/image-12.jpg';
 	const imgList = [
-		{
-			src: image1,
-			css: 'rotate-2'
-		},
+		// {
+		// 	src: image1,
+		// 	css: 'rotate-2'
+		// },
 		{
 			src: image4,
 			css: 'rotate-2'
