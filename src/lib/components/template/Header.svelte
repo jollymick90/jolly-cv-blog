@@ -136,7 +136,7 @@
 			bind:this={avatarRef}
 			class="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
 		></div>
-		<Container className="top-0 order-last -mb-3 pt-3" style="position: var(--header-position);">
+		<Container className="top-0 order-last -mb-3 pt-3">
 			<div
 				class="top-[var(--avatar-top,theme(spacing.3))] w-full"
 				style="position: var(--header-inner-position);"
@@ -160,7 +160,6 @@
 	<div bind:this={headerRef} class="top-0 z-10 h-16 pt-6" style="position: var(--header-position);">
 		<Container
 			className="sm:px-8 top-[var(--header-top,theme(spacing.6))] w-full"
-			style="position: var(--header-inner-position);"
 		>
 			<div class="relative flex gap-4">
 				<div class="flex flex-1">

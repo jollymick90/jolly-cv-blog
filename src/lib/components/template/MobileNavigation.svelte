@@ -2,7 +2,8 @@
 	import type { ItemList } from "$lib/components/types/template";
 	const { items }: { items: ItemList[] } = $props();
 
-	
+	let buttonMobile: any;
+	let mobileNav: any;
 	const itemsList = items.filter(item => !item.disable)
 	let isOpen = $state(false);
 
@@ -14,9 +15,22 @@
 		isOpen = false;		
 	}
 	
-</script>
 
+	//event: TouchEvent & { currentTarget: EventTarget & Document; }
+	function ontouchOut(event: any): any {
+		// if (event.currentTarget.id !== buttonMobile.id ||
+		// 	event.currentTarget.id !== mobileNav.id
+		//  ) {
+		// 	if (isOpen) {
+		// 		isOpen = false;
+		// 	}
+		// }
+	}
+</script>
+<svelte:document ontouchend={(event) => ontouchOut(event)}></svelte:document>
 <button
+	bind:this={buttonMobile}
+ 	id="nav-mobile-button"
 	type="button"
 	class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400
     hover:bg-gray-700
@@ -61,7 +75,10 @@
 
 <div class="relative">
 	{#if isOpen}
-		<div class="absolute left-1/2 z-10 mt-5 flex -translate-x-1/2 px-4">
+		<div 
+		bind:this={mobileNav}
+		id="mobile-nav"
+		class="absolute left-1/2 z-10 mt-5 flex -translate-x-1/2 px-4">
 			<div
 				class="flex-auto overflow-hidden
                         rounded-3xl
