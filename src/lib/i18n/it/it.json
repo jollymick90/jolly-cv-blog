@@ -11,7 +11,8 @@
         "navspeaker": "Speaker",
         "navproject": "Projects",
         "navcv": "CV",
-        "navblog": "Blog"
+        "navblog": "Blog",
+        "gotocv": "Leggi tutto"
     },
     "resume": { 
         "contact": "Contatti",

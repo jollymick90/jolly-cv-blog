@@ -14,7 +14,8 @@
         "navspeaker": "Speaker",
         "navproject": "Projects",
         "navcv": "CV",
-        "navblog": "Blog"
+        "navblog": "Blog",
+        "gotocv": "Read the complete resume"
     },
     "project": {
         "title": "From Code to Creation",

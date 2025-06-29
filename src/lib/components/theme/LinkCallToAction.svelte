@@ -12,8 +12,8 @@
 	} = $props();
 </script>
 
-<div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium {color}">
-	<a {href}>
+<div class="{color}">
+	<a {href} class="relative z-10 mt-4 flex items-center text-sm font-medium">
 		{@render children()}
 		<svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
 			<path

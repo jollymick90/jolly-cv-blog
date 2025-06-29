@@ -44,8 +44,10 @@
 		<span class="ml-3">{$t('home.workexperiences')}</span>
 	</h2>
 	<div>
-		<LinkCallToAction href="">
-			{$t('home.readarticle')}
+		<LinkCallToAction 
+		color="text-exp-base"
+		href={`/${lang}/cv`}>
+			{$t('home.gotocv')}
 		</LinkCallToAction>
 	</div>
 	<ol class="mt-6 space-y-4">
