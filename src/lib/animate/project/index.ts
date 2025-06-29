@@ -19,18 +19,18 @@ export function create3DProject(container: any) {
     renderer.setSize(container.clientWidth, container.clientHeight);
     container.appendChild(renderer.domElement);
 
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.05;
-    controls.enablePan = false;
-    controls.minDistance = 3;
-    controls.maxDistance = 6;
-    controls.target.set(0, 1, 0); // punto che la camera guarda
-    controls.update();
-controls.addEventListener('change', () => {
-  console.log('Camera position:', camera.position.toArray());
-  console.log('Camera target:', controls.target.toArray());
-});
+//     const controls = new OrbitControls(camera, renderer.domElement);
+//     controls.enableDamping = true;
+//     controls.dampingFactor = 0.05;
+//     controls.enablePan = false;
+//     controls.minDistance = 3;
+//     controls.maxDistance = 6;
+//     controls.target.set(0, 1, 0); // punto che la camera guarda
+//     controls.update();
+// controls.addEventListener('change', () => {
+//   console.log('Camera position:', camera.position.toArray());
+//   console.log('Camera target:', controls.target.toArray());
+// });
     // Lights
     const ambientLight = new THREE.HemisphereLight(0xffffff, 0x444444, 1);
     scene.add(ambientLight);
@@ -50,7 +50,7 @@ controls.addEventListener('change', () => {
         requestAnimationFrame(animate);
         const time = Date.now() * 0.001; // secondi
         balloon.position.y = balloonStartY + Math.sin(time) * 0.8;
-        controls.update();
+        // controls.update();
         renderer.render(scene, camera);
     }
     animate();

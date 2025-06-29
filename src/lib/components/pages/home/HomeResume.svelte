@@ -8,6 +8,9 @@
 	import HomeResumeRole from '$lib/components/pages/home/HomeResumeRole.svelte';
 	import { Briefcase, Icon } from 'svelte-hero-icons';
 	import { langStore } from '$lib/i18n/lang.store';
+	import { t } from '$lib/i18n';
+	import CardCta from '$lib/components/theme/card/CardCta.svelte';
+	import LinkCallToAction from '$lib/components/theme/LinkCallToAction.svelte';
 	const lang = $derived($langStore);
 	const { resume }: { resume: IResume } = $props();
 
@@ -38,8 +41,13 @@
 		
 		<Icon class="h-7 w-7 dark:text-white text-zinc-400"
 		 aria-hidden="true" src={Briefcase} />
-		<span class="ml-3">Work</span>
+		<span class="ml-3">{$t('home.workexperiences')}</span>
 	</h2>
+	<div>
+		<LinkCallToAction href="">
+			{$t('home.readarticle')}
+		</LinkCallToAction>
+	</div>
 	<ol class="mt-6 space-y-4">
 		{#each data as role}
 			<HomeResumeRole {role} />

@@ -1,12 +1,20 @@
 {
     "home": {
-        "title": "Welcome!",
+        "title": "Michele Scarpa",
         "heading": "Hi, I'm Michele Scarpa!",
-        "description": "I am a software engineer, primarily focused on web development. I have a passion for software development and possess expertise in various technologies, including JS, TS, Java, Angular, React, and Spring. Throughout my career, I have also worked on projects involving Digital Signage (Smart TVs - Tizen ) and mobile android applications",
+        "subHeading": "Full-stack Software Engineer",
+        "description": "I am a fullstack software engineer, primarily focused on web development. I'm passionate about building robust and scalable applications, with extensive expertise across frontend and backend frameworks and ecosystems",
+        "description2": "I am a software engineer, primarily focused on web development. I'm passionate about software development and I have extensive expertise in various technologies, including JS, TS, Java, Angular, React, and Spring. Throughout my career, I have also worked on projects involving Digital Signage (Smart TVs - Tizen ) and mobile android applications",
         "readarticle": "Read the complete article",
-        "event": "Events",
+        "event": "Speaker",
         "event-title": "Speaker - Event - Conferences",
-        "event-describe": "Here where i talk about speaker"
+        "event-describe": "I'm also a speaker.",
+        "workexperiences": "Work Experiences",
+        "navhome": "Home",
+        "navspeaker": "Speaker",
+        "navproject": "Projects",
+        "navcv": "CV",
+        "navblog": "Blog"
     },
     "project": {
         "title": "From Code to Creation",

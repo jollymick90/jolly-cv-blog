@@ -15,34 +15,7 @@
             "useShortAddress": true,
             "zipcode": "35010",
             "country": "Italy"
-        },
-        "social": [
-            {
-                "icon": "LinkedInIcon",
-                "href": "https://www.linkedin.com/in/michele-scarpa-90-arco/",
-                "ariaLabel": "Follow on LinkedIn"
-            },
-            {
-                "icon": "GitHubIcon",
-                "href": "https://github.com/jollymick90",
-                "ariaLabel": "Follow on Github"
-            },
-            {
-                "icon": "InstagramIcon",
-                "href": "https://www.instagram.com/michele.scarpetta/",
-                "ariaLabel": "Follow on Instagram"
-            },
-            {
-                "icon": "BlueskyIcon",
-                "href": "https://x.com/mscarpa90",
-                "ariaLabel": "Follow on Bluesky"
-            },
-            {
-                "icon": "XIcon",
-                "href": "https://x.com/mscarpa90",
-                "ariaLabel": "Follow on X"
-            }
-        ]
+        }
     },
     "certifications": [
         {

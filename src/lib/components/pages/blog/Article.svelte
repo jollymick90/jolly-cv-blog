@@ -16,7 +16,9 @@
 
 <article class="md:grid md:grid-cols-4 md:items-baseline">
 	<Card className="md:col-span-3">
-		<CardTitle className="-inset-x-4 -inset-y-6 sm:-inset-x-6" href="/{lang}/blog/{article.slug}">
+		<CardTitle 
+			hoverHighlight={true}
+			href="/{lang}/blog/{article.slug}">
 			{article.metadata.title}
 		</CardTitle>
 		<CardEyebrow className="md:hidden" decorate>

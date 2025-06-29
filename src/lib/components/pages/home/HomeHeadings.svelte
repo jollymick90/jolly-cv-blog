@@ -11,9 +11,10 @@
 	import SocialLink from '$lib/components/theme/SocialLink.svelte';
 	import type { SocialInfo } from '$lib/content';
 
-	let { socialListInput }: { socialListInput: SocialInfo[] } = $props();
-
-	let socialList = socialListInput.map((socialItem) => {
+	const { socialListInput }: { socialListInput: SocialInfo[] } = $props();
+	const socialList = socialListInput
+	.filter(socialItem => socialItem.enable === true)
+	.map((socialItem) => {
 		const socialItemUi = {
 			...socialItem,
 			icon: mapIcon(socialItem)
@@ -42,11 +43,13 @@
 </script>
 
 <div class="max-w-2xl">
-	<h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+	<h1 class="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-300 sm:text-5xl">
 		{$t('home.heading')}
-		{$t('home.title')}
 	</h1>
-	<p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+	<h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+		{$t('home.subHeading')}
+	</h1>
+	<p class="text-lg mt-6 text-zinc-600 dark:text-zinc-400">
 		{$t('home.description')}
 	</p>
 	<div class="mt-6 flex gap-6">

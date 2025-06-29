@@ -1,14 +1,15 @@
 export type SocialIcon =  'LinkedInIcon' | 'GitHubIcon' | 'InstagramIcon' | 'BlueskyIcon' | 'XIcon';
+
 export type SocialInfo = {
     icon: SocialIcon;
     href: string;
     ariaLabel: string;
+    enable?: boolean;
 }
 export type ContactData = {
     showPhone: boolean;
     phone: string;
     email: string;
-    social: SocialInfo[];
     address: {
         showStreet?: boolean;
         street: string;
@@ -130,12 +131,13 @@ export type IResume = {
     title: string;
 	fullName: string;
     mainRoleTitle: string;
-    mainSkills: MainSkills[],
-    presentation: PresentationResume,
-    certifications: Certification[],
-    speakers: SpeakersEvent[],
-    contact: ContactData,
-    skills: SkillItem[],
-    studies: StudiesEvent[],
-    experiences: ExperiencesEvent[]
+    mainSkills: MainSkills[];
+    presentation: PresentationResume;
+    certifications: Certification[];
+    speakers: SpeakersEvent[];
+    contact: ContactData;
+    skills: SkillItem[];
+    studies: StudiesEvent[];
+    experiences: ExperiencesEvent[];
+    social: SocialInfo[];
 }
