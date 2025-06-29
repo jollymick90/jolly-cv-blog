@@ -15,6 +15,10 @@
 	import { t } from '$lib/i18n';
 	import { create3DProject } from '$lib/animate/project';
 
+	const titleMainList = [
+		'002-gis-portal-pa',
+		'003-realtime-bus-tracking'
+	]
 	const lang = $derived($langStore);
 	let container: any;
 
@@ -26,6 +30,7 @@
 	onMount(() => {
 		async function init() {
 			articleList = await loadProjects(currentLang) as ProjectFormat[];
+			articleList = articleList.filter(a => titleMainList.includes(a.slug))
 			count = articleList.length;
 		}
 		init();
@@ -43,7 +48,7 @@
 	</h2>
 	<p class="my-3 text-zinc-900 dark:text-zinc-100">{$t('home.projects-descriptions')}</p>
 
-	<div bind:this={container} class="h-52 w-full bg-blue-200"></div>
+	<div bind:this={container} class="hidden h-52 w-full bg-blue-200"></div>
 
 	<div class="flex flex-col mt-6 space-y-4 dark:text-white text-zinc-900">
 		{#each articleList as art}

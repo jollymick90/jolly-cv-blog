@@ -6,7 +6,7 @@
 	import type { ArticleFormat } from '$lib/content/content';
 	import { t } from '$lib/i18n';
 
-	let titleMainList = [
+	const titleMainList = [
 		'007-post-20230401',
 		'006-post-20241230',
 		'005-post-20240101'
