@@ -10,7 +10,7 @@
 
 <article class="md:grid md:grid-cols-4 md:items-baseline">
 	<Card className="md:col-span-3">
-		<CardTitle href="/{lang}/event/{event.slug}">
+		<CardTitle href="/{lang}/speaker/{event.slug}">
 			{event.metadata.title}
 		</CardTitle>
 	</Card>

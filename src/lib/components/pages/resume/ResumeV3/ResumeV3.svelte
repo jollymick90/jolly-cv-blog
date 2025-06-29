@@ -339,13 +339,6 @@
 		margin-bottom: 30px;
 	}
 
-	.profile-pic {
-		width: 100px;
-		height: 100px;
-		border-radius: 50%;
-		object-fit: cover;
-	}
-
 	.details,
 	.skills {
 		text-align: left;
@@ -366,11 +359,6 @@
 	.skills li {
 		padding: 5px 0;
 		border-bottom: 1px solid #ffffff33;
-	}
-
-	.main-content {
-		width: 70%;
-		padding: 40px;
 	}
 
 	.sidebar h3 {

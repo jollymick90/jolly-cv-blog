@@ -46,7 +46,7 @@
 	<div class="mt-6 flex flex-col space-y-4 text-zinc-900 dark:text-white">
 		{#each articleList as article}
 			<Card>
-				<CardTitle hoverHighlight={true} href="/{lang}/event/{article.slug}">
+				<CardTitle hoverHighlight={true} href="/{lang}/speaker/{article.slug}">
 					{article.metadata.title}
 				</CardTitle>
 				<CardEyebrow decorate>
