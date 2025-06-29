@@ -40,7 +40,8 @@
 		/>
 		<span class="ml-3">{$t('home.event')}</span>
 	</h2>
-	
+	<p class="my-3 text-zinc-900 dark:text-zinc-100">{$t('home.event-description')}</p>
+
 	<div bind:this={container} class="h-52 w-full bg-blue-200"></div>
 	<div class="mt-6 flex flex-col space-y-4 text-zinc-900 dark:text-white">
 		{#each articleList as article}

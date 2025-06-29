@@ -55,6 +55,7 @@ export type SkillAquired = {
 
 export type ExperiencesEvent = {
     companyName: string;
+    showHome?: boolean;
     role: string;
     target?: string,
     dateEnd: string,

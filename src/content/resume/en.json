@@ -66,6 +66,7 @@
     "experiences": [
         {
             "id": 1,
+            "showHome": true,
             "type": "work",
             "companyName": "Almaviva Digitaltec",
             "role": "Fullstack Developer",
@@ -178,6 +179,7 @@
         },
         {
             "id": 1,
+            "showHome": true,
             "type": "work",
             "companyName": "Viasat - Greenext",
             "role": "Front End Developer",
@@ -239,6 +241,7 @@
         },
         {
             "id": 2,
+            "showHome": true,
             "type": "work",
             "companyName": "Red-V - Ennova Researh",
             "role": "Junior Software Engineer",
@@ -347,6 +350,7 @@
         },
         {
             "id": 3,
+            "showHome": false,
             "type": "work",
             "companyName": "IN's mercato",
             "role": "Work & study",

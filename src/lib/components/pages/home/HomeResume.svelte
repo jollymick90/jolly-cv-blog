@@ -2,19 +2,19 @@
 	import type { RoleProps } from '$lib/components/types/components';
 	import type { IResume } from '$lib/content';
 
-	import Button from '$lib/components/theme/Button.svelte';
 	import ArrowDownIcon from '$lib/components/icons/ArrowDownIcon.svelte';
 	
 	import HomeResumeRole from '$lib/components/pages/home/HomeResumeRole.svelte';
 	import { Briefcase, Icon } from 'svelte-hero-icons';
 	import { langStore } from '$lib/i18n/lang.store';
 	import { t } from '$lib/i18n';
-	import CardCta from '$lib/components/theme/card/CardCta.svelte';
 	import LinkCallToAction from '$lib/components/theme/LinkCallToAction.svelte';
 	const lang = $derived($langStore);
 	const { resume }: { resume: IResume } = $props();
 
-	const data: RoleProps[] = resume.experiences.map(exp => {
+	const data: RoleProps[] = resume.experiences
+	.filter(exp => exp.showHome)
+	.map(exp => {
 		const _role: RoleProps = {
 			company: exp.companyName,
 			title: exp.role,

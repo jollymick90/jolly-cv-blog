@@ -39,8 +39,10 @@
 		<Icon class="h-7 w-7 dark:text-white text-zinc-400"
 		 aria-hidden="true" src={CodeBracketSquare} />
 
-		<span class="ml-3">Project</span>
+		<span class="ml-3">{$t('home.projects')}</span>
 	</h2>
+	<p class="my-3 text-zinc-900 dark:text-zinc-100">{$t('home.projects-descriptions')}</p>
+
 	<div bind:this={container} class="h-52 w-full bg-blue-200"></div>
 
 	<div class="flex flex-col mt-6 space-y-4 dark:text-white text-zinc-900">
