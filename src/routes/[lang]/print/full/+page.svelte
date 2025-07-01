@@ -16,5 +16,5 @@
 </svelte:head>
 
 <ContainerPrint>
-	 <Cv resume={data.resume} printable={true} full={false}/>
+	 <Cv resume={data.resume} full={true} printable={true}/>
 </ContainerPrint>

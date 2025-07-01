@@ -11,6 +11,7 @@
 	import LangSelect from './LangSelect.svelte';
 	import ArrowDownIcon from '../icons/ArrowDownIcon.svelte';
 	import { ArrowDownCircle, Icon } from 'svelte-hero-icons';
+	import { downloadResumeLang } from '$lib/utils/download-pdf';
 
 	const { lang }: { lang: LangAvailable } = $props();
 
@@ -115,13 +116,7 @@
 	});
 
 	function downloadCV() {
-		const url = `/${lang}_michele_scarpa_cv.pdf`;
-		const link = document.createElement('a');
-		link.href = url;
-		link.download = 'Michele-Scarpa-CV.pdf'; // nome del file salvato
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
+		downloadResumeLang(lang);
 	}
 </script>
 

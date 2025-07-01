@@ -11,6 +11,7 @@
 		WrenchScrewdriver,
 		RocketLaunch
 	} from 'svelte-hero-icons';
+	import avatar from '$lib/img/profile-michele.png';
 
 	import { t } from '$lib/i18n';
 
@@ -47,12 +48,20 @@
 		.splice(0, 5);
 </script>
 
-<div class="cv-container m-auto flex max-w-[1200px] flex-col bg-white md:flex-row">
+<div class="cv-container m-auto flex max-w-[1200px] 
+print:flex-row
+flex-col bg-white md:flex-row">
 	{@render headerDesktop()}
 
 	{@render headerMobile()}
 
-	<main class=" p-5 md:w-[70%] md:p-4">
+	<main class="p-5 print:w-[65%] md:w-[70%] md:p-4">
+		<section>
+			<div class="ml-5">
+				<h1 class="text-xl">{resume.fullName}</h1>
+				<p class="text-2xl">{resume.mainRoleTitle}</p>
+			</div>
+		</section>
 		<section class="profile">
 			<p>{resume.presentation}</p>
 		</section>
@@ -108,9 +117,16 @@
 {/snippet}
 
 {#snippet headerDesktop()}
-	<aside class="sidebar hidden w-[35%] bg-[#fefeff] dark:bg-[#10253f] dark:text-[#fefeff] md:block">
-		<h1>{resume.fullName}</h1>
-		<p class="subtitle">{resume.mainRoleTitle}</p>
+	<aside class="sidebar print:block hidden  border-r-2 border-dashed w-[35%] bg-[#fefeff] dark:bg-[#10253f] dark:text-[#fefeff] md:block">
+
+		<div class="flex justify-center">
+			<img
+				src={avatar}
+				alt="{resume.fullName}"
+				class="h-[100px] w-[100px] rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
+			/>
+		</div>
+
 		<div class="details">
 			<h3>{$t('resume.contact')}</h3>
 			{@render address()}
@@ -156,7 +172,7 @@
 	</aside>
 {/snippet}
 {#snippet headerMobile()}
-	<header class="w-full bg-[#10253f] p-2 text-white md:hidden">
+	<header class="w-full print:hidden bg-[#10253f] p-2 text-white md:hidden">
 		<h1>{resume.fullName}</h1>
 		<p class="mb-2 text-xl">{resume.mainRoleTitle}</p>
 		<div class="mb-3 pb-2">
@@ -207,7 +223,7 @@
 	</header>
 {/snippet}
 {#snippet footerMobile()}
-	<footer class="block md:hidden w-full bg-[#10253f] p-2 text-white">
+	<footer class="print:hidden block md:hidden w-full bg-[#10253f] p-2 text-white">
 		
 		<div class="">
 			
@@ -320,6 +336,8 @@
 {/snippet}
 
 <style>
+
+
 	.cv-container {
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	}

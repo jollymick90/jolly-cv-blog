@@ -17,7 +17,7 @@ export const load: Load = async ({ url }) => {
 
   const route = pathname.replace(new RegExp(`^/${lang}`), '');
   let isFullScreen = false;
-  if (route === '/print') {
+  if (route.includes('/print')) {
     isFullScreen = true;
   }
 

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { type ExperiencesEvent } from '$lib/content/resume';
-	import avatar from '$lib/img/avatar.jpg';
 	import type { IResume, StudiesEvent, TimelineEvent } from '$lib/content';
 	import {
 		Icon,
@@ -11,6 +10,7 @@
 		WrenchScrewdriver,
 		RocketLaunch
 	} from 'svelte-hero-icons';
+	import avatar from '$lib/img/profile-michele.png';
 
 	import { t } from '$lib/i18n';
 
@@ -53,8 +53,14 @@
 
 <div class="cv-container m-auto flex max-w-[1200px] flex-row bg-white">
 	{@render headerDesktop()}
-	<main class=" w-[70%] p-5 md:p-4">
-		<section class="profile">
+	<main class=" w-[70%] p-5">
+		<section>
+			<div class="ml-5">
+				<h1 class="text-xl">{resume.fullName}</h1>
+				<p class="text-2xl">{resume.mainRoleTitle}</p>
+			</div>
+		</section>
+		<section class="border-b-2 border-dashed mt-6 pb-2 profile">
 			<p>{resume.presentation}</p>
 		</section>
 
@@ -108,31 +114,20 @@
 {/snippet}
 
 {#snippet headerDesktop()}
-	<aside class="sidebar w-[35%] bg-[#fefeff] text-[#10253f]">
-		<div class="flex">
+	<aside class="sidebar border-r-2 border-dashed w-[35%] bg-[#fefeff] text-[#10253f]">
+		<div class="flex justify-center">
 			<img
-		src={avatar}
-		alt="Michele"
-		class="w-[100px] h-[100px] rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
-	/>
-	<div class="ml-5">
-		<h1>{resume.fullName}</h1>
-		<p class="subtitle">{resume.mainRoleTitle}</p>
-		</div>	
-	</div>
+				src={avatar}
+				alt="{resume.fullName}"
+				class="h-[100px] w-[100px] rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
+			/>
+		</div>
 		<div class="details">
 			<h3>{$t('resume.contact')}</h3>
 			{@render address()}
 			{@render contact()}
 		</div>
 		<div class="skills mt-2">
-			<h3 class="mb-2">{$t('resume.softskills')}</h3>
-
-			<div class="flex flex-wrap">
-				{#each top5Skills as skill}
-					<span>{skill.name}</span>
-				{/each}
-			</div>
 			<h3 class="mb-2 mt-2">{$t('resume.techskills')}</h3>
 			<div class="flex flex-wrap gap-2">
 				{#each programmingLanguage as skill}
@@ -148,6 +143,20 @@
 					</span>
 				{/each}
 			</div>
+			<h3 class="my-2">{$t('resume.softskills')}</h3>
+
+			<div class="flex flex-col">
+				{#each top5Skills as skill}
+					<span>{skill.name}</span>
+				{/each}
+			</div>
+			<div>
+				<h3 class="mb-2 mt-2">{$t('resume.certifications')}</h3>
+
+				{#each resume.certifications.filter((c) => c.id !== 1) as cert}
+					{@render certifications(cert)}
+				{/each}
+			</div>
 			<div>
 				<h3 class="mb-2 mt-2">{$t('resume.education')}</h3>
 
@@ -155,13 +164,7 @@
 					{@render studies(study)}
 				{/each}
 			</div>
-			<div>
-				<h3 class="mb-2 mt-2">{$t('resume.certifications')}</h3>
 
-				{#each resume.certifications.filter(c => c.id !== 1) as cert}
-					{@render certifications(cert)}
-				{/each}
-			</div>
 		</div>
 	</aside>
 {/snippet}
@@ -183,18 +186,14 @@
 {#snippet experience(experience: ExperiencesEvent)}
 	{@const experiencesAquired = experience.skillAquiredList.filter((l) => l.level && l.level >= 70)}
 
-	<div class="mb-2 border-b-2 border-dashed border-grey-300 pb-5">
-		<div class="flex justify-start align-middle my-2 border-[#10253f]">
-			<Icon
-				class="mr-2 h-5 w-[50px] text-gray-400"
-				aria-hidden="true"
-				src={Briefcase}
-			/>
+	<div class="border-grey-300 mb-2 border-b-2 border-dashed pb-5">
+		<div class="my-2 flex justify-start border-[#10253f] align-middle">
+			<Icon class="mr-2 h-5 w-[50px] text-gray-400" aria-hidden="true" src={Briefcase} />
 			<h3 class="text-bold text-[#10253f]">
 				{experience.role}, {experience.companyName}
 			</h3>
 
-			<h3 class="ml-2 align-middle text-md italic">
+			<h3 class="text-md ml-2 align-middle italic">
 				{new Date(experience.dateStartTime).getFullYear()} - {experience.dateEndTime === null
 					? 'current'
 					: new Date(experience.dateEndTime).getFullYear()}
@@ -202,32 +201,31 @@
 		</div>
 
 		<div class="flex flex-col">
-			<div class="w-full flex justify-start">
-					<Icon
-						class="w-[50px] mr-2 mt-3 h-5 align-middle text-gray-400"
-						aria-hidden="true"
-						src={WrenchScrewdriver}
-					/>
-					<div class="flex flex-wrap gap-1 w-[90%]" >
-						{#each experiencesAquired as sa}
-							<span
-								class="border-blue-[#10253f] text-center text-sm rounded-xl border-b-2 px-2 py-1"
-							>
-								{sa.name}
-							</span>
-						{/each}
-					</div>
-				
+			<div class="flex w-full justify-start">
+				<Icon
+					class="mr-2 mt-3 h-5 w-[50px] align-middle text-gray-400"
+					aria-hidden="true"
+					src={WrenchScrewdriver}
+				/>
+				<div class="flex w-[90%] flex-wrap gap-1">
+					{#each experiencesAquired as sa}
+						<span class="border-blue-[#10253f] rounded-xl border-b-2 px-2 py-1 text-center text-sm">
+							{sa.name}
+						</span>
+					{/each}
+				</div>
 			</div>
 			<div class="mt-1 flex justify-start">
-				
-					<Icon class="h-5 w-[50px] mr-2 mt-2 align-middle text-gray-400" aria-hidden="true" src={RocketLaunch} />
-					<ul class="w-[90%]">
-						{#each Array.from(experience.experiencesListShort || []) as expItem}
-							<li class="list-disc text-sm">{expItem}</li>
-						{/each}
-					</ul>
-				
+				<Icon
+					class="mr-2 mt-2 h-5 w-[50px] align-middle text-gray-400"
+					aria-hidden="true"
+					src={RocketLaunch}
+				/>
+				<ul class="w-[90%]">
+					{#each Array.from(experience.experiencesListShort || []) as expItem}
+						<li class="list-disc text-sm">{expItem}</li>
+					{/each}
+				</ul>
 			</div>
 		</div>
 	</div>

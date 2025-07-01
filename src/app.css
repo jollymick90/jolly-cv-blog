@@ -37,3 +37,4 @@
     --text-9xl--line-height: 1;
   }
   
+@media print { body { -webkit-print-color-adjust: exact; } }
