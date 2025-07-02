@@ -1,8 +1,8 @@
 import puppeteer from 'puppeteer';
+import chromium from '@sparticuz/chromium';
 import { existsSync } from 'fs';
 import path from 'path';
 import fs from 'fs/promises';
-const chromium = require("@sparticuz/chromium");
 
 export async function GET({ request }) {
   const { url, lang, mode } = await extractUrlRequest(request);
@@ -64,9 +64,9 @@ async function getBrowser(url: string) {
   try {
     browser = await puppeteer.launch({
       args: [...chromium.args],
-      defaultViewport: chromium.defaultViewport,
+      // defaultViewport: chromium.defaultViewport,
       executablePath: await chromium.executablePath(),
-      headless: chromium.headless,
+      // headless: chromium.headless,
       // ignoreHTTPSErrors: true,
     });
 
