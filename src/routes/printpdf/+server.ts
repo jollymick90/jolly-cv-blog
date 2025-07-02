@@ -2,45 +2,89 @@ import puppeteer from 'puppeteer';
 import { existsSync } from 'fs';
 import path from 'path';
 import fs from 'fs/promises';
+const chromium = require("@sparticuz/chromium");
 
 export async function GET({ request }) {
   const { url, lang, mode } = await extractUrlRequest(request);
+
+  const resultNameFile = `cv_michele_scarpa_${lang}`;
+  const headerResponse = {
+    headers: {
+      'Content-Type': 'application/pdf',
+      'Content-Disposition': `attachment; filename="${resultNameFile}.pdf"`,
+    }
+  }
   console.log("call ", url)
-  
+
   const fileName = `cv-${lang}-${mode}-pagina.pdf`;
   const pdfFilePath = path.resolve('static/generated', fileName);
-  
+
   if (existsSync(pdfFilePath)) {
     const cachedPdf = await fs.readFile(pdfFilePath);
     console.log('[Cache hit] Serving cached PDF:', fileName);
-    return new Response(cachedPdf, {
-      headers: {
-        'Content-Type': 'application/pdf',
-        'Content-Disposition': 'attachment; filename="pagina.pdf"',
-      }
-    });
+    return new Response(cachedPdf, headerResponse);
   }
 
-  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
-  const page = await browser.newPage();
+  const browser = await getBrowser(url);
+  if (browser) {
+    const page = await browser.newPage();
 
-  await page.goto(url);
-  const pdfBuffer = await page.pdf({ format: 'A4' });
-  
-  await browser.close();
+    await page.goto(url);
+    const pdfBuffer = await page.pdf({ format: 'A4' });
 
-  await fs.mkdir(path.dirname(pdfFilePath), { recursive: true });
-  await fs.writeFile(pdfFilePath, pdfBuffer);
+    await browser.close();
 
-  return new Response(pdfBuffer, {
-    headers: {
-      'Content-Type': 'application/pdf',
-      'Content-Disposition': 'attachment; filename="pagina.pdf"',
-    }
-  });
+    await fs.mkdir(path.dirname(pdfFilePath), { recursive: true });
+    await fs.writeFile(pdfFilePath, pdfBuffer);
+    return new Response(pdfBuffer, headerResponse);
+  } else {
+    const cvFileName = `${lang}_michele_scarpa_cv.pdf`;
+    const cvFilePath = path.resolve('static', cvFileName);
+    const cachedPdf = await fs.readFile(cvFilePath);
+    return new Response(cachedPdf, headerResponse);
+  }
+
+
+
 
 }
 
+
+async function getBrowser(url: string) {
+  let browser = null;
+
+  try {
+    browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+    const page = await browser.newPage();
+
+    await page.goto(url);
+  } catch (error) {
+  }
+
+  try {
+    browser = await puppeteer.launch({
+      args: [...chromium.args],
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+      // ignoreHTTPSErrors: true,
+    });
+
+    let page = await browser.newPage();
+
+    await page.goto('https://example.com');
+
+    await page.title();
+  } catch (error) {
+    console.error("error page", error);
+    browser = null;
+  } finally {
+    if (browser !== null) {
+      await browser.close();
+    }
+  }
+  return browser;
+}
 
 async function extractUrlRequest(request: any) {
   console.log("request", request.url);

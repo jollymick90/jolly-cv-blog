@@ -28,7 +28,8 @@
 	})
 
 	function downloadCV() {
-		showModal = !showModal;
+		// showModal = !showModal;
+		downloadResumeLang(lang, 'short');
 	}
 
 	function confirmDownloadCV() {
