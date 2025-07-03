@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer';
-import chromium from '@sparticuz/chromium';
+// import chromium from '@sparticuz/chromium';
 import { existsSync } from 'fs';
 import path from 'path';
 import fs from 'fs/promises';
@@ -61,28 +61,28 @@ async function getBrowser(url: string) {
   } catch (error) {
   }
 
-  try {
-    browser = await puppeteer.launch({
-      args: [...chromium.args],
-      // defaultViewport: chromium.defaultViewport,
-      executablePath: await chromium.executablePath(),
-      // headless: chromium.headless,
-      // ignoreHTTPSErrors: true,
-    });
+  // try {
+  //   browser = await puppeteer.launch({
+  //     args: [...chromium.args],
+  //     // defaultViewport: chromium.defaultViewport,
+  //     executablePath: await chromium.executablePath(),
+  //     // headless: chromium.headless,
+  //     // ignoreHTTPSErrors: true,
+  //   });
 
-    let page = await browser.newPage();
+  //   let page = await browser.newPage();
 
-    await page.goto('https://example.com');
+  //   await page.goto('https://example.com');
 
-    await page.title();
-  } catch (error) {
-    console.error("error page", error);
-    browser = null;
-  } finally {
-    if (browser !== null) {
-      await browser.close();
-    }
-  }
+  //   await page.title();
+  // } catch (error) {
+  //   console.error("error page", error);
+  //   browser = null;
+  // } finally {
+  //   if (browser !== null) {
+  //     await browser.close();
+  //   }
+  // }
   return browser;
 }
 

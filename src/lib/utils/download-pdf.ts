@@ -1,17 +1,11 @@
-const localhostUrl = 'http://localhost:5173';
+// const localhostUrl = 'http://localhost:5173';
 export function downloadResumeLang(lang: string, mode: string) {
-    const baseUrl = process.env.PUBLIC_BASE_URL || localhostUrl;
-    if (baseUrl === localhostUrl) {
-        callApi(lang, mode);
-
-    } else {
-        callStatic(lang);
-
-    }
+    // callApi(lang, mode);
+    callStatic(lang, mode)
 }
 
-function callStatic(lang: string) {
-    const url = `/${lang}_michele_scarpa_cv.pdf`;
+function callStatic(lang: string, mode: string) {
+    const url = `/cv-${lang}-${mode}-michele-scarpa.pdf`;
     const link = document.createElement('a');
     link.href = url;
     link.download = 'Michele-Scarpa-CV.pdf'; // nome del file salvato
