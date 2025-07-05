@@ -241,16 +241,6 @@
 		text-align: center;
 	}
 
-	.sidebar h1 {
-		margin-top: 15px;
-		font-size: 24px;
-	}
-
-	.subtitle {
-		font-size: 14px;
-		margin-bottom: 30px;
-	}
-
 	.details,
 	.skills {
 		text-align: left;

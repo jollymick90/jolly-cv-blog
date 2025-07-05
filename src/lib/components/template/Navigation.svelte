@@ -25,7 +25,6 @@
 			title:  $t('home.navproject'),
 			description: "Your customers' data will be safe and secure",
 			href: `/${lang}/project`,
-			disable: true
 		},
 
 		{
@@ -36,8 +35,7 @@
 		{
 			title: $t('home.navspeaker'),
 			description: 'Speak directly to your customers',
-			href: `/${lang}/speaker`,
-			disable: true
+			href: `/${lang}/speaker`
 		},
 		{
 			title: $t('home.navblog'),
