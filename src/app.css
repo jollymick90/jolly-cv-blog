@@ -38,3 +38,7 @@
   }
   
 @media print { body { -webkit-print-color-adjust: exact; } }
+
+html {
+  scroll-behavior: smooth;
+}

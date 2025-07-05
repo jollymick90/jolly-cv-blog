@@ -1,9 +1,7 @@
 ---
 title: "AFSK - High-Altitude Balloon Challenge"
 date: "2014-06-22"
-description: "My bachelor's project was an interdisciplinary challenge with an ambitious goal: sending a cube to 40,000 meters altitude.
-We didn’t quite make it — but I learned a lot along the way.
-Today, that project lives on as an educational game to teach radio communication and geostationary coordinates."
+description: "My bachelor's project was an interdisciplinary challenge with an ambitious goal: sending a cube to 40,000 meters altitude. We didn’t quite make it — but I learned a lot along the way. Today, that project lives on as an educational game to teach radio communication and geostationary coordinates."
 ---
 
 # 🛰️ AFSK High‑Altitude Balloon Challenge
@@ -11,6 +9,22 @@ Today, that project lives on as an educational game to teach radio communication
 **Bachelor’s Thesis – Electronics & Telecommunications (2013‑2014)**
 
 > *Designing and building an APRS‑based telemetry stack to track a stratospheric balloon at \~40 km altitude.*
+
+---
+
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Mission Objectives](#mission-objectives)
+3. [System Architecture](#system-architecture)
+4. [Hardware Design](#hardware-design)
+5. [Firmware & Protocols](#firmware--protocols)
+6. [Ground Segment](#ground-segment)
+7. [Testing & Validation](#testing--validation)
+8. [Build & Run](#build--run)
+9. [Key Outcomes & Lessons Learned](#key-outcomes--lessons-learned)
+10. [Future Work](#future-work)
+11. [License](#license)
 
 ---
 

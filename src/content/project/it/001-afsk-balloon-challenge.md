@@ -13,23 +13,7 @@ description: "La mia tesi di laurea è stata una sfida interdisciplinare, con ob
 
 ---
 
-## Indice
-
-1. [Panoramica del Progetto](#panoramica-del-progetto)
-2. [Obiettivi della Missione](#obiettivi-della-missione)
-3. [Architettura del Sistema](#architettura-del-sistema)
-4. [Progettazione Hardware](#progettazione-hardware)
-5. [Firmware & Protocolli](#firmware--protocolli)
-6. [Segmento di Terra](#segmento-di-terra)
-7. [Test & Validazione](#test--validazione)
-8. [Compilazione & Esecuzione](#compilazione--esecuzione)
-9. [Risultati Chiave & Lezioni Apprese](#risultati-chiave--lezioni-apprese)
-10. [Lavori Futuri](#lavori-futuri)
-11. [Licenza](#licenza)
-
----
-
-## Panoramica del Progetto
+## Panoramica del Progetto 
 
 La **Sfida Pallone Stratosferico AFSK** è stata un’iniziativa interdisciplinare che ha unito elettronica embedded, comunicazioni radioamatoriali e scienza atmosferica. L’obiettivo era **lanciare un payload cubico da 10 cm** nella stratosfera, trasmetterne in tempo reale le coordinate GPS tramite **APRS** (Automatic Packet Reporting System) e recuperare il pallone dopo lo scoppio.
 
@@ -69,7 +53,6 @@ Sebbene i vincoli normativi abbiano bloccato il lancio effettivo, l’hardware e
 | Alimentazione    | 2 × 18650 Li‑Ion + boost TPS61090, NTC per temperatura batterie |
 | PCB              | FR‑4 a 2 strati, KiCad 5, 50 × 50 mm                            |
 
-Schemi dettagliati e file Gerber sono disponibili in [`/hardware`](hardware/).
 
 ## Firmware & Protocolli
 
@@ -82,8 +65,6 @@ Schemi dettagliati e file Gerber sono disponibili in [`/hardware`](hardware/).
   * Generazione toni ***AFSK 1200 baud*** (1200 Hz = “mark”, 2200 Hz = “space”).
 * **Gestione energia:** Deep‑sleep tra i beacon (30–120 s regolabile).
 * **Affidabilità:** FEC tramite frame duplicati ogni 5° beacon; watchdog a 4 s.
-
-Il sorgente firmware si trova in [`/firmware`](firmware/) con script di build completi.
 
 ## Segmento di Terra
 
@@ -101,9 +82,6 @@ Il sorgente firmware si trova in [`/firmware`](firmware/) con script di build co
 
 ## Compilazione & Esecuzione
 
-
-
-Consulta [`/docs/build.md`](docs/build.md) per i dettagli completi della tool‑chain.
 
 ## Risultati Chiave & Lezioni Apprese
 
