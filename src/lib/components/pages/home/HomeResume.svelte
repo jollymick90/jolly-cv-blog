@@ -29,7 +29,7 @@
 
 	function downloadCV() {
 		// showModal = !showModal;
-		downloadResumeLang(lang, 'short');
+		downloadResumeLang(lang, 'full');
 	}
 
 	function confirmDownloadCV() {

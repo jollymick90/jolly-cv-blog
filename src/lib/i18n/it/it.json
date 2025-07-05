@@ -27,7 +27,8 @@
         "certifications": "Certificazioni",
         "skills_acquired": "Competenze sviluppate e consolidate",
         "technologies":"Stack tecnologico utilizzato",
-        "activities": "Principali attività e progetti"
+        "activities": "Principali attività e progetti",
+        "privacy": "Autorizzo il trattamento dei miei dati personali presenti nel curriculum vitae ai sensi del D. Lgs. 196/2003, coordinato con il D. Lgs. 101/2018, e del Regolamento UE 2016/679"
     },
     "blog": {
         "title": "Pensieri in Codice e non Solo",

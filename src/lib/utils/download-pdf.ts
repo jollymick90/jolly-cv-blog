@@ -1,6 +1,6 @@
 // const localhostUrl = 'http://localhost:5173';
 export function downloadResumeLang(lang: string, mode: string) {
-    // callApi(lang, mode);
+    //callApi(lang, mode);
     callStatic(lang, mode)
 }
 

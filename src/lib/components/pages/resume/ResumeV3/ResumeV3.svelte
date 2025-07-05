@@ -14,6 +14,7 @@
 	import avatar from '$lib/img/profile-michele.png';
 
 	import { t } from '$lib/i18n';
+	import { LinkedInIcon } from '$lib/components/icons';
 
 	export const {
 		resume
@@ -56,14 +57,14 @@ flex-col bg-white md:flex-row">
 	{@render headerMobile()}
 
 	<main class="p-5 print:w-[65%] md:w-[70%] md:p-4">
-		<section>
+		<section class="hidden md:block print:block">
 			<div class="ml-5">
 				<h1 class="text-xl">{resume.fullName}</h1>
 				<p class="text-2xl">{resume.mainRoleTitle}</p>
 			</div>
 		</section>
 		<section class="profile">
-			<p>{resume.presentation}</p>
+			<p class="print:text-md">{resume.presentation}</p>
 		</section>
 
 		<section class="experience">
@@ -72,6 +73,11 @@ flex-col bg-white md:flex-row">
 			{#each resume.experiences as exp}
 				{@render experience(exp)}
 			{/each}
+		</section>
+		<section class="text-xs hidden md:block print:block">
+		
+			{$t('resume.privacy')}
+		
 		</section>
 	</main>
 	{@render footerMobile()}
@@ -90,8 +96,16 @@ flex-col bg-white md:flex-row">
 
 		<div class="flex">
 			<Icon class="mr-2 h-5 w-5 text-gray-400" aria-hidden="true" src={Envelope} />
-			<a href={`mailto:${resume.contact.email}`}>
+			<a class="text-sm" href={`mailto:${resume.contact.email}`}>
 				{resume.contact.email}
+			</a>
+		</div>
+		<div class="flex">
+	<LinkedInIcon class="h-6 w-6 mr-2 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" ></LinkedInIcon>
+
+    		
+			<a class="text-sm" href={`${resume.social[0].href}`}>
+				in/michele-scarpa-90-arco
 			</a>
 		</div>
 	</div>
@@ -117,7 +131,7 @@ flex-col bg-white md:flex-row">
 {/snippet}
 
 {#snippet headerDesktop()}
-	<aside class="sidebar print:block hidden  border-r-2 border-dashed w-[35%] bg-[#fefeff] dark:bg-[#10253f] dark:text-[#fefeff] md:block">
+	<aside class="sidebar print:block hidden border-r-2 border-dashed w-[35%] bg-[#fefeff] dark:bg-[#10253f] dark:text-[#fefeff] md:block">
 
 		<div class="flex justify-center">
 			<img
@@ -132,33 +146,26 @@ flex-col bg-white md:flex-row">
 			{@render address()}
 			{@render contact()}
 		</div>
-		<div class="skills">
+		<div class="skills mt-2">
 			<h3>{$t('resume.softskills')}</h3>
 			<ul>
 				{#each top5Skills as skill}
-					<li>{skill.name}</li>
+					<li class="text-sm">{skill.name}</li>
 				{/each}
 			</ul>
 			<h3 class="mt-2">{$t('resume.techskills')}</h3>
 			<div class="flex flex-wrap gap-2">
 				{#each programmingLanguage as skill}
-					<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
+					<span class="border-blue-[#10253f] text-sm rounded-lg border-2 px-2 py-1">
 						{skill.name}
 					</span>
 				{/each}
 			</div>
 			<div class="mt-2 flex flex-wrap gap-2">
 				{#each [...web5TechSkills, ...tools5TechSkills, ...framework5TechSkills] as skill}
-					<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
+					<span class="border-blue-[#10253f] text-sm rounded-lg border-2 px-2 py-1">
 						{skill.name}
 					</span>
-				{/each}
-			</div>
-			<div>
-				<h3 class="mb-2 mt-2">{$t('resume.education')}</h3>
-
-				{#each resume.studies as study}
-					{@render studies(study)}
 				{/each}
 			</div>
 			<div>
@@ -168,11 +175,19 @@ flex-col bg-white md:flex-row">
 					{@render certifications(cert)}
 				{/each}
 			</div>
+			<div>
+				<h3 class="mb-2 mt-2">{$t('resume.education')}</h3>
+
+				{#each resume.studies as study}
+					{@render studies(study)}
+				{/each}
+			</div>
+
 		</div>
 	</aside>
 {/snippet}
 {#snippet headerMobile()}
-	<header class="w-full print:hidden bg-[#10253f] p-2 text-white md:hidden">
+	<header class="w-full print:hidden bg-[#10253f] p-4 text-white md:hidden">
 		<h1>{resume.fullName}</h1>
 		<p class="mb-2 text-xl">{resume.mainRoleTitle}</p>
 		<div class="mb-3 pb-2">
@@ -181,43 +196,37 @@ flex-col bg-white md:flex-row">
 			</h3>
 			{@render address()}
 			{@render contact()}
-		</div>
+		</div>			
 		<div class="">
 			<h3 class=" border-b-2 border-[#fffffff5]">{$t('resume.softskills')}</h3>
-			<ul class="flex flex-col gap-2">
+			<ul class="flex flex-col justify-center gap-2">
 				{#each top5Skills as skill}
 					<li>{skill.name}</li>
 				{/each}
 			</ul>
-			<h3 class=" border-b-2 border-[#fffffff5]">{$t('resume.techskills')}</h3>
-			<div class="mt-2 flex flex-wrap gap-2">
+			<h3 class="mt-4 border-b-2 border-[#fffffff5]">{$t('resume.techskills')}</h3>
+			<div class="mt-2 flex flex-wrap justify-center gap-2 md:p-0">
 				{#each programmingLanguage as skill}
 					<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
 						{skill.name}
 					</span>
 				{/each}
 			</div>
-			<div class="mt-2 flex flex-wrap gap-2 pb-2 border-b-2 border-[#fffffff5]">
+			<div class="mt-2 flex flex-wrap justify-center gap-2 pb-2 ">
 				{#each [...web5TechSkills, ...tools5TechSkills, ...framework5TechSkills] as skill}
 					<span class="border-blue-[#10253f] rounded-lg border-2 px-2 py-1">
 						{skill.name}
 					</span>
 				{/each}
 			</div>
-			<!-- <div class="pb-2 border-b-2 border-[#fffffff5]">
-				<h3 class="mb-2 mt-2">{$t('resume.education')}</h3>
-
-				{#each resume.studies as study}
-					{@render studies(study)}
-				{/each}
-			</div>
-			<div class="pb-2 border-b-2 border-[#fffffff5]">
-				<h3 class="mb-2 mt-2">{$t('resume.certifications')}</h3>
+		
+			<div class="pb-2">
+				<h3 class="mb-2 mt-2 border-b-2 border-[#fffffff5]">{$t('resume.certifications')}</h3>
 
 				{#each resume.certifications as cert}
 					{@render certifications(cert)}
 				{/each}
-			</div> -->
+			</div> 
 			
 		</div>
 	</header>
@@ -234,29 +243,26 @@ flex-col bg-white md:flex-row">
 					{@render studies(study)}
 				{/each}
 			</div>
-			<div class="pb-2 border-b-2 border-[#fffffff5]">
-				<h3 class="mb-2 mt-2">{$t('resume.certifications')}</h3>
 
-				{#each resume.certifications as cert}
-					{@render certifications(cert)}
-				{/each}
-			</div>
-			
+		</div>
+		<div class="text-xs">
+			{$t('resume.privacy')}
 		</div>
 	</footer>
+	
 {/snippet}
 {#snippet studies(study: StudiesEvent)}
 	<div class="mb-2 flex flex-row flex-wrap gap-1 md:gap-0 md:flex-col text-left text-[#10253f] dark:text-[#fefeff]">
-		<span>{study.target}</span>
-		<span>{study.content}</span>
-		<em class="text-sm">{study.date}</em>
+		<span class="text-sm">{study.target}</span>
+		<span class="text-xs">{study.content}</span>
+		<em class="text-xs">{study.date}</em>
 	</div>
 {/snippet}
 
 {#snippet certifications(cert: TimelineEvent)}
 	<div class="mb-2 flex flex-col text-left text-[#10253f] dark:text-[#fefeff]">
-		<span>{cert.content}</span>
-		<em class="text-sm">{cert.date}</em>
+		<span class="text-sm">{cert.content}</span>
+		<em class="text-xs">{cert.date}</em>
 	</div>
 {/snippet}
 
@@ -288,24 +294,24 @@ flex-col bg-white md:flex-row">
 					aria-hidden="true"
 					src={WrenchScrewdriver}
 				/>
-					<h4 class="block md:hidden text-bold">{$t('resume.skills_acquired')}</h4>
+					<span class="block md:hidden text-bold">{$t('resume.skills_acquired')}</span>
 				</div>
 				
 
 				<div class="flex flex-col">
-					<h4 class="hidden md:block text-bold">{$t('resume.skills_acquired')}</h4>
+					<h4 class="hidden md:block italic text-sm text-bold">{$t('resume.skills_acquired')}</h4>
 					<div class="flex flex-wrap gap-1">
 						{#each experiencesAquired as sa}
-							<span class="border-blue-[#10253f] rounded-xl border-2 px-2 py-1 text-center">
+							<span class="border-blue-[#10253f] print:text-xs text-sm border-b-2 print:py-[2px] px-2 py-1 text-center">
 								{sa.name}
 							</span>
 						{/each}
 					</div>
 					{#if experiencesUse.length > 0}
-						<h4 class="text-bold">{$t('resume.technologies')}</h4>
+						<span class="print:hidden text-bold text-sm talic">{$t('resume.technologies')}</span>
 						<div class="flex flex-wrap gap-1">
 							{#each experiencesUse as sa}
-								<p class="border-blue-[#10253f] rounded-xl border-2 px-2 py-1 text-center">
+								<p class="border-blue-[#10253f] print:text-xs text-sm border-b-2 px-2 print:py-[2px] py-1 text-center">
 									{sa.name}
 								</p>
 							{/each}
@@ -323,10 +329,10 @@ flex-col bg-white md:flex-row">
 					<h4 class="block md:hidden text-bold">{$t('resume.activities')}</h4>
 				</div>
 				<div>
-					<h4 class="hidden md:block text-bold">{$t('resume.activities')}</h4>
+					<h4 class="hidden md:block text-bold italic">{$t('resume.activities')}</h4>
 					<ul>
 						{#each Array.from(experience.experiencesList || []) as expItem}
-							<li class="list-disc">{expItem}</li>
+							<li class="list-disc text-sm print:text-sm">{expItem}</li>
 						{/each}
 					</ul>
 				</div>
@@ -350,7 +356,7 @@ flex-col bg-white md:flex-row">
 	.details,
 	.skills {
 		text-align: left;
-		margin-top: 30px;
+
 	}
 
 	.details h3,
@@ -366,7 +372,7 @@ flex-col bg-white md:flex-row">
 
 	.skills li {
 		padding: 5px 0;
-		border-bottom: 1px solid #ffffff33;
+		/* border-bottom: 1px solid #ffffff33; */
 	}
 
 	.sidebar h3 {

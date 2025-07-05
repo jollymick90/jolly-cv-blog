@@ -116,7 +116,7 @@
 	});
 
 	function downloadCV() {
-		downloadResumeLang(lang, 'short');
+		downloadResumeLang(lang, 'full');
 	}
 </script>
 

@@ -19,11 +19,11 @@ export async function GET({ request }) {
   const fileName = `cv-${lang}-${mode}-pagina.pdf`;
   const pdfFilePath = path.resolve('static/generated', fileName);
 
-  if (existsSync(pdfFilePath)) {
-    const cachedPdf = await fs.readFile(pdfFilePath);
-    console.log('[Cache hit] Serving cached PDF:', fileName);
-    return new Response(cachedPdf, headerResponse);
-  }
+  // if (existsSync(pdfFilePath)) {
+  //   const cachedPdf = await fs.readFile(pdfFilePath);
+  //   console.log('[Cache hit] Serving cached PDF:', fileName);
+  //   return new Response(cachedPdf, headerResponse);
+  // }
 
   const browser = await getBrowser(url);
   if (browser) {

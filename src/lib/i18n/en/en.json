@@ -17,7 +17,7 @@
         "navproject": "Projects",
         "navcv": "CV",
         "navblog": "Blog",
-        "gotocv": "Read the complete resume"
+        "gotocv": "Read the complete resume"    
     },
     "project": {
         "title": "From Code to Creation",
@@ -32,7 +32,8 @@
         "certifications": "Certifications",
         "skills_acquired": "Skills developed",
         "technologies":"Technology stack adopted",
-        "activities": "Key activities and projects"
+        "activities": "Key activities and projects",
+        "privacy": "I hereby authorize the use of my personal data in accordance to the GDPR 679/16 - \"European regulation on the protection of personal data\"."
     },
     "blog": { 
         "title": "Thoughts in Code and Beyond",
