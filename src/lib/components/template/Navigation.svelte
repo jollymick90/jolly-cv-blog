@@ -35,7 +35,8 @@
 		{
 			title: $t('home.navspeaker'),
 			description: 'Speak directly to your customers',
-			href: `/${lang}/speaker`
+			href: `/${lang}/speaker`,
+			disable: true
 		},
 		{
 			title: $t('home.navblog'),

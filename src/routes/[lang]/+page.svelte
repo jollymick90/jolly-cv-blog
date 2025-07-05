@@ -32,7 +32,7 @@
 			<HomeProject></HomeProject>
 			</div>
 		<div class="flex flex-col gap-16 lg:pl-16 xl:pl-24">
-			<HomeEvent></HomeEvent>
+			<!-- <HomeEvent></HomeEvent> -->
 			<!-- <HomeArticleSection></HomeArticleSection> -->
 		</div>
 	</div>
