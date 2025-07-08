@@ -16,8 +16,9 @@ export async function GET({ request }) {
   }
   console.log("call ", url)
 
-  const fileName = `cv-${lang}-${mode}-pagina.pdf`;
-  const pdfFilePath = path.resolve('static/generated', fileName);
+  const fileName = `cv-${lang}-${mode}-michele-scarpa.pdf`;
+  // const pdfFilePath = path.resolve('static/generated', fileName);
+  const pdfFilePath = path.resolve('static', fileName);
 
   // if (existsSync(pdfFilePath)) {
   //   const cachedPdf = await fs.readFile(pdfFilePath);

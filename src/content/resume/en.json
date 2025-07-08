@@ -86,8 +86,11 @@
                 "Fullstack management of enterprise projects, taking care of frontend, backend and database.",
                 "Responsible for the delivery of two projects in production for the Public Administration.",
                 "Mentoring of junior colleagues, supporting them in the path of technical and professional growth.",
-                "Shadowing a post-bootcamp junior developer, contributing to his training until he joined another large company as a frontend and mobile developer.",
+                "Design and develop a GIS application leveraging GeoServer, a microservices architecture built with Spring Boot, a PostgreSQL database extended with PostGIS, and an Angular front end powered by Leaflet.",
                 "Achievement of the AWS Developer Associate certification, strengthening skills in cloud and scalable architectures."
+            ],
+            "otherExperiences": [
+                "Shadowing a post-bootcamp junior developer, contributing to his training until he joined another large company as a frontend and mobile developer."
             ],
             "skillAquiredList": [
                 {
