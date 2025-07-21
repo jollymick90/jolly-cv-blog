@@ -2,7 +2,8 @@
     "title": "Curriculum Michele Scarpa",
     "fullName": "Michele Scarpa",
     "mainRoleTitle": "Software Engineer",
-    "presentation": "I'm a software engineer with nearly 10 years of experience in web, mobile, GIS, and Digital Signage applications. I specialize in fullstack development, focusing on context, domain, and technologies to ensure quality and continuous improvement.",
+    "presentation": "Highly motivated Fullstack Developer with 8+ years of experience in designing, developing, and deploying scalable web applications using React, Angular, and Spring Boot. Proven ability to lead project delivery, mentor junior colleagues, and optimize system performance, resulting in a 20% improvement in application load times",
+    "presentationOld": "I'm a software engineer with nearly 10 years of experience in web, mobile, GIS, and Digital Signage applications. I specialize in fullstack development, focusing on context, domain, and technologies to ensure quality and continuous improvement.",
     "contact": {
         "email": "scarpa.michele.90@gmail.com",
         "showPhone": false,
@@ -77,12 +78,20 @@
             "date": "2022 - current",
             "description": "I currently work in Almaviva, one of the largest Italian corporations, specialized in IT solutions for the Public Administration. In this experience I consolidated my role as Senior Fullstack Developer, expanding my skills on enterprise technologies and scalable architectures.",
             "experiencesListShort": [
-"Fullstack development (frontend, backend, database) for enterprise-grade projects.",
-"Delivered two production-level projects for Public Administration.",
-"Mentored junior colleagues, fostering technical and professional growth.",
-"Achieved AWS Developer Associate certification, enhancing skills in cloud solutions."
+                "Fullstack development (frontend, backend, database) for enterprise-grade projects.",
+                "Delivered two production-level projects for Public Administration.",
+                "Mentored junior colleagues, fostering technical and professional growth.",
+                "Achieved AWS Developer Associate certification, enhancing skills in cloud solutions."
             ],
             "experiencesList": [
+                "<b>Led</b> the fullstack management and successful delivery of two critical enterprise projects for Public Administration, from concept to deployment.",
+                "<b>Designed and developed</b> a robust GIS application leveraging Leaflet and Geoserver, significantly improving data visualization and spatial analysis capabilities.",
+                "<b>Mentored and guided</b> junior colleagues, fostering skill development and contributing to overall team productivity and knowledge transfer.",
+                "<b>Implemented</b> scalable solutions using React, Angular, Java, and Spring Boot, optimizing performance and ensuring seamless integration with PostgresSQL and Postgis databases.",
+                "<b>Utilized</b> Docker, Kubernetes, and AWS to streamline deployment pipelines and enhance application resilience in cloud environments.",
+                "<b>Achieved</b> AWS Developer Associate certification, demonstrating advanced proficiency in cloud development practices."
+            ],
+            "experiencesListOld": [
                 "Fullstack management of enterprise projects, taking care of frontend, backend and database.",
                 "Responsible for the delivery of two projects in production for the Public Administration.",
                 "Mentoring of junior colleagues, supporting them in the path of technical and professional growth.",
@@ -197,6 +206,12 @@
                 "Achieved ISIPM Base certification in Project Management."
             ],
             "experiencesList": [
+                "<b>Developed and maintained</b> complex frontend applications using React and Angular within an NX - Monorepo architecture, enhancing code reusability and project scalability.",
+                "<b>Seamlessly integrated</b> frontend components with .NET/C# backends via GraphQL, ensuring efficient data exchange and robust application functionality.",
+                "<b>Implemented</b> advanced UI/UX features and custom components utilizing Kendo UI and Syncfusion libraries, significantly improving user experience and application aesthetics.",
+                "<b>Contributed</b> to the full software development lifecycle, from requirements gathering to deployment, ensuring high-quality frontend deliverables."
+            ],
+            "experiencesListOld": [
                 "Development and maintenance of frontend applications in Angular and React for the management of fleets and waste collection services.",
                 "Integration with .NET/C# backends via GraphQL, streamlining communication between frontend and database.",
                 "Use NX to manage monorepo and scale Angular/React applications.",
@@ -279,11 +294,11 @@
                     "type": "Frontend",
                     "level": 80
                 },
-                 {
+                {
                     "name": "Typescript",
                     "type": "Frontend",
                     "level": 80
-                },               
+                },
                 {
                     "name": "FFmpeg",
                     "type": "Multimedia Processing",
@@ -298,7 +313,7 @@
                     "name": "Tizen",
                     "type": "Player Digital Signage",
                     "level": 80
-                },                
+                },
                 {
                     "name": "Toshiba Professional Monitor",
                     "type": "Player Digital Signage",
@@ -328,20 +343,25 @@
                     "name": "Android",
                     "type": "Player Digital Signage",
                     "level": 80
-                },                
+                },
                 {
                     "name": "Openlayer",
                     "type": "GIS",
                     "level": 80
                 }
-                
             ],
             "experiencesListShort": [
-            "Development of cross-platform digital signage and tracking systems, including real-time public transport monitoring and synchronized LED wall content distribution.",
-            "Creation of native Android apps with focus on performance, UX/UI, and secure backend integration using Kotlin and Java.",
-            "Advanced frontend development with Vue.js and OpenLayers for spatial data management and interactive geographic visualizations."
+                "Development of cross-platform digital signage and tracking systems, including real-time public transport monitoring and synchronized LED wall content distribution.",
+                "Creation of native Android apps with focus on performance, UX/UI, and secure backend integration using Kotlin and Java.",
+                "Advanced frontend development with Vue.js and OpenLayers for spatial data management and interactive geographic visualizations."
             ],
             "experiencesList": [
+                "<b>Architected and developed</b> full-stack web and Android Player solutions for Digital Signage, reaching over 500 active installations.",
+                "<b>Designed and implemented</b> a real-time Map Tracking System for Public Transport, enhancing operational efficiency for clients.",
+                "<b>Boosted user engagement</b>  by developing advanced Digital Signage features, including dynamic content integration for LED Walls.",
+                "<b>Contributed significantly to mobile development</b> (Android - Kotlin, Java) and frontend development (Vue.js, GIS, OpenLayers), supporting critical project timelines."
+            ],
+            "experiencesListOld": [
                 "Web and Android Player for Digital Signage: Development of a web and mobile platform optimized for centralized management and distribution of digital content on signage devices, with particular focus on performance and scalability.",
                 "Map Tracking System for Public Transport: Implementation of a web and mobile system for real-time tracking of public transport vehicles, integrated with interactive maps and advanced geolocation features to enhance user experience.",
                 "Advanced Digital Signage Feature – LED Wall: Design and development of a reliable system for synchronized and simultaneous multimedia content distribution on large-scale LED screens for public events.",

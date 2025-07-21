@@ -2,6 +2,7 @@
 	import type { IResume } from "$lib/content";
 	import ResumePrintable from "./ResumePrintable.svelte";
 	import ResumeV3 from "./ResumeV3/ResumeV3.svelte";
+	import ResumeV4 from "./ResumeV4/ResumeV4.svelte";
 
 	const { resume, printable, full = false }: {
 		resume: IResume,
@@ -13,7 +14,7 @@
 	<ResumePrintable {resume}></ResumePrintable>
 
 	{:else if printable && full}
-	<ResumeV3 {resume}></ResumeV3>
+	<ResumeV4 {resume}></ResumeV4>
 	{:else}
-	<ResumeV3 {resume}></ResumeV3>
+	<ResumeV4 {resume}></ResumeV4>
 {/if}

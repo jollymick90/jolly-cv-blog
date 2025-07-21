@@ -6,16 +6,29 @@
 		Icon,
 		Envelope,
 		Phone,
-		MapPin,
-		Briefcase,
-		WrenchScrewdriver,
-		RocketLaunch
+		MapPin
 	} from 'svelte-hero-icons';
 	import avatar from '$lib/img/profile-michele.png';
 
 	import { t } from '$lib/i18n';
 	import { LinkedInIcon } from '$lib/components/icons';
 
+	const techSkills = [
+		"<b>Programming Languages</b>: Typescript, Javascript, Java, Kotlin",
+        "<b>Frontend Frameworks</b>: React, Angular, Vue, Svelte",
+        "<b>Backend & Databases</b>: Spring Boot, NodeJS, PostgresSQL, Postgis",
+        "<b>GIS Technologies</b>: OpenLayers/Leaflet, Geoserver",
+        "<b>Tools & Platforms</b>: Docker, AWS, Kubernates, Keycloak",
+        "<b>Other</b>: GraphQL, NX - Monorepo"
+	]
+
+	const softSkills = [
+		"Analytical Thinking",
+		"Creative Problem Solving",
+		"Project Management",
+		"Team Collaboration",
+		"Mentoring"
+	]
 	export const {
 		resume
 	}: {
@@ -47,6 +60,9 @@
 		.filter((skill) => skill.type === 'PROGRAMMING_LANGUAGE')
 		.sort((skillA, skillB) => skillB.level - skillA.level)
 		.splice(0, 5);
+
+	const studiesList = resume.studies.filter(s => s.id === 1);
+	const experiencesList = resume.experiences.filter(e => e.id !== 3);
 </script>
 
 <div class="cv-container m-auto flex max-w-[1200px] 
@@ -70,7 +86,7 @@ flex-col bg-white md:flex-row">
 		<section class="experience">
 			<h2 class="my-2 font-medium">{$t('resume.history_experiences')}</h2>
 
-			{#each resume.experiences as exp}
+			{#each experiencesList as exp}
 				{@render experience(exp)}
 			{/each}
 		</section>
@@ -149,25 +165,19 @@ flex-col bg-white md:flex-row">
 		<div class="skills mt-2">
 			<h3>{$t('resume.softskills')}</h3>
 			<ul>
-				{#each top5Skills as skill}
-					<li class="text-sm">{skill.name}</li>
+				{#each softSkills as skill}
+					<li class="text-sm">{skill}</li>
 				{/each}
 			</ul>
 			<h3 class="mt-2">{$t('resume.techskills')}</h3>
 			<div class="flex flex-wrap gap-2">
-				{#each programmingLanguage as skill}
-					<span class="border-blue-[#10253f] text-sm rounded-lg border-2 px-2 py-1">
-						{skill.name}
+				{#each techSkills as skill}
+					<span class=" text-sm rounded-lg px-2 py-1">
+						{@html skill}
 					</span>
 				{/each}
 			</div>
-			<div class="mt-2 flex flex-wrap gap-2">
-				{#each [...web5TechSkills, ...tools5TechSkills, ...framework5TechSkills] as skill}
-					<span class="border-blue-[#10253f] text-sm rounded-lg border-2 px-2 py-1">
-						{skill.name}
-					</span>
-				{/each}
-			</div>
+
 			<div>
 				<h3 class="mb-2 mt-2">{$t('resume.certifications')}</h3>
 
@@ -178,7 +188,7 @@ flex-col bg-white md:flex-row">
 			<div>
 				<h3 class="mb-2 mt-2">{$t('resume.education')}</h3>
 
-				{#each resume.studies as study}
+				{#each studiesList as study}
 					{@render studies(study)}
 				{/each}
 			</div>
@@ -239,7 +249,7 @@ flex-col bg-white md:flex-row">
 			<div class="pb-2 border-b-2 border-[#fffffff5]">
 				<h3 class="mb-2 mt-2">{$t('resume.education')}</h3>
 
-				{#each resume.studies as study}
+				{#each studiesList as study}
 					{@render studies(study)}
 				{/each}
 			</div>
@@ -267,15 +277,8 @@ flex-col bg-white md:flex-row">
 {/snippet}
 
 {#snippet experience(experience: ExperiencesEvent)}
-	{@const experiencesAquired = experience.skillAquiredList.filter((l) => l.level && l.level >= 70)}
-	{@const experiencesUse = experience.skillAquiredList.filter((l) => !l.level || l.level < 70)}
 	<div class="mb-2 border-b-2 border-dashed border-[#10253f] pb-5">
 		<div class="my-2 flex justify-start border-[#10253f] align-middle">
-			<Icon
-				class="mr-2 h-5 w-[50px] text-gray-400"
-				aria-hidden="true"
-				src={Briefcase} 
-			/>
 			<h3 class="text-bold text-[#10253f]">
 				{experience.role}, {experience.companyName}
 			</h3>
@@ -289,43 +292,6 @@ flex-col bg-white md:flex-row">
 		<div class="flex flex-col">
 			<div class="flex flex-col md:flex-row w-full">
 				<div class="flex">
-					<Icon
-					class="mr-2 h-5 w-[50px] align-middle text-gray-400"
-					aria-hidden="true"
-					src={WrenchScrewdriver}
-				/>
-					<span class="block md:hidden text-bold">{$t('resume.skills_acquired')}</span>
-				</div>
-				
-
-				<div class="flex flex-col">
-					<h4 class="hidden md:block italic text-sm text-bold">{$t('resume.skills_acquired')}</h4>
-					<div class="flex flex-wrap gap-1">
-						{#each experiencesAquired as sa}
-							<span class="border-blue-[#10253f] print:text-xs text-sm border-b-2 print:py-[2px] px-2 py-1 text-center">
-								{sa.name}
-							</span>
-						{/each}
-					</div>
-					{#if experiencesUse.length > 0}
-						<span class="print:hidden text-bold text-sm talic">{$t('resume.technologies')}</span>
-						<div class="flex flex-wrap gap-1">
-							{#each experiencesUse as sa}
-								<p class="border-blue-[#10253f] print:text-xs text-sm border-b-2 px-2 print:py-[2px] py-1 text-center">
-									{sa.name}
-								</p>
-							{/each}
-						</div>
-					{/if}
-				</div>
-			</div>
-			<div class="flex flex-col md:flex-row w-full">
-				<div class="flex">
-					<Icon
-						class="mt-2 h-5 w-[50px] align-middle text-gray-400"
-						aria-hidden="true"
-						src={RocketLaunch}
-					/>
 					<h4 class="block md:hidden text-bold">{$t('resume.activities')}</h4>
 				</div>
 				<div>
