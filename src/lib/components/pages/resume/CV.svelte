@@ -3,6 +3,7 @@
 	import ResumePrintable from "./ResumePrintable.svelte";
 	import ResumeV3 from "./ResumeV3/ResumeV3.svelte";
 	import ResumeV4 from "./ResumeV4/ResumeV4.svelte";
+	import ResumeV4Printable from "./ResumeV4/ResumeV4Printable.svelte";
 
 	const { resume, printable, full = false }: {
 		resume: IResume,
@@ -14,7 +15,7 @@
 	<ResumePrintable {resume}></ResumePrintable>
 
 	{:else if printable && full}
-	<ResumeV4 {resume}></ResumeV4>
+	<ResumeV4Printable {resume}></ResumeV4Printable>
 	{:else}
 	<ResumeV4 {resume}></ResumeV4>
 {/if}

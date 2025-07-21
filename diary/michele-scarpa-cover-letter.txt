@@ -1,0 +1,7 @@
+I am a highly motivated and experienced Full-Stack Developer specializing in designing, developing, and deploying scalable web applications. With over eight years of hands-on experience, I am now targeting roles like Senior Full-Stack Developer or Technical Lead, focusing on geospatial technologies, IoT solutions, or innovative digital products.
+
+One aspect that sets me apart is my unique blend of technical expertise in GIS systems and IoT, combined with leadership experience. I've successfully developed applications leveraging tools like Geoserver and Leaflet while driving complex projects across frameworks like React, Angular, and Spring Boot. My capability to mentor junior colleagues shows my commitment to fostering team success while delivering impactful software solutions.
+
+Throughout my career, I’ve been recognized for leading two critical enterprise projects for Public Administration, creating a GIS application that improved spatial analysis. My optimization efforts resulted in a 20% enhancement in application load times, and I earned my AWS Developer Associate certification, validating my cloud proficiency and commitment to professional growth.
+
+I’m actively pursuing opportunities to contribute to cutting-edge organizations that value innovation and technical leadership. I would appreciate any introductions to leaders in geospatial, IoT, or platform-based industries. Additionally, I’m open to advice that could help refine my career trajectory or expand my skillset further.

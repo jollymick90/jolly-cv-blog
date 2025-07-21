@@ -34,7 +34,7 @@
         {
             "id": 1,
             "type": "cert",
-            "content": "Google Professional Data Engineering ",
+            "content": "Google Professional Data Engineering",
             "date": "March 2020"
         }
     ],
@@ -261,7 +261,7 @@
             "id": 2,
             "showHome": true,
             "type": "work",
-            "companyName": "Red-V - Ennova Researh",
+            "companyName": "Red-V - Ennova Research",
             "role": "Junior Software Engineer",
             "dateStart": "Sep 15",
             "dateStartTime": "2015-09-15",
