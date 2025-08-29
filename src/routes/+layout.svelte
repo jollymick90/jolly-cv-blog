@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '../app.css';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit'
 
 	import { langStore } from '$lib/i18n/lang.store';
