@@ -50,7 +50,7 @@
 		{$t('home.subHeading')}
 	</h1>
 	<p class="text-lg mt-6 text-zinc-600 dark:text-zinc-400">
-		{$t('home.description')}
+		{@html $t('home.description')}
 	</p>
 	<div class="mt-6 flex gap-6">
 		{#each socialList as socialItem}
