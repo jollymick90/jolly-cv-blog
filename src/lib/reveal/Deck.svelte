@@ -31,12 +31,13 @@
 
 <div class="reveal">
 	<div class="slides">
-    <ChiSono></ChiSono>
-		
-
+		<ChiSono></ChiSono>
 		<Esperienze></Esperienze>
 		<AmbientiTecnologici></AmbientiTecnologici>
 		<CosaCerco></CosaCerco>
 		<CosaSoDiAwms></CosaSoDiAwms>
+		<section data-background-color="lightblue">			
+			<p>Michele</p>
+		</section>
 	</div>
 </div>
