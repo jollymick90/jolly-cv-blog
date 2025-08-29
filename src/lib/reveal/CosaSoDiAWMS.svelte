@@ -3,7 +3,7 @@
 	<ul>
 		<li>Workforce Management</li>
 		<li>Vi ho conosciuti agli eventi GDG Venezia</li>
-		<li>Conosco Azzurro da quando stavano al TAG</li>
-		<li>So che fate parte anche della famiglia Zucchetti</li>
+		<li>Fate parte della famiglia Azzurro Digitale, che conosco da quando stavano al TAG</li>
+		<li>So che farete parte anche della famiglia Zucchetti</li>
 	</ul>    
 </section>
