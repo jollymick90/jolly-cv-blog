@@ -11,6 +11,7 @@
 	import Esperienze from "./Settori.svelte";
 	import AmbientiTecnologici from "./AmbientiTecnologici.svelte";
 	import CosaCerco from "./CosaCerco.svelte";
+	import CosaSoDiAwms from "./CosaSoDiAWMS.svelte";
   
 
   onMount(() => {
@@ -30,27 +31,28 @@
 
 <div class="reveal">
 	<div class="slides">
-		<section data-auto-animate>
+		<section data-auto-animate data-background-color="rgb(70 233 255)">
 			<h3>Ciao Sono Michele</h3>
 		</section>
-        <section data-auto-animate>
+        <section data-auto-animate data-background-color="rgb(70 233 255)">
 			<h3>Ciao Sono Michele</h3>
             <h3>sono un software engineer</h3>
 		</section>
-        <section data-auto-animate>
+        <section data-auto-animate data-background-color="rgb(70 233 255)">
 			<h3>Ciao Sono Michele</h3>
             <h3>sono un software engineer</h3>
             <h3>Full-stack developer</h3>
 		</section>
 
-        <section data-auto-animate>
+        <section data-auto-animate data-background-color="rgb(70 233 255)">
 			<h3>... un vero ...</h3>
-            <h3 style="margin-top: 100px; color: red;">Full-stack developer</h3>
+            <h3 style="margin-top: 100px; color: mediumblue;">Full-stack developer</h3>
 		</section>
 
         <Esperienze></Esperienze>
         <AmbientiTecnologici></AmbientiTecnologici>
         <CosaCerco></CosaCerco>
+        <CosaSoDiAwms></CosaSoDiAwms>
 	</div>
 </div>
 

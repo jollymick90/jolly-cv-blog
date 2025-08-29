@@ -1,15 +1,15 @@
-<section>
+<section data-background-color="rgb(70 255 166)">
 	<h3>Settori ed Esperienze...</h3>
 </section>
 
-<section data-auto-animate>
+<section data-auto-animate data-background-color="rgb(70 255 166)">
 	<h3>Settori ed Esperienze...</h3>
 	<ul>
 		<li>Digital Signage</li>
 	</ul>
 </section>
 
-<section data-auto-animate>
+<section data-auto-animate data-background-color="rgb(70 255 166)">
 	<h3>Settori ed Esperienze...</h3>
 	<ul>
 		<li>Digital Signage</li>
@@ -17,7 +17,7 @@
 	</ul>
 </section>
 
-<section data-auto-animate>
+<section data-auto-animate data-background-color="rgb(70 255 166)">
 	<h3>Settori ed Esperienze...</h3>
 	<ul>
 		<li>Digital Signage</li>
@@ -26,7 +26,7 @@
 	</ul>
 </section>
 
-<section data-auto-animate>
+<section data-auto-animate data-background-color="rgb(70 255 166)">
 	<h3>Settori ed Esperienze...</h3>
 	<ul>
 		<li>Digital Signage</li>
@@ -36,7 +36,7 @@
 	</ul>
 </section>
 
-<section data-auto-animate>
+<section data-auto-animate data-background-color="rgb(70 255 166)">
 	<h3>Settori ed Esperienze...</h3>
 	<ul>
 		<li>Digital Signage</li>
