@@ -8,6 +8,9 @@
   import "reveal.js/dist/reveal.css";
   import "reveal.js/dist/theme/black.css";
   import "reveal.js/plugin/highlight/monokai.css";
+	import Esperienze from "./Settori.svelte";
+	import AmbientiTecnologici from "./AmbientiTecnologici.svelte";
+	import CosaCerco from "./CosaCerco.svelte";
   
 
   onMount(() => {
@@ -45,74 +48,9 @@
             <h3 style="margin-top: 100px; color: red;">Full-stack developer</h3>
 		</section>
 
-        <section>
-            <h1>
-                Settori ed Esperienze...
-            </h1>
-        </section>
-        <section data-auto-animate>
-                <ul>
-                    <li>
-                        Digital signage
-                    </li>
-                </ul>
-        </section>
-        <section data-auto-animate>
-                <ul>
-                    <li>
-                        Digital signage
-                    </li>
-                    <li>
-                        Mobile <b>B2B</b> / <b>B2C</b>
-                    </li>                 
-                </ul>
-        </section>
-         <section data-auto-animate>
-                <ul>
-                    <li>
-                        Digital signage
-                    </li>
-                    <li>
-                        Mobile <b>B2B</b> / <b>B2C</b>
-                    </li>
-                    <li>
-                        GIS
-                    </li>                    
-                </ul>
-        </section>
-                 <section data-auto-animate>
-                <ul>
-                    <li>
-                        Digital signage
-                    </li>
-                    <li>
-                        Mobile <b>B2B</b> / <b>B2C</b>
-                    </li>
-                    <li>
-                        Waste
-                    </li>
-                    <li>
-                        PA
-                    </li>                    
-                </ul>
-        </section>
-
-                         <section data-auto-animate>
-                <ul>
-                    <li>
-                        Digital signage
-                    </li>
-                    <li>
-                        Mobile <b>B2B</b> / <b>B2C</b>
-                    </li>
-                    <li>
-                        Waste
-                    </li>
-                    <li>
-                        PA
-                    </li>                    
-                </ul>
-        </section>
+        <Esperienze></Esperienze>
+        <AmbientiTecnologici></AmbientiTecnologici>
+        <CosaCerco></CosaCerco>
 	</div>
 </div>
 
