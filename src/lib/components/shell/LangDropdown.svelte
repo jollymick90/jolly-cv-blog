@@ -10,18 +10,18 @@
   let isDark = $state(true);
 
   onMount(() => {
-    isDark = document.documentElement.classList.contains('dark');
+    isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   });
 
   function toggleTheme() {
     isDark = !isDark;
-    document.documentElement.classList.toggle('dark', isDark);
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   }
 
   function switchLang(newLang: LangAvailable) {
     open = false;
     const currentPath = page.url.pathname;
-    const newPath = currentPath.replace(`/${lang}`, `/${newLang}`);
+    const newPath = currentPath.replace(new RegExp(`^/${lang}(/|$)`), `/${newLang}$1`);
     goto(newPath);
   }
 

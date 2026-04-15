@@ -5,7 +5,8 @@
   import './tw.css';
 
   let { children, data } = $props();
-  const { lang, isFullScreen } = data;
+  const lang = $derived(data.lang);
+  const isFullScreen = $derived(data.isFullScreen);
 </script>
 
 {#if isFullScreen}
