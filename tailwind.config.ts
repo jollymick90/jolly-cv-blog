@@ -17,6 +17,39 @@ export default {
 			colors: {
 				transparent: 'transparent',
 				current: 'currentColor',
+				'background': '#0b1326',
+				'on-background': '#dae2fd',
+				'surface': '#0b1326',
+				'surface-dim': '#0b1326',
+				'surface-bright': '#31394d',
+				'surface-container-lowest': '#060e20',
+				'surface-container-low': '#131b2e',
+				'surface-container': '#171f33',
+				'surface-container-high': '#222a3d',
+				'surface-container-highest': '#2d3449',
+				'surface-variant': '#2d3449',
+				'on-surface': '#dae2fd',
+				'on-surface-variant': '#c6c6cd',
+				'inverse-surface': '#dae2fd',
+				'inverse-on-surface': '#283044',
+				'outline': '#909097',
+				'outline-variant': '#45464d',
+				'primary': '#bec6e0',
+				'on-primary': '#283044',
+				'primary-container': '#0f172a',
+				'on-primary-container': '#798098',
+				'secondary': '#b9c7e0',
+				'on-secondary': '#233144',
+				'secondary-container': '#3c4a5e',
+				'on-secondary-container': '#abb9d2',
+				'tertiary': '#b3d17a',
+				'on-tertiary': '#243600',
+				'tertiary-container': '#101b00',
+				'on-tertiary-container': '#6f8a3c',
+				'error': '#ffb4ab',
+				'on-error': '#690005',
+				'error-container': '#93000a',
+				'on-error-container': '#ffdad6',
 				'cv-primary': '#C7AB95',
 				'cv-secondary': '#BABABA',
 				'exp-base': '#67e8f9',
@@ -109,6 +142,11 @@ export default {
 					900: '#f4fef5'
 				}
 			},
+			fontFamily: {
+				headline: ["Plus Jakarta Sans"],
+				body: ["Inter"],
+				label: ["Inter"]
+			}
 		}
 	},
 

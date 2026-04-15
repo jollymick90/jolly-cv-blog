@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "content-creator": {
+      "source": "shubhamsaboo/awesome-llm-apps",
+      "sourceType": "github",
+      "computedHash": "8a40efacec188736eb229b9605df4d6a3c9d42e5ec08765e31dd5d2ad2c679cb"
+    },
+    "seo-content-writer": {
+      "source": "aaron-he-zhu/seo-geo-claude-skills",
+      "sourceType": "github",
+      "computedHash": "2febf8129b87fedf5072c3baf5f0ad665aec00c7f5a6edf481d6c454334e54d9"
+    },
+    "svelte5-best-practices": {
+      "source": "ejirocodes/agent-skills",
+      "sourceType": "github",
+      "computedHash": "bfcbba3d355aede6f6be9720f195206d4dcaa7c152787ea00c06cb4a1ac44ba4"
+    }
+  }
+}

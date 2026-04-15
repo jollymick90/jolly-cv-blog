@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-tertiary": "#243600",
+                  "surface-dim": "#0b1326",
+                  "primary-container": "#0f172a",
+                  "tertiary-container": "#101b00",
+                  "on-surface-variant": "#c6c6cd",
+                  "surface-container-lowest": "#060e20",
+                  "secondary": "#b9c7e0",
+                  "on-secondary-fixed-variant": "#3a485c",
+                  "on-primary": "#283044",
+                  "inverse-surface": "#dae2fd",
+                  "inverse-primary": "#565e74",
+                  "on-error": "#690005",
+                  "error": "#ffb4ab",
+                  "background": "#0b1326",
+                  "surface-container-low": "#131b2e",
+                  "secondary-fixed": "#d5e3fd",
+                  "outline": "#909097",
+                  "outline-variant": "#45464d",
+                  "on-background": "#dae2fd",
+                  "inverse-on-surface": "#283044",
+                  "secondary-container": "#3c4a5e",
+                  "on-tertiary-fixed": "#131f00",
+                  "primary-fixed": "#dae2fd",
+                  "surface-container": "#171f33",
+                  "on-secondary-container": "#abb9d2",
+                  "on-primary-fixed-variant": "#3f465c",
+                  "surface-container-highest": "#2d3449",
+                  "on-tertiary-container": "#6f8a3c",
+                  "primary": "#bec6e0",
+                  "tertiary": "#b3d17a",
+                  "surface-bright": "#31394d",
+                  "surface-container-high": "#222a3d",
+                  "on-secondary-fixed": "#0d1c2f",
+                  "on-primary-container": "#798098",
+                  "on-error-container": "#ffdad6",
+                  "tertiary-fixed": "#ceee93",
+                  "on-surface": "#dae2fd",
+                  "on-tertiary-fixed-variant": "#364e03",
+                  "on-secondary": "#233144",
+                  "surface-tint": "#bec6e0",
+                  "surface": "#0b1326",
+                  "tertiary-fixed-dim": "#b3d17a",
+                  "secondary-fixed-dim": "#b9c7e0",
+                  "error-container": "#93000a",
+                  "primary-fixed-dim": "#bec6e0",
+                  "on-primary-fixed": "#131b2e",
+                  "surface-variant": "#2d3449"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.125rem",
+                  "lg": "0.25rem",
+                  "xl": "0.5rem",
+                  "full": "0.75rem"
+          },
+          "fontFamily": {
+                  "headline": ["Plus Jakarta Sans"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopAppBar (Immutable Content & Mandatory Styling) -->
+<header class="fixed top-0 w-full z-50 bg-[#131b2e] flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#bec6e0]" data-icon="terminal">terminal</span>
+<h1 class="text-lg font-bold text-[#bec6e0] tracking-widest font-['Plus_Jakarta_Sans']">ENGINEER_CORE_V4</h1>
+</div>
+<div class="hidden md:flex gap-6 items-center">
+<nav class="flex gap-4">
+<a class="text-[#b3d17a] font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-sm" href="#">DEPLOYS</a>
+<a class="text-[#bec6e0] font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-sm hover:text-[#b3d17a] transition-colors" href="#">BIO</a>
+<a class="text-[#bec6e0] font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-sm hover:text-[#b3d17a] transition-colors" href="#">COMMUNITY</a>
+<a class="text-[#bec6e0] font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-sm hover:text-[#b3d17a] transition-colors" href="#">CONFIG</a>
+</nav>
+</div>
+<span class="text-[10px] font-bold text-[#bec6e0] tracking-widest opacity-60">STATUS: AVAILABLE</span>
+</header>
+<main class="pt-24 pb-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-20">
+<div class="inline-block px-2 py-1 mb-6 bg-surface-container-high border-l-2 border-tertiary">
+<span class="text-[10px] font-label font-bold tracking-[0.2em] text-tertiary uppercase">ARCHITECT_LOG_01</span>
+</div>
+<h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-primary leading-none mb-8">
+        Engineering Solutions<br/><span class="text-surface-bright">at Scale.</span>
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<p class="text-secondary leading-relaxed text-lg max-w-lg">
+          Michele Scarpa. Senior Full-stack Engineer with 10+ years of technical craftsmanship. 
+          Currently evolving from deep-code execution to architecting high-impact communities and engineering leadership.
+        </p>
+<div class="flex flex-col gap-2 p-4 bg-surface-container-low border border-outline-variant/15">
+<div class="flex justify-between items-center text-xs font-label tracking-widest opacity-50">
+<span>UPTIME</span>
+<span>3650_DAYS+</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest">
+<div class="h-full bg-tertiary w-full"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] font-label text-tertiary">
+<span>SENIOR_LEVEL</span>
+<span>SYSTEM_STABLE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Architecture: Bento Grid Style -->
+<section class="mb-24">
+<div class="flex items-center gap-4 mb-12">
+<h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Core Architecture</h3>
+<div class="h-px grow bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<!-- Web/Mobile -->
+<div class="p-8 bg-surface-container hover:bg-surface-container-high transition-colors group">
+<span class="material-symbols-outlined text-tertiary mb-6 block text-4xl" data-icon="devices">devices</span>
+<h4 class="text-lg font-bold text-on-surface mb-3">Web &amp; Mobile Ecosystems</h4>
+<p class="text-sm text-secondary/80 mb-6">Architecting cross-platform interfaces with focus on performance, state management, and seamless UX across the stack.</p>
+<ul class="space-y-2 text-[11px] font-label tracking-wider text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> REACT / NEXT.JS</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> FLUTTER CORE</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> PROGRESSIVE WEB APPS</li>
+</ul>
+</div>
+<!-- GIS -->
+<div class="p-8 bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<span class="material-symbols-outlined text-tertiary mb-6 block text-4xl" data-icon="explore">explore</span>
+<h4 class="text-lg font-bold text-on-surface mb-3">Enterprise GIS Context</h4>
+<p class="text-sm text-secondary/80 mb-6">Translating spatial data into actionable intelligence. Specialist in high-load geospatial infrastructure and map rendering.</p>
+<ul class="space-y-2 text-[11px] font-label tracking-wider text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> POSTGIS / GEOJSON</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> MAPBOX ARCHITECTURE</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> SPATIAL ANALYTICS</li>
+</ul>
+</div>
+<!-- AI/Chatbots -->
+<div class="p-8 bg-surface-container hover:bg-surface-container-high transition-colors group">
+<span class="material-symbols-outlined text-tertiary mb-6 block text-4xl" data-icon="smart_toy">smart_toy</span>
+<h4 class="text-lg font-bold text-on-surface mb-3">AI &amp; Conversational UX</h4>
+<p class="text-sm text-secondary/80 mb-6">Integrating LLMs into business workflows. Building robust RAG systems and context-aware chatbot orchestration.</p>
+<ul class="space-y-2 text-[11px] font-label tracking-wider text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> LLM ORCHESTRATION</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> VECTOR DATABASES</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> PROMPT ENGINEERING</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Impact & Community: The Log -->
+<section class="mb-24 relative">
+<div class="flex items-center gap-4 mb-12">
+<h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Impact &amp; Community</h3>
+<div class="h-px grow bg-outline-variant/20"></div>
+</div>
+<div class="space-y-1">
+<div class="grid grid-cols-1 md:grid-cols-[120px_1fr] group">
+<div class="text-[10px] font-label py-6 opacity-40 group-hover:opacity-100 transition-opacity">EST. 2021</div>
+<div class="py-6 px-0 md:px-8 bg-surface-container-low border-l-2 border-transparent group-hover:border-tertiary group-hover:bg-surface-container transition-all">
+<h4 class="font-bold text-tertiary mb-1">Co-founder, BacaroTech</h4>
+<p class="text-sm text-secondary">Scaling a local tech collective focused on Venetian engineering talent and startup acceleration.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-[120px_1fr] group">
+<div class="text-[10px] font-label py-6 opacity-40 group-hover:opacity-100 transition-opacity">PUBLIC_SPEAKING</div>
+<div class="py-6 px-0 md:px-8 bg-surface-container-low border-l-2 border-transparent group-hover:border-tertiary group-hover:bg-surface-container transition-all">
+<h4 class="font-bold text-on-surface mb-1">GDG Speaker &amp; Organizer</h4>
+<p class="text-sm text-secondary">Regular sessions on Architecture patterns, Rust performance, and the future of GIS.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-[120px_1fr] group">
+<div class="text-[10px] font-label py-6 opacity-40 group-hover:opacity-100 transition-opacity">CONTINUOUS</div>
+<div class="py-6 px-0 md:px-8 bg-surface-container-low border-l-2 border-transparent group-hover:border-tertiary group-hover:bg-surface-container transition-all">
+<h4 class="font-bold text-on-surface mb-1">Senior Mentorship Program</h4>
+<p class="text-sm text-secondary">Advising junior and mid-level engineers on transition from individual contributor to lead roles.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Stack: High Density -->
+<section class="mb-24">
+<div class="p-8 bg-surface-container-lowest border border-outline-variant/10">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-tertiary" data-icon="terminal">terminal</span>
+<h3 class="font-headline text-sm font-bold tracking-[0.3em] text-primary uppercase">Current Stack Config</h3>
+</div>
+<div class="rounded-lg overflow-hidden border border-outline-variant/30 shadow-2xl bg-[#0d1117]">
+<!-- Terminal Header -->
+<div class="bg-[#161b22] px-4 py-2 flex items-center justify-between border-b border-outline-variant/20">
+<div class="flex gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
+</div>
+<div class="text-[10px] font-mono text-secondary/40 tracking-widest uppercase">stack.sh</div>
+<div class="w-10"></div>
+</div>
+<!-- Terminal Content -->
+<div class="p-6 font-mono text-sm space-y-1.5 md:grid md:grid-cols-2 md:gap-x-8 md:space-y-0">
+<div class="flex items-center gap-2">
+<span class="text-[#b3d17a]">root@mscarpa:~#</span>
+<span class="text-on-surface">RUST</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[#b3d17a]">root@mscarpa:~#</span>
+<span class="text-on-surface">GOLANG</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[#b3d17a]">root@mscarpa:~#</span>
+<span class="text-on-surface">TYPESCRIPT</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[#b3d17a]">root@mscarpa:~#</span>
+<span class="text-on-surface">DART</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[#b3d17a]">root@mscarpa:~#</span>
+<span class="text-on-surface">DOCKER</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[#b3d17a]">root@mscarpa:~#</span>
+<span class="text-on-surface">KUBERNETES</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[#b3d17a]">root@mscarpa:~#</span>
+<span class="text-on-surface">LANGCHAIN</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[#b3d17a]">root@mscarpa:~#</span>
+<span class="text-on-surface">PINECONE</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[#b3d17a]">root@mscarpa:~#</span>
+<span class="text-on-surface">TURBOREPO</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[#b3d17a]">root@mscarpa:~#</span>
+<span class="text-on-surface">POSTGRES</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[#b3d17a] animate-pulse">_</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Works: Simple List Scroller -->
+<section class="mb-24">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Works</h3>
+<span class="text-[10px] font-label text-tertiary tracking-[0.2em]">04_ACTIVE_NODES</span>
+</div>
+<div class="space-y-4">
+<a class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary" href="#">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-3 mb-1">
+<span class="text-lg font-bold text-on-surface group-hover:text-tertiary transition-colors">VeneziaSpatial_v4.0</span>
+<span class="text-[9px] font-label px-2 py-0.5 bg-tertiary text-on-tertiary font-bold tracking-tighter">LIVE</span>
+</div>
+<p class="text-xs text-secondary/60">Enterprise real estate GIS platform managing 10k+ spatial nodes with real-time sync.</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<a class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary" href="#">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-3 mb-1">
+<span class="text-lg font-bold text-on-surface group-hover:text-tertiary transition-colors">Core_Engine_Rust</span>
+<span class="text-[9px] font-label px-2 py-0.5 border border-outline-variant text-outline-variant font-bold tracking-tighter">PRIVATE REPO</span>
+</div>
+<p class="text-xs text-secondary/60">High-performance data transformation engine for legacy-to-modern database migrations.</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors" data-icon="lock">lock</span>
+</div>
+</a>
+<a class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary" href="#">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-3 mb-1">
+<span class="text-lg font-bold text-on-surface group-hover:text-tertiary transition-colors">BacaroOS_Platform</span>
+<span class="text-[9px] font-label px-2 py-0.5 border border-tertiary text-tertiary font-bold tracking-tighter">V1.2.0</span>
+</div>
+<p class="text-xs text-secondary/60">Community management infrastructure built for speed and distributed collaboration.</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors" data-icon="code">code</span>
+</div>
+</a>
+<a class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary" href="#">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-3 mb-1">
+<span class="text-lg font-bold text-on-surface group-hover:text-tertiary transition-colors">AI_Proxy_Gateway</span>
+<span class="text-[9px] font-label px-2 py-0.5 bg-surface-container-highest text-secondary font-bold tracking-tighter">BETA</span>
+</div>
+<p class="text-xs text-secondary/60">Token-throttled API gateway for managing multiple LLM provider costs and fallbacks.</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-tertiary transition-colors" data-icon="bolt">bolt</span>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer (Immutable Content & Mandatory Styling) -->
+<footer class="relative w-full py-12 bg-[#131b2e] flex flex-col items-center gap-4 px-8 pb-24 text-center">
+<div class="text-[#b3d17a] font-mono text-xs mb-4">SYSTEM_STATUS: ONLINE</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="text-[#b9c7e0] font-['Inter'] text-[10px] tracking-tighter hover:text-[#ffffff] transition-colors" href="#">GITHUB</a>
+<a class="text-[#b9c7e0] font-['Inter'] text-[10px] tracking-tighter hover:text-[#ffffff] transition-colors" href="#">LINKEDIN</a>
+<a class="text-[#b9c7e0] font-['Inter'] text-[10px] tracking-tighter hover:text-[#ffffff] transition-colors" href="#">MENTORING</a>
+<a class="text-[#b9c7e0] font-['Inter'] text-[10px] tracking-tighter hover:text-[#ffffff] transition-colors" href="#">VERCEL_STATUS</a>
+</div>
+<p class="text-[#bec6e0] font-['Inter'] text-[10px] tracking-tighter opacity-50">© 2024 SENIOR_ENG_BLUEPRINT</p>
+</footer>
+<!-- BottomNavBar (Immutable Content & Mandatory Styling) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-safe bg-[#0b1326]/80 backdrop-blur-md z-50 border-t border-[#45464d]/15">
+<a class="flex flex-col items-center justify-center text-[#b9c7e0] px-4 py-2 hover:bg-[#131b2e] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-widest uppercase">DEPLOYS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#b3d17a] border-l-2 border-[#b3d17a] px-4 py-2 hover:bg-[#131b2e] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-widest uppercase">BIO</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#b9c7e0] px-4 py-2 hover:bg-[#131b2e] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-widest uppercase">COMMUNITY</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#b9c7e0] px-4 py-2 hover:bg-[#131b2e] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings_ethernet">settings_ethernet</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-widest uppercase">CONFIG</span>
+</a>
+</nav>
+</body></html>
