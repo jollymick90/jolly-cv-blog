@@ -1,0 +1,35 @@
+{
+  "name": "Michele Scarpa",
+  "role": "Senior Software Engineer",
+  "bio": "Senior Software Engineer con 10 anni di esperienza. Specializzato in sistemi GIS enterprise e soluzioni AI agentiche. In evoluzione da esecutore tecnico ad architetto di community ad alto impatto.",
+  "experiences": [
+    {
+      "id": "startup-2026",
+      "period": "2026",
+      "label": "CURRENT",
+      "company": "Startup Engineer",
+      "description": "Sviluppo di infrastrutture cloud su AWS tramite codice Terraform. Esecuzione di performance testing avanzato col framework k6. Pieno coinvolgimento nell'integrazione di chatbot vocali basati sulle API di OpenAI per migliorare l'esperienza e i processi B2C."
+    },
+    {
+      "id": "dog-diet",
+      "period": "2025",
+      "label": "AI AUTOMATION",
+      "company": "Dog Diet Calculator",
+      "description": "Applicazione sviluppata interamente in ottica 'agentic', sfruttando attivamente Claude Code per autogenerare ed eseguire la logica di calcolo complessa delle diete nutrizionali ad uso veterinario."
+    }
+  ],
+  "coreAreas": [
+    { "icon": "explore", "title": "Solid Foundation", "description": "Basi solide e architetture scalabili per contesti enterprise." },
+    { "icon": "smart_toy", "title": "Modern Stack & AI", "description": "Le tecnologie cutting-edge per rapid prototyping e automazione spinta." }
+  ],
+  "projects": [
+    { "id": "venezia-spatial", "title": "VeneziaSpatial_v4.0", "description": "Piattaforma GIS immobiliare enterprise che gestisce 10k+ nodi spaziali con sync real-time." },
+    { "id": "core-engine-rust", "title": "Core_Engine_Rust", "description": "Motore di trasformazione dati ad alte prestazioni per migrazioni da database legacy a moderni." },
+    { "id": "bacaro-os", "title": "BacaroOS_Platform", "description": "Infrastruttura di community management costruita per velocità e collaborazione distribuita." },
+    { "id": "ai-proxy-gateway", "title": "AI_Proxy_Gateway", "description": "API gateway con throttling token per gestire costi e fallback di più provider LLM." }
+  ],
+  "community": [
+    { "label": "FOUNDER", "title": "Co-founder, BacaroTech", "description": "Promozione attiva e co-fondazione di BacaroTech, collettivo dedicato ad accelerare lo sviluppo tech in laguna e aggregare l'esperienza di molteplici professionisti del settore." },
+    { "label": "DEVREL", "title": "DevRel & GDG Speaker", "description": "Speaker abituale presso Google Developer Groups, dove condivido pratiche su SvelteKit, ottimizzazioni agentiche e metodologie Frontend avanzate." }
+  ]
+}

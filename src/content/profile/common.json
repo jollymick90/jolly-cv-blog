@@ -1,0 +1,28 @@
+{
+  "contact": {
+    "email": "scarpa.michele.90@gmail.com",
+    "phone": "+393483482541",
+    "city": "Padova, Italy",
+    "github": "https://github.com/jollymick90",
+    "linkedin": "https://linkedin.com/in/michelescarpa90"
+  },
+  "stack": [
+    "RUST", "GOLANG", "TYPESCRIPT", "DART", "DOCKER",
+    "KUBERNETES", "LANGCHAIN", "PINECONE", "TURBOREPO", "POSTGRES"
+  ],
+  "certifications": [
+    { "id": 3, "content": "AWS Certified Developer - Associate", "date": "December 2022" },
+    { "id": 2, "content": "ISIPM Base - Istituto Italiano di Project Management", "date": "April 2022" },
+    { "id": 1, "content": "Google Professional Data Engineering", "date": "March 2020" }
+  ],
+  "projects": [
+    { "id": "venezia-spatial", "slug": "venezia-spatial", "status": "LIVE", "tags": ["GIS", "POSTGIS", "REAL-TIME"] },
+    { "id": "core-engine-rust", "slug": "core-engine-rust", "status": "PRIVATE", "tags": ["RUST", "MIGRATION", "PERFORMANCE"] },
+    { "id": "bacaro-os", "slug": "bacaro-os", "status": "LIVE", "tags": ["COMMUNITY", "PLATFORM"] },
+    { "id": "ai-proxy-gateway", "slug": "ai-proxy-gateway", "status": "BETA", "tags": ["AI", "LLM", "GATEWAY"] }
+  ],
+  "coreAreas": [
+    { "icon": "explore", "tags": ["JAVA / SPRING", "ANGULAR / REACT", "ENTERPRISE GIS (POSTGIS)"] },
+    { "icon": "smart_toy", "tags": ["SVELTEKIT / TAILWIND CSS", "AI AUTOMATION", "CLAUDE CODE & CURSOR"] }
+  ]
+}

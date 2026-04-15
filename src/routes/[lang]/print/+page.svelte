@@ -8,13 +8,13 @@
 		document.documentElement.setAttribute('data-theme', 'dark');
         document.documentElement.classList.toggle('dark', true);
 	})
-	
+
 </script>
 
 <svelte:head>
-	<title>{data?.resume.title ?? 'Resume'}</title>
+	<title>{data?.profile?.name ?? 'Resume'}</title>
 </svelte:head>
 
 <ContainerPrint>
-	 <Cv resume={data.resume} printable={true} full={false}/>
+	 <Cv resume={data.profile as any} printable={true} full={false}/>
 </ContainerPrint>

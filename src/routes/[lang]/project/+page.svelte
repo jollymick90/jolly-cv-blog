@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>{data?.resume.title ?? 'Resume'}</title>
+	<title>{data?.profile?.name ?? 'Projects'}</title>
 </svelte:head>
 
 <Container className="mt-9">

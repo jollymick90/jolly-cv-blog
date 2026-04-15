@@ -6,10 +6,10 @@
 </script>
 
 <svelte:head>
-	<title>{data?.resume.title ?? 'Resume'}</title>
+	<title>{data?.profile?.name ?? 'Resume'}</title>
 </svelte:head>
 
 <Container className="mt-9">
-	
-	 <Cv resume={data.resume} printable={false}/>
+
+	 <Cv resume={data.profile as any} printable={false}/>
 </Container>

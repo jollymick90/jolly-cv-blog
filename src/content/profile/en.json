@@ -1,0 +1,35 @@
+{
+  "name": "Michele Scarpa",
+  "role": "Senior Software Engineer",
+  "bio": "Senior Full-stack Engineer with 10+ years of technical craftsmanship. Currently evolving from deep-code execution to architecting high-impact communities and engineering leadership.",
+  "experiences": [
+    {
+      "id": "startup-2026",
+      "period": "2026",
+      "label": "CURRENT",
+      "company": "Startup Engineer",
+      "description": "Cloud infrastructure development on AWS using Terraform. Advanced performance testing with k6 framework. Full integration of voice chatbots based on OpenAI APIs to improve B2C experience and processes."
+    },
+    {
+      "id": "dog-diet",
+      "period": "2025",
+      "label": "AI AUTOMATION",
+      "company": "Dog Diet Calculator",
+      "description": "Application developed entirely with an 'agentic' approach, actively leveraging Claude Code to auto-generate and execute complex nutritional diet calculation logic for veterinary use."
+    }
+  ],
+  "coreAreas": [
+    { "icon": "explore", "title": "Solid Foundation", "description": "Solid bases and scalable architectures for enterprise contexts." },
+    { "icon": "smart_toy", "title": "Modern Stack & AI", "description": "Cutting-edge technologies for rapid prototyping and advanced automation." }
+  ],
+  "projects": [
+    { "id": "venezia-spatial", "title": "VeneziaSpatial_v4.0", "description": "Enterprise real estate GIS platform managing 10k+ spatial nodes with real-time sync." },
+    { "id": "core-engine-rust", "title": "Core_Engine_Rust", "description": "High-performance data transformation engine for legacy-to-modern database migrations." },
+    { "id": "bacaro-os", "title": "BacaroOS_Platform", "description": "Community management infrastructure built for speed and distributed collaboration." },
+    { "id": "ai-proxy-gateway", "title": "AI_Proxy_Gateway", "description": "Token-throttled API gateway for managing multiple LLM provider costs and fallbacks." }
+  ],
+  "community": [
+    { "label": "FOUNDER", "title": "Co-founder, BacaroTech", "description": "Active promotion and co-founding of BacaroTech, a collective dedicated to accelerating tech development in Venice and aggregating expertise from multiple industry professionals." },
+    { "label": "DEVREL", "title": "DevRel & GDG Speaker", "description": "Regular speaker at Google Developer Groups, sharing practices on SvelteKit, agentic optimizations and advanced Frontend methodologies." }
+  ]
+}
