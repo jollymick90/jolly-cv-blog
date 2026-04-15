@@ -76,12 +76,13 @@
 			</div>
 		{/each}
 
-		<div class="flex items-center gap-2 mt-2" bind:this={inputRef}>
+		<div class="flex items-center gap-2 mt-2">
 			<span class="text-[#b3d17a] shrink-0">root@mscarpa:~#</span>
-			<input 
+			<input
+				bind:this={inputRef}
 				bind:value={inputValue}
 				onkeydown={handleKeydown}
-				type="text" 
+				type="text"
 				class="bg-transparent text-on-surface outline-none border-none flex-grow p-0 focus:ring-0 font-mono"
 				autofocus
 				autocomplete="off"
