@@ -4,7 +4,7 @@
   import type { ProfileProject, ProjectStatus } from '$lib/content/profile.d.ts';
 
   let { data }: { data: { projects: ProfileProject[] } } = $props();
-  const projects = $derived(data.projects);
+  const { projects } = data;
   const lang = $derived(page.params.lang ?? 'en');
 
   function badgeClass(status: ProjectStatus): string {
@@ -12,16 +12,16 @@
       case 'LIVE': return 'bg-tertiary text-on-tertiary';
       case 'BETA': return 'bg-surface-container-highest text-secondary';
       case 'PRIVATE': return 'border border-outline-variant text-outline-variant';
-      default: return 'border border-outline-variant text-outline-variant';
+      case 'ARCHIVE': return 'border border-outline-variant/50 text-outline-variant/50';
     }
   }
 
   function badgeIcon(status: ProjectStatus): string {
     switch (status) {
       case 'LIVE': return 'arrow_forward';
-      case 'PRIVATE': return 'lock';
       case 'BETA': return 'bolt';
-      default: return 'code';
+      case 'PRIVATE': return 'lock';
+      case 'ARCHIVE': return 'history';
     }
   }
 </script>

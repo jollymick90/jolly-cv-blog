@@ -2,21 +2,18 @@
   import { page } from '$app/state';
 
   let { data } = $props();
-  const log = $derived(data.log);
+  const { log } = data;
   const lang = $derived(page.params.lang ?? 'en');
 
   let filter = $state<'ALL' | 'ARTICLE' | 'EVENT'>('ALL');
 
   const filtered = $derived(
-    filter === 'ALL' ? log : log.filter((item: any) => item.type === filter)
+    filter === 'ALL' ? log : log.filter((item: { type: string }) => item.type === filter)
   );
 
   function formatYear(dateStr: string): string {
-    try {
-      return new Date(dateStr).getFullYear().toString();
-    } catch {
-      return '—';
-    }
+    const year = new Date(dateStr).getFullYear();
+    return isNaN(year) ? '—' : year.toString();
   }
 </script>
 
@@ -46,23 +43,23 @@
   </div>
 
   <div class="space-y-1">
-    {#each filtered as item (item.slug)}
-      {@const routeBase = item.type === 'ARTICLE' ? 'blog' : 'event'}
+    {#each filtered as item (`${item.type}:${item.slug}`)}
+      {@const routeBase = item.type === 'ARTICLE' ? 'blog' : 'speaker'}
       <a
         href="/{lang}/{routeBase}/{item.slug}"
         class="grid grid-cols-1 md:grid-cols-[120px_1fr] group no-underline"
       >
         <div class="text-[10px] font-label py-6 opacity-40 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
-          {item.metadata?.date ? formatYear(item.metadata.date) : '—'}
+          {formatYear(item.metadata.date)}
         </div>
         <div class="py-6 px-0 md:px-8 bg-surface-container-low border-l-2 border-transparent group-hover:border-tertiary group-hover:bg-surface-container transition-all">
           <div class="flex items-center gap-2 mb-1">
             <h4 class="font-bold text-on-surface group-hover:text-tertiary transition-colors font-headline">
-              {item.metadata?.title ?? item.slug}
+              {item.metadata.title}
             </h4>
             <span class="text-[9px] font-label px-2 py-0.5 bg-surface-container-highest text-secondary font-bold tracking-widest">{item.type}</span>
           </div>
-          {#if item.metadata?.description}
+          {#if item.metadata.description}
             <p class="text-sm text-secondary">{item.metadata.description}</p>
           {/if}
         </div>
