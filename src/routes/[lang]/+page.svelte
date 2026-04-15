@@ -3,13 +3,13 @@
   import { page } from '$app/state';
   import Terminal from '$lib/components/Terminal.svelte';
   import MaterialIcon from '$lib/components/shell/MaterialIcon.svelte';
-  import type { Profile } from '$lib/content/profile.d.ts';
+  import type { Profile, ProjectStatus } from '$lib/content/profile.d.ts';
 
   let { data }: { data: { profile: Profile } } = $props();
   const profile = $derived(data.profile);
   const lang = $derived(page.params.lang ?? 'en');
 
-  function badgeClass(status: string): string {
+  function badgeClass(status: ProjectStatus): string {
     switch (status) {
       case 'LIVE': return 'bg-tertiary text-on-tertiary';
       case 'BETA': return 'bg-surface-container-highest text-secondary';
@@ -61,7 +61,7 @@
       <div class="h-px grow bg-outline-variant/20"></div>
     </div>
     <div class="space-y-4">
-      {#each profile.experiences as exp}
+      {#each profile.experiences as exp (exp.id)}
         <div class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary">
           <div class="flex items-center gap-3 mb-2">
             <span class="text-xl font-bold text-on-surface group-hover:text-tertiary transition-colors font-headline">{exp.company}</span>
@@ -80,7 +80,7 @@
       <div class="h-px grow bg-outline-variant/20"></div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
-      {#each profile.coreAreas as area}
+      {#each profile.coreAreas as area (area.icon)}
         <div class="p-8 bg-surface-container hover:bg-surface-container-high transition-colors group">
           <MaterialIcon name={area.icon} class="text-tertiary mb-6 block text-4xl" />
           <h4 class="text-lg font-bold text-on-surface mb-3 font-headline">{area.title}</h4>
@@ -102,7 +102,7 @@
       <span class="text-[10px] font-label text-tertiary tracking-[0.2em]">{String(profile.projects.length).padStart(2, '0')}_ACTIVE_NODES</span>
     </div>
     <div class="space-y-4">
-      {#each profile.projects as project}
+      {#each profile.projects as project (project.id)}
         <a
           href="/{lang}/project/{project.slug}"
           class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary"
@@ -140,7 +140,7 @@
           <div class="w-10"></div>
         </div>
         <div class="p-6 font-mono text-sm space-y-1.5 md:grid md:grid-cols-2 md:gap-x-8 md:space-y-0">
-          {#each profile.stack as tech}
+          {#each profile.stack as tech (tech)}
             <div class="flex items-center gap-2">
               <span class="text-tertiary">root@mscarpa:~#</span>
               <span class="text-on-surface">{tech}</span>
@@ -161,7 +161,7 @@
       <div class="h-px grow bg-outline-variant/20"></div>
     </div>
     <div class="space-y-1">
-      {#each profile.community as entry}
+      {#each profile.community as entry (entry.label)}
         <div class="grid grid-cols-1 md:grid-cols-[140px_1fr] group">
           <div class="text-[10px] font-label py-6 opacity-40 group-hover:opacity-100 transition-opacity uppercase tracking-widest font-bold">{entry.label}</div>
           <div class="py-6 px-0 md:px-8 bg-surface-container-low border-l-2 border-transparent group-hover:border-tertiary group-hover:bg-surface-container transition-all">
