@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Cv from '$lib/components/pages/resume/CV.svelte';
 	import ContainerPrint from '$lib/components/template/ContainerPrint.svelte';
+	import { profileToResume } from '$lib/utils/config-utils';
 	import { onMount } from 'svelte';
 
 	const { data } = $props();
@@ -16,5 +17,5 @@
 </svelte:head>
 
 <ContainerPrint>
-	 <Cv resume={data.profile as any} full={true} printable={true}/>
+	 <Cv resume={profileToResume(data.profile)} full={true} printable={true}/>
 </ContainerPrint>

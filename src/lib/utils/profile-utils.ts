@@ -3,9 +3,9 @@ import common from '$content/profile/common.json';
 import profileEn from '$content/profile/en.json';
 import profileIt from '$content/profile/it.json';
 import type { Profile, ProfileProject, ProfileCoreArea, ProjectStatus } from '$lib/content/profile';
-import type { LangType } from '$lib/types';
+import type { LangAvailable } from '$lib/types';
 
-export function getProfile(lang: LangType = 'en'): Profile {
+export function getProfile(lang: LangAvailable = 'en'): Profile {
   const localized = lang === 'it' ? profileIt : profileEn;
 
   const projects: ProfileProject[] = common.projects.map((commonProject) => {
