@@ -3,7 +3,7 @@
   const { lang }: { lang: LangAvailable } = $props();
 </script>
 
-<footer class="relative w-full py-12 bg-[#131b2e] flex flex-col items-center gap-4 px-8 pb-24 md:pb-12 text-center border-t border-outline-variant/15">
+<footer class="relative w-full py-12 bg-surface-container-low flex flex-col items-center gap-4 px-8 pb-24 md:pb-12 text-center border-t border-outline-variant/15">
   <div class="text-tertiary font-mono text-xs mb-4 tracking-widest">SYSTEM_STATUS: ONLINE</div>
 
   <div class="flex flex-wrap justify-center gap-6 mb-8">

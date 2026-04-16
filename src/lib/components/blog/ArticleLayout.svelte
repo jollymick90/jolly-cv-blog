@@ -85,7 +85,7 @@
 
   <!-- Article body (prose) -->
   <div class="px-4 md:px-12 lg:px-24 max-w-[720px] mx-auto pb-16">
-    <div class="prose prose-invert max-w-none
+    <div class="prose dark:prose-invert max-w-none
       prose-headings:font-headline prose-headings:tracking-tight prose-headings:text-primary
       prose-p:text-secondary prose-p:leading-relaxed
       prose-strong:text-on-surface

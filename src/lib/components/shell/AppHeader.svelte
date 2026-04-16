@@ -18,7 +18,7 @@
   }
 </script>
 
-<header class="fixed top-0 w-full z-50 bg-[#131b2e] flex justify-between items-center px-6 py-4 border-b border-outline-variant/15">
+<header class="fixed top-0 w-full z-50 bg-surface-container-low flex justify-between items-center px-6 py-4 border-b border-outline-variant/15">
   <a href="/{lang}/" class="flex items-center gap-2 no-underline">
     <MaterialIcon name="terminal" class="text-primary" />
     <span class="text-base font-bold text-primary tracking-widest font-headline">ENGINEER_CORE_V4</span>
