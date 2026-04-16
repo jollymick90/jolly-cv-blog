@@ -5,6 +5,8 @@
 @plugin "@tailwindcss/forms";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant print (@media print);
+@custom-variant screen (@media screen);
 
 @theme {
   /* ── Typography scale ── */
@@ -39,10 +41,6 @@
   --font-headline: "Plus Jakarta Sans";
   --font-body: "Inter";
   --font-label: "Inter";
-
-  /* ── Custom breakpoints ── */
-  --breakpoint-print: print;
-  --breakpoint-screen: screen;
 
   /* ══════════════════════════════════════════════════
      SEMANTIC TOKENS — Light default (Digital Whitepaper)
