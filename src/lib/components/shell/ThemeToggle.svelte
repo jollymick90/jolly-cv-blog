@@ -5,7 +5,7 @@
 <button
   type="button"
   onclick={themeStore.toggle}
-  class="flex items-center justify-center text-primary hover:text-tertiary transition-colors"
+  class="flex items-center justify-center text-primary hover:text-tertiary transition-colors focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
   aria-label={$themeStore === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
 >
   {#if $themeStore === 'dark'}

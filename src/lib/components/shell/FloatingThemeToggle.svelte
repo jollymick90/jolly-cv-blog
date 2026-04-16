@@ -10,7 +10,7 @@
          rounded-xl
          bg-surface-container border border-outline-variant/15
          text-on-surface hover:text-tertiary
-         transition-colors"
+         transition-colors focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
   aria-label={$themeStore === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
 >
   {#if $themeStore === 'dark'}
