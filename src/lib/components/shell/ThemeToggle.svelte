@@ -3,6 +3,7 @@
 </script>
 
 <button
+  type="button"
   onclick={themeStore.toggle}
   class="flex items-center justify-center text-primary hover:text-tertiary transition-colors"
   aria-label={$themeStore === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
