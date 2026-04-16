@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { tick } from 'svelte';
+
   interface GalleryImage {
     src: string;
     alt?: string;
@@ -11,8 +13,13 @@
   let { images }: Props = $props();
 
   let lightboxIndex = $state<number | null>(null);
+  let closeButton = $state<HTMLButtonElement | null>(null);
 
-  function open(i: number) { lightboxIndex = i; }
+  async function open(i: number) {
+    lightboxIndex = i;
+    await tick();
+    closeButton?.focus();
+  }
   function close() { lightboxIndex = null; }
 
   function onKeydown(e: KeyboardEvent) {
@@ -27,7 +34,7 @@
 
 <!-- Grid -->
 <div class="my-8 grid grid-cols-2 md:grid-cols-3 gap-1">
-  {#each images as image, i (image.src)}
+  {#each images as image, i (i)}
     <button
       class="overflow-hidden aspect-video bg-surface-container-low cursor-zoom-in"
       onclick={() => open(i)}
@@ -75,9 +82,10 @@
 
     <!-- Close -->
     <button
+      bind:this={closeButton}
       class="absolute top-4 right-6 z-10 text-white/60 hover:text-white text-3xl leading-none"
       onclick={close}
-      aria-label="Close"
+      aria-label="Close lightbox"
     >✕</button>
 
     <!-- Prev / Next -->

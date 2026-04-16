@@ -6,16 +6,24 @@
   let { url }: Props = $props();
 
   function getEmbedUrl(raw: string): string | null {
-    // YouTube: watch?v=ID, youtu.be/ID, or /embed/ID
-    const yt = raw.match(
-      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/
-    );
-    if (yt) return `https://www.youtube.com/embed/${yt[1]}`;
+    let hostname: string;
+    try {
+      hostname = new URL(raw).hostname;
+    } catch {
+      return null;
+    }
 
-    // Vimeo: vimeo.com/ID or player.vimeo.com/video/ID
-    const vm = raw.match(/vimeo\.com\/(?:video\/)?(\d+)/);
-    if (vm) return `https://player.vimeo.com/video/${vm[1]}`;
+    const isYouTube = hostname === 'youtube.com' || hostname === 'www.youtube.com' || hostname === 'youtu.be';
+    const isVimeo   = hostname === 'vimeo.com'   || hostname === 'player.vimeo.com';
 
+    if (isYouTube) {
+      const yt = raw.match(/(?:watch\?v=|youtu\.be\/|\/embed\/)([a-zA-Z0-9_-]{11})/);
+      if (yt) return `https://www.youtube.com/embed/${yt[1]}`;
+    }
+    if (isVimeo) {
+      const vm = raw.match(/\/(?:video\/)?(\d+)/);
+      if (vm) return `https://player.vimeo.com/video/${vm[1]}`;
+    }
     return null;
   }
 
