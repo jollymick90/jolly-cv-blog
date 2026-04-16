@@ -1,24 +1,37 @@
+// src/routes/[lang]/blog/[slug]/+page.ts
+import { loadArticles } from '$lib/utils/blog-loader-utils';
+import { readingTime } from '$lib/utils/reading-time';
 import { defaultLang } from '$lib/i18n/lang.store.js';
+import type { PageLoad } from './$types';
 
 export const prerender = true;
 
-export async function load({ params, parent }) {
+// Static raw glob resolved at build time — individual file selected at runtime
+const rawGlob = import.meta.glob('/src/content/blog/**/*.md', { query: '?raw', import: 'default' });
+
+export const load: PageLoad = async ({ params, parent }) => {
   const dataParent = await parent();
-  const lang = dataParent.lang ?? defaultLang;
+  const activeLang = dataParent.lang ?? defaultLang;
   const { slug } = params;
 
-  try {
-    const post = await import(`../../../../content/blog/${lang}/${slug}.md`);
+  const [post, articles] = await Promise.all([
+    import(`../../../../content/blog/${activeLang}/${slug}.md`),
+    loadArticles(activeLang)
+  ]);
 
-    return {
-      metadata: post.metadata,
-      content: post.default
-    };
-  } catch (e) {
-    console.error(e);
-    return {
-      status: 404,
-      error: new Error('Post non trovato')
-    };
-  }
-}
+  const rawKey = `/src/content/blog/${activeLang}/${slug}.md`;
+  const rawLoader = rawGlob[rawKey];
+  const rawText = rawLoader ? String(await rawLoader()) : '';
+  const minutes = readingTime(rawText);
+
+  const idx = articles.findIndex(a => a.slug === slug);
+
+  return {
+    metadata: post.metadata,
+    content: post.default,
+    readingTime: minutes,
+    prev: idx > 0 ? articles[idx - 1] : null,
+    next: idx < articles.length - 1 ? articles[idx + 1] : null,
+    lang: activeLang
+  };
+};
