@@ -2,6 +2,7 @@
   import { page } from '$app/state';
   import MaterialIcon from './MaterialIcon.svelte';
   import LangDropdown from './LangDropdown.svelte';
+  import ThemeToggle from './ThemeToggle.svelte';
   import type { LangAvailable } from '$lib/types';
 
   const { lang }: { lang: LangAvailable } = $props();
@@ -42,6 +43,7 @@
     <span class="hidden md:block text-[10px] font-bold text-primary tracking-widest opacity-60">
       STATUS: AVAILABLE
     </span>
+    <ThemeToggle />
     <LangDropdown {lang} />
   </div>
 </header>

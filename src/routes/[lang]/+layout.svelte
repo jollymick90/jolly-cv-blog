@@ -2,6 +2,7 @@
   import AppHeader from '$lib/components/shell/AppHeader.svelte';
   import AppFooter from '$lib/components/shell/AppFooter.svelte';
   import BottomNav from '$lib/components/shell/BottomNav.svelte';
+  import FloatingThemeToggle from '$lib/components/shell/FloatingThemeToggle.svelte';
   import './tw.css';
 
   let { children, data } = $props();
@@ -18,4 +19,5 @@
   </main>
   <AppFooter {lang} />
   <BottomNav {lang} />
+  <FloatingThemeToggle />
 {/if}
