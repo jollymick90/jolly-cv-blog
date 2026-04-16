@@ -13,8 +13,12 @@
 
   let { metadata, readingTime, lang, prev, next, children }: Props = $props();
 
+  const localeMap: Record<string, string> = { en: 'en-GB', it: 'it-IT' };
+
   function formatDate(dateStr: string): string {
-    return new Date(dateStr).toLocaleDateString('en-GB', {
+    const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return dateStr;
+    return d.toLocaleDateString(localeMap[lang] ?? 'en-GB', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -39,7 +43,7 @@
 
   <!-- Cover image (conditional) -->
   {#if metadata.cover}
-    <div class="w-full h-[240px] md:h-[380px] overflow-hidden">
+    <div class="w-full h-[280px] md:h-[380px] overflow-hidden">
       <img
         src={metadata.cover}
         alt={metadata.title}
@@ -50,7 +54,7 @@
   {/if}
 
   <!-- Article header -->
-  <div class="px-4 md:px-12 lg:px-24 max-w-[760px] mx-auto pt-10 pb-8">
+  <div class="px-4 md:px-12 lg:px-24 max-w-[720px] mx-auto pt-10 pb-8">
     <!-- Meta bar: date · N MIN READ · tags -->
     <div class="flex flex-wrap items-center gap-3 mb-6 text-[10px] font-label tracking-widest text-secondary uppercase">
       <span>{formatDate(metadata.date)}</span>
@@ -60,7 +64,7 @@
         <span class="text-outline-variant/30">·</span>
         <div class="flex gap-2 flex-wrap">
           {#each metadata.tags as tag (tag)}
-            <span class="px-2 py-0.5 bg-surface-container text-on-surface-variant">{tag}</span>
+            <span class="text-[9px] px-2 py-0.5 bg-surface-container text-on-surface-variant font-label">{tag}</span>
           {/each}
         </div>
       {/if}
@@ -80,7 +84,7 @@
   </div>
 
   <!-- Article body (prose) -->
-  <div class="px-4 md:px-12 lg:px-24 max-w-[760px] mx-auto pb-16">
+  <div class="px-4 md:px-12 lg:px-24 max-w-[720px] mx-auto pb-16">
     <div class="prose prose-invert max-w-none
       prose-headings:font-headline prose-headings:tracking-tight prose-headings:text-primary
       prose-p:text-secondary prose-p:leading-relaxed
@@ -98,10 +102,10 @@
   <!-- Prev / Next footer -->
   {#if prev || next}
     <div class="border-t border-outline-variant/15">
-      <div class="px-4 md:px-12 lg:px-24 max-w-[760px] mx-auto py-8 flex justify-between gap-8">
+      <div class="px-4 md:px-12 lg:px-24 max-w-[720px] mx-auto py-8 flex justify-between gap-8">
         {#if prev}
           <a href="/{lang}/blog/{prev.slug}" class="group flex-1 text-left">
-            <div class="text-[9px] font-label tracking-widest text-secondary mb-1 uppercase">← Prev</div>
+            <div class="text-[10px] font-label tracking-widest text-secondary mb-1 uppercase">← Prev</div>
             <div class="text-sm font-headline font-bold text-on-surface group-hover:text-tertiary transition-colors line-clamp-2">
               {prev.metadata.title}
             </div>
@@ -111,7 +115,7 @@
         {/if}
         {#if next}
           <a href="/{lang}/blog/{next.slug}" class="group flex-1 text-right">
-            <div class="text-[9px] font-label tracking-widest text-secondary mb-1 uppercase">Next →</div>
+            <div class="text-[10px] font-label tracking-widest text-secondary mb-1 uppercase">Next →</div>
             <div class="text-sm font-headline font-bold text-on-surface group-hover:text-tertiary transition-colors line-clamp-2">
               {next.metadata.title}
             </div>
