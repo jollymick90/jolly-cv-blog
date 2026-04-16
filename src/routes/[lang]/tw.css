@@ -1,44 +1,223 @@
-@import "/node_modules/flag-icons/css/flag-icons.min.css";
+@import 'tailwindcss';
+@import "flag-icons/css/flag-icons.min.css";
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-/* @config '../typography.ts' */
-/* @custom-variant dark (&:where(.dark, .dark *)); */
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-
 @theme {
-    --text-xs: 0.8125rem;
-    --text-xs--line-height: 1.5rem;
-    --text-sm: 0.875rem;
-    --text-sm--line-height: 1.5rem;
-    --text-base: 1rem;
-    --text-base--line-height: 1.75rem;
-    --text-lg: 1.125rem;
-    --text-lg--line-height: 1.75rem;
-    --text-xl: 1.25rem;
-    --text-xl--line-height: 2rem;
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: 2rem;
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: 2.25rem;
-    --text-4xl: 2rem;
-    --text-4xl--line-height: 2.5rem;
-    --text-5xl: 3rem;
-    --text-5xl--line-height: 3.5rem;
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
-    --text-7xl: 4.5rem;
-    --text-7xl--line-height: 1;
-    --text-8xl: 6rem;
-    --text-8xl--line-height: 1;
-    --text-9xl: 8rem;
-    --text-9xl--line-height: 1;
-  }
-  
-@media print { body { -webkit-print-color-adjust: exact; } }
+  /* ── Typography scale ── */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.5rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.75rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 2rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 2.25rem;
+  --text-4xl: 2rem;
+  --text-4xl--line-height: 2.5rem;
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 3.5rem;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1;
+  --text-7xl: 4.5rem;
+  --text-7xl--line-height: 1;
+  --text-8xl: 6rem;
+  --text-8xl--line-height: 1;
+  --text-9xl: 8rem;
+  --text-9xl--line-height: 1;
 
-html {
-  scroll-behavior: smooth;
+  /* ── Font families ── */
+  --font-headline: "Plus Jakarta Sans";
+  --font-body: "Inter";
+  --font-label: "Inter";
+
+  /* ── Custom breakpoints ── */
+  --breakpoint-print: print;
+  --breakpoint-screen: screen;
+
+  /* ══════════════════════════════════════════════════
+     SEMANTIC TOKENS — Light default (Digital Whitepaper)
+     ══════════════════════════════════════════════════ */
+  --color-background: #faf8ff;
+  --color-on-background: #131b2e;
+  --color-surface: #faf8ff;
+  --color-surface-dim: #e8eaf6;
+  --color-surface-bright: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f3ff;
+  --color-surface-container: #eaedff;
+  --color-surface-container-high: #e2e7ff;
+  --color-surface-container-highest: #dae2fd;
+  --color-surface-variant: #e3e4f4;
+  --color-on-surface: #131b2e;
+  --color-on-surface-variant: #44464e;
+  --color-inverse-surface: #2e3192;
+  --color-inverse-on-surface: #f1f0f7;
+  --color-outline: #74757d;
+  --color-outline-variant: #c3c5d9;
+
+  --color-primary: #0046c9;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #dce1ff;
+  --color-on-primary-container: #001258;
+
+  --color-secondary: #5f6377;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e3e4f7;
+  --color-on-secondary-container: #1b1e30;
+
+  --color-tertiary: #465a00;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #c6ef83;
+  --color-on-tertiary-container: #132000;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #410002;
+
+  /* ══════════════════════════════════════════════════
+     STATIC TOKENS — Custom palettes (never change with theme)
+     ══════════════════════════════════════════════════ */
+  --color-white: #ffffff;
+  --color-cv-primary: #C7AB95;
+  --color-cv-secondary: #BABABA;
+  --color-exp-base: #67e8f9;
+  --color-exp-work: #57cc99;
+  --color-exp-pro: #84574a;
+
+  --color-cv-50: #f9f6f3;
+  --color-cv-100: #f1eae3;
+  --color-cv-200: #e1d3c7;
+  --color-cv-300: #c7ab95;
+  --color-cv-400: #ba947d;
+  --color-cv-500: #ac7c63;
+  --color-cv-600: #9e6b58;
+  --color-cv-700: #84574a;
+  --color-cv-800: #6c4840;
+  --color-cv-900: #583d36;
+  --color-cv-950: #2f1f1b;
+
+  --color-jm: #22d3ee;
+  --color-jm-100: #cffafe;
+  --color-jm-200: #a5f3fc;
+  --color-jm-300: #67e8f9;
+  --color-jm-400: #22d3ee;
+  --color-jm-500: #06b6d4;
+  --color-jm-600: #0891b2;
+  --color-jm-700: #0e7490;
+  --color-jm-800: #155e75;
+  --color-jm-900: #164e63;
+
+  --color-lapislazuli: #22577a;
+  --color-lapislazuli-100: #071219;
+  --color-lapislazuli-200: #0e2331;
+  --color-lapislazuli-300: #15354a;
+  --color-lapislazuli-400: #1c4663;
+  --color-lapislazuli-500: #22577a;
+  --color-lapislazuli-600: #327fb2;
+  --color-lapislazuli-700: #5aa1d1;
+  --color-lapislazuli-800: #91c1e0;
+  --color-lapislazuli-900: #c8e0f0;
+
+  --color-verdigris: #38a3a5;
+  --color-verdigris-100: #0b2021;
+  --color-verdigris-200: #164141;
+  --color-verdigris-300: #226162;
+  --color-verdigris-400: #2d8183;
+  --color-verdigris-500: #38a3a5;
+  --color-verdigris-600: #52c2c4;
+  --color-verdigris-700: #7dd1d3;
+  --color-verdigris-800: #a8e0e1;
+  --color-verdigris-900: #d4f0f0;
+
+  --color-emerald: #57cc99;
+  --color-emerald-100: #0e2c1f;
+  --color-emerald-200: #1b593e;
+  --color-emerald-300: #29855d;
+  --color-emerald-400: #37b27c;
+  --color-emerald-500: #57cc99;
+  --color-emerald-600: #79d6ad;
+  --color-emerald-700: #9ae0c2;
+  --color-emerald-800: #bcead6;
+  --color-emerald-900: #ddf5eb;
+
+  --color-lightgreen: #80ed99;
+  --color-lightgreen-100: #094016;
+  --color-lightgreen-200: #12812c;
+  --color-lightgreen-300: #1cc142;
+  --color-lightgreen-400: #42e468;
+  --color-lightgreen-500: #80ed99;
+  --color-lightgreen-600: #9bf1af;
+  --color-lightgreen-700: #b4f4c3;
+  --color-lightgreen-800: #cdf8d7;
+  --color-lightgreen-900: #e6fbeb;
+
+  --color-teagreen: #c7f9cc;
+  --color-teagreen-100: #095110;
+  --color-teagreen-200: #11a220;
+  --color-teagreen-300: #25e839;
+  --color-teagreen-400: #76f183;
+  --color-teagreen-500: #c7f9cc;
+  --color-teagreen-600: #d3fad7;
+  --color-teagreen-700: #defce1;
+  --color-teagreen-800: #e9fdeb;
+  --color-teagreen-900: #f4fef5;
 }
+
+/* ══════════════════════════════════════════════════
+   Dark override (Digital Blueprint)
+   Applied when <html data-theme="dark">
+   ══════════════════════════════════════════════════ */
+[data-theme=dark] {
+  --color-background: #0b1326;
+  --color-on-background: #dae2fd;
+  --color-surface: #0b1326;
+  --color-surface-dim: #0b1326;
+  --color-surface-bright: #31394d;
+  --color-surface-container-lowest: #060e20;
+  --color-surface-container-low: #131b2e;
+  --color-surface-container: #171f33;
+  --color-surface-container-high: #222a3d;
+  --color-surface-container-highest: #2d3449;
+  --color-surface-variant: #2d3449;
+  --color-on-surface: #dae2fd;
+  --color-on-surface-variant: #c6c6cd;
+  --color-inverse-surface: #dae2fd;
+  --color-inverse-on-surface: #283044;
+  --color-outline: #909097;
+  --color-outline-variant: #45464d;
+
+  --color-primary: #bec6e0;
+  --color-on-primary: #283044;
+  --color-primary-container: #0f172a;
+  --color-on-primary-container: #798098;
+
+  --color-secondary: #b9c7e0;
+  --color-on-secondary: #233144;
+  --color-secondary-container: #3c4a5e;
+  --color-on-secondary-container: #abb9d2;
+
+  --color-tertiary: #b3d17a;
+  --color-on-tertiary: #243600;
+  --color-tertiary-container: #101b00;
+  --color-on-tertiary-container: #6f8a3c;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+}
+
+/* ── Global ── */
+@media print { body { -webkit-print-color-adjust: exact; } }
+html { scroll-behavior: smooth; }
