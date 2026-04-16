@@ -1,0 +1,5 @@
+{"type":"server-started","port":54275,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:54275","screen_dir":"/Users/jollymick/SProject/jolly-cv-blog/.superpowers/brainstorm/27892-1776288105/content","state_dir":"/Users/jollymick/SProject/jolly-cv-blog/.superpowers/brainstorm/27892-1776288105/state"}
+{"type":"screen-added","file":"/Users/jollymick/SProject/jolly-cv-blog/.superpowers/brainstorm/27892-1776288105/content/current-state.html"}
+{"type":"screen-added","file":"/Users/jollymick/SProject/jolly-cv-blog/.superpowers/brainstorm/27892-1776288105/content/nav-mapping.html"}
+{"type":"screen-added","file":"/Users/jollymick/SProject/jolly-cv-blog/.superpowers/brainstorm/27892-1776288105/content/shell-design.html"}
+{"type":"server-stopped","reason":"idle timeout"}

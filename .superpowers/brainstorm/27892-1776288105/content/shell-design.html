@@ -1,0 +1,112 @@
+<h2>Nuovo Shell — Struttura Componenti</h2>
+<p class="subtitle">Anatomia del layout che rimpiazza il vecchio Spotlight template</p>
+
+<div class="section" style="margin-top:24px;">
+
+  <!-- MOCKUP DESKTOP -->
+  <h3 style="margin-bottom:12px;">Desktop</h3>
+  <div class="mockup" style="background:#0b1326;font-family:'Inter',sans-serif;border:1px solid #2d3449;">
+    <div class="mockup-header" style="background:#131b2e;color:#888;font-size:11px;">Header.svelte — fixed, z-50</div>
+    <div class="mockup-body" style="padding:0;">
+
+      <!-- HEADER -->
+      <div style="background:#131b2e;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(69,70,77,0.15);">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span style="color:#bec6e0;font-size:14px;">⌨</span>
+          <span style="color:#bec6e0;font-size:12px;font-weight:700;letter-spacing:0.15em;">ENGINEER_CORE_V4</span>
+        </div>
+        <nav style="display:flex;gap:20px;align-items:center;">
+          <span style="color:#b3d17a;font-size:11px;font-weight:700;letter-spacing:0.1em;">DEPLOYS</span>
+          <span style="color:#bec6e0;font-size:11px;font-weight:700;letter-spacing:0.1em;opacity:0.7;">BIO</span>
+          <span style="color:#bec6e0;font-size:11px;font-weight:700;letter-spacing:0.1em;opacity:0.7;">COMMUNITY</span>
+        </nav>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <!-- Lang Dropdown -->
+          <div style="background:#171f33;border:1px solid rgba(69,70,77,0.3);padding:4px 10px;font-size:10px;color:#bec6e0;letter-spacing:0.1em;cursor:pointer;">
+            🌐 EN ▾
+            <div style="font-size:9px;color:#888;margin-top:2px;">(dropdown → IT/EN + theme toggle)</div>
+          </div>
+          <span style="font-size:10px;color:#b3d17a;letter-spacing:0.15em;opacity:0.6;">STATUS: AVAILABLE</span>
+        </div>
+      </div>
+
+      <!-- CONTENT AREA -->
+      <div style="padding:32px 24px;min-height:120px;background:#0b1326;">
+        <div style="color:#555;font-size:12px;text-align:center;padding:20px 0;">
+          ↕ {children} — contenuto della pagina
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div style="background:#131b2e;padding:20px 24px;text-align:center;border-top:1px solid rgba(69,70,77,0.15);">
+        <div style="color:#b3d17a;font-size:10px;letter-spacing:0.15em;margin-bottom:8px;">SYSTEM_STATUS: ONLINE</div>
+        <div style="display:flex;justify-content:center;gap:20px;">
+          <span style="color:#888;font-size:10px;">GITHUB</span>
+          <span style="color:#888;font-size:10px;">LINKEDIN</span>
+          <span style="color:#888;font-size:10px;">DOWNLOAD_CV</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOCKUP MOBILE -->
+  <h3 style="margin:24px 0 12px;">Mobile</h3>
+  <div style="display:flex;gap:24px;align-items:flex-start;">
+    <div class="mockup" style="width:260px;background:#0b1326;font-family:'Inter',sans-serif;border:1px solid #2d3449;">
+      <div class="mockup-header" style="background:#131b2e;color:#888;font-size:11px;">Mobile view</div>
+      <div class="mockup-body" style="padding:0;">
+        <!-- MOBILE HEADER (simplified) -->
+        <div style="background:#131b2e;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="color:#bec6e0;font-size:11px;font-weight:700;letter-spacing:0.1em;">ENG_CORE</span>
+          <div style="background:#171f33;padding:3px 8px;font-size:10px;color:#bec6e0;">🌐 EN ▾</div>
+        </div>
+        <!-- CONTENT -->
+        <div style="padding:20px 16px;min-height:100px;background:#0b1326;">
+          <div style="color:#555;font-size:11px;text-align:center;padding:16px 0;">{children}</div>
+        </div>
+        <!-- BOTTOM NAV (fixed) -->
+        <div style="background:rgba(11,19,38,0.9);border-top:1px solid rgba(69,70,77,0.15);padding:8px 0;display:flex;justify-content:space-around;">
+          <div style="text-align:center;">
+            <div style="font-size:16px;">🚀</div>
+            <div style="font-size:9px;color:#b3d17a;font-weight:700;letter-spacing:0.1em;">DEPLOYS</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:16px;">👤</div>
+            <div style="font-size:9px;color:#888;letter-spacing:0.1em;">BIO</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:16px;">👥</div>
+            <div style="font-size:9px;color:#888;letter-spacing:0.1em;">COMMUNITY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPONENT LIST -->
+    <div style="flex:1;">
+      <div class="label" style="margin-bottom:12px;">Nuovi componenti — src/lib/components/shell/</div>
+      <div style="display:grid;gap:8px;">
+        <div style="background:#171f33;padding:10px 14px;border-radius:4px;border-left:2px solid #b3d17a;">
+          <div style="font-size:12px;color:#bec6e0;font-weight:600;">AppHeader.svelte</div>
+          <div style="font-size:11px;color:#888;margin-top:2px;">fixed top • logo • desktop nav • lang dropdown</div>
+        </div>
+        <div style="background:#171f33;padding:10px 14px;border-radius:4px;border-left:2px solid #b3d17a;">
+          <div style="font-size:12px;color:#bec6e0;font-weight:600;">AppFooter.svelte</div>
+          <div style="font-size:11px;color:#888;margin-top:2px;">status • social links • copyright</div>
+        </div>
+        <div style="background:#171f33;padding:10px 14px;border-radius:4px;border-left:2px solid #b3d17a;">
+          <div style="font-size:12px;color:#bec6e0;font-weight:600;">BottomNav.svelte</div>
+          <div style="font-size:11px;color:#888;margin-top:2px;">md:hidden • fixed bottom • 3 voci • active indicator tertiary</div>
+        </div>
+        <div style="background:#171f33;padding:10px 14px;border-radius:4px;border-left:2px solid #b3d17a;">
+          <div style="font-size:12px;color:#bec6e0;font-weight:600;">LangDropdown.svelte</div>
+          <div style="font-size:11px;color:#888;margin-top:2px;">IT/EN switch + theme toggle integrato</div>
+        </div>
+        <div style="background:#171f33;padding:10px 14px;border-radius:4px;border-left:2px solid #909097;">
+          <div style="font-size:12px;color:#909097;font-weight:600;">[lang]/+layout.svelte</div>
+          <div style="font-size:11px;color:#888;margin-top:2px;">rimpiazza wrapper zinc • usa AppHeader + AppFooter + BottomNav</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -54,25 +54,6 @@
     </div>
   </section>
 
-  <!-- Recent Experience -->
-  <section class="mb-24">
-    <div class="flex items-center gap-4 mb-12">
-      <h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Recent Experience</h3>
-      <div class="h-px grow bg-outline-variant/20"></div>
-    </div>
-    <div class="space-y-4">
-      {#each profile.experiences as exp (exp.id)}
-        <div class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-xl font-bold text-on-surface group-hover:text-tertiary transition-colors font-headline">{exp.company}</span>
-            <span class="text-[9px] font-label px-2 py-0.5 font-bold tracking-widest uppercase {exp.label === 'CURRENT' ? 'bg-tertiary text-on-tertiary' : 'border border-tertiary text-tertiary'}">{exp.label}</span>
-          </div>
-          <p class="text-sm text-secondary/80 mt-2 max-w-3xl leading-relaxed">{exp.description}</p>
-        </div>
-      {/each}
-    </div>
-  </section>
-
   <!-- Core Architecture -->
   <section class="mb-24">
     <div class="flex items-center gap-4 mb-12">
@@ -90,6 +71,25 @@
               <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary inline-block"></span> {tag}</li>
             {/each}
           </ul>
+        </div>
+      {/each}
+    </div>
+  </section>
+
+  <!-- Recent Experience -->
+  <section class="mb-24">
+    <div class="flex items-center gap-4 mb-12">
+      <h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Recent Experience</h3>
+      <div class="h-px grow bg-outline-variant/20"></div>
+    </div>
+    <div class="space-y-4">
+      {#each profile.experiences as exp (exp.id)}
+        <div class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-xl font-bold text-on-surface group-hover:text-tertiary transition-colors font-headline">{exp.company}</span>
+            <span class="text-[9px] font-label px-2 py-0.5 font-bold tracking-widest uppercase {exp.label === 'CURRENT' ? 'bg-tertiary text-on-tertiary' : 'border border-tertiary text-tertiary'}">{exp.label}</span>
+          </div>
+          <p class="text-sm text-secondary/80 mt-2 max-w-3xl leading-relaxed">{exp.description}</p>
         </div>
       {/each}
     </div>

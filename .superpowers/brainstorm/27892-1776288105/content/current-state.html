@@ -1,0 +1,76 @@
+<h2>Stato Attuale — Gap Analysis</h2>
+<p class="subtitle">Cosa esiste oggi vs cosa vuole il nuovo design</p>
+
+<div class="section" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;">
+
+  <!-- CURRENT -->
+  <div style="border:1px solid #444;border-radius:8px;padding:20px;background:#1a1a2e;">
+    <div class="label" style="color:#e07b54;margin-bottom:12px;">⚠ STATO ATTUALE</div>
+
+    <div style="background:#2a2a3e;border-radius:6px;padding:12px;margin-bottom:10px;">
+      <div style="font-size:11px;color:#aaa;margin-bottom:4px;">SHELL / LAYOUT</div>
+      <div style="font-size:13px;color:#f5c842;">Old Spotlight template</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">zinc/white palette • avatar • ThemeToggle • zinc nav</div>
+    </div>
+
+    <div style="background:#2a2a3e;border-radius:6px;padding:12px;margin-bottom:10px;">
+      <div style="font-size:11px;color:#aaa;margin-bottom:4px;">HOMEPAGE [lang]/+page.svelte</div>
+      <div style="font-size:13px;color:#f5c842;">Parzialmente migrata</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">nuovo stile ✓ • contenuti hardcoded in italiano • nessun link a dati centrali</div>
+    </div>
+
+    <div style="background:#2a2a3e;border-radius:6px;padding:12px;margin-bottom:10px;">
+      <div style="font-size:11px;color:#aaa;margin-bottom:4px;">CONTENUTI PROFILO</div>
+      <div style="font-size:13px;color:#e07b54;">Sparsi in 5+ posti</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">resume/en.json • resume/it.json • common.json • i18n/en.json • hardcoded in .svelte</div>
+    </div>
+
+    <div style="background:#2a2a3e;border-radius:6px;padding:12px;margin-bottom:10px;">
+      <div style="font-size:11px;color:#aaa;margin-bottom:4px;">PAGINE INTERNE (CV, Blog, Project)</div>
+      <div style="font-size:13px;color:#e07b54;">Vecchio design</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">zinc/white • componenti old-template</div>
+    </div>
+
+    <div style="background:#2a2a3e;border-radius:6px;padding:12px;">
+      <div style="font-size:11px;color:#aaa;margin-bottom:4px;">NAV STRUCTURE</div>
+      <div style="font-size:13px;color:#e07b54;">Mismatch</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">vecchie sezioni • no DEPLOYS/BIO/COMMUNITY/CONFIG</div>
+    </div>
+  </div>
+
+  <!-- TARGET -->
+  <div style="border:1px solid #444;border-radius:8px;padding:20px;background:#0b1326;">
+    <div class="label" style="color:#b3d17a;margin-bottom:12px;">✓ TARGET — Nuovo Design</div>
+
+    <div style="background:#171f33;border-radius:6px;padding:12px;margin-bottom:10px;">
+      <div style="font-size:11px;color:#aaa;margin-bottom:4px;">SHELL / LAYOUT</div>
+      <div style="font-size:13px;color:#b3d17a;">Digital Blueprint</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">navy palette • fixed header dark • bottom nav mobile • no avatar • dark-only</div>
+    </div>
+
+    <div style="background:#171f33;border-radius:6px;padding:12px;margin-bottom:10px;">
+      <div style="font-size:11px;color:#aaa;margin-bottom:4px;">HOMEPAGE</div>
+      <div style="font-size:13px;color:#b3d17a;">Completamente migrata</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">dati da sorgente centrale • bilingue • sezioni da template</div>
+    </div>
+
+    <div style="background:#171f33;border-radius:6px;padding:12px;margin-bottom:10px;">
+      <div style="font-size:11px;color:#aaa;margin-bottom:4px;">CONTENUTI PROFILO</div>
+      <div style="font-size:13px;color:#b3d17a;">Centralizzati</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">un unico profile.json (o .ts) come source of truth • bilingue • strutturato</div>
+    </div>
+
+    <div style="background:#171f33;border-radius:6px;padding:12px;margin-bottom:10px;">
+      <div style="font-size:11px;color:#aaa;margin-bottom:4px;">PAGINE INTERNE</div>
+      <div style="font-size:13px;color:#bec6e0;">Da decidere ↓</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">same shell • stile blueprint • nessun elemento zinc</div>
+    </div>
+
+    <div style="background:#171f33;border-radius:6px;padding:12px;">
+      <div style="font-size:11px;color:#aaa;margin-bottom:4px;">NAV STRUCTURE</div>
+      <div style="font-size:13px;color:#b3d17a;">DEPLOYS / BIO / COMMUNITY / CONFIG</div>
+      <div style="font-size:11px;color:#888;margin-top:4px;">Material Symbols • active state tertiary indicator</div>
+    </div>
+  </div>
+
+</div>
