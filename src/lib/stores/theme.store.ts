@@ -20,7 +20,9 @@ function createThemeStore() {
     },
     toggle() {
       if (!browser) return;
-      const current = localStorage.getItem(STORAGE_KEY) === 'light' ? 'light' : 'dark';
+      let current: Theme = DEFAULT_THEME;
+      const unsub = subscribe((v) => (current = v));
+      unsub();
       const next: Theme = current === 'dark' ? 'light' : 'dark';
       localStorage.setItem(STORAGE_KEY, next);
       document.documentElement.setAttribute('data-theme', next);
