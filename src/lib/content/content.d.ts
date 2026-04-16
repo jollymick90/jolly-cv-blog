@@ -1,12 +1,13 @@
 export type ArticleFormat = {
-    slug: string;
-    metadata: {
-        title: string;
-        date: string;
-        description: string;
-    }
-
-}
+  slug: string;
+  metadata: {
+    title: string;
+    date: string;
+    description: string;
+    cover?: string;
+    tags?: string[];
+  };
+};
 
 export type ProjectFormat = {
     slug: string;
