@@ -1,0 +1,104 @@
+<h2>Article Layout — Scegli la struttura</h2>
+<p class="subtitle">Come appare la pagina di un post nel nuovo design Digital Blueprint</p>
+
+<div class="cards" style="margin-top:24px;grid-template-columns:1fr 1fr 1fr;">
+
+  <!-- A: Single Column Whitepaper -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0b1326;padding:12px;min-height:280px;font-family:monospace;">
+      <!-- cover image full width -->
+      <div style="background:#1a2744;height:80px;width:100%;margin-bottom:8px;display:flex;align-items:center;justify-content:center;">
+        <span style="color:#555;font-size:9px;">COVER IMAGE</span>
+      </div>
+      <!-- narrow reading column centered -->
+      <div style="max-width:75%;margin:0 auto;">
+        <div style="background:#b3d17a;height:2px;width:30px;margin-bottom:6px;"></div>
+        <div style="background:#bec6e0;height:10px;width:90%;margin-bottom:4px;opacity:0.9;"></div>
+        <div style="background:#555;height:6px;width:60%;margin-bottom:10px;"></div>
+        <div style="background:#2d3449;height:4px;width:100%;margin-bottom:3px;"></div>
+        <div style="background:#2d3449;height:4px;width:95%;margin-bottom:3px;"></div>
+        <div style="background:#2d3449;height:4px;width:88%;margin-bottom:3px;"></div>
+        <div style="background:#2d3449;height:4px;width:100%;margin-bottom:3px;"></div>
+        <div style="background:#171f33;height:40px;width:100%;margin:8px 0;border-left:2px solid #b3d17a;"></div>
+        <div style="background:#2d3449;height:4px;width:100%;margin-bottom:3px;"></div>
+        <div style="background:#2d3449;height:4px;width:90%;margin-bottom:3px;"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Colonna Centrata</h3>
+      <p>Cover full-width + colonna stretta (~720px) centrata. Layout "Whitepaper" accademico, massima leggibilità. Nessuna sidebar.</p>
+    </div>
+  </div>
+
+  <!-- B: Wide + TOC Sidebar -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0b1326;padding:12px;min-height:280px;font-family:monospace;">
+      <!-- cover image -->
+      <div style="background:#1a2744;height:60px;width:100%;margin-bottom:8px;display:flex;align-items:center;justify-content:center;">
+        <span style="color:#555;font-size:9px;">COVER IMAGE</span>
+      </div>
+      <!-- two column: content + sidebar -->
+      <div style="display:grid;grid-template-columns:1fr 28%;gap:8px;">
+        <div>
+          <div style="background:#bec6e0;height:10px;width:90%;margin-bottom:4px;opacity:0.9;"></div>
+          <div style="background:#555;height:5px;width:55%;margin-bottom:8px;"></div>
+          <div style="background:#2d3449;height:4px;width:100%;margin-bottom:3px;"></div>
+          <div style="background:#2d3449;height:4px;width:95%;margin-bottom:3px;"></div>
+          <div style="background:#2d3449;height:4px;width:88%;margin-bottom:3px;"></div>
+          <div style="background:#171f33;height:30px;width:100%;margin:6px 0;border-left:2px solid #b3d17a;"></div>
+          <div style="background:#2d3449;height:4px;width:100%;margin-bottom:3px;"></div>
+          <div style="background:#2d3449;height:4px;width:92%;margin-bottom:3px;"></div>
+        </div>
+        <div style="background:#131b2e;padding:6px;">
+          <div style="color:#b3d17a;font-size:7px;letter-spacing:0.1em;margin-bottom:4px;">TOC</div>
+          <div style="background:#2d3449;height:3px;width:80%;margin-bottom:3px;"></div>
+          <div style="background:#2d3449;height:3px;width:70%;margin-bottom:3px;"></div>
+          <div style="background:#b3d17a;height:3px;width:60%;margin-bottom:3px;opacity:0.5;"></div>
+          <div style="background:#2d3449;height:3px;width:75%;margin-bottom:3px;"></div>
+          <div style="color:#555;font-size:7px;margin-top:8px;">TAGS</div>
+          <div style="display:flex;gap:2px;flex-wrap:wrap;margin-top:3px;">
+            <div style="background:#1a2744;height:8px;width:20px;"></div>
+            <div style="background:#1a2744;height:8px;width:25px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Wide + Sidebar TOC</h3>
+      <p>Cover + layout a due colonne: contenuto a sinistra, sidebar sticky con table of contents e tag a destra.</p>
+    </div>
+  </div>
+
+  <!-- C: Full-bleed hero -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0b1326;padding:0;min-height:280px;font-family:monospace;overflow:hidden;">
+      <!-- full bleed hero with title overlay -->
+      <div style="position:relative;height:100px;background:linear-gradient(135deg,#131b2e,#1a2744);display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px;">
+        <div style="background:#b3d17a;height:2px;width:24px;margin-bottom:4px;"></div>
+        <div style="background:#bec6e0;height:8px;width:85%;margin-bottom:3px;opacity:0.9;"></div>
+        <div style="background:#555;height:5px;width:50%;"></div>
+      </div>
+      <!-- content below hero -->
+      <div style="padding:10px 12px;">
+        <div style="background:#2d3449;height:4px;width:100%;margin-bottom:3px;"></div>
+        <div style="background:#2d3449;height:4px;width:95%;margin-bottom:3px;"></div>
+        <div style="background:#2d3449;height:4px;width:88%;margin-bottom:8px;"></div>
+        <!-- image inline -->
+        <div style="background:#1a2744;height:35px;width:100%;margin-bottom:6px;display:flex;align-items:center;justify-content:center;">
+          <span style="color:#555;font-size:8px;">IMAGE</span>
+        </div>
+        <div style="background:#2d3449;height:4px;width:100%;margin-bottom:3px;"></div>
+        <div style="background:#2d3449;height:4px;width:92%;margin-bottom:3px;"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Hero Full-Bleed</h3>
+      <p>Nessuna cover separata — il titolo è sovrapposto all'immagine hero. Effetto "magazine", più visivo ma meno leggibile su mobile.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="section" style="margin-top:16px;background:#171f33;padding:12px 16px;border-left:2px solid #b3d17a;">
+  <span class="label">Nota:</span> tutti e tre i layout supportano immagini inline, video embed, callout e gallery. La scelta è solo sulla struttura della pagina.
+</div>

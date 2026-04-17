@@ -1,21 +1,28 @@
 {
   "name": "Michele Scarpa",
-  "role": "Senior Software Engineer",
-  "bio": "Senior Software Engineer con 10 anni di esperienza. Costruisco applicazioni web e mobile  — da sistemi enterprise a chatbot vocali AI — e mi piace condividere quello che imparo, attraverso community, talk e mentoring.",
+  "role": "Senior Software Engineer & Solution Builder",
+  "bio": "Oltre 10 anni di esperienza nella progettazione di prodotti digitali. Specializzato in sistemi GIS, automazione AI e modernizzazione di architetture legacy. Unisco rigore ingegneristico e rapid prototyping.",
   "experiences": [
     {
       "id": "startup-2026",
       "period": "2026",
       "label": "CURRENT",
       "company": "Startup Engineer",
-      "description": "Sviluppo di infrastrutture cloud su AWS tramite codice Terraform. Esecuzione di performance testing avanzato col framework k6. Pieno coinvolgimento nell'integrazione di chatbot vocali basati sulle API di OpenAI per migliorare l'esperienza e i processi B2C."
+      "description": "Sviluppo di infrastrutture cloud su AWS tramite Terraform. Performance testing avanzato con k6. Integrazione completa di chatbot vocali basati su OpenAI per migliorare l'esperienza B2C."
     },
     {
-      "id": "dog-diet",
-      "period": "2025",
-      "label": "AI AUTOMATION",
-      "company": "Dog Diet Calculator",
-      "description": "Applicazione sviluppata interamente in ottica 'agentic', sfruttando attivamente Claude Code per autogenerare ed eseguire la logica di calcolo complessa delle diete nutrizionali ad uso veterinario."
+      "id": "viasat-almaviva",
+      "period": "2021–2025",
+      "label": "GIS LEAD",
+      "company": "Viasat / Almaviva",
+      "description": "Architettura di sistemi geospaziali per la Pubblica Amministrazione con oltre 5 milioni di record e tempi di risposta inferiori a 200ms. Guida della migrazione da Angular a React/GraphQL su codebase enterprise."
+    },
+    {
+      "id": "red-v",
+      "period": "2015–2021",
+      "label": "FULLSTACK",
+      "company": "Red-V Digital",
+      "description": "Sviluppo di un ecosistema IoT completo per oltre 500 installazioni professionali di digital signage, curando l'intera catena dal firmware al cloud."
     }
   ],
   "coreAreas": [
@@ -24,13 +31,27 @@
     { "icon": "smart_toy", "title": "AI & Conversational UX", "description": "Integrazione di LLM nei flussi aziendali. Costruzione di sistemi RAG robusti e orchestrazione di chatbot context-aware." }
   ],
   "projects": [
-    { "id": "venezia-spatial", "title": "VeneziaSpatial_v4.0", "description": "Piattaforma GIS immobiliare enterprise che gestisce 10k+ nodi spaziali con sync real-time." },
-    { "id": "core-engine-rust", "title": "Core_Engine_Rust", "description": "Motore di trasformazione dati ad alte prestazioni per migrazioni da database legacy a moderni." },
-    { "id": "bacaro-os", "title": "BacaroOS_Platform", "description": "Infrastruttura di community management costruita per velocità e collaborazione distribuita." },
-    { "id": "ai-proxy-gateway", "title": "AI_Proxy_Gateway", "description": "API gateway con throttling token per gestire costi e fallback di più provider LLM." }
+    {
+      "id": "ai-engine",
+      "title": "Motore Decisionale AI-Driven",
+      "description": "Sistema complesso basato su TDD sviluppato in solitaria, sostituendo il lavoro di un team da 4 persone tramite workflow agentici.",
+      "metrics": ["Velocità di sviluppo +300%", "Copertura test 100% (TDD)", "Lavoro di 4 persone gestito in solitaria"]
+    },
+    {
+      "id": "gis-almaviva",
+      "title": "Sistemi GIS Big Data",
+      "description": "Architetture geospaziali per la Pubblica Amministrazione con latenza inferiore a 200ms su scala enterprise.",
+      "metrics": ["5M+ punti dati geospaziali", "Latenza <200ms", "Migliaia di dipendenti PA serviti"]
+    },
+    {
+      "id": "digital-signage",
+      "title": "Ecosistema Digital Signage",
+      "description": "Ecosistema IoT full-stack per installazioni professionali, dalla gestione hardware al browser.",
+      "metrics": ["500+ installazioni attive", "Sincronizzazione real-time", "Ownership completa hardware-to-cloud"]
+    }
   ],
   "community": [
-    { "label": "FOUNDER", "title": "Co-founder, BacaroTech", "description": "Promozione attiva e co-fondazione di BacaroTech, collettivo dedicato ad accelerare lo sviluppo tech in laguna e aggregare l'esperienza di molteplici professionisti del settore." },
-    { "label": "DEVREL", "title": "DevRel & GDG Speaker", "description": "Speaker abituale presso Google Developer Groups, dove condivido pratiche su SvelteKit, ottimizzazioni agentiche e metodologie Frontend avanzate." }
+    { "label": "FOUNDER", "title": "Co-founder, BacaroTech", "description": "Guida di una community tecnica e gestione media partnership per eventi nazionali. Aggregazione di expertise da molteplici professionisti del settore." },
+    { "label": "DEVREL", "title": "DevRel & GDG Speaker", "description": "Speaker abituale ai Google Developer Groups su SvelteKit, workflow agentici e metodologie Frontend avanzate." }
   ]
 }

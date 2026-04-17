@@ -1,21 +1,28 @@
 {
   "name": "Michele Scarpa",
-  "role": "Senior Software Engineer",
-  "bio": "Senior Full-stack Engineer with 10+ years of technical craftsmanship. Currently evolving from deep-code execution to architecting high-impact communities and engineering leadership.",
+  "role": "Senior Software Engineer & Solution Builder",
+  "bio": "10+ years of experience in architecting digital products. Specialized in GIS systems, AI automation, and legacy modernization. Combining engineering rigor with a rapid prototyping mindset.",
   "experiences": [
     {
       "id": "startup-2026",
       "period": "2026",
       "label": "CURRENT",
       "company": "Startup Engineer",
-      "description": "Cloud infrastructure development on AWS using Terraform. Advanced performance testing with k6 framework. Full integration of voice chatbots based on OpenAI APIs to improve B2C experience and processes."
+      "description": "Cloud infrastructure on AWS with Terraform. Advanced performance testing with k6. Full integration of voice chatbots powered by OpenAI APIs to improve B2C experience and processes."
     },
     {
-      "id": "dog-diet",
-      "period": "2025",
-      "label": "AI AUTOMATION",
-      "company": "Dog Diet Calculator",
-      "description": "Application developed entirely with an 'agentic' approach, actively leveraging Claude Code to auto-generate and execute complex nutritional diet calculation logic for veterinary use."
+      "id": "viasat-almaviva",
+      "period": "2021–2025",
+      "label": "GIS LEAD",
+      "company": "Viasat Almaviva",
+      "description": "Architected geospatial systems for Public Administration handling 5M+ spatial records with <200ms response times. Led migration from Angular to React/GraphQL across enterprise codebases."
+    },
+    {
+      "id": "red-v",
+      "period": "2015–2019",
+      "label": "FULLSTACK",
+      "company": "Red-V Digital",
+      "description": "Engineered a complete IoT ecosystem for 500+ active professional digital signage installations, managing the full stack from firmware to cloud."
     }
   ],
   "coreAreas": [
@@ -24,13 +31,27 @@
     { "icon": "smart_toy", "title": "AI & Conversational UX", "description": "Integrating LLMs into business workflows. Building robust RAG systems and context-aware chatbot orchestration." }
   ],
   "projects": [
-    { "id": "venezia-spatial", "title": "VeneziaSpatial_v4.0", "description": "Enterprise real estate GIS platform managing 10k+ spatial nodes with real-time sync." },
-    { "id": "core-engine-rust", "title": "Core_Engine_Rust", "description": "High-performance data transformation engine for legacy-to-modern database migrations." },
-    { "id": "bacaro-os", "title": "BacaroOS_Platform", "description": "Community management infrastructure built for speed and distributed collaboration." },
-    { "id": "ai-proxy-gateway", "title": "AI_Proxy_Gateway", "description": "Token-throttled API gateway for managing multiple LLM provider costs and fallbacks." }
+    {
+      "id": "ai-engine",
+      "title": "AI-Driven Decision Engine",
+      "description": "Complex TDD-based system developed solo, replacing the output of a 4-person team via agentic AI workflows.",
+      "metrics": ["+300% development velocity", "100% Test Coverage (TDD)", "4-person workload handled solo"]
+    },
+    {
+      "id": "gis-almaviva",
+      "title": "Big Data GIS Systems",
+      "description": "Geospatial architectures for Government projects, ensuring sub-200ms responsiveness at scale.",
+      "metrics": ["5M+ geospatial data points", "<200ms latency", "Thousands of Gov employees served"]
+    },
+    {
+      "id": "digital-signage",
+      "title": "Digital Signage Ecosystem",
+      "description": "Full-stack IoT ecosystem for professional installations, managing everything from hardware to browser.",
+      "metrics": ["500+ active installations", "Real-time synchronization", "Hardware-to-Cloud full ownership"]
+    }
   ],
   "community": [
-    { "label": "FOUNDER", "title": "Co-founder, BacaroTech", "description": "Active promotion and co-founding of BacaroTech, a collective dedicated to accelerating tech development in Venice and aggregating expertise from multiple industry professionals." },
-    { "label": "DEVREL", "title": "DevRel & GDG Speaker", "description": "Regular speaker at Google Developer Groups, sharing practices on SvelteKit, agentic optimizations and advanced Frontend methodologies." }
+    { "label": "FOUNDER", "title": "Co-founder, BacaroTech", "description": "Leading a tech community and managing media partnerships for national events. Aggregating expertise across multiple industry professionals." },
+    { "label": "DEVREL", "title": "DevRel & GDG Speaker", "description": "Regular speaker at Google Developer Groups, sharing practices on SvelteKit, agentic workflows, and advanced Frontend methodologies." }
   ]
 }

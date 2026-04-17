@@ -1,0 +1,154 @@
+<h2>Article Design — Digital Blueprint</h2>
+<p class="subtitle">Layout completo: header, corpo, componenti custom. Clicca "APPROVE" in fondo se va bene.</p>
+
+<div class="section" style="margin-top:24px;">
+
+  <div class="mockup" style="background:#0b1326;font-family:'Inter',sans-serif;max-width:860px;margin:0 auto;">
+    <div class="mockup-header" style="background:#131b2e;color:#888;font-size:11px;">
+      /en/blog/mastering-throttling — ArticleLayout.svelte (nuovo)
+    </div>
+    <div class="mockup-body" style="padding:0;">
+
+      <!-- BACK NAV -->
+      <div style="padding:16px 24px;border-bottom:1px solid rgba(69,70,77,0.15);">
+        <span style="font-size:10px;font-family:'Space Grotesk',monospace;color:#b3d17a;letter-spacing:0.15em;cursor:pointer;">← COMMUNITY_LOG</span>
+      </div>
+
+      <!-- COVER IMAGE -->
+      <div style="width:100%;height:200px;background:linear-gradient(135deg,#131b2e 0%,#1a2744 60%,#0d3b6e 100%);display:flex;align-items:center;justify-content:center;position:relative;">
+        <span style="color:#2d3449;font-size:11px;font-family:monospace;">cover: /blog/images/throttling/cover.jpg</span>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(to top,#0b1326,transparent);"></div>
+      </div>
+
+      <!-- ARTICLE HEADER -->
+      <div style="padding:32px 24px 24px;max-width:720px;margin:0 auto;">
+        <!-- meta bar -->
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+          <span style="font-size:9px;font-family:monospace;color:#b3d17a;letter-spacing:0.2em;">2024_01_01</span>
+          <span style="color:#2d3449;">·</span>
+          <span style="font-size:9px;font-family:monospace;color:#555;letter-spacing:0.15em;">6 MIN READ</span>
+          <span style="color:#2d3449;">·</span>
+          <div style="display:flex;gap:4px;">
+            <span style="font-size:8px;font-family:monospace;padding:2px 6px;background:#171f33;color:#bec6e0;letter-spacing:0.1em;">PERFORMANCE</span>
+            <span style="font-size:8px;font-family:monospace;padding:2px 6px;background:#171f33;color:#bec6e0;letter-spacing:0.1em;">JAVASCRIPT</span>
+          </div>
+        </div>
+        <!-- title -->
+        <h1 style="font-size:24px;font-weight:800;color:#dae2fd;letter-spacing:-0.02em;line-height:1.2;margin-bottom:12px;font-family:'Plus Jakarta Sans',sans-serif;">
+          Mastering Throttling: Optimizing Web Performance with Smarter Event Handling
+        </h1>
+        <!-- description -->
+        <p style="font-size:14px;color:#888;line-height:1.6;max-width:600px;">
+          Discover how throttling can improve performance by controlling the frequency of function executions. Learn when to use it and how it differs from debouncing.
+        </p>
+
+        <!-- divider -->
+        <div style="margin:24px 0;height:1px;background:rgba(69,70,77,0.2);"></div>
+      </div>
+
+      <!-- ARTICLE BODY -->
+      <div style="padding:0 24px 32px;max-width:720px;margin:0 auto;">
+
+        <!-- Prose text -->
+        <p style="font-size:14px;color:#bec6e0;line-height:1.8;margin-bottom:16px;">
+          In modern web development, user interactions like scrolling, resizing, and key presses can trigger events at a high frequency. If not handled properly, this can lead to performance bottlenecks…
+        </p>
+
+        <!-- H3 -->
+        <div style="font-size:14px;font-weight:700;color:#dae2fd;margin:24px 0 12px;font-family:monospace;letter-spacing:0.05em;">// What is Throttling?</div>
+
+        <!-- CALLOUT COMPONENT -->
+        <div style="background:#131b2e;border-left:3px solid #b3d17a;padding:12px 16px;margin:16px 0;">
+          <div style="font-size:8px;font-family:monospace;color:#b3d17a;letter-spacing:0.2em;margin-bottom:6px;">NOTE</div>
+          <p style="font-size:12px;color:#bec6e0;margin:0;line-height:1.6;">
+            Throttling ensures a function executes <strong style="color:#dae2fd;">at most once per interval</strong>, regardless of how many times the event fires. Diverso dal debouncing che ritarda l'esecuzione.
+          </p>
+        </div>
+
+        <!-- Prose -->
+        <p style="font-size:14px;color:#bec6e0;line-height:1.8;margin-bottom:16px;">
+          It's common to confuse throttling with debouncing, but they serve different purposes…
+        </p>
+
+        <!-- IMAGE WITH CAPTION COMPONENT -->
+        <div style="margin:24px 0;">
+          <div style="background:#1a2744;height:100px;width:100%;display:flex;align-items:center;justify-content:center;">
+            <span style="color:#2d3449;font-size:10px;font-family:monospace;">/blog/images/throttling/diagram.png</span>
+          </div>
+          <div style="font-size:10px;color:#555;font-family:monospace;text-align:center;margin-top:6px;letter-spacing:0.1em;">
+            FIG.01 — Throttle vs Debounce timeline comparison
+          </div>
+        </div>
+
+        <!-- VIDEO EMBED COMPONENT -->
+        <div style="margin:24px 0;background:#131b2e;padding:16px;border:1px solid rgba(69,70,77,0.2);">
+          <div style="font-size:8px;font-family:monospace;color:#555;letter-spacing:0.2em;margin-bottom:8px;">VIDEO_EMBED</div>
+          <div style="background:#0b1326;height:80px;display:flex;align-items:center;justify-content:center;gap:8px;">
+            <span style="font-size:20px;color:#b3d17a;">▶</span>
+            <span style="font-size:11px;color:#555;font-family:monospace;">youtube.com/watch?v=...</span>
+          </div>
+        </div>
+
+        <!-- GALLERY COMPONENT -->
+        <div style="margin:24px 0;">
+          <div style="font-size:8px;font-family:monospace;color:#555;letter-spacing:0.2em;margin-bottom:8px;">GALLERY — 3 IMAGES</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;">
+            <div style="background:#1a2744;height:50px;display:flex;align-items:center;justify-content:center;"><span style="color:#2d3449;font-size:8px;">01</span></div>
+            <div style="background:#1a2744;height:50px;display:flex;align-items:center;justify-content:center;"><span style="color:#2d3449;font-size:8px;">02</span></div>
+            <div style="background:#1a2744;height:50px;display:flex;align-items:center;justify-content:center;"><span style="color:#2d3449;font-size:8px;">03</span></div>
+          </div>
+        </div>
+
+        <!-- TECH BADGE CALLOUT -->
+        <div style="background:#131b2e;border-left:3px solid #515f74;padding:12px 16px;margin:16px 0;">
+          <div style="font-size:8px;font-family:monospace;color:#515f74;letter-spacing:0.2em;margin-bottom:6px;">TIP</div>
+          <p style="font-size:12px;color:#bec6e0;margin:0;line-height:1.6;">
+            Use <code style="background:#0b1326;padding:1px 4px;color:#b3d17a;font-size:11px;">_.throttle</code> from Lodash for production — handles edge cases automatically.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FOOTER NAV -->
+      <div style="padding:16px 24px;border-top:1px solid rgba(69,70,77,0.15);display:flex;justify-content:space-between;">
+        <span style="font-size:9px;font-family:monospace;color:#555;letter-spacing:0.15em;">← POST PRECEDENTE</span>
+        <span style="font-size:9px;font-family:monospace;color:#555;letter-spacing:0.15em;">POST SUCCESSIVO →</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COMPONENTS LEGEND -->
+  <div style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:860px;margin-left:auto;margin-right:auto;">
+    <div style="background:#171f33;padding:12px 14px;border-left:2px solid #b3d17a;">
+      <div style="font-size:11px;color:#bec6e0;font-weight:600;margin-bottom:2px;">&lt;Callout type="note|tip|warn"&gt;</div>
+      <div style="font-size:10px;color:#555;">Box con accento colorato — note tecniche, warning, tip</div>
+    </div>
+    <div style="background:#171f33;padding:12px 14px;border-left:2px solid #b3d17a;">
+      <div style="font-size:11px;color:#bec6e0;font-weight:600;margin-bottom:2px;">&lt;ImageCaption src="..." caption="..."&gt;</div>
+      <div style="font-size:10px;color:#555;">Immagine con caption in stile FIG.01</div>
+    </div>
+    <div style="background:#171f33;padding:12px 14px;border-left:2px solid #b3d17a;">
+      <div style="font-size:11px;color:#bec6e0;font-weight:600;margin-bottom:2px;">&lt;VideoEmbed url="youtube|vimeo"&gt;</div>
+      <div style="font-size:10px;color:#555;">Embed responsivo con lazy loading</div>
+    </div>
+    <div style="background:#171f33;padding:12px 14px;border-left:2px solid #b3d17a;">
+      <div style="font-size:11px;color:#bec6e0;font-weight:600;margin-bottom:2px;">&lt;Gallery images={[...]} /&gt;</div>
+      <div style="font-size:10px;color:#555;">Grid 2-3 colonne con lightbox su click</div>
+    </div>
+  </div>
+
+  <!-- APPROVE -->
+  <div style="max-width:860px;margin:16px auto 0;">
+    <div class="options">
+      <div class="option" data-choice="approve" onclick="toggleSelect(this)">
+        <div class="letter">✓</div>
+        <div class="content">
+          <h3>Design approvato — procedi con spec + piano</h3>
+          <p>Layout A confermato, tutti i componenti confermati, immagini in static/blog/images/</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

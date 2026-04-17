@@ -14,7 +14,8 @@ export function getProfile(lang: LangAvailable = 'en'): Profile {
       ...commonProject,
       status: commonProject.status as ProjectStatus,
       title: localizedProject?.title ?? commonProject.id,
-      description: localizedProject?.description ?? ''
+      description: localizedProject?.description ?? '',
+      metrics: (localizedProject as any)?.metrics ?? []
     };
   });
 

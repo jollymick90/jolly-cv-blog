@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { downloadCVAts } from '$lib/utils/download-pdf';
   import type { LangAvailable } from '$lib/types';
   const { lang }: { lang: LangAvailable } = $props();
 </script>
@@ -14,16 +15,24 @@
       class="text-secondary font-label text-[10px] tracking-widest hover:text-on-surface transition-colors uppercase"
     >GITHUB</a>
     <a
-      href="https://linkedin.com/in/michelescarpa90"
+      href="https://linkedin.com/in/michele-scarpa-90-arco"
       target="_blank"
       rel="noopener noreferrer"
       class="text-secondary font-label text-[10px] tracking-widest hover:text-on-surface transition-colors uppercase"
     >LINKEDIN</a>
     <a
-      href="/{lang}/print"
+      href="/{lang}/cv"
       class="text-secondary font-label text-[10px] tracking-widest hover:text-on-surface transition-colors uppercase"
-    >DOWNLOAD_CV</a>
+    >VIEW_CV</a>
   </div>
+
+  <button
+    type="button"
+    onclick={downloadCVAts}
+    class="text-outline-variant font-label text-[9px] tracking-widest hover:text-secondary transition-colors uppercase opacity-50 hover:opacity-100"
+  >
+    ↓ ATS-optimized version
+  </button>
 
   <p class="text-primary font-label text-[10px] tracking-widest opacity-50">
     © {new Date().getFullYear()} Michele Scarpa

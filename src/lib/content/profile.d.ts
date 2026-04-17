@@ -13,9 +13,11 @@ export interface ProfileProject {
   slug: string;
   status: ProjectStatus;
   tags: string[];
+  tech: string[];
   // From localized file (merged by id):
   title: string;
   description: string;
+  metrics: string[];
 }
 
 export interface ProfileCoreArea {

@@ -4,11 +4,12 @@
     "phone": "+393483482541",
     "city": "Padova, Italy",
     "github": "https://github.com/jollymick90",
-    "linkedin": "https://linkedin.com/in/michelescarpa90"
+    "linkedin": "https://linkedin.com/in/michele-scarpa-90-arco"
   },
   "stack": [
-    "RUST", "GOLANG", "TYPESCRIPT", "DART", "DOCKER",
-    "KUBERNETES", "LANGCHAIN", "PINECONE", "TURBOREPO", "POSTGRES"
+    "TYPESCRIPT", "REACT / NEXT.JS", "POSTGIS", "SPRING BOOT",
+    "TERRAFORM", "DOCKER / KUBERNETES", "N8N / AI AGENTS",
+    "VUE.JS", "FLUTTER", "NODE.JS"
   ],
   "certifications": [
     { "id": 3, "content": "AWS Certified Developer - Associate", "date": "December 2022" },
@@ -16,10 +17,27 @@
     { "id": 1, "content": "Google Professional Data Engineering", "date": "March 2020" }
   ],
   "projects": [
-    { "id": "venezia-spatial", "slug": "venezia-spatial", "status": "LIVE", "tags": ["GIS", "POSTGIS", "REAL-TIME"] },
-    { "id": "core-engine-rust", "slug": "core-engine-rust", "status": "PRIVATE", "tags": ["RUST", "MIGRATION", "PERFORMANCE"] },
-    { "id": "bacaro-os", "slug": "bacaro-os", "status": "LIVE", "tags": ["COMMUNITY", "PLATFORM"] },
-    { "id": "ai-proxy-gateway", "slug": "ai-proxy-gateway", "status": "BETA", "tags": ["AI", "LLM", "GATEWAY"] }
+    {
+      "id": "ai-engine",
+      "slug": "ai-engine",
+      "status": "LIVE",
+      "tags": ["AI", "LLM", "TDD"],
+      "tech": ["TypeScript", "AI Agents", "n8n", "TDD"]
+    },
+    {
+      "id": "gis-almaviva",
+      "slug": "gis-almaviva",
+      "status": "LIVE",
+      "tags": ["GIS", "POSTGIS", "BIG DATA"],
+      "tech": ["PostGIS", "GeoServer", "Spring Boot", "React"]
+    },
+    {
+      "id": "digital-signage",
+      "slug": "digital-signage",
+      "status": "LIVE",
+      "tags": ["IoT", "REAL-TIME", "HARDWARE"],
+      "tech": ["Vue.js", "Node.js", "Android/Kotlin", "IoT"]
+    }
   ],
   "coreAreas": [
     { "icon": "devices", "tags": ["REACT / NEXT.JS", "FLUTTER CORE", "PROGRESSIVE WEB APPS"] },

@@ -5,7 +5,7 @@
 	};
 
 	let logs = $state<Log[]>([
-		{ type: 'output', text: 'Welcome to ENGINEER_CORE_V4 terminal.' },
+		{ type: 'output', text: 'Welcome to MS_CORE_V4 terminal.' },
 		{ type: 'output', text: 'Type "help" to see available commands.' }
 	]);
 	

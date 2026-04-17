@@ -1,21 +1,12 @@
 <script lang="ts">
   import { t } from '$lib/i18n';
-  import { page } from '$app/state';
   import MaterialIcon from '$lib/components/shell/MaterialIcon.svelte';
-  import type { Profile, ProjectStatus } from '$lib/content/profile.d.ts';
+  import { downloadCV } from '$lib/utils/download-pdf';
+  import type { PageProps } from './$types';
 
-  let { data }: { data: { profile: Profile } } = $props();
+  let { data }: PageProps = $props();
   const profile = $derived(data.profile);
-  const lang = $derived(page.params.lang ?? 'en');
-
-  function badgeClass(status: ProjectStatus): string {
-    switch (status) {
-      case 'LIVE': return 'bg-tertiary text-on-tertiary';
-      case 'BETA': return 'bg-surface-container-highest text-secondary';
-      case 'PRIVATE': return 'border border-outline-variant text-outline-variant';
-      default: return 'border border-outline-variant text-outline-variant';
-    }
-  }
+  const lang = $derived(data.lang ?? 'en');
 </script>
 
 <svelte:head>
@@ -30,21 +21,45 @@
       <div class="inline-block px-2 py-1 mb-6 bg-surface-container-high border-l-2 border-tertiary">
         <span class="text-[10px] font-label font-bold tracking-[0.2em] text-tertiary uppercase">ARCHITECT_LOG_01</span>
       </div>
-      <h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-primary leading-none mb-8">
-        Engineering Solutions<br /><span class="text-surface-bright">at Scale.</span>
-      </h2>
-      <p class="text-secondary leading-relaxed text-lg max-w-lg mb-8 font-body">
-        {profile.name}. {profile.bio}
+      <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-primary leading-none mb-4">
+        {profile.role.split('&')[0].trim()}<br />
+        <span class="text-tertiary">& {profile.role.split('&')[1]?.trim()}</span>
+      </h1>
+      <p class="text-secondary leading-relaxed text-lg max-w-xl mb-10 font-body">
+        {profile.bio}
       </p>
-      <div class="flex flex-col gap-2 p-4 bg-surface-container-low border border-outline-variant/15 w-full max-w-lg">
-        <div class="flex justify-between items-center text-xs font-label tracking-widest opacity-50">
-          <span>UPTIME</span><span>3650_DAYS+</span>
+      <!-- CTA -->
+      <div class="flex gap-3 mb-10">
+        <button
+          type="button"
+          onclick={() => downloadCV()}
+          class="flex items-center gap-2 px-5 py-2.5 bg-tertiary text-on-tertiary font-label font-bold text-xs tracking-widest uppercase hover:opacity-90 transition-opacity"
+        >
+          <MaterialIcon name="download" class="text-[18px]" />
+          Download CV
+        </button>
+        <a
+          href="/{lang}/cv"
+          class="flex items-center gap-2 px-5 py-2.5 border border-outline-variant/40 text-secondary font-label font-bold text-xs tracking-widest uppercase hover:border-tertiary hover:text-tertiary transition-colors"
+        >
+          <MaterialIcon name="person" class="text-[18px]" />
+          View CV
+        </a>
+      </div>
+
+      <!-- Key metrics bar -->
+      <div class="grid grid-cols-3 gap-1 max-w-xl">
+        <div class="p-4 bg-surface-container-low border-l-2 border-tertiary">
+          <div class="font-headline text-2xl font-extrabold text-tertiary">+300%</div>
+          <div class="text-[10px] font-label text-secondary tracking-widest uppercase mt-1">Dev Velocity</div>
         </div>
-        <div class="h-1 w-full bg-surface-container-highest">
-          <div class="h-full bg-tertiary w-full"></div>
+        <div class="p-4 bg-surface-container-low border-l-2 border-tertiary">
+          <div class="font-headline text-2xl font-extrabold text-tertiary">5M+</div>
+          <div class="text-[10px] font-label text-secondary tracking-widest uppercase mt-1">GIS Records</div>
         </div>
-        <div class="flex justify-between items-center text-[10px] font-label text-tertiary">
-          <span>SENIOR_LEVEL</span><span>SYSTEM_STABLE</span>
+        <div class="p-4 bg-surface-container-low border-l-2 border-tertiary">
+          <div class="font-headline text-2xl font-extrabold text-tertiary">500+</div>
+          <div class="text-[10px] font-label text-secondary tracking-widest uppercase mt-1">Installations</div>
         </div>
       </div>
     </div>
@@ -56,7 +71,7 @@
       <h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Core Architecture</h3>
       <div class="h-px grow bg-outline-variant/20"></div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
       {#each profile.coreAreas as area (area.icon)}
         <div class="p-8 bg-surface-container hover:bg-surface-container-high transition-colors group">
           <MaterialIcon name={area.icon} class="text-tertiary mb-6 block text-4xl" />
@@ -64,9 +79,47 @@
           <p class="text-sm text-secondary/80 mb-6 font-body">{area.description}</p>
           <ul class="space-y-2 text-[11px] font-label tracking-wider text-on-surface-variant font-bold">
             {#each area.tags as tag}
-              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary inline-block"></span> {tag}</li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-tertiary inline-block shrink-0"></span> {tag}
+              </li>
             {/each}
           </ul>
+        </div>
+      {/each}
+    </div>
+  </section>
+
+  <!-- Key Projects & Impact -->
+  <section class="mb-24">
+    <div class="flex items-center justify-between mb-8">
+      <h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Key Projects & Impact</h3>
+      <span class="text-[10px] font-label text-tertiary tracking-[0.2em]">{String(profile.projects.length).padStart(2, '0')}_ACTIVE_NODES</span>
+    </div>
+    <div class="space-y-1">
+      {#each profile.projects as project (project.id)}
+        <div class="p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary">
+          <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+            <div class="flex-1">
+              <h4 class="text-lg font-bold text-on-surface group-hover:text-tertiary transition-colors font-headline mb-1">
+                {project.title}
+              </h4>
+              <p class="text-sm text-secondary/70 mb-4 font-body">{project.description}</p>
+              <!-- Metrics -->
+              <ul class="flex flex-wrap gap-2">
+                {#each project.metrics as metric}
+                  <li class="text-[10px] font-label font-bold tracking-wider px-2 py-1 bg-surface-container-high text-tertiary uppercase">
+                    {metric}
+                  </li>
+                {/each}
+              </ul>
+            </div>
+            <!-- Tech stack -->
+            <div class="flex flex-wrap gap-1 md:max-w-[180px] md:justify-end">
+              {#each project.tech as techItem}
+                <span class="text-[9px] font-mono px-2 py-0.5 border border-outline-variant/30 text-outline-variant">{techItem}</span>
+              {/each}
+            </div>
+          </div>
         </div>
       {/each}
     </div>
@@ -75,45 +128,23 @@
   <!-- Recent Experience -->
   <section class="mb-24">
     <div class="flex items-center gap-4 mb-12">
-      <h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Recent Experience</h3>
+      <h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Experience</h3>
       <div class="h-px grow bg-outline-variant/20"></div>
     </div>
-    <div class="space-y-4">
+    <div class="space-y-1">
       {#each profile.experiences as exp (exp.id)}
-        <div class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-xl font-bold text-on-surface group-hover:text-tertiary transition-colors font-headline">{exp.company}</span>
-            <span class="text-[9px] font-label px-2 py-0.5 font-bold tracking-widest uppercase {exp.label === 'CURRENT' ? 'bg-tertiary text-on-tertiary' : 'border border-tertiary text-tertiary'}">{exp.label}</span>
+        <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] group">
+          <div class="text-[10px] font-label py-6 opacity-40 group-hover:opacity-100 transition-opacity uppercase tracking-widest font-bold">
+            {exp.period}
           </div>
-          <p class="text-sm text-secondary/80 mt-2 max-w-3xl leading-relaxed">{exp.description}</p>
-        </div>
-      {/each}
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="mb-24">
-    <div class="flex items-center justify-between mb-8">
-      <h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Works</h3>
-      <span class="text-[10px] font-label text-tertiary tracking-[0.2em]">{String(profile.projects.length).padStart(2, '0')}_ACTIVE_NODES</span>
-    </div>
-    <div class="space-y-4">
-      {#each profile.projects as project (project.id)}
-        <a
-          href="/{lang}/project/{project.slug}"
-          class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary"
-        >
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <div class="flex items-center gap-3 mb-1">
-                <span class="text-lg font-bold text-on-surface group-hover:text-tertiary transition-colors">{project.title}</span>
-                <span class="text-[9px] font-label px-2 py-0.5 font-bold tracking-tighter {badgeClass(project.status)}">{project.status}</span>
-              </div>
-              <p class="text-xs text-secondary/60">{project.description}</p>
+          <div class="py-6 px-0 md:px-8 bg-surface-container-low border-l-2 border-transparent group-hover:border-tertiary group-hover:bg-surface-container transition-all">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="font-bold text-on-surface group-hover:text-tertiary transition-colors font-headline">{exp.company}</span>
+              <span class="text-[9px] font-label px-2 py-0.5 font-bold tracking-widest uppercase {exp.label === 'CURRENT' ? 'bg-tertiary text-on-tertiary' : 'border border-tertiary text-tertiary'}">{exp.label}</span>
             </div>
-            <MaterialIcon name="arrow_forward" class="text-outline-variant group-hover:text-tertiary transition-colors shrink-0" />
+            <p class="text-sm text-secondary/80 max-w-3xl leading-relaxed font-body">{exp.description}</p>
           </div>
-        </a>
+        </div>
       {/each}
     </div>
   </section>
@@ -153,7 +184,7 @@
   <!-- Community -->
   <section class="mb-24">
     <div class="flex items-center gap-4 mb-12">
-      <h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Community Builders</h3>
+      <h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Community</h3>
       <div class="h-px grow bg-outline-variant/20"></div>
     </div>
     <div class="space-y-1">
