@@ -19,8 +19,9 @@
     }
   ],
   "coreAreas": [
-    { "icon": "explore", "title": "Solid Foundation", "description": "Basi solide e architetture scalabili per contesti enterprise." },
-    { "icon": "smart_toy", "title": "Modern Stack & AI", "description": "Le tecnologie cutting-edge per rapid prototyping e automazione spinta." }
+    { "icon": "devices", "title": "Web & Mobile Ecosystems", "description": "Progettazione di interfacce cross-platform con focus su performance, state management e UX fluida su tutto lo stack." },
+    { "icon": "explore", "title": "Enterprise GIS Context", "description": "Trasformare dati spaziali in intelligenza operativa. Specialista in infrastrutture geospaziali ad alto carico e rendering cartografico." },
+    { "icon": "smart_toy", "title": "AI & Conversational UX", "description": "Integrazione di LLM nei flussi aziendali. Costruzione di sistemi RAG robusti e orchestrazione di chatbot context-aware." }
   ],
   "projects": [
     { "id": "venezia-spatial", "title": "VeneziaSpatial_v4.0", "description": "Piattaforma GIS immobiliare enterprise che gestisce 10k+ nodi spaziali con sync real-time." },

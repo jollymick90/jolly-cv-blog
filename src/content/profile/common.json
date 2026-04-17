@@ -22,7 +22,8 @@
     { "id": "ai-proxy-gateway", "slug": "ai-proxy-gateway", "status": "BETA", "tags": ["AI", "LLM", "GATEWAY"] }
   ],
   "coreAreas": [
-    { "icon": "explore", "tags": ["JAVA / SPRING", "ANGULAR / REACT", "ENTERPRISE GIS (POSTGIS)"] },
-    { "icon": "smart_toy", "tags": ["SVELTEKIT / TAILWIND CSS", "AI AUTOMATION", "CLAUDE CODE & CURSOR"] }
+    { "icon": "devices", "tags": ["REACT / NEXT.JS", "FLUTTER CORE", "PROGRESSIVE WEB APPS"] },
+    { "icon": "explore", "tags": ["POSTGIS / GEOJSON", "MAPBOX ARCHITECTURE", "SPATIAL ANALYTICS"] },
+    { "icon": "smart_toy", "tags": ["LLM ORCHESTRATION", "VECTOR DATABASES", "PROMPT ENGINEERING"] }
   ]
 }

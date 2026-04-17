@@ -1,7 +1,6 @@
 <script lang="ts">
   import { t } from '$lib/i18n';
   import { page } from '$app/state';
-  import Terminal from '$lib/components/Terminal.svelte';
   import MaterialIcon from '$lib/components/shell/MaterialIcon.svelte';
   import type { Profile, ProjectStatus } from '$lib/content/profile.d.ts';
 
@@ -26,8 +25,8 @@
 <div class="pt-12 pb-20 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto">
 
   <!-- Hero Section -->
-  <section class="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-    <div>
+  <section class="mb-24">
+    <div class="max-w-3xl">
       <div class="inline-block px-2 py-1 mb-6 bg-surface-container-high border-l-2 border-tertiary">
         <span class="text-[10px] font-label font-bold tracking-[0.2em] text-tertiary uppercase">ARCHITECT_LOG_01</span>
       </div>
@@ -48,9 +47,6 @@
           <span>SENIOR_LEVEL</span><span>SYSTEM_STABLE</span>
         </div>
       </div>
-    </div>
-    <div class="h-[400px] lg:h-[450px]">
-      <Terminal />
     </div>
   </section>
 
