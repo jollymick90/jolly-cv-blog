@@ -6,6 +6,7 @@
   const { lang }: { lang: LangAvailable } = $props();
 
   const navItems = $derived([
+    { label: 'HOME', icon: 'home', href: `/${lang}` },
     { label: 'DEPLOYS', icon: 'rocket_launch', href: `/${lang}/project` },
     { label: 'BIO', icon: 'account_circle', href: `/${lang}/cv` },
     { label: 'COMMUNITY', icon: 'groups', href: `/${lang}/blog` }
@@ -13,6 +14,7 @@
 
   function isActive(href: string): boolean {
     const path = page.url.pathname;
+    if (href === `/${lang}`) return path === href;
     return path === href || path.startsWith(href + '/');
   }
 </script>

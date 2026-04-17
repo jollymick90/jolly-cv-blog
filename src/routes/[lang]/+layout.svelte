@@ -19,5 +19,5 @@
   </main>
   <AppFooter {lang} />
   <BottomNav {lang} />
-  <FloatingThemeToggle />
+  <!-- <FloatingThemeToggle /> -->
 {/if}

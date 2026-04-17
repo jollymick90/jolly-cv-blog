@@ -11,11 +11,18 @@
       "description": "Cloud infrastructure on AWS with Terraform. Advanced performance testing with k6. Full integration of voice chatbots powered by OpenAI APIs to improve B2C experience and processes."
     },
     {
-      "id": "viasat-almaviva",
-      "period": "2021–2025",
+      "id": "almaviva-2022",
+      "period": "2022–2025",
       "label": "GIS LEAD",
-      "company": "Viasat Almaviva",
+      "company": "Almaviva",
       "description": "Architected geospatial systems for Public Administration handling 5M+ spatial records with <200ms response times. Led migration from Angular to React/GraphQL across enterprise codebases."
+    },
+    {
+      "id": "viasat-greenext-2021",
+      "period": "2021–2022",
+      "label": "FULLSTACK",
+      "company": "Viasat - Greenext Technologies",
+      "description": "Developed web and mobile solutions for fleet management and environmental monitoring. Built cross-platform interfaces integrating real-time geospatial data feeds."
     },
     {
       "id": "red-v",
@@ -26,7 +33,7 @@
     }
   ],
   "coreAreas": [
-    { "icon": "devices", "title": "Web & Mobile Ecosystems", "description": "Architecting cross-platform interfaces with focus on performance, state management, and seamless UX across the stack." },
+    { "icon": "devices", "title": "Web & Mobile Ecosystems", "description": "Architecting cross-platform interfaces with Next.js, Angular, Vue, and Svelte. Native Android development with Kotlin, combined with a strong focus on performance, state management, and seamless UX across the stack." },
     { "icon": "explore", "title": "Enterprise GIS Context", "description": "Translating spatial data into actionable intelligence. Specialist in high-load geospatial infrastructure and map rendering." },
     { "icon": "smart_toy", "title": "AI & Conversational UX", "description": "Integrating LLMs into business workflows. Building robust RAG systems and context-aware chatbot orchestration." }
   ],

@@ -1,9 +1,11 @@
 <script lang="ts">
   import MaterialIcon from '$lib/components/shell/MaterialIcon.svelte';
   import type { Profile } from '$lib/content/profile.d.ts';
+  import { page } from '$app/stores';
 
   let { data }: { data: { profile: Profile } } = $props();
   const profile = $derived(data.profile);
+  const lang = $derived($page.params.lang ?? 'en');
 </script>
 
 <svelte:head>
@@ -11,6 +13,14 @@
 </svelte:head>
 
 <div class="px-4 md:px-12 lg:px-24 max-w-7xl mx-auto py-12">
+
+  <!-- Back to home -->
+  <div class="mb-8">
+    <a href="/{lang}" class="inline-flex items-center gap-2 text-[10px] font-label font-bold tracking-[0.2em] text-secondary uppercase hover:text-primary transition-colors">
+      <MaterialIcon name="arrow_back" class="text-sm" />
+      HOME
+    </a>
+  </div>
 
   <!-- Header -->
   <div class="mb-16">

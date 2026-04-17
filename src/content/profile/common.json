@@ -40,7 +40,7 @@
     }
   ],
   "coreAreas": [
-    { "icon": "devices", "tags": ["REACT / NEXT.JS", "FLUTTER CORE", "PROGRESSIVE WEB APPS"] },
+    { "icon": "devices", "tags": ["NEXT.JS", "ANGULAR", "VUE.JS", "SVELTE", "ANDROID / KOTLIN", "FLUTTER", "PROGRESSIVE WEB APPS"] },
     { "icon": "explore", "tags": ["POSTGIS / GEOJSON", "MAPBOX ARCHITECTURE", "SPATIAL ANALYTICS"] },
     { "icon": "smart_toy", "tags": ["LLM ORCHESTRATION", "VECTOR DATABASES", "PROMPT ENGINEERING"] }
   ]
