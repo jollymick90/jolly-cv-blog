@@ -82,6 +82,8 @@
           src={avatar}
           alt="Michele Scarpa"
           class="w-full h-full object-cover object-top grayscale"
+          fetchpriority="high"
+          loading="eager"
         />
         <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface to-transparent"></div>
       </div>
