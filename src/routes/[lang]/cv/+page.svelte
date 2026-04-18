@@ -1,5 +1,5 @@
 <script lang="ts">
-  import MaterialIcon from '$lib/components/shell/MaterialIcon.svelte';
+  import { ArrowLeft, Terminal } from 'lucide-svelte';
   import type { Profile } from '$lib/content/profile.d.ts';
   import { page } from '$app/stores';
 
@@ -17,7 +17,7 @@
   <!-- Back to home -->
   <div class="mb-8">
     <a href="/{lang}" class="inline-flex items-center gap-2 text-[10px] font-label font-bold tracking-[0.2em] text-secondary uppercase hover:text-primary transition-colors">
-      <MaterialIcon name="arrow_back" class="text-sm" />
+      <ArrowLeft size={14} aria-hidden="true" />
       HOME
     </a>
   </div>
@@ -64,7 +64,7 @@
       <!-- Stack -->
       <div class="p-6 bg-surface-container-lowest border border-outline-variant/10">
         <div class="flex items-center gap-2 mb-4">
-          <MaterialIcon name="terminal" class="text-tertiary text-lg" />
+          <Terminal size={20} class="text-tertiary" aria-hidden="true" />
           <h3 class="font-headline text-xs font-bold tracking-[0.3em] text-primary uppercase">Stack</h3>
         </div>
         <div class="flex flex-wrap gap-2">
