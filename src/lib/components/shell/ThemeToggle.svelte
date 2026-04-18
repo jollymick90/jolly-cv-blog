@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Sun, Moon } from 'lucide-svelte';
   import { themeStore } from '$lib/stores/theme.store';
 </script>
 
@@ -9,8 +10,8 @@
   aria-label={$themeStore === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
 >
   {#if $themeStore === 'dark'}
-    <span class="material-symbols-outlined text-[20px]">light_mode</span>
+    <Sun size={20} aria-hidden="true" />
   {:else}
-    <span class="material-symbols-outlined text-[20px]">dark_mode</span>
+    <Moon size={20} aria-hidden="true" />
   {/if}
 </button>
