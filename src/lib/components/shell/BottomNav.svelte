@@ -1,13 +1,12 @@
 <script lang="ts">
   import { page } from '$app/state';
   import { Home, Rocket, CircleUser, Users } from 'lucide-svelte';
-  import type { Component } from 'svelte';
   import Icon from './MaterialIcon.svelte';
   import type { LangAvailable } from '$lib/types';
 
   const { lang }: { lang: LangAvailable } = $props();
 
-  const navItems: { label: string; icon: any; href: string }[] = $derived([
+  const navItems: { label: string; icon: typeof Home; href: string }[] = $derived([
     { label: 'HOME', icon: Home, href: `/${lang}` },
     { label: 'DEPLOYS', icon: Rocket, href: `/${lang}/project` },
     { label: 'BIO', icon: CircleUser, href: `/${lang}/cv` },
