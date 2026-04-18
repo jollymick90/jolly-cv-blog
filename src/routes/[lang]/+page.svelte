@@ -1,6 +1,6 @@
 <script lang="ts">
   import { t } from '$lib/i18n';
-  import MaterialIcon from '$lib/components/shell/MaterialIcon.svelte';
+  import { Terminal, Monitor, Compass, Bot } from 'lucide-svelte';
   import Photos from '$lib/components/pages/home/Photos.svelte';
   import avatar from '$lib/img/photos/profilo-1-DSCF2646.webp';
   import { downloadCV } from '$lib/utils/download-pdf';
@@ -9,6 +9,12 @@
   let { data }: PageProps = $props();
   const profile = $derived(data.profile);
   const lang = $derived(data.lang ?? 'en');
+
+  const AREA_ICONS: Record<string, typeof Monitor> = {
+    devices: Monitor,
+    explore: Compass,
+    smart_toy: Bot
+  };
 </script>
 
 <svelte:head>
@@ -91,8 +97,9 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
       {#each profile.coreAreas as area (area.icon)}
+        {@const AreaIcon = AREA_ICONS[area.icon]}
         <div class="p-8 bg-surface-container hover:bg-surface-container-high transition-colors group">
-          <MaterialIcon name={area.icon} class="text-tertiary mb-6 block text-4xl" />
+          <AreaIcon size={36} class="text-tertiary mb-6 block" aria-hidden="true" />
           <h4 class="text-lg font-bold text-on-surface mb-3 font-headline">{area.title}</h4>
           <p class="text-sm text-secondary/80 mb-6 font-body">{area.description}</p>
           <ul class="space-y-2 text-[11px] font-label tracking-wider text-on-surface-variant font-bold">
@@ -173,7 +180,7 @@
   <section class="mb-24">
     <div class="p-8 bg-surface-container-lowest border border-outline-variant/10">
       <div class="flex items-center gap-2 mb-6">
-        <MaterialIcon name="terminal" class="text-tertiary" />
+        <Terminal size={20} class="text-tertiary" aria-hidden="true" />
         <h3 class="font-headline text-sm font-bold tracking-[0.3em] text-primary uppercase">Current Stack Config</h3>
       </div>
       <div class="rounded-lg overflow-hidden border border-outline-variant/30 bg-[#0d1117]">
