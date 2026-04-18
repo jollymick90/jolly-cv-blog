@@ -1,25 +1,25 @@
+import { error } from '@sveltejs/kit';
 import { defaultLang } from '$lib/i18n/lang.store.js';
 
-// export const prerender = false;
 export const prerender = true;
+
+const projectModules = import.meta.glob('/src/content/project/**/*.md');
 
 export async function load({ params, parent }) {
   const dataParent = await parent();
   const lang = dataParent.lang ?? defaultLang;
   const { slug } = params;
 
-  try {
-    const post = await import(`../../../../content/project/${lang}/${slug}.md`);
+  const key = `/src/content/project/${lang}/${slug}.md`;
+  const loader = projectModules[key];
 
-    return {
-      metadata: post.metadata,
-      content: post.default
-    };
-  } catch (e) {
-    console.error(e);
-    return {
-      status: 404,
-      error: new Error('Post non trovato')
-    };
+  if (!loader) {
+    error(404, 'Project not found');
   }
+
+  const post = await loader() as any;
+  return {
+    metadata: post.metadata,
+    content: post.default
+  };
 }
