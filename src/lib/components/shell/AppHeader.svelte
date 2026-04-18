@@ -1,6 +1,6 @@
 <script lang="ts">
+  import { Terminal } from 'lucide-svelte';
   import { page } from '$app/state';
-  import MaterialIcon from './MaterialIcon.svelte';
   import LangDropdown from './LangDropdown.svelte';
   import ThemeToggle from './ThemeToggle.svelte';
   import type { LangAvailable } from '$lib/types';
@@ -21,7 +21,7 @@
 
 <header class="fixed top-0 w-full z-50 bg-surface-container-low flex justify-between items-center px-6 py-4 border-b border-outline-variant/15">
   <a href="/{lang}/" class="flex items-center gap-2 no-underline">
-    <MaterialIcon name="terminal" class="text-primary" />
+    <Terminal size={20} class="text-primary" aria-hidden="true" />
     <span class="text-base font-bold text-primary tracking-widest font-headline">MICHELE SCARPA</span>
   </a>
 
