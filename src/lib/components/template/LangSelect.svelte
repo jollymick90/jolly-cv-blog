@@ -37,10 +37,10 @@
 			<span class="sr-only">Change published status</span>
 			<div class="inline-flex items-center rounded-l-md bg-zinc-600 text-white">
 				{#if currentLang === 'it'}
-					<span class="fi fi-it"></span>
+					<span aria-hidden="true">🇮🇹</span>
 				{/if}
 				{#if currentLang === 'en'}
-					<span class="fi fi-gb"></span>
+					<span aria-hidden="true">🇬🇧</span>
 				{/if}
 			</div>
 		</button>
@@ -74,7 +74,7 @@
 				<div class="flex flex-col">
 					<div class="flex justify-between">
 						<p class="font-normal">
-							<span class="fi fi-it"></span>
+							<span aria-hidden="true">🇮🇹</span>
 							<span>Italiano</span>
 						</p>
 						<!--
@@ -115,7 +115,7 @@
 				<div class="flex flex-col">
 					<div class="flex justify-between">
 						<p class="font-normal">
-							<span class="fi fi-gb"></span>
+							<span aria-hidden="true">🇬🇧</span>
 							<span>English</span>
 						</p>
 						<!--
