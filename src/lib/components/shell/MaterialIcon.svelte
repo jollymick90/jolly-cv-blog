@@ -7,4 +7,4 @@
   }>();
 </script>
 
-<svelte:component this={IconComponent} {size} class={className} aria-hidden="true" />
+<IconComponent {size} class={className} aria-hidden="true" />

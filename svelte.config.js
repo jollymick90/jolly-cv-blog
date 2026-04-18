@@ -26,9 +26,13 @@ const config = {
 			precompress: false,
 			strict: false
 		}),
-		// prerender: {
-		// 	entries: ['*']
-		// },
+		prerender: {
+			handleHttpError: ({ status, path }) => {
+				// Profile projects in common.json may not have a detail page yet — ignore their 404s
+				if (status === 404 && path.startsWith('/en/project/') || path.startsWith('/it/project/')) return;
+				throw new Error(`${status} ${path}`);
+			}
+		},
 		alias: {
             $content: path.resolve('./src/content')
         }
