@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import MaterialIcon from '$lib/components/shell/MaterialIcon.svelte';
+  import { ArrowRight, Zap, Lock, History } from 'lucide-svelte';
+  import type { Component } from 'svelte';
   import type { ProfileProject, ProjectStatus } from '$lib/content/profile.d.ts';
 
   let { data }: { data: { projects: ProfileProject[] } } = $props();
@@ -16,12 +17,12 @@
     }
   }
 
-  function badgeIcon(status: ProjectStatus): string {
+  function badgeIcon(status: ProjectStatus): typeof ArrowRight {
     switch (status) {
-      case 'LIVE': return 'arrow_forward';
-      case 'BETA': return 'bolt';
-      case 'PRIVATE': return 'lock';
-      case 'ARCHIVE': return 'history';
+      case 'LIVE': return ArrowRight;
+      case 'BETA': return Zap;
+      case 'PRIVATE': return Lock;
+      case 'ARCHIVE': return History;
     }
   }
 </script>
@@ -43,6 +44,7 @@
 
   <div class="space-y-4">
     {#each projects as project (project.id)}
+      {@const BadgeIcon = badgeIcon(project.status)}
       <a
         href="/{lang}/project/{project.slug}"
         class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary"
@@ -60,7 +62,7 @@
               {/each}
             </div>
           </div>
-          <MaterialIcon name={badgeIcon(project.status)} class="text-outline-variant group-hover:text-tertiary transition-colors shrink-0" />
+          <BadgeIcon size={20} class="text-outline-variant group-hover:text-tertiary transition-colors shrink-0" aria-hidden="true" />
         </div>
       </a>
     {/each}
