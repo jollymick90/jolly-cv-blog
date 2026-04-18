@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state';
+  import { t } from '$lib/i18n';
   import { ArrowRight, Zap, Lock, History } from 'lucide-svelte';
   import type { Component } from 'svelte';
   import type { ProfileProject, ProjectStatus } from '$lib/content/profile.d.ts';
@@ -29,6 +30,7 @@
 
 <svelte:head>
   <title>DEPLOYS — Projects</title>
+  <meta name="description" content={$t('project.intro')} />
 </svelte:head>
 
 <div class="px-4 md:px-12 lg:px-24 max-w-7xl mx-auto py-12">

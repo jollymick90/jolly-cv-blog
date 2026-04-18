@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state';
+  import { t } from '$lib/i18n';
 
   let { data } = $props();
   const { log } = data;
@@ -19,6 +20,7 @@
 
 <svelte:head>
   <title>COMMUNITY — Log</title>
+  <meta name="description" content={$t('blog.intro')} />
 </svelte:head>
 
 <div class="px-4 md:px-12 lg:px-24 max-w-7xl mx-auto py-12">

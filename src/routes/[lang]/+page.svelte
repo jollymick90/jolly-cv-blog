@@ -19,6 +19,7 @@
 
 <svelte:head>
   <title>{$t('home.title')}</title>
+  <meta name="description" content={$t('home.description')} />
 </svelte:head>
 
 <div class="pt-12 pb-20 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto">

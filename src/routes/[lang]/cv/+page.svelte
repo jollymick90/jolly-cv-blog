@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ArrowLeft, Terminal } from 'lucide-svelte';
+  import { t } from '$lib/i18n';
   import type { Profile } from '$lib/content/profile.d.ts';
   import { page } from '$app/stores';
 
@@ -10,6 +11,7 @@
 
 <svelte:head>
   <title>BIO — {profile.name}</title>
+  <meta name="description" content={$t('home.description')} />
 </svelte:head>
 
 <div class="px-4 md:px-12 lg:px-24 max-w-7xl mx-auto py-12">
