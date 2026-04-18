@@ -1,6 +1,6 @@
 <script lang="ts">
 	import clsx from 'clsx';
-	import avatar from '$lib/img/avatar.jpg';
+	import avatar from '$lib/img/photos/profilo-1-DSCF2646.webp';
 	export let large = false;
 	export let className: string = '';
 	export let styleTransform = '';

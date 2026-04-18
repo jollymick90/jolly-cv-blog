@@ -1,6 +1,8 @@
 <script lang="ts">
   import { t } from '$lib/i18n';
   import MaterialIcon from '$lib/components/shell/MaterialIcon.svelte';
+  import Photos from '$lib/components/pages/home/Photos.svelte';
+  import avatar from '$lib/img/photos/profilo-1-DSCF2646.webp';
   import { downloadCV } from '$lib/utils/download-pdf';
   import type { PageProps } from './$types';
 
@@ -16,52 +18,68 @@
 <div class="pt-12 pb-20 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto">
 
   <!-- Hero Section -->
-  <section class="mb-24">
-    <div class="max-w-3xl">
-      <div class="inline-block px-2 py-1 mb-6 bg-surface-container-high border-l-2 border-tertiary">
-        <span class="text-[10px] font-label font-bold tracking-[0.2em] text-tertiary uppercase">ARCHITECT_LOG_01</span>
-      </div>
-      <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-primary leading-none mb-4">
-        {profile.role.split('&')[0].trim()}<br />
-        <span class="text-tertiary">& {profile.role.split('&')[1]?.trim()}</span>
-      </h1>
-      <p class="text-secondary leading-relaxed text-lg max-w-xl mb-10 font-body">
-        {profile.bio}
-      </p>
-      <!-- CTA -->
-      <div class="flex gap-3 mb-10">
-        <button
-          type="button"
-          onclick={() => downloadCV()}
-          class="flex items-center gap-2 px-5 py-2.5 bg-tertiary text-on-tertiary font-label font-bold text-xs tracking-widest uppercase hover:opacity-90 transition-opacity"
-        >
-          <MaterialIcon name="download" class="text-[18px]" />
-          Download CV
-        </button>
-        <a
-          href="/{lang}/cv"
-          class="flex items-center gap-2 px-5 py-2.5 border border-outline-variant/40 text-secondary font-label font-bold text-xs tracking-widest uppercase hover:border-tertiary hover:text-tertiary transition-colors"
-        >
-          <MaterialIcon name="person" class="text-[18px]" />
-          View CV
-        </a>
+  <section class="mb-24 min-h-[calc(100vh-80px)] flex items-center">
+    <div class="w-full grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-10 lg:gap-16 items-center">
+
+      <!-- Left: Content -->
+      <div>
+        <div class="flex items-center gap-2 mb-8">
+          <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse shrink-0"></span>
+          <span class="text-[10px] font-label font-bold tracking-[0.2em] text-tertiary uppercase">Available for Architecture Review</span>
+        </div>
+
+        <h1 class="font-headline text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-none mb-6 text-primary">
+          Senior Software<br />
+          <em class="not-italic text-tertiary italic">Engineer</em>&<br />
+          Solution Builder
+        </h1>
+
+        <p class="text-secondary leading-relaxed text-lg max-w-xl mb-10 font-body">
+          {profile.bio}
+        </p>
+
+        <div class="flex flex-wrap gap-3 mb-12">
+          <a
+            href="/{lang}/project"
+            class="flex items-center gap-2 px-5 py-2.5 bg-tertiary text-on-tertiary font-label font-bold text-xs tracking-widest uppercase hover:opacity-90 transition-opacity"
+          >
+            EXPLORE WORK →
+          </a>
+          <button
+            type="button"
+            onclick={() => downloadCV()}
+            class="flex items-center gap-2 px-5 py-2.5 border border-outline-variant/40 text-secondary font-label font-bold text-xs tracking-widest uppercase hover:border-tertiary hover:text-tertiary transition-colors"
+          >
+            DOWNLOAD CV
+          </button>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 max-w-sm">
+          <div>
+            <div class="font-headline text-3xl font-extrabold text-primary">10+</div>
+            <div class="text-[10px] font-label text-secondary tracking-widest uppercase mt-1">Years Exp</div>
+          </div>
+          <div>
+            <div class="font-headline text-3xl font-extrabold text-primary">500+</div>
+            <div class="text-[10px] font-label text-secondary tracking-widest uppercase mt-1">Installations</div>
+          </div>
+          <div>
+            <div class="font-headline text-3xl font-extrabold text-primary">5M+</div>
+            <div class="text-[10px] font-label text-secondary tracking-widest uppercase mt-1">GIS Records</div>
+          </div>
+        </div>
       </div>
 
-      <!-- Key metrics bar -->
-      <div class="grid grid-cols-3 gap-1 max-w-xl">
-        <div class="p-4 bg-surface-container-low border-l-2 border-tertiary">
-          <div class="font-headline text-2xl font-extrabold text-tertiary">+300%</div>
-          <div class="text-[10px] font-label text-secondary tracking-widest uppercase mt-1">Dev Velocity</div>
-        </div>
-        <div class="p-4 bg-surface-container-low border-l-2 border-tertiary">
-          <div class="font-headline text-2xl font-extrabold text-tertiary">5M+</div>
-          <div class="text-[10px] font-label text-secondary tracking-widest uppercase mt-1">GIS Records</div>
-        </div>
-        <div class="p-4 bg-surface-container-low border-l-2 border-tertiary">
-          <div class="font-headline text-2xl font-extrabold text-tertiary">500+</div>
-          <div class="text-[10px] font-label text-secondary tracking-widest uppercase mt-1">Installations</div>
-        </div>
+      <!-- Right: Photo -->
+      <div class="relative w-full h-[420px] lg:h-[600px] overflow-hidden">
+        <img
+          src={avatar}
+          alt="Michele Scarpa"
+          class="w-full h-full object-cover object-top grayscale"
+        />
+        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface to-transparent"></div>
       </div>
+
     </div>
   </section>
 
@@ -88,6 +106,8 @@
       {/each}
     </div>
   </section>
+
+  <Photos />
 
   <!-- Key Projects & Impact -->
   <section class="mb-24">
