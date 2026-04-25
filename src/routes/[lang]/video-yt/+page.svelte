@@ -48,9 +48,7 @@
     {#each videos as video (video.id)}
       {@const BadgeIcon = badgeIcon(video.type)}
       <a
-        href={video.url || '#'}
-        target={video.url ? "_blank" : "_self"}
-        rel={video.url ? "noopener noreferrer" : ""}
+        href="/{lang}/video-yt/{video.id}"
         class="block p-6 bg-surface-container-low hover:bg-surface-container group transition-all border-l-4 border-transparent hover:border-tertiary"
       >
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -58,6 +56,9 @@
             <div class="flex items-center gap-3 mb-1">
               <span class="text-lg font-bold text-on-surface group-hover:text-tertiary transition-colors">{video.title}</span>
               <span class="text-[9px] font-label px-2 py-0.5 font-bold tracking-tighter {badgeClass(video.type)}">{video.type}</span>
+              {#if video.isFeatured}
+                <span class="text-[8px] font-label px-1.5 py-0.5 bg-tertiary/20 text-tertiary uppercase tracking-tighter">Featured</span>
+              {/if}
             </div>
             <p class="text-xs text-secondary/60 mb-2">{video.description}</p>
           </div>
