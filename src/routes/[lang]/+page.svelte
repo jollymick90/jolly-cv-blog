@@ -1,6 +1,6 @@
 <script lang="ts">
   import { t } from '$lib/i18n';
-  import { Terminal, Monitor, Compass, Bot } from 'lucide-svelte';
+  import { Terminal, Monitor, Compass, Bot, MonitorPlay } from 'lucide-svelte';
   import Photos from '$lib/components/pages/home/Photos.svelte';
   import avatar from '$lib/img/photos/profilo-1-DSCF2646.webp';
   import { downloadCV } from '$lib/utils/download-pdf';
@@ -118,6 +118,44 @@
   </section>
 
   <Photos />
+
+  <!-- Featured Talks -->
+  <section class="mb-24 mt-24">
+    <div class="flex items-center justify-between mb-8">
+      <h3 class="font-headline text-xl font-bold tracking-widest text-primary uppercase">Featured Talks & Videos</h3>
+      <a href="/{lang}/video-yt" class="text-[10px] font-label text-tertiary hover:underline tracking-[0.2em]">VIEW_ALL_VIDEOS →</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {#each profile.videos.filter(v => v.isFeatured) as video}
+        <a
+          href={video.url || '#'}
+          target={video.url ? "_blank" : "_self"}
+          rel={video.url ? "noopener noreferrer" : ""}
+          class="block p-8 bg-surface-container hover:bg-surface-container-high transition-all border-t-4 {video.id === 'devfest-torino' ? 'border-tertiary' : 'border-outline-variant/30 hover:border-tertiary'} group"
+        >
+          <div class="flex items-start gap-4 mb-4">
+            <div class="p-3 bg-surface-container-highest rounded-lg group-hover:bg-tertiary/10 transition-colors">
+              <MonitorPlay size={24} class="text-tertiary" aria-hidden="true" />
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-[10px] font-label font-bold tracking-widest text-secondary uppercase">{video.type}</span>
+                {#if video.id === 'devfest-torino'}
+                  <span class="text-[8px] font-label px-1.5 py-0.5 bg-tertiary/20 text-tertiary uppercase tracking-tighter">Highlight</span>
+                {/if}
+              </div>
+              <h4 class="text-lg font-bold text-on-surface group-hover:text-tertiary transition-colors font-headline leading-tight">
+                {video.title}
+              </h4>
+            </div>
+          </div>
+          <p class="text-sm text-secondary/80 font-body">
+            {video.description}
+          </p>
+        </a>
+      {/each}
+    </div>
+  </section>
 
   <!-- Key Projects & Impact -->
   <section class="mb-24">

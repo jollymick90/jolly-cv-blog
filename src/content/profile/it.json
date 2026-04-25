@@ -60,5 +60,62 @@
   "community": [
     { "label": "FOUNDER", "title": "Co-founder, BacaroTech", "description": "Guida di una community tecnica e gestione media partnership per eventi nazionali. Aggregazione di expertise da molteplici professionisti del settore." },
     { "label": "DEVREL", "title": "DevRel & GDG Speaker", "description": "Speaker abituale ai Google Developer Groups su SvelteKit, workflow agentici e metodologie Frontend avanzate." }
+  ],
+  "videos": [
+    {
+      "id": "devfest-torino",
+      "title": "Devfest Torino - Frontend On Stage: Mastering Performance with Svelte, Angular, React by Michele",
+      "description": "Versione del talk sui framework frontend portata al Devfest Torino. L'intervento spiega i concetti di base di Svelte (compilazione senza runtime pesante), Angular (Change Detection) e React (Virtual DOM). Vengono eseguiti degli stress-test prestazionali su una UI complessa e confrontati i relativi benchmark di velocità ed efficienza del browser."
+    },
+    {
+      "id": "devfest-roma",
+      "title": "Devfest Roma Città - Pokedex a confronto - DevEx e Web Vitals tra Svelte, React e Angular",
+      "description": "Talk tenuto al DevFest Roma in cui confronto i framework Svelte, React e Angular sviluppando la medesima applicazione Pokedex. L'analisi si concentra sulla Developer Experience (DevEx) e sulla misurazione delle performance sfruttando i Core Web Vitals (LCP, INP, CLS)."
+    },
+    {
+      "id": "frontend-dilemma",
+      "title": "Frontend Dilemma Live Discord",
+      "description": "Registrazione del primo evento live del 2025 su Discord. Include un talk approfondito su come scegliere il miglior framework frontend per la propria carriera. Esplora l'evoluzione di JavaScript da jQuery ai framework attuali, spiegando differenze cruciali come CSR vs SSR e l'uso del DOM Virtuale."
+    },
+    {
+      "id": "arcade-threejs",
+      "title": "Arcade THREEJS - PT1",
+      "description": "Il video illustra lo sviluppo di un videogioco Arcade 3D usando Three.js, nato come regalo per un 'Secret Santa' aziendale. Vengono descritte le sfide tecniche incontrate nel convertire prototipi in Unity e Python in puro JavaScript funzionante via web browser."
+    },
+    {
+      "id": "keycloak-pt1",
+      "title": "Keycloak - customizzazione temi - PT1",
+      "description": "Prima parte di un tutorial dedicato a Keycloak. Spiega come personalizzare la pagina di login standard clonando il tema base. Illustra il funzionamento dei file FreeMarker Template (ftl) e dimostra come iniettare Tailwind CSS."
+    },
+    {
+      "id": "keycloak-pt2",
+      "title": "Keycloak - customizzazione temi - PT2",
+      "description": "Seguito del tutorial su Keycloak, focalizzato sull'iniezione di codice JavaScript all'interno delle pagine ftl. Si analizza il binding tra le variabili generate lato server e JavaScript. Introduce poi l'uso dei bundler come Vite e Webpack e Alpine.js."
+    },
+    {
+      "id": "keycloak-react-pt1",
+      "title": "Keycloak - customizzazione temi react - PT1",
+      "description": "Terzo episodio della serie Keycloak, che prepara il terreno all'integrazione di React per i temi personalizzati. Chiarisce le logiche dietro le SPA rispetto al Server-Side Rendering utilizzato da Keycloak (ftl)."
+    },
+    {
+      "id": "keycloak-react-pt2",
+      "title": "Keycloak - customizzazione temi react - pt 2",
+      "description": "Capitolo finale dell'integrazione di React in Keycloak. Mostra la procedura completa: dalla creazione di un progetto con Vite, alla compilazione e collegamento degli asset React (JS e CSS) nel tema Keycloak."
+    },
+    {
+      "id": "postman-env-auto",
+      "title": "Postman - Come aggiornare automaticamente le variabili d'ambiente?",
+      "description": "Breve trucco su come ottimizzare i test API su Postman. Sfrutta i 'Tests' e i pre-request scripts per catturare l'Access Token salvandolo in automatico nelle variabili di ambiente."
+    },
+    {
+      "id": "postman-env",
+      "title": "Postman - come usare le variabili d'ambiente?",
+      "description": "Guida introduttiva sull'uso delle variabili di ambiente all'interno di Postman. Mostra come parametrizzare URL e Token di autenticazione per velocizzare lo sviluppo."
+    },
+    {
+      "id": "throttling",
+      "title": "Throttoling - che cos'è e a cosa serve?",
+      "description": "Tutorial orientato all'esperienza utente che illustra come utilizzare il 'Network Throttling' nei Dev Tools. Spiega l'utilità di simulare connessioni lente in fase di sviluppo."
+    }
   ]
 }

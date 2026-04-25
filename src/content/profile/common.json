@@ -43,5 +43,75 @@
     { "icon": "devices", "tags": ["NEXT.JS", "ANGULAR", "VUE.JS", "SVELTE", "ANDROID / KOTLIN", "FLUTTER", "PROGRESSIVE WEB APPS"] },
     { "icon": "explore", "tags": ["POSTGIS / GEOJSON", "MAPBOX ARCHITECTURE", "SPATIAL ANALYTICS"] },
     { "icon": "smart_toy", "tags": ["LLM ORCHESTRATION", "VECTOR DATABASES", "PROMPT ENGINEERING"] }
+  ],
+  "videos": [
+    {
+      "id": "devfest-torino",
+      "url": "https://www.youtube.com/watch?v=vdcdNBGncZU",
+      "type": "CONFERENCE",
+      "lang": "en",
+      "isFeatured": true
+    },
+    {
+      "id": "devfest-roma",
+      "url": "https://www.youtube.com/watch?v=ANUi0fc49cA",
+      "type": "CONFERENCE",
+      "lang": "it",
+      "isFeatured": true
+    },
+    {
+      "id": "frontend-dilemma",
+      "url": "",
+      "type": "LIVE",
+      "lang": "it"
+    },
+    {
+      "id": "arcade-threejs",
+      "url": "https://www.youtube.com/watch?v=kq1VYA6-BWY",
+      "type": "TUTORIAL",
+      "lang": "it"
+    },
+    {
+      "id": "keycloak-pt1",
+      "url": "",
+      "type": "TUTORIAL",
+      "lang": "it"
+    },
+    {
+      "id": "keycloak-pt2",
+      "url": "",
+      "type": "TUTORIAL",
+      "lang": "it"
+    },
+    {
+      "id": "keycloak-react-pt1",
+      "url": "",
+      "type": "TUTORIAL",
+      "lang": "it"
+    },
+    {
+      "id": "keycloak-react-pt2",
+      "url": "",
+      "type": "TUTORIAL",
+      "lang": "it"
+    },
+    {
+      "id": "postman-env-auto",
+      "url": "",
+      "type": "TUTORIAL",
+      "lang": "it"
+    },
+    {
+      "id": "postman-env",
+      "url": "",
+      "type": "TUTORIAL",
+      "lang": "it"
+    },
+    {
+      "id": "throttling",
+      "url": "",
+      "type": "TUTORIAL",
+      "lang": "it"
+    }
   ]
 }

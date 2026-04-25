@@ -10,7 +10,8 @@
   const navItems = $derived([
     { label: 'DEPLOYS', icon: 'rocket_launch', href: `/${lang}/project` },
     { label: 'BIO', icon: 'account_circle', href: `/${lang}/cv` },
-    { label: 'COMMUNITY', icon: 'groups', href: `/${lang}/blog` }
+    { label: 'COMMUNITY', icon: 'groups', href: `/${lang}/blog` },
+    { label: 'VIDEO', icon: 'smart_display', href: `/${lang}/video-yt` }
   ]);
 
   function isActive(href: string): boolean {

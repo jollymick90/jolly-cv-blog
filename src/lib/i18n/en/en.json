@@ -17,7 +17,12 @@
         "navproject": "Projects",
         "navcv": "CV",
         "navblog": "Blog",
+        "navvideo": "Videos",
         "gotocv": "Read the complete resume"    
+    },
+    "video-yt": {
+        "title": "My Videos and Talks",
+        "intro": "A collection of my YouTube tutorials and conference talks, where I share my knowledge about frontend frameworks, backend architecture, and developer tools."
     },
     "project": {
         "title": "From Code to Creation",

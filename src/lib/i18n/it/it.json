@@ -16,7 +16,12 @@
         "navproject": "Projects",
         "navcv": "CV",
         "navblog": "Blog",
+        "navvideo": "Video",
         "gotocv": "Leggi tutto"
+    },
+    "video-yt": {
+        "title": "I Miei Video e Talk",
+        "intro": "Una raccolta dei miei tutorial su YouTube e talk a conferenze, dove condivido conoscenze su framework frontend, architetture backend e strumenti per sviluppatori."
     },
     "resume": { 
         "contact": "Contatti",

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import { Home, Rocket, CircleUser, Users } from 'lucide-svelte';
+  import { Home, Rocket, CircleUser, Users, PlayCircle } from 'lucide-svelte';
   import Icon from './MaterialIcon.svelte';
   import type { LangAvailable } from '$lib/types';
 
@@ -10,7 +10,8 @@
     { label: 'HOME', icon: Home, href: `/${lang}` },
     { label: 'DEPLOYS', icon: Rocket, href: `/${lang}/project` },
     { label: 'BIO', icon: CircleUser, href: `/${lang}/cv` },
-    { label: 'COMMUNITY', icon: Users, href: `/${lang}/blog` }
+    { label: 'COMMUNITY', icon: Users, href: `/${lang}/blog` },
+    { label: 'VIDEO', icon: PlayCircle, href: `/${lang}/video-yt` }
   ]);
 
   function isActive(href: string): boolean {

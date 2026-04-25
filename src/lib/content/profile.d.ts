@@ -48,6 +48,17 @@ export interface ProfileCertification {
   date: string;
 }
 
+export interface ProfileVideo {
+  id: string;
+  url: string;
+  type: 'CONFERENCE' | 'TUTORIAL' | 'LIVE';
+  lang: 'en' | 'it';
+  isFeatured?: boolean;
+  // Merged from localized
+  title: string;
+  description: string;
+}
+
 export interface Profile {
   // From common.json
   contact: ProfileContact;
@@ -56,6 +67,7 @@ export interface Profile {
   // Merged (common + localized)
   projects: ProfileProject[];
   coreAreas: ProfileCoreArea[];
+  videos: ProfileVideo[];
   // From localized only
   name: string;
   role: string;

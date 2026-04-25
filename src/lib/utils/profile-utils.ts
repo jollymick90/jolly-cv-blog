@@ -28,12 +28,24 @@ export function getProfile(lang: LangAvailable = 'en'): Profile {
     };
   });
 
+  const videos: ProfileVideo[] = (common.videos || []).map((commonVideo) => {
+    const localizedVideo = localized.videos?.find((v) => v.id === commonVideo.id);
+    return {
+      ...commonVideo,
+      type: commonVideo.type as any,
+      lang: commonVideo.lang as any,
+      title: localizedVideo?.title ?? commonVideo.id,
+      description: localizedVideo?.description ?? ''
+    };
+  });
+
   return {
     contact: common.contact,
     stack: common.stack,
     certifications: common.certifications,
     projects,
     coreAreas,
+    videos,
     name: localized.name,
     role: localized.role,
     bio: localized.bio,

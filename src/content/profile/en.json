@@ -60,5 +60,62 @@
   "community": [
     { "label": "FOUNDER", "title": "Co-founder, BacaroTech", "description": "Leading a tech community and managing media partnerships for national events. Aggregating expertise across multiple industry professionals." },
     { "label": "DEVREL", "title": "DevRel & GDG Speaker", "description": "Regular speaker at Google Developer Groups, sharing practices on SvelteKit, agentic workflows, and advanced Frontend methodologies." }
+  ],
+  "videos": [
+    {
+      "id": "devfest-torino",
+      "title": "Devfest Torino - Frontend On Stage: Mastering Performance with Svelte, Angular, React",
+      "description": "A talk on frontend frameworks presented at Devfest Torino. Explains the basics of Svelte (compile-time without heavy runtime), Angular (Change Detection), and React (Virtual DOM). Includes stress-tests on a complex UI and compares their speed and efficiency benchmarks."
+    },
+    {
+      "id": "devfest-roma",
+      "title": "Devfest Roma Città - Pokedex Comparison - DevEx and Web Vitals",
+      "description": "Talk given at DevFest Roma comparing Svelte, React, and Angular by building the same Pokedex application. Analyzes Developer Experience (DevEx) and performance using Core Web Vitals. Demonstrates the use of Lighthouse and Chrome Dev Tools."
+    },
+    {
+      "id": "frontend-dilemma",
+      "title": "Frontend Dilemma Live Discord",
+      "description": "Recording of the first live event of 2025 on Discord. Discusses how to choose the best frontend framework for your career. Explores the evolution of JavaScript from jQuery to modern frameworks, explaining CSR vs SSR and the Virtual DOM."
+    },
+    {
+      "id": "arcade-threejs",
+      "title": "Arcade THREEJS - PT1",
+      "description": "Shows the development of a 3D Arcade game using Three.js, born as a corporate 'Secret Santa' gift. Describes the technical challenges of converting prototypes written in Unity and Python for face/hand tracking into pure browser-based JS."
+    },
+    {
+      "id": "keycloak-pt1",
+      "title": "Keycloak - Theme Customization - PT1",
+      "description": "First part of a tutorial dedicated to Keycloak. Explains how to customize the standard login page by cloning the base theme, using FreeMarker Templates (ftl), and injecting Tailwind CSS."
+    },
+    {
+      "id": "keycloak-pt2",
+      "title": "Keycloak - Theme Customization - PT2",
+      "description": "Sequel focusing on JavaScript injection inside ftl pages. Analyzes binding between server-generated Java variables and JS. Introduces Vite, Webpack, and Alpine.js for lightweight DOM manipulation."
+    },
+    {
+      "id": "keycloak-react-pt1",
+      "title": "Keycloak - React Theme Customization - PT1",
+      "description": "Third episode preparing the integration of React for custom themes. Clarifies SPA logic compared to Keycloak's Server-Side Rendering (ftl)."
+    },
+    {
+      "id": "keycloak-react-pt2",
+      "title": "Keycloak - React Theme Customization - PT2",
+      "description": "Final chapter on React integration in Keycloak. Shows the complete process: creating a Vite project, building, and linking React assets inside the Keycloak theme."
+    },
+    {
+      "id": "postman-env-auto",
+      "title": "Postman - How to Auto-Update Environment Variables?",
+      "description": "Quick tip on optimizing API tests in Postman. Uses 'Tests' and pre-request scripts to capture the Access Token from a login response and save it automatically as an environment variable."
+    },
+    {
+      "id": "postman-env",
+      "title": "Postman - How to Use Environment Variables?",
+      "description": "Introductory guide on using environment variables in Postman. Shows how to parameterize URLs and auth tokens to speed up development."
+    },
+    {
+      "id": "throttling",
+      "title": "Throttling - What is it and why use it?",
+      "description": "UI/UX tutorial showing how to use 'Network Throttling' in Dev Tools. Explains the usefulness of simulating slow connections during development to verify loading states."
+    }
   ]
 }
