@@ -114,7 +114,7 @@
     },
     {
       "id": "throttling",
-      "title": "Throttoling - che cos'è e a cosa serve?",
+      "title": "Throttling - che cos'è e a cosa serve?",
       "description": "Tutorial orientato all'esperienza utente (UI) che illustra come utilizzare il \"Network Throttling\" all'interno dei Dev Tools (su Chrome, Edge e Firefox) [47, 48]. Spiega l'utilità di simulare connessioni lente (come Fast 3G o Slow 3G) in fase di sviluppo per verificare visivamente l'implementazione degli stati di caricamento (loader/spinner) in applicazioni web con recupero dati dinamico [49, 50]."
     }
   ]

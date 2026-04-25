@@ -128,9 +128,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       {#each profile.videos.filter(v => v.isFeatured) as video}
         <a
-          href={video.url || '#'}
-          target={video.url ? "_blank" : "_self"}
-          rel={video.url ? "noopener noreferrer" : ""}
+          href="/{lang}/video-yt/{video.id}"
           class="block p-8 bg-surface-container hover:bg-surface-container-high transition-all border-t-4 {video.id === 'devfest-torino' ? 'border-tertiary' : 'border-outline-variant/30 hover:border-tertiary'} group"
         >
           <div class="flex items-start gap-4 mb-4">
