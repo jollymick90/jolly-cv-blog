@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { t } from '$lib/i18n';
 	import { createHandRunner, type HandRunnerHandle } from '$lib/playground/hand-runner/dogut';
+	import { immersive } from '$lib/stores/immersive.store';
 
 	let sceneContainer = $state<HTMLDivElement | null>(null);
 	let videoElement = $state<HTMLVideoElement | null>(null);
@@ -40,6 +41,7 @@
 			window.removeEventListener('keydown', onKey);
 			handle?.dispose();
 			handle = null;
+			immersive.set(false);
 		};
 	});
 
@@ -59,6 +61,7 @@
 		try {
 			await handle.start();
 			started = true;
+			immersive.set(true);
 		} catch (e) {
 			console.error('Error starting Hand Runner:', e);
 			const isPermission = e instanceof DOMException && e.name === 'NotAllowedError';
@@ -96,6 +99,72 @@
 		>
 			<div>{$t('playground.handRunner.score')}: {score}</div>
 			<div>{$t('playground.handRunner.speed')}: {speed}</div>
+		</div>
+
+		<button
+			type="button"
+			onclick={() => immersive.update((v) => !v)}
+			aria-label={$immersive ? 'Show navigation' : 'Hide navigation'}
+			aria-pressed={!$immersive}
+			class="absolute right-4 top-1/2 -translate-y-1/2 z-[60] w-11 h-11 rounded-full
+             bg-black/60 backdrop-blur-sm border border-white/20 text-white text-lg
+             flex items-center justify-center active:bg-white/20 touch-manipulation"
+		>
+			{$immersive ? '☰' : '✕'}
+		</button>
+
+		<div class="md:hidden absolute bottom-24 left-1/2 -translate-x-1/2 z-10 select-none">
+			<div class="grid grid-cols-3 gap-2 w-48">
+				<div></div>
+				<button
+					type="button"
+					aria-label="Up"
+					class="aspect-square rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-2xl flex items-center justify-center active:bg-white/30 touch-manipulation"
+					onpointerdown={(e) => {
+						e.preventDefault();
+						handle?.clickUp();
+					}}
+				>
+					↑
+				</button>
+				<div></div>
+				<button
+					type="button"
+					aria-label="Left"
+					class="aspect-square rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-2xl flex items-center justify-center active:bg-white/30 touch-manipulation"
+					onpointerdown={(e) => {
+						e.preventDefault();
+						handle?.clickLeft();
+					}}
+				>
+					←
+				</button>
+				<div></div>
+				<button
+					type="button"
+					aria-label="Right"
+					class="aspect-square rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-2xl flex items-center justify-center active:bg-white/30 touch-manipulation"
+					onpointerdown={(e) => {
+						e.preventDefault();
+						handle?.clickRight();
+					}}
+				>
+					→
+				</button>
+				<div></div>
+				<button
+					type="button"
+					aria-label="Down"
+					class="aspect-square rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-2xl flex items-center justify-center active:bg-white/30 touch-manipulation"
+					onpointerdown={(e) => {
+						e.preventDefault();
+						handle?.clickDown();
+					}}
+				>
+					↓
+				</button>
+				<div></div>
+			</div>
 		</div>
 	{/if}
 
