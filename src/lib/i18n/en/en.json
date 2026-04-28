@@ -48,6 +48,29 @@
         "title": "Tech Contamination",
         "intro": "From code to stage: my commitment to sharing important topics and fostering discussion within the developer community. Thanks to the BacaroTech project, I've become a speaker, and I aim to bring some topics important to me live to audiences. Being able to program is crucial for a developer; being able to talk about how to program is a further step towards greater awareness."
     },
+    "playground": {
+        "hub": {
+            "title": "Playground",
+            "intro": "Three.js experiments and interactive sketches."
+        },
+        "handRunner": {
+            "title": "Hand Runner",
+            "cardDesc": "Endless runner controlled by your hand via webcam.",
+            "intro": "Guide the sphere through the doughnuts. Move your hand in front of the camera.",
+            "controlsHeading": "Controls",
+            "controlHand": "Hand: move in front of webcam",
+            "controlArrows": "Arrows: move",
+            "controlS": "S: pause / resume",
+            "controlAD": "A / D: increase / decrease speed",
+            "controlR": "R: reset doughnut center",
+            "score": "Score",
+            "speed": "Speed",
+            "start": "Start",
+            "loading": "Loading…",
+            "errorCamera": "Cannot access webcam. Check browser permissions.",
+            "errorGeneric": "Something went wrong. Try reloading."
+        }
+    },
     "common": {
         "langselect": "Language",
         "modal-download-pdf": "Type CV Download"

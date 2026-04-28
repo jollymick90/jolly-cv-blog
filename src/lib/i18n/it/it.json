@@ -47,6 +47,29 @@
         "title": "Divulgazione Tech",
         "intro": "Dal codice al palco: il mio impegno nel condividere temi importanti e stimolare la discussione nella community di sviluppatori. Grazie al progetto BacaroTech sono diventato uno speaker e cerco di portare dal vivo gli alcuni temi per me importanti. Riuscire a programmare è importante per un developer, riuscire a raccontare come programmare è un passo in più verso una maggiore consapevolezza"
     },
+    "playground": {
+        "hub": {
+            "title": "Playground",
+            "intro": "Esperimenti Three.js e schizzi interattivi."
+        },
+        "handRunner": {
+            "title": "Hand Runner",
+            "cardDesc": "Endless runner controllato dalla mano via webcam.",
+            "intro": "Guida la sfera attraverso le ciambelle. Muovi la mano davanti alla webcam.",
+            "controlsHeading": "Controlli",
+            "controlHand": "Mano: muovi davanti alla webcam",
+            "controlArrows": "Frecce: movimento",
+            "controlS": "S: pausa / riprendi",
+            "controlAD": "A / D: aumenta / diminuisci velocità",
+            "controlR": "R: resetta centro ciambella",
+            "score": "Punteggio",
+            "speed": "Velocità",
+            "start": "Avvia",
+            "loading": "Caricamento…",
+            "errorCamera": "Impossibile accedere alla webcam. Controlla i permessi.",
+            "errorGeneric": "Qualcosa è andato storto. Riprova."
+        }
+    },
     "common": {
         "langselect": "Language",
         "modal-download-pdf": "Seleziona il tipo di pdf"
