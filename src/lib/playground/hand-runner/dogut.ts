@@ -133,16 +133,7 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 		started = true;
 
 		const THREE = await import('three');
-		// @mediapipe/hands is Closure-compiled and only exports via a side-effect
-		// global assignment (`globalThis.Hands = ...`). Named imports work in dev
-		// (Vite CJS interop) but resolve to `undefined` after Rollup minification.
-		// Import for side effect, then read the constructor off the global.
-		await import('@mediapipe/hands');
 		if (disposed) return;
-		const HandsCtor = (globalThis as unknown as { Hands?: typeof Hands }).Hands;
-		if (!HandsCtor) {
-			throw new Error('@mediapipe/hands failed to register globalThis.Hands');
-		}
 
 		scene = new THREE.Scene();
 		camera = new THREE.PerspectiveCamera(
@@ -207,6 +198,31 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 		};
 		window.addEventListener('keydown', onKeyDown);
 
+		// Render loop runs regardless of MediaPipe / camera availability so the
+		// game stays playable via keyboard + click controls in fallback mode.
+		animate();
+
+		// Best-effort hand tracking. @mediapipe/hands is Closure-compiled and only
+		// exports via a side-effect global (`globalThis.Hands = ...`). Named
+		// imports work in dev (Vite CJS interop) but resolve to undefined after
+		// Rollup minification. If the import fails or the global never registers,
+		// we degrade to keyboard-only controls instead of aborting start().
+		let HandsCtor: typeof Hands | undefined;
+		try {
+			await import('@mediapipe/hands');
+		} catch (err) {
+			console.warn('Hand Runner: @mediapipe/hands failed to load — keyboard controls only.', err);
+			return;
+		}
+		if (disposed) return;
+		HandsCtor = (globalThis as unknown as { Hands?: typeof Hands }).Hands;
+		if (!HandsCtor) {
+			console.warn(
+				'Hand Runner: @mediapipe/hands did not register globalThis.Hands — keyboard controls only.'
+			);
+			return;
+		}
+
 		mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
 		if (disposed) {
 			mediaStream.getTracks().forEach((t) => t.stop());
@@ -242,8 +258,6 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 			requestAnimationFrame(sendVideo);
 		};
 		sendVideo();
-
-		animate();
 	}
 
 	function disposeMesh(mesh: Mesh | null) {
