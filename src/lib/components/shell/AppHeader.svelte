@@ -11,7 +11,8 @@
     { label: 'DEPLOYS', icon: 'rocket_launch', href: `/${lang}/project` },
     { label: 'BIO', icon: 'account_circle', href: `/${lang}/cv` },
     { label: 'COMMUNITY', icon: 'groups', href: `/${lang}/blog` },
-    { label: 'VIDEO', icon: 'smart_display', href: `/${lang}/video-yt` }
+    { label: 'VIDEO', icon: 'smart_display', href: `/${lang}/video-yt` },
+    { label: 'PLAYGROUND', icon: 'play_circle', href: `/${lang}/playground` }
   ]);
 
   function isActive(href: string): boolean {
