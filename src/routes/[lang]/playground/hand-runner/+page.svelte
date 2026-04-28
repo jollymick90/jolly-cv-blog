@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { t } from '$lib/i18n';
-	import { createHandRunner, type HandRunnerHandle } from '$lib/playground/hand-runner/dogut';
+	import {
+		createHandRunner,
+		type HandRunnerHandle,
+		type HandRunnerMode
+	} from '$lib/playground/hand-runner/dogut';
 	import { immersive } from '$lib/stores/immersive.store';
 
 	let sceneContainer = $state<HTMLDivElement | null>(null);
@@ -11,6 +15,8 @@
 	let errorKey = $state<string | null>(null);
 	let score = $state(0);
 	let speed = $state(5);
+	let handTrackingAvailable = $state(false);
+	let mode = $state<HandRunnerMode>('manual');
 
 	let handle: HandRunnerHandle | null = null;
 
@@ -56,6 +62,10 @@
 			onUpdate: ({ score: s, speed: sp }) => {
 				score = s;
 				speed = sp;
+			},
+			onTrackingChange: (available) => {
+				handTrackingAvailable = available;
+				mode = available ? 'hand' : 'manual';
 			}
 		});
 		try {
@@ -74,6 +84,13 @@
 			starting = false;
 		}
 	}
+
+	function toggleMode() {
+		if (!handle || !handTrackingAvailable) return;
+		const next: HandRunnerMode = mode === 'hand' ? 'manual' : 'hand';
+		handle.setMode(next);
+		mode = next;
+	}
 </script>
 
 <svelte:head>
@@ -85,7 +102,8 @@
 
 	<video
 		bind:this={videoElement}
-		class="absolute top-4 right-4 w-48 aspect-video rounded-lg border border-white/20 shadow-lg z-10 {started
+		class="absolute top-4 right-4 w-48 aspect-video rounded-lg border border-white/20 shadow-lg z-10 {started &&
+		mode === 'hand'
 			? ''
 			: 'hidden'}"
 		playsinline
@@ -98,7 +116,51 @@
              text-white font-mono text-sm space-y-1 border border-white/10"
 		>
 			<div>{$t('playground.handRunner.score')}: {score}</div>
-			<div>{$t('playground.handRunner.speed')}: {speed}</div>
+			<div class="flex items-center gap-2">
+				<span>{$t('playground.handRunner.speed')}: {speed}</span>
+				<button
+					type="button"
+					aria-label="Decrease speed"
+					onclick={() => handle?.decrementSpeed()}
+					class="w-6 h-6 rounded bg-white/10 hover:bg-white/20 active:bg-white/30 border border-white/20 flex items-center justify-center text-sm leading-none touch-manipulation"
+				>
+					−
+				</button>
+				<button
+					type="button"
+					aria-label="Increase speed"
+					onclick={() => handle?.incrementSpeed()}
+					class="w-6 h-6 rounded bg-white/10 hover:bg-white/20 active:bg-white/30 border border-white/20 flex items-center justify-center text-sm leading-none touch-manipulation"
+				>
+					+
+				</button>
+			</div>
+			{#if handTrackingAvailable}
+				<button
+					type="button"
+					onclick={toggleMode}
+					aria-pressed={mode === 'hand'}
+					class="mt-1 w-full px-2 py-1 rounded bg-white/10 hover:bg-white/20 active:bg-white/30
+                 border border-white/20 text-xs flex items-center justify-center gap-1
+                 touch-manipulation"
+				>
+					<span aria-hidden="true">{mode === 'hand' ? '✋' : '⌨'}</span>
+					<span>{mode === 'hand' ? 'Hand' : 'Manual'}</span>
+				</button>
+			{/if}
+			<div class="text-xs text-white/70 max-w-[12rem] leading-snug pt-1">
+				{$t('playground.handRunner.objective')}
+			</div>
+			<button
+				type="button"
+				onclick={() => handle?.restart()}
+				class="mt-1 w-full px-2 py-1 rounded bg-white/10 hover:bg-white/20 active:bg-white/30
+                 border border-white/20 text-xs flex items-center justify-center gap-1
+                 touch-manipulation"
+			>
+				<span aria-hidden="true">↻</span>
+				<span>{$t('playground.handRunner.restart')}</span>
+			</button>
 		</div>
 
 		<button

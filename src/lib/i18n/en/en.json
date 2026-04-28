@@ -65,6 +65,8 @@
             "controlR": "R: reset doughnut center",
             "score": "Score",
             "speed": "Speed",
+            "objective": "Hit the doughnut with the ball",
+            "restart": "Restart",
             "start": "Start",
             "loading": "Loading…",
             "errorCamera": "Cannot access webcam. Check browser permissions.",

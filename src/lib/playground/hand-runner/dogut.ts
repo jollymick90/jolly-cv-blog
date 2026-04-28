@@ -1,6 +1,8 @@
 import type { Material, Mesh, PerspectiveCamera, Points, Scene, WebGLRenderer } from 'three';
 import type { Hands, Results } from '@mediapipe/hands';
 
+export type HandRunnerMode = 'hand' | 'manual';
+
 export type HandRunnerOutput = {
 	score: number;
 	speed: number;
@@ -10,37 +12,79 @@ export type HandRunnerOptions = {
 	sceneContainer: HTMLElement;
 	videoElement: HTMLVideoElement;
 	onUpdate: (out: HandRunnerOutput) => void;
+	/**
+	 * Fires once after `start()` has determined whether hand tracking is
+	 * usable (MediaPipe loaded AND camera permission granted). Call site
+	 * uses this to enable/disable the mode toggle UI.
+	 */
+	onTrackingChange?: (handTrackingAvailable: boolean) => void;
 };
 
 export type HandRunnerHandle = {
 	/**
 	 * Begins camera capture, MediaPipe load, and the render loop. Idempotent.
-	 * @throws DOMException — typically `NotAllowedError` if the user denies
-	 *   webcam permission. May also reject for other camera/MediaPipe errors.
-	 *   On rejection, the caller MUST call `dispose()` to release any partially
-	 *   acquired resources (MediaStream, listeners, renderer).
+	 * Resolves successfully even if MediaPipe fails to load — the game stays
+	 * playable in manual mode. Only rejects if the user denies the camera
+	 * permission; on rejection the caller MUST still call `dispose()`.
+	 * @throws DOMException — typically `NotAllowedError` for camera denial.
 	 */
 	start: () => Promise<void>;
+	/** Switch between hand-tracking and manual control. No-op if hand mode
+	 *  requested while tracking is unavailable. */
+	setMode: (mode: HandRunnerMode) => void;
 	clickLeft: () => void;
 	clickRight: () => void;
 	clickUp: () => void;
 	clickDown: () => void;
+	incrementSpeed: () => void;
+	decrementSpeed: () => void;
+	/** Reset score, speed, and torus to the initial state (no remount). */
+	restart: () => void;
 	dispose: () => void;
 };
 
 const INITIAL_SPEED = 5;
 const STEP_SPEED = 5;
 const TORUS_INNER_RADIUS = 1.5;
-const HIT_DEPTH_TOLERANCE = 0.1;
 const STAR_COUNT = 1000;
 const PLAYER_Z = -10;
 const TORUS_RESET_Z = -50;
+const HANDS_CDN_URL = 'https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js';
+
+// Memoised across module invocations: avoids reloading the script on remount,
+// retry-able if the network fails.
+let handsScriptPromise: Promise<typeof Hands | undefined> | null = null;
+
+function loadHandsFromCdn(): Promise<typeof Hands | undefined> {
+	if (typeof document === 'undefined') return Promise.resolve(undefined);
+	const existing = (globalThis as unknown as { Hands?: typeof Hands }).Hands;
+	if (existing) return Promise.resolve(existing);
+	if (handsScriptPromise) return handsScriptPromise;
+
+	handsScriptPromise = new Promise((resolve) => {
+		const script = document.createElement('script');
+		script.src = HANDS_CDN_URL;
+		script.async = true;
+		script.crossOrigin = 'anonymous';
+		script.onload = () => {
+			resolve((globalThis as unknown as { Hands?: typeof Hands }).Hands);
+		};
+		script.onerror = () => {
+			handsScriptPromise = null;
+			resolve(undefined);
+		};
+		document.head.appendChild(script);
+	});
+	return handsScriptPromise;
+}
 
 export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
-	const { sceneContainer, videoElement, onUpdate } = opts;
+	const { sceneContainer, videoElement, onUpdate, onTrackingChange } = opts;
 
 	let started = false;
 	let disposed = false;
+	let mode: HandRunnerMode = 'manual';
+	let trackingAvailable = false;
 
 	let counter = 0;
 	let speed = INITIAL_SPEED;
@@ -54,6 +98,7 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 	let torus: Mesh | null = null;
 	let player: Mesh | null = null;
 	let stars: Points | null = null;
+	let prevTorusZ = TORUS_RESET_Z;
 
 	let hands: Hands | null = null;
 	let mediaStream: MediaStream | null = null;
@@ -77,6 +122,7 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 			torus.position.x = (Math.random() - 0.5) * 10;
 			torus.position.y = (Math.random() - 0.5) * 10;
 		}
+		prevTorusZ = TORUS_RESET_Z;
 	}
 
 	function detectIntersection() {
@@ -84,16 +130,17 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 		const dx = player.position.x - torus.position.x;
 		const dy = player.position.y - torus.position.y;
 		const distanceXY = Math.sqrt(dx * dx + dy * dy);
-		if (
-			Math.abs(player.position.z - torus.position.z) < HIT_DEPTH_TOLERANCE &&
-			distanceXY < TORUS_INNER_RADIUS &&
-			!trigger
-		) {
+		const playerZ = player.position.z;
+		// Z-plane crossing: invariant to per-frame step size, so high speeds
+		// can no longer leap over the player's plane without registering a hit.
+		const crossed = prevTorusZ < playerZ && torus.position.z >= playerZ;
+		if (crossed && distanceXY < TORUS_INNER_RADIUS && !trigger) {
 			speed += STEP_SPEED;
 			counter += 1;
 			trigger = true;
 			emit();
 		}
+		prevTorusZ = torus.position.z;
 	}
 
 	function realSpeed() {
@@ -101,7 +148,9 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 	}
 
 	function handleResults(results: Results) {
-		if (!player) return;
+		// Skip while in manual mode: keyboard / D-pad clicks own the player
+		// position and we don't want hand-tracking to fight them.
+		if (mode !== 'hand' || !player) return;
 		const list = results.multiHandLandmarks;
 		if (list && list.length > 0) {
 			const wrist = list[0][0];
@@ -110,6 +159,19 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 			player.position.x = -x;
 			player.position.y = y;
 		}
+	}
+
+	async function sendVideoLoop() {
+		if (disposed || !hands || mode !== 'hand') return;
+		try {
+			await hands.send({ image: videoElement });
+		} catch {
+			// MediaPipe transient error — ignore, next frame will retry
+		}
+		if (disposed || mode !== 'hand') return;
+		requestAnimationFrame(() => {
+			sendVideoLoop();
+		});
 	}
 
 	function animate() {
@@ -202,24 +264,17 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 		// game stays playable via keyboard + click controls in fallback mode.
 		animate();
 
-		// Best-effort hand tracking. @mediapipe/hands is Closure-compiled and only
-		// exports via a side-effect global (`globalThis.Hands = ...`). Named
-		// imports work in dev (Vite CJS interop) but resolve to undefined after
-		// Rollup minification. If the import fails or the global never registers,
-		// we degrade to keyboard-only controls instead of aborting start().
-		let HandsCtor: typeof Hands | undefined;
-		try {
-			await import('@mediapipe/hands');
-		} catch (err) {
-			console.warn('Hand Runner: @mediapipe/hands failed to load — keyboard controls only.', err);
-			return;
-		}
+		// @mediapipe/hands ships as a Closure-compiled IIFE that registers
+		// `globalThis.Hands` via `(function(){...}).call(this)`. Inside an ES
+		// module top-level `this` is `undefined`, so a bundled `import()` never
+		// produces the global in production. Loading the script as a classic
+		// `<script>` from the CDN evaluates with `this === globalThis` and the
+		// constructor lands on the global as designed.
+		const HandsCtor = await loadHandsFromCdn();
 		if (disposed) return;
-		HandsCtor = (globalThis as unknown as { Hands?: typeof Hands }).Hands;
 		if (!HandsCtor) {
-			console.warn(
-				'Hand Runner: @mediapipe/hands did not register globalThis.Hands — keyboard controls only.'
-			);
+			console.warn('Hand Runner: @mediapipe/hands unavailable — manual mode only.');
+			onTrackingChange?.(false);
 			return;
 		}
 
@@ -244,20 +299,10 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 		});
 		hands.onResults(handleResults);
 
-		// The RAF id below is intentionally not captured: the loop self-terminates
-		// on the next frame via the `disposed` guard. One trailing frame after
-		// dispose() is acceptable; capturing the id would buy a one-frame win.
-		const sendVideo = async () => {
-			if (disposed || !hands) return;
-			try {
-				await hands.send({ image: videoElement });
-			} catch {
-				// MediaPipe transient error — ignore, next frame will retry
-			}
-			if (disposed) return;
-			requestAnimationFrame(sendVideo);
-		};
-		sendVideo();
+		trackingAvailable = true;
+		mode = 'hand';
+		onTrackingChange?.(true);
+		sendVideoLoop();
 	}
 
 	function disposeMesh(mesh: Mesh | null) {
@@ -320,8 +365,20 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 		camera = null;
 	}
 
+	function setMode(next: HandRunnerMode) {
+		if (next === mode) return;
+		if (next === 'hand' && !trackingAvailable) return;
+		const wasManual = mode === 'manual';
+		mode = next;
+		if (next === 'hand' && wasManual) {
+			// Restart the MediaPipe pump, which had self-terminated.
+			sendVideoLoop();
+		}
+	}
+
 	return {
 		start,
+		setMode,
 		clickLeft: () => {
 			if (player) player.position.x -= 1;
 		},
@@ -333,6 +390,26 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 		},
 		clickDown: () => {
 			if (player) player.position.y -= 1;
+		},
+		incrementSpeed: () => {
+			speed += STEP_SPEED;
+			emit();
+		},
+		decrementSpeed: () => {
+			speed -= STEP_SPEED;
+			emit();
+		},
+		restart: () => {
+			counter = 0;
+			speed = INITIAL_SPEED;
+			trigger = false;
+			if (player) {
+				player.position.x = 0;
+				player.position.y = 0;
+			}
+			resetInitialTorus = true;
+			resetTorusPosition();
+			emit();
 		},
 		dispose
 	};

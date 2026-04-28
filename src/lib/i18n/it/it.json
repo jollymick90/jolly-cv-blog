@@ -64,6 +64,8 @@
             "controlR": "R: resetta centro ciambella",
             "score": "Punteggio",
             "speed": "Velocità",
+            "objective": "Centra la ciambella con la pallina",
+            "restart": "Ricomincia",
             "start": "Avvia",
             "loading": "Caricamento…",
             "errorCamera": "Impossibile accedere alla webcam. Controlla i permessi.",
