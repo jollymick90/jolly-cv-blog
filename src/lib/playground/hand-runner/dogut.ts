@@ -133,8 +133,16 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 		started = true;
 
 		const THREE = await import('three');
-		const { Hands: HandsCtor } = await import('@mediapipe/hands');
+		// @mediapipe/hands is Closure-compiled and only exports via a side-effect
+		// global assignment (`globalThis.Hands = ...`). Named imports work in dev
+		// (Vite CJS interop) but resolve to `undefined` after Rollup minification.
+		// Import for side effect, then read the constructor off the global.
+		await import('@mediapipe/hands');
 		if (disposed) return;
+		const HandsCtor = (globalThis as unknown as { Hands?: typeof Hands }).Hands;
+		if (!HandsCtor) {
+			throw new Error('@mediapipe/hands failed to register globalThis.Hands');
+		}
 
 		scene = new THREE.Scene();
 		camera = new THREE.PerspectiveCamera(
