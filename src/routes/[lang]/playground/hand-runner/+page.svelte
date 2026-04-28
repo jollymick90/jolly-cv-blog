@@ -60,6 +60,7 @@
 			await handle.start();
 			started = true;
 		} catch (e) {
+			console.error('Error starting Hand Runner:', e);
 			const isPermission = e instanceof DOMException && e.name === 'NotAllowedError';
 			errorKey = isPermission
 				? 'playground.handRunner.errorCamera'
