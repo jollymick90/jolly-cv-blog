@@ -60,7 +60,7 @@
 			await handle.start();
 			started = true;
 		} catch (e) {
-			const isPermission = (e as DOMException)?.name === 'NotAllowedError';
+			const isPermission = e instanceof DOMException && e.name === 'NotAllowedError';
 			errorKey = isPermission
 				? 'playground.handRunner.errorCamera'
 				: 'playground.handRunner.errorGeneric';
@@ -77,7 +77,7 @@
 </svelte:head>
 
 <div class="relative h-screen w-full overflow-hidden bg-black">
-	<div bind:this={sceneContainer} class="absolute inset-0"></div>
+	<div bind:this={sceneContainer} class="absolute inset-0" aria-hidden="true"></div>
 
 	<video
 		bind:this={videoElement}
