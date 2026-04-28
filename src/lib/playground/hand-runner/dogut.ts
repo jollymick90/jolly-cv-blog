@@ -13,6 +13,13 @@ export type HandRunnerOptions = {
 };
 
 export type HandRunnerHandle = {
+	/**
+	 * Begins camera capture, MediaPipe load, and the render loop. Idempotent.
+	 * @throws DOMException — typically `NotAllowedError` if the user denies
+	 *   webcam permission. May also reject for other camera/MediaPipe errors.
+	 *   On rejection, the caller MUST call `dispose()` to release any partially
+	 *   acquired resources (MediaStream, listeners, renderer).
+	 */
 	start: () => Promise<void>;
 	clickLeft: () => void;
 	clickRight: () => void;
@@ -213,6 +220,9 @@ export function createHandRunner(opts: HandRunnerOptions): HandRunnerHandle {
 		});
 		hands.onResults(handleResults);
 
+		// The RAF id below is intentionally not captured: the loop self-terminates
+		// on the next frame via the `disposed` guard. One trailing frame after
+		// dispose() is acceptable; capturing the id would buy a one-frame win.
 		const sendVideo = async () => {
 			if (disposed || !hands) return;
 			try {
